@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "R-010",
+  "status": "promoted",
+  "request": "User (14 Oct 2026), with walkthrough screenshot: in Bedroom 2 the wooden almirah and the non-wooden almirah's door are overlapping in the 3D model. Any correction must not go beyond the physical dimensions of the room as specified in the architecture layout.",
+  "work_mode": "draft",
+  "affected_zones": [
+    "Bedroom 2 (east wall storage run)"
+  ],
+  "disciplines": [
+    "Interior joinery",
+    "Visualisation"
+  ],
+  "sources_used": [
+    "output/jaipur-home/architect-layout.pdf (east-wall dimension chain: 3 in, 1 ft 3 in, 10 ft 9 in; room 14 ft 1.5 in x 12 ft 3 in)",
+    "output/jaipur-home/model/plan-geometry.json (Bedroom 2 polygon bounds)",
+    "output/jaipur-home/model/interior.js (baseline after R-007 promotion)",
+    "output/jaipur-home/walkthrough.html and walkthrough.template.html",
+    "studio-control/project-state.json, artifact-manifest.json, decision-log.json, rfis.json",
+    "User screenshot of walkthrough, 14 Oct 2026"
+  ],
+  "source_versions_checked": [
+    "Architect layout PDF SHA-256 91f749713a05e3654ae89833828eb3533d36b2dc29c4ed0d795c6e06e162c590 (as listed in artifact-manifest; PDF read directly)",
+    "Baseline interior.js SHA-256 125017e3fcf0adf32a585988ddf625944e64976fa4cfa967a739e068cf960229",
+    "Baseline walkthrough.html reproduced byte for byte by the rebuild recipe"
+  ],
+  "specialists_activated": [],
+  "model_routing": {
+    "planned_launches": [],
+    "runtime_available_models": [],
+    "router_results": [],
+    "actual_model_usage": []
+  },
+  "source_conflicts": [],
+  "proposal": "Shorten the Bedroom 2 oak end store from 2 ft to 1 ft 3 in along the east wall (z 0.625 to 1.875 ft) so it abuts the unchanged 10 ft 9 in wardrobe, matching the architect chain 3 in + 1 ft 3 in + 10 ft 9 in = 12 ft 3 in. Store depth stays 2 ft; its back face is placed exactly on the east wall face (x 26.25 ft). One line in interior.js changes.",
+  "risks_and_dependencies": [
+    "The 3 in strip between the north wall and the store is drawn but not described; modelled as an open gap (RFI-011 proposed).",
+    "Wardrobe back face already sits 0.76 mm into the east wall in the baseline (trace rounding); left untouched.",
+    "R-008 (unpromoted draft) contains the same faulty store line; fix must be applied there if it is promoted.",
+    "Baseline stills showing the Bedroom 2 east wall are stale until regenerated at promotion."
+  ],
+  "rfis_created_or_updated": [
+    "RFI-011 proposed only (3 in strip north of the Bedroom 2 east-wall store); not added to rfis.json pending user decision."
+  ],
+  "draft_artifacts": [
+    "studio-control/drafts/R-010/"
+  ],
+  "approved_baseline_artifacts_to_change": [
+    "output/jaipur-home/model/interior.js",
+    "output/jaipur-home/model/jaipur-first-floor.glb",
+    "output/jaipur-home/walkthrough.html",
+    "output/jaipur-home/renders/bedroom-2.png",
+    "output/jaipur-home/renders/final-bedroom-2.png",
+    "output/jaipur-home/renders/overview.png",
+    "output/jaipur-home/renders/measured-overhead.png",
+    "output/jaipur-home/renders/final-measured-overhead.png",
+    "output/jaipur-home/CHANGELOG.md",
+    "docs/PROJECT_HANDOFF.md",
+    "studio-control/artifact-manifest.json",
+    "studio-control/decision-log.json"
+  ],
+  "validation_plan": [
+    "Reproduce the defect in the baseline (collider and shutter intersection).",
+    "Headless-browser comparison of baseline and draft: store/wardrobe abut, no shutter intersection, store inside the architect room envelope, nothing else changed, no console errors.",
+    "Before/after views from the walkthrough's own camera.",
+    "Independent QA before promotion."
+  ],
+  "validation_done": [
+    "verification/verify-results.json: 20 of 20 checks pass (author run)"
+  ],
+  "scope_approval": {
+    "status": "approved",
+    "approved_by": "user",
+    "approved_at": "2026-10-15",
+    "note": "User instruction in chat, 15 Oct 2026: no draft versions, push all changes to the baseline model."
+  },
+  "qa": {
+    "status": "author-checks-only-independent-qa-not-performed",
+    "reviewer": null,
+    "results": [
+      "studio-control/drafts/R-010/verification/verify-results.json: 20 of 20 author checks pass",
+      "Regenerated stills reproduce the previous baseline stills pixel for pixel when rendered from the old model (fidelity check), so the new stills differ only by the store change",
+      "GLB re-export compared with baseline GLB: same node/mesh/material counts; only the store group transform and 4 store meshes differ"
+    ]
+  },
+  "promotion_approval": {
+    "status": "approved",
+    "approved_by": "user",
+    "approved_at": "2026-10-15",
+    "note": "Same instruction. Independent QA was not run before promotion; the user directed direct promotion."
+  },
+  "promotion": {
+    "status": "promoted",
+    "promoted_at": "2026-10-15",
+    "changed_artifacts": [
+      "output/jaipur-home/model/interior.js",
+      "output/jaipur-home/model/jaipur-first-floor.glb",
+      "output/jaipur-home/walkthrough.html",
+      "output/jaipur-home/renders/bedroom-2.png",
+      "output/jaipur-home/renders/final-bedroom-2.png",
+      "output/jaipur-home/renders/overview.png",
+      "output/jaipur-home/renders/measured-overhead.png",
+      "output/jaipur-home/renders/final-measured-overhead.png",
+      "output/jaipur-home/CHANGELOG.md",
+      "output/jaipur-home/README.md",
+      "docs/PROJECT_HANDOFF.md",
+      "docs/LATEST_COMPLETE_HOUSE_DESIGN.json",
+      "studio-control/decision-log.json",
+      "studio-control/project-state.json",
+      "studio-control/artifact-manifest.json"
+    ]
+  },
+  "open_next_actions": [
+    "Decide whether to raise RFI-011.",
+    "Apply the same store line to drafts/R-008/model/interior.js (line 295) if R-008 is ever promoted.",
+    "Optional: independent QA of the promoted change."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "mode": "Built-in image_gen",
+  "purpose": "Kitchen image correction only; 3D model unchanged",
+  "cornerReference": "https://www.hettich.com/fileadmin/Media_Center/Catalogue/Fittings_Applications_2019_18483_HNZ_en.pdf",
+  "designNotes": [
+    "Broad blank band beside dish rack replaced by usable rack width and normal thin carcass sides.",
+    "Full-width drawer fronts with consistent vertical divisions.",
+    "Corner-adjacent drawer stack replaced by hinged blind-corner access door and two-tier swing-out storage.",
+    "Open shutters and access doors demonstrate internal appliances and storage; matching fronts conceal these when closed."
+  ],
+  "limitation": "Visual concept. Final cabinet widths, door swing clearances and hardware fit require dimensioned vendor drawings and site measurements."
+}

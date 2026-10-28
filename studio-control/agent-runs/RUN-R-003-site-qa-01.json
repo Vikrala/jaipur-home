@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN-R-003-site-qa-01",
+  "revision_id": "R-003",
+  "agent_id": "R-003-site-qa-01",
+  "role": "site-qa-coordinator",
+  "launch_status": "completed",
+  "model": "gpt-6-sol",
+  "reasoning_effort": "medium",
+  "model_tier": "standard",
+  "consent_id": null,
+  "consent_status": "not-required",
+  "selection_rationale": "Deterministic router selected the available standard-tier site-QA model; launch allowed without consent.",
+  "runtime_available_models": ["gpt-6-luna", "gpt-6-sol", "gpt-6.1-sol", "gpt-6-astra"],
+  "task": "Independent visual QA of R-003 only; no baseline edits.",
+  "artifact_scope": ["studio-control/drafts/R-003/tv-unit-puja-clear-zone-concept.png"],
+  "write_scope": "studio-control/drafts/R-003",
+  "output_contract": "Structured findings, cited evidence, risks, RFIs, and no baseline edits.",
+  "contribution": "Independently compared R-003 with R-002, the current handoff and model QA. Confirmed that the puja-side tall cabinet and its console segment are removed and ceiling-high storage is shown. Flagged that standing width, puja door/tray operation, overhead anchorage/depth, TV fixing and ventilation require measured coordination.",
+  "sources_actually_used": [
+    "studio-control/project-state.json",
+    "studio-control/revisions/R-003.json",
+    "docs/PROJECT_HANDOFF.md",
+    "output/jaipur-home/model/quality-checks.json",
+    "studio-control/drafts/R-002/tv-unit-layout-specific-concept.png",
+    "studio-control/drafts/R-003/tv-unit-puja-clear-zone-concept.png"
+  ],
+  "output_artifacts": ["studio-control/drafts/R-003/qa-tv-unit-puja-clear-zone-concept.json"],
+  "started_at": null,
+  "completed_at": "2026-10-08T03:24:25+05:30",
+  "failure_reason": null
+}

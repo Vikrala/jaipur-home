@@ -1,0 +1,75 @@
+{
+ "schema_version": "1.0",
+ "project_id": "jaipur-home-first-floor",
+ "project_name": "Jaipur Home — First Floor Interior Design Delivery",
+ "status": "approved-baseline-active",
+ "approved_baseline": {
+  "revision_id": "BASELINE-2026-10-27",
+  "root": "output/jaipur-home",
+  "authority": "Current maintained model; later approved changes must update this folder rather than create a numbered baseline.",
+  "note": "Single model. Includes R-006, R-007, R-010, R-011 and (27 Oct 2026) R-008 realism + R-012 master bathroom. All drafts and numbered copies retired. R-013, R-014 and R-015 (open master shower, 1 mm floor joints) applied directly. R-016 QA fixes applied. R-017 (28 Oct 2026) smoother movement, render quality unchanged. R-018 bathroom wall tile to ceiling."
+ },
+ "boot_pack": {
+  "persona": "AGENTS.md",
+  "design_handoff": "docs/PROJECT_HANDOFF.md",
+  "design_state": "docs/LATEST_COMPLETE_HOUSE_DESIGN.json",
+  "artifact_manifest": "studio-control/artifact-manifest.json",
+  "decision_log": "studio-control/decision-log.json",
+  "rfi_register": "studio-control/rfis.json",
+  "model_policy": "studio-control/model-policy.json",
+  "model_consents": "studio-control/model-consents.json"
+ },
+ "source_hierarchy": [
+  "Architect layout PDF and parsed geometry",
+  "Approved baseline README, CHANGELOG, handoff and quality records",
+  "Explicitly approved room packages and elevation references",
+  "Latest compatible user decision",
+  "Historical chats, inspiration and older versions as evidence only"
+ ],
+ "protected_decisions": [
+  "Constructed walls, columns, rooms, openings, stair, lift well and ventilation shafts are not changed without explicit user request and professional sign-off.",
+  "The 10 ft model ceiling remains the current baseline assumption.",
+  "Approved kitchen cabinet/elevation logic remains protected.",
+  "Kitchen dining set/pendants and separate living-to-kitchen handwash remain removed.",
+  "Living hall retains 75 in TV, compact perpendicular puja, continuous L-sofa principle and current TV/W5 relationship.",
+  "Bedroom 2 privacy screen remains rejected; shifted bed group is the current baseline."
+ ],
+ "session_policy": {
+  "default_retrieval": "Use the boot pack and request-relevant artifacts only.",
+  "historical_chat_retrieval": "Use only when state and approved artifacts do not answer the request.",
+  "force_baseline_reread_when": [
+   "A governed artifact hash differs from artifact-manifest.json",
+   "The request changes a protected decision or approved baseline",
+   "The request is safety-critical or execution-sensitive",
+   "A source conflict is detected",
+   "A final promotion or independent QA is requested"
+  ]
+ },
+ "model_routing": {
+  "router": "studio-control/scripts/model_router.py",
+  "policy": "studio-control/model-policy.json",
+  "consent_register": "studio-control/model-consents.json",
+  "agent_run_directory": "studio-control/agent-runs",
+  "rule": "Every specialist launch must resolve to an explicit model and reasoning effort; inherited/default model launches are blocked.",
+  "premium_rule": "Premium tier or high-and-above reasoning requires a separate approved, single-use consent record for each specialist launch.",
+  "runtime_availability_rule": "An unavailable or unknown selected model blocks the launch; there is no silent fallback."
+ },
+ "active_revision": null,
+ "open_rfis": [
+  "RFI-001",
+  "RFI-002",
+  "RFI-003",
+  "RFI-004",
+  "RFI-005",
+  "RFI-006",
+  "RFI-007",
+  "RFI-008",
+  "RFI-009",
+  "RFI-011",
+  "RFI-012",
+  "RFI-013"
+ ],
+ "unresolved_conflicts": [],
+ "updated_at": "2026-10-28",
+ "update_rule": "Only update after an approved baseline promotion or a user-approved control-state correction."
+}

@@ -1,0 +1,12 @@
+{
+  "mode": "Built-in image_gen",
+  "purpose": "Night-time kitchen image preview only; 3D model unchanged",
+  "requestedChanges": [
+    "Dark and light drawer tiers use matching heights.",
+    "Dark drawers split into two columns, centre division aligned with window mullion.",
+    "Narrower RO cupboard with closed shutter and cut-out for direct built-in tap access.",
+    "Drying-rack outside width intended to match overall double-bowl sink width and be centred over it.",
+    "Night lighting using recessed downlights, continuous 3000K under-cabinet strips and hood task lights; daylight removed."
+  ],
+  "limitation": "Image shows design intent; exact drawer dimensions, rack/sink width and lighting levels require measured model/vendor drawings. No photometric calculation or exact-dimensional verification claimed."
+}

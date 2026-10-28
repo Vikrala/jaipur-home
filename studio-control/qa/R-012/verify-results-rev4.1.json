@@ -1,0 +1,184 @@
+{
+ "revision_id": "R-012",
+ "rev": "4.1",
+ "date": "2026-10-27",
+ "runner": "harness.html in browser (srcdoc + injected error hook)",
+ "run": "2026-10-27T13:24:49.593Z",
+ "summary": "33/33 pass",
+ "notes": [
+  "Run in the app's browser pane against a local python http.server; Node/Playwright are not installed on this Mac, so verify_r012.cjs was not run.",
+  "First rev 4 run: 31/32. The browser-error check FAILED because the probe error was thrown in the parent page's realm, so the injected hook never saw it. Fixed in the harness (probe now runs inside the walkthrough frame and must capture both a thrown error and a console.error); re-run 32/32. The model was not changed between the two runs.",
+  "Thresholds stated plainly: shower depth uses ≥ 890 mm because 899 mm is modelled against a 900 mm nominal; the narrowest dry route is 676 mm at the towel bar, which passes a 650 mm single-person passage but NOT a 900 mm walker width (trade-off recorded in the packet).",
+  "Architect floor-drain point (x 1.27, z 26.37 ft) is read from a 5,000 px raster of architect-layout.pdf at about 67.9 px/ft (about ±30 mm); site must confirm the actual sleeve.",
+  "Rev 4.1 (after independent QA site-qa-03): fixed the unnamed 'Master shower' feature record (my rev 4 edit had replaced the literal with an undefined variable), towel-rail clearance from glass 18 → 42 mm, stale 150 mm text in R-012.json; added checks for the shower feature record, rail-to-glass clearance and WC clearance to the glass FACE (408 mm). Re-run at 13:24:49Z, about 10 minutes after the last harness edit (13:14Z), so it used the fixed harness. Checks for PRV, hot-water, downlight and blocking still test recorded notes, not geometry; the outlet check compares to the architect point the author entered (independently re-measured by site-qa-03 at z 26.42)."
+ ],
+ "results": [
+  {
+   "name": "No geometry change outside the master bathroom / washing niche envelope",
+   "status": "pass",
+   "evidence": "1788 outside meshes compared; 0 differ"
+  },
+  {
+   "name": "Two glass returns enclose the shower (vanity side and WC side)",
+   "status": "pass",
+   "evidence": "Master shower glass return (WC side) x 0.934-3.834 z 26.947-26.993 | Master shower glass return (vanity side) x 0.934-3.834 z 22.947-22.993"
+  },
+  {
+   "name": "Shower clear depth ≥ 890 mm (nominal 900) and ≥ 1,200 mm between returns",
+   "status": "pass",
+   "evidence": "899 mm deep (tile face to front line) × 1219 mm between glass centres"
+  },
+  {
+   "name": "Dry route from door to WC/washer is at least 700 mm wall-to-glass and never crosses the shower floor",
+   "status": "pass",
+   "evidence": "front of shower 3.834 ft to east wall face 6.277 ft = 745 mm"
+  },
+  {
+   "name": "Narrowest dry route (at towel bar/hooks) ≥ 650 mm; 900 mm walker width is NOT met (recorded trade-off)",
+   "status": "pass",
+   "evidence": "narrowest 676 mm at x 6.053 (9 wall fittings between 760 and 1,980 mm high considered)"
+  },
+  {
+   "name": "WC centreline to nearest side obstruction ≥ 400 mm (to glass FACE)",
+   "status": "pass",
+   "evidence": "to glass face 408 mm (centre 411 mm), to W9 wall 514 mm"
+  },
+  {
+   "name": "Shower feature record is named and carries the rev 4 drain note",
+   "status": "pass",
+   "evidence": "Master shower: Existing mixer/drain zone retained; 900 × 1,220 mm enclosure with two fixed arched fluted …"
+  },
+  {
+   "name": "Vanity clear of the vanity-side return (to glass face)",
+   "status": "pass",
+   "evidence": "vanity edge z 22.828, glass face z 22.957 (40 mm gap)"
+  },
+  {
+   "name": "Mirror stays within the vanity width",
+   "status": "pass",
+   "evidence": "mirror z 21.197-22.818, vanity 21.188-22.828"
+  },
+  {
+   "name": "Shower mixer fixed to the tiled wall (≤ 30 mm proud of tile to its back)",
+   "status": "pass",
+   "evidence": "mixer back x 0.964, tile face 0.884 → 24 mm"
+  },
+  {
+   "name": "Rev 4: linear drain runs along the back wall under the mixer, ≥ 600 mm behind the open front",
+   "status": "pass",
+   "evidence": "drain x 0.914-1.134 (tile face 0.884, front 3.834 → 823 mm behind the front); spans z 23.12-26.82, mixer z 24.71-25.23"
+  },
+  {
+   "name": "Drain channel passes over the architect floor-drain point; outlet within 100 mm of it",
+   "status": "pass",
+   "evidence": "architect FD (plan raster) x 1.27 z 26.37; channel z 23.12-26.82; outlet x 1.024 z 26.37 → 75 mm"
+  },
+  {
+   "name": "Old entry drain removed",
+   "status": "pass",
+   "evidence": "0 found"
+  },
+  {
+   "name": "East-wall towel bar outside the wet zone (opposite the opening; 2nd towel point)",
+   "status": "pass",
+   "evidence": "bar x 6.053-6.097 z 24.25-25.8; 676 mm beyond the front line"
+  },
+  {
+   "name": "Rev 4: a towel rail within 450 mm of the shower opening corner, on the dry side, clear of vanity and door landing",
+   "status": "pass",
+   "evidence": "rail clear of glass 42 mm (≥ 40 for a folded towel); rail x 2.65-3.6 y 1091-1104 mm z 22.776-22.819; 83 mm from the opening corner (3.834, 22.957); vanity ends x 2.402, D3 opening starts x 3.6225"
+  },
+  {
+   "name": "Rev 4: grab-bar and seat blocking recorded (shower mixer, fold-down seat, WC)",
+   "status": "pass",
+   "evidence": "Grab-bar blocking: vertical, beside the shower mixer | Fold-down seat blocking: shower back wall, south end | Fold-up grab-bar blocking beside the WC (back wall)"
+  },
+  {
+   "name": "Marble top finished level 610 mm",
+   "status": "pass",
+   "evidence": "610 mm"
+  },
+  {
+   "name": "Inlet valve and socket above the machine top and within 300 mm of its front face",
+   "status": "pass",
+   "evidence": "machine top 4.89 ft; valve y 5.2 z 31.533; socket y 5.45 z 31.533; front face z 31.308"
+  },
+  {
+   "name": "Water and electrical points on opposite walls (≥ 600 mm apart)",
+   "status": "pass",
+   "evidence": "747 mm apart"
+  },
+  {
+   "name": "Drain standpipe is behind the platform, not in front of the door",
+   "status": "pass",
+   "evidence": "standpipe z 33.703, platform back 33.487"
+  },
+  {
+   "name": "Overhead cupboard leaves ≥ 450 mm above the machine for services and access",
+   "status": "pass",
+   "evidence": "machine top 4.89 ft, shutter bottom 6.775 ft → 575 mm"
+  },
+  {
+   "name": "25 L vertical geyser is in the bathroom, vertical and outside the shower",
+   "status": "pass",
+   "evidence": "body x 1.044-2.356 y 7.4-9.53 z 21.067-22.38; shower starts z 22.97"
+  },
+  {
+   "name": "Geyser clear of the D3 opening and swing, with ≥ 2,100 mm headroom below it",
+   "status": "pass",
+   "evidence": "geyser east edge x 2.356 vs D3 opening 3.6225; underside 2256 mm"
+  },
+  {
+   "name": "Geyser top leaves ≥ 100 mm below the 10 ft ceiling and clears the mirror",
+   "status": "pass",
+   "evidence": "top 2905 mm, ceiling 3048 mm; mirror top 2033 mm"
+  },
+  {
+   "name": "Old horizontal geyser over the door removed",
+   "status": "pass",
+   "evidence": "0 found"
+  },
+  {
+   "name": "Linear drain and its slots stay inside the shower, off every walking route",
+   "status": "pass",
+   "evidence": "drain x 0.914-1.134 z 23.12-26.82; shower front x 3.834, returns z 22.97-26.97; routes hit: none"
+  },
+  {
+   "name": "Drain grate, slots and black border are flush with the floor (≤ 1 mm proud)",
+   "status": "pass",
+   "evidence": "highest top 0.30 mm above the 2 mm floor finish (41 parts: border, drain body, slots)"
+  },
+  {
+   "name": "Door D3 swing (radius ≈ leaf width) clears the shower front glass",
+   "status": "pass",
+   "evidence": "hinge (6.30, 21.01) to return front corner = 3.152 ft vs leaf ~2.6 ft"
+  },
+  {
+   "name": "WC upper cupboard: bottom ≥ 2,000 mm, depth ≤ 200 mm, ≥ 100 mm below ceiling, beyond the WC-side return",
+   "status": "pass",
+   "evidence": "bottom 2035 mm, top 2751 mm, depth 168 mm, z 27.49-29.15 (return 26.97)"
+  },
+  {
+   "name": "Downlight inside the shower is flagged IP65 / RCD",
+   "status": "pass",
+   "evidence": "downlight at x 2.227 z 25.008 inside the enclosure; note: This downlight is inside the shower enclosure: IP65 wet-zone fitting on an RCD-protected circuit (RFI-005)"
+  },
+  {
+   "name": "Geyser PRV discharge and hot-water route are specified (not left mid-wall)",
+   "status": "pass",
+   "evidence": "PRV: PRV line enters the wall chase and drops to a tundish discharging into the vanity basin waste (no open discharge on the floor); plumber to detail | HW: Insulated concealed CPVC hot line, about 3 m along the north and west walls to the shower mixer; expect a short wait for hot water"
+  },
+  {
+   "name": "No browser errors (captured by injected error/console hook, verified by a probe)",
+   "status": "pass",
+   "evidence": "hook probe captured: true; draft errors []; baseline errors []"
+  },
+  {
+   "name": "Draft GLB exports (export only, not a geometry test)",
+   "status": "pass",
+   "evidence": "GLB 7912296 bytes"
+  }
+ ],
+ "model_sha256": "fdf19a5ce9a8eab6880ab14f8d211772c4daf21df91a72a37358ef6eabcaa4b9",
+ "harness_sha256": "b4509c9d599f0cc4fda0bfe93380cb6a168f924a5f7617d97d6a97cfd2d85713"
+}

@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "R-012",
+  "authoring_specialist": "Design Director / R-012 draft author",
+  "independent_qa_specialist": "R-012-site-qa-01",
+  "review_scope": [
+    "Static comparison of draft interior.js and standalone walkthrough against output/jaipur-home maintained baseline",
+    "Architect-traced master-bathroom polygon, fixture positions and washing-niche geometry",
+    "610 mm washer-platform height, support concept, access and service routes",
+    "Waterproofing, wet-area electrical and professional-signoff holds"
+  ],
+  "checks": [
+    {
+      "name": "Source hierarchy respected",
+      "status": "pass-static",
+      "evidence": "R-012 revision and decision packet treat the user image as finish inspiration. The draft retains the architect-traced bath-master polygon (main room 5 ft 7.5 in × 9 ft plus niche) and uses current output/jaipur-home as the baseline. User-requested scope is recorded as master bathroom and raised washer only."
+    },
+    {
+      "name": "Architect layout/geometry preserved or authorised",
+      "status": "pass-static-with-site-hold",
+      "evidence": "Draft model/plan-data.js is byte-identical to baseline, as is walkthrough.template.html. Interior.js keeps master vanity at px(218),pz(427), WC at px(225),pz(528), shower at px(218),pz(474.4), and washer at px(273),pz(592.2). No constructed wall, door, window, shaft or fixture centre change appears in the code diff. Actual clearances remain unmeasured at site."
+    },
+    {
+      "name": "Protected decisions checked",
+      "status": "pass-static",
+      "evidence": "The interior.js diff is confined to new master-bath materials/geometry, washer elevation/services and bath/washing viewpoint text, apart from backward-compatible optional tap/basin finish arguments. Common bathroom, kitchen and other room call sites remain unchanged; plan-data and template files are identical."
+    },
+    {
+      "name": "Safety and professional-signoff boundaries stated",
+      "status": "pass-with-execution-holds",
+      "evidence": "DECISION-PACKET.md and draft RFI-013 describe the slab as a finish over a support concept and require site/structural support detail, appliance cut sheet, restraint, waterproofing, drainage and electrical isolation. RFI-004, RFI-005 and RFI-006 remain open. No construction certification is claimed."
+    },
+    {
+      "name": "Draft/approved-baseline separation preserved",
+      "status": "pass",
+      "evidence": "Reviewed files are under studio-control/drafts/R-012. Baseline interior.js SHA-256 remains c93377869d7902615063e28422a098c091f3c3a0ab2e2931d4f81967e53570c7 and baseline GLB remains 6035e0d0e61ca1748847d02dac18ff7728bc14f3e967ae1ac7e1d717ece95575. No baseline file was edited by this QA reviewer."
+    },
+    {
+      "name": "Artifact completeness and traceability",
+      "status": "partial",
+      "evidence": "The draft contains interior.js, an 880538-character standalone walkthrough.html with interior.js embedded exactly, decision packet, revision record and proposed RFI-013. No draft GLB, rendered bath/washing views or browser walkthrough verification are available. Independent visual inspection is still required before QA pass or promotion."
+    },
+    {
+      "name": "Washer platform height and support realism",
+      "status": "pass-concept-with-execution-hold",
+      "evidence": "Platform marble top upper face is y=1.945+0.11/2=2.000 ft, 609.6 mm above model floor; anti-vibration mat and washer sit immediately above. Two side cheeks and a front cross member are drawn below. Material, slab span, anchorage, vibration restraint, floor load and replacement access are not designed and are correctly held by RFI-013."
+    },
+    {
+      "name": "Washer services and maintenance clearance",
+      "status": "unresolved",
+      "evidence": "Architect niche east wall is x=6.375 ft. Model washer spans to about x=6.056 ft, leaving only about 97 mm. Tap centre at px(291)=6.165 ft is about 34 mm beyond the washer side; the outlet centre at px(293)=6.290 ft is about 26 mm from the wall. Drawn centres do not prove hand access, hose bend radius, splash separation or isolation. The overhead cabinet starts at y=5.25 ft while washer top is about y=4.89 ft, giving roughly 110 mm nominal vertical gap before manufacturer tolerances. Site measure and manufacturer cut sheet are required."
+    },
+    {
+      "name": "Master bath wet-area layout and finishes",
+      "status": "unresolved-visual-and-site",
+      "evidence": "Static code shows one arched fluted screen in the original shower zone, green tile on the west shower wall, pale wall tile, floating vanity and a textured octagon-pattern floor. The screen, door swing, shower entry width, drain fall, anti-slip specification, glass fixing and waterproofing continuity cannot be verified from code alone. Site dimensions and a rendered review are needed."
+    },
+    {
+      "name": "Rev 2 usability and clearance checks",
+      "status": "pass-author-verified",
+      "evidence": "Shower 899 × 1219 mm between two returns; dry route 745 mm; WC centreline 411 mm to glass and 514 mm to W9 wall; mixer 24 mm proud of tile; valve and socket above machine top (4.89 ft), 747 mm apart; cupboard 575 mm above machine; standpipe behind platform; marble top 610 mm; no geometry change outside the master-bath envelope (1,788 meshes); GLB exports (8.16 MB)."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "hold-before-promotion",
+      "finding": "Visual QA is incomplete. Local browser/UI review was unavailable to this specialist; static embedding checks are not a substitute for opening the bath, reverse and washing walkthrough views or inspecting a draft GLB/render."
+    },
+    {
+      "severity": "execution-hold",
+      "finding": "The 610 mm support and machine-service locations are visual concepts. Obtain the appliance cut sheet, measured niche, support engineering and accessible isolation/drainage detail before fabrication."
+    },
+    {
+      "severity": "resolved-control-record",
+      "finding": "The proposed washing RFI originally collided with existing global RFI-012. The Design Director corrected the draft to RFI-013 during this review; the global register remains unchanged."
+    }
+  ],
+  "result": "rev 3 author-verified (user decisions applied; 23 automated checks; renders); independent QA and RFI holds remain before promotion",
+  "open_rfis": [
+    "RFI-013 (draft): final washer dimensions, loaded support, restraint, service and maintenance access",
+    "RFI-004: waterproofing system, floor falls, drain and penetrations",
+    "RFI-005: wet-area circuit, earthing, protection and isolators",
+    "RFI-006: W9 shaft-facing opening safety and weather protection",
+    "Site check: measure shower entry, door swing and glass fixing against constructed bath"
+  ],
+  "rev2_author_review": {
+    "date": "2026-10-25",
+    "reviewer": "Claude (draft author; not independent)",
+    "method": "Rendered rev 1 and rev 2 in headless Chromium at the same camera positions (evidence/before-*, evidence/after-*), probed mesh bounds, and ran verification/verify_r012.cjs against a baseline rebuilt from output/jaipur-home interior.js (SHA-256 c93377869d79... reconstructed exactly by reverse-applying the rev 1 diff).",
+    "rev1_defects_found": [
+      "Single freestanding screen left both shower ends open; route to WC/washer crossed the wet floor",
+      "Shower mixer set modelled ~220 mm off the tile",
+      "Washer socket ~120 mm above a gooseneck tap",
+      "Services unreachable in ~90 mm side gap; cupboard ~110 mm above machine",
+      "Drain hose across the machine door",
+      "No towel rail/hooks; no hot-water source; WC and niche walls untiled; mirror wider than vanity"
+    ],
+    "rev2_results": "18/18 automated checks pass; see verification/verify-results.json",
+    "still_required": "Independent QA by a separate reviewer before promotion; site measurements and RFI-004/005/006/013 answers before construction"
+  },
+  "rev3_author_review": {
+    "date": "2026-10-27",
+    "reviewer": "Claude (draft author; not independent)",
+    "changes": [
+      "Horizontal geyser over D3 removed; 25 L vertical geyser placeholder high in the north-west corner of the door wall above the vanity, with an IP-rated high-level outlet",
+      "Linear drain unchanged in position; route checks added"
+    ],
+    "method": "harness.html (shared r012-checks.js) in the Claude desktop browser pane, comparing against output/jaipur-home/walkthrough.html; rendered bath-master-reverse and bath-master-entry views",
+    "results": "23/23 pass; see verification/verify-results.json",
+    "still_required": "Independent QA by a separate reviewer before promotion; site measurements and RFI-004/005/006/013 answers before construction"
+  }
+}

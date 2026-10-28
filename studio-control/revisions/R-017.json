@@ -1,0 +1,22 @@
+{
+ "schema_version": "1.0",
+ "revision_id": "R-017",
+ "status": "promoted",
+ "date": "2026-10-28",
+ "request": "the movement in the app is very jittery, is there anything that can be done to make it smooth, I don't want the detailing to go down then it's currently",
+ "work_mode": "direct baseline edit on user instruction (viewer performance only, no design change)",
+ "source": "browser profiling of walkthrough.html on Apple M1 (ANGLE Metal)",
+ "changes": [
+  "renderer.shadowMap.autoUpdate=false: shadow maps (sun 4096, two room point lights 2048 cube) are redrawn only by render() after a light, door or fitting change; camera-only frames use draw()",
+  "pointer drag, wheel and walking no longer render inside each input event; the animation loop draws at most once per frame",
+  "look, orbit and walking speed ease toward their targets (look/orbit k=1-exp(-16dt), walk velocity k=1-exp(-9dt)); top speed unchanged at 3.5 ft/s",
+  "JAIPUR.draw exported for camera-only frames"
+ ],
+ "unchanged": [
+  "textures, resolution and pixel ratio cap 1.6, MSAA, GTAO soft shadows, shadow map sizes, lights, geometry",
+  "GLB (geometry unchanged, not re-exported)",
+  "stills"
+ ],
+ "qa": "Cached vs per-frame shadows rendered pixel-identical (0 of 7,346,560 channels differ, master bedroom). Camera-only frame cost 5-8x lower across living, master, kitchen and master bath (e.g. living 203 -> 31 ms, kitchen 258 -> 27 ms in the browser pane, timings noisy). Real drag turned the view with easing, keyboard walk moved, no JS errors.",
+ "specialists_activated": []
+}

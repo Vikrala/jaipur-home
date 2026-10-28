@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "policy_name": "Jaipur Home explicit specialist model routing",
+  "no_implicit_model_inheritance": true,
+  "default_model": null,
+  "runtime_availability_required": true,
+  "no_silent_fallback": true,
+  "premium_consent": {
+    "required_for_tiers": [
+      "premium"
+    ],
+    "required_for_reasoning_efforts": [
+      "high",
+      "xhigh",
+      "max",
+      "ultra"
+    ],
+    "scope": "one approved consent per exact specialist launch; retries, model changes, reasoning escalations and other specialists require new consent",
+    "consent_ttl_minutes": 30
+  },
+  "model_catalog": {
+    "gpt-6-luna": {
+      "tier": "standard",
+      "allowed_reasoning_efforts": [
+        "low",
+        "medium"
+      ],
+      "intended_use": "bounded state, RFI and document tasks"
+    },
+    "gpt-6-sol": {
+      "tier": "standard",
+      "allowed_reasoning_efforts": [
+        "low",
+        "medium"
+      ],
+      "intended_use": "standard interior, layout, technical-document and site-QA tasks"
+    },
+    "gpt-6.1-sol": {
+      "tier": "premium",
+      "allowed_reasoning_efforts": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "intended_use": "complex room, wet-area, visual and coordination tasks"
+    },
+    "gpt-6-astra": {
+      "tier": "premium",
+      "allowed_reasoning_efforts": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max",
+        "ultra"
+      ],
+      "intended_use": "cross-discipline conflict, complex visual/model and high-risk multi-room review"
+    },
+    "claude-sonnet-5-5": {
+      "tier": "standard",
+      "allowed_reasoning_efforts": [
+        "low",
+        "medium"
+      ],
+      "intended_use": "standard interior, layout, technical-document and site-QA tasks when running in Claude Code (user-approved 27 Oct 2026)"
+    }
+  },
+  "routing_rules": [
+    {
+      "id": "cross-discipline-high-risk",
+      "match": {
+        "roles": [
+          "design-director-review",
+          "cross-discipline-reviewer"
+        ],
+        "task_classes": [
+          "cross-discipline-conflict",
+          "high-risk-multi-room",
+          "complex-visual-investigation"
+        ],
+        "risk_levels": [
+          "high"
+        ]
+      },
+      "selection": {
+        "model": "gpt-6-astra",
+        "reasoning_effort": "medium",
+        "rationale": "Requires deep cross-discipline reconciliation; this is premium and consent-gated."
+      }
+    },
+    {
+      "id": "complex-coordination",
+      "match": {
+        "roles": [
+          "layout-reviewer",
+          "kitchen-bath-utility-specialist",
+          "visualisation-specialist",
+          "lighting-services-coordinator"
+        ],
+        "task_classes": [
+          "complex-layout",
+          "kitchen-bath-utility",
+          "high-impact-visual-qa",
+          "services-coordination"
+        ],
+        "risk_levels": [
+          "medium",
+          "high"
+        ]
+      },
+      "selection": {
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "medium",
+        "rationale": "Complex coordination requires premium review; this is consent-gated."
+      }
+    },
+    {
+      "id": "state-and-rfi",
+      "match": {
+        "roles": [
+          "project-state-steward"
+        ],
+        "task_classes": [
+          "state-management",
+          "artifact-manifest",
+          "rfi-formatting",
+          "routine-document-check"
+        ],
+        "risk_levels": [
+          "low",
+          "medium"
+        ]
+      },
+      "selection": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "medium",
+        "rationale": "Bounded structured-record work."
+      }
+    },
+    {
+      "id": "standard-design-delivery",
+      "match": {
+        "roles": [
+          "layout-reviewer",
+          "interior-ffe-designer",
+          "technical-documentation-specialist",
+          "site-qa-coordinator"
+        ],
+        "task_classes": [
+          "single-room-review",
+          "interior-ffe",
+          "technical-package",
+          "routine-site-qa"
+        ],
+        "risk_levels": [
+          "low",
+          "medium"
+        ]
+      },
+      "selection": {
+        "models": [
+          "gpt-6-sol",
+          "claude-sonnet-5-5"
+        ],
+        "reasoning_effort": "medium",
+        "rationale": "Standard, bounded design-delivery work. Models are an explicit, ordered preference: gpt-6-sol in Codex, claude-sonnet-5-5 in Claude Code; if neither is available the launch is blocked."
+      }
+    }
+  ],
+  "unmatched_request": "block-and-request-model-policy-update",
+  "policy_changes": [
+    {
+      "date": "2026-10-27",
+      "approved_by": "user",
+      "change": "Added claude-sonnet-5-5 (standard tier, low/medium) and made the standard-design-delivery rule an explicit ordered list [gpt-6-sol, claude-sonnet-5-5] so site-QA can run in Claude Code. Premium rules unchanged."
+    }
+  ]
+}

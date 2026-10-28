@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "R-001",
+  "status": "withdrawn-by-user",
+  "request": "Create a visual representation of a concealed-shutter TV unit inspired by the supplied reference, sized to the approved living-room TV-wall constraints.",
+  "work_mode": "draft",
+  "affected_zones": ["Living hall", "TV wall"],
+  "disciplines": ["Interior joinery", "Visualisation"],
+  "sources_used": [
+    "User-supplied TV-unit reference image (conversation attachment)",
+    "output/jaipur-home/architect-layout.pdf",
+    "output/jaipur-home/model/plan-geometry.json",
+    "output/jaipur-home/model/quality-checks.json",
+    "docs/PROJECT_HANDOFF.md"
+  ],
+  "source_versions_checked": [
+    "Architect layout SHA-256 91f749713a05e3654ae89833828eb3533d36b2dc29c4ed0d795c6e06e162c590",
+    "Current approved baseline: BASELINE-2026-09-23"
+  ],
+  "specialists_activated": [],
+  "model_routing": {
+    "planned_launches": [],
+    "runtime_available_models": [],
+    "router_results": [],
+    "actual_model_usage": []
+  },
+  "source_conflicts": [],
+  "proposal": "Draft one front-facing living-room visual: a 75-inch TV in a full-height warm off-white and taupe textured joinery composition, flanked by two shallow 460 mm-wide outward-opening concealed-storage shutters. Preserve the W5 clearance, stair-wall placement, low ventilated console and the existing puja relationship.",
+  "risks_and_dependencies": [
+    "The concept render is not a fabrication drawing and cannot establish final joinery dimensions.",
+    "The current model has only 61 mm clearance from the TV backing to W5; no shutter or end panel may invade the window reveal.",
+    "Final shutter swing, ceiling height, masonry bracket fixing, cable routes and equipment ventilation need site verification."
+  ],
+  "rfis_created_or_updated": [],
+  "draft_artifacts": ["studio-control/drafts/R-001/tv-unit-concept.png"],
+  "approved_baseline_artifacts_to_change": [],
+  "validation_plan": [
+    "Check the generated visual retains the 75-inch TV, clear W5 side, closed service storage and no change to walls, puja or circulation.",
+    "Present as a concept-only draft for user review; no promotion is requested."
+  ],
+  "scope_approval": {"status": "approved", "approved_by": "User", "approved_at": "2026-10-08"},
+  "qa": {
+    "status": "completed-with-site-checks",
+    "reviewer": "R-001-site-qa-01",
+    "results": [
+      "Suitable as a concept-only draft; no baseline changes were made.",
+      "The render broadly communicates the 75-inch TV within the approved 2,810 mm console envelope, but cannot certify dimensions or the 61 mm W5 clearance.",
+      "Confirm shutter swing at W5, actual ventilation/free area, service access, TV bracket fixing and cable routing through a measured shop drawing."
+    ]
+  },
+  "promotion_approval": {"status": "declined", "approved_by": "User", "approved_at": "2026-10-08"},
+  "promotion": {"status": "not-started", "promoted_at": null, "changed_artifacts": []},
+  "open_next_actions": ["Preserve as withdrawn draft history; do not use for design or fabrication."]
+}

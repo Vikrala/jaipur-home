@@ -1,0 +1,19 @@
+{
+  "status": "launch-allowed",
+  "routing_rule": "standard-design-delivery",
+  "agent_id": "BASELINE-site-qa-02",
+  "role": "site-qa-coordinator",
+  "model": "claude-sonnet-5-5",
+  "reasoning_effort": "medium",
+  "model_tier": "standard",
+  "selection_rationale": "Standard, bounded design-delivery work. Models are an explicit, ordered preference: gpt-6-sol in Codex, claude-sonnet-5-5 in Claude Code; if neither is available the launch is blocked.",
+  "task_fingerprint": "69c35626b70fa21cfcbb2ab387cb4a666674feb07ac1666d3b5158f4fd571928",
+  "runtime_available_models": [
+    "claude-fable-5-1",
+    "claude-haiku-5-5",
+    "claude-opus-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "premium": false,
+  "consent_status": "not-required"
+}

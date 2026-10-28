@@ -1,0 +1,21 @@
+{
+ "schema_version": "1.0",
+ "revision_id": "R-016",
+ "status": "promoted",
+ "date": "2026-10-27",
+ "request": "Yes, apply fixes 1–5: move the towel bar and hooks, correct the stale glass and backsplash text, fix the WC collider, update captions and header date. Leave stills as they are.",
+ "work_mode": "direct baseline edit on user instruction",
+ "source": "studio-control/qa/BASELINE-2026-10-27/QA-REPORT.md items 1-5",
+ "changes": [
+  "master towel bar z 27.45-29.00 ft, robe hooks z 29.35/29.75 ft on east wall, south of shower line",
+  "toilet() collider swaps half-extents when rotated 90 degrees (master and common WC)",
+  "viewpoint names/captions; header date 27 Oct 2026; plan-note master bath line",
+  "stale glass/backsplash text corrected in design JSON, RFI-013, CHANGELOG, R-014.json; handoff towel line added",
+  "GLB re-exported"
+ ],
+ "not_done": [
+  "stills not regenerated (user instruction)"
+ ],
+ "qa": "Author browser check: bar at the new position, WC colliders now x 0.94-3.14 / z 27.57-29.07 for master (mesh x 0.93-2.97, z 27.35-29.40), captions and header confirmed, page ready with no new errors.",
+ "specialists_activated": []
+}

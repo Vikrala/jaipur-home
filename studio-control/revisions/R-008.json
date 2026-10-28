@@ -1,0 +1,104 @@
+{
+ "schema_version": "1.0",
+ "revision_id": "R-008",
+ "status": "promoted",
+ "request": "User (13 Oct 2026) shared a Living screenshot of the 3D walkthrough and a generated Bedroom 2 ideation image: the 3D render should have real material texture so it shows how the house will look in reality, not a flat college-project look.",
+ "work_mode": "draft",
+ "affected_zones": [
+  "All first-floor rooms (visual only)"
+ ],
+ "disciplines": [
+  "Visualisation",
+  "Interior/FF&E materials"
+ ],
+ "sources_used": [
+  "User screenshot of Living viewpoint (13 Oct 2026)",
+  "User-supplied generated Bedroom 2 ideation image (13 Oct 2026)",
+  "output/jaipur-home/model/interior.js (materials lines 1-67, lights lines 68-76; three.js r160)",
+  "output/jaipur-home/walkthrough.html"
+ ],
+ "audit_findings": [
+  "Renderer already has ACES tone mapping, PCF soft shadows, one sun, per-room point lights and a neutral PMREM studio environment.",
+  "Textures are 512 px procedural canvases (oak, tile, granite, fabric, bath). Walls, laminates, rug, paint have no texture at all.",
+  "No normal, roughness or bump maps anywhere; every surface has uniform roughness, so nothing catches light.",
+  "No ambient occlusion or bounced light: corners, sofa bases, wardrobe-to-floor joints do not darken.",
+  "Square-edged boxes everywhere; real joinery has 2-3 mm edge radii that catch highlights.",
+  "Living screenshot shows a dark navy rectangle above the passage (looks like scene background showing through a ceiling gap); to be investigated, not assumed."
+ ],
+ "geometry_policy": "No change to walls, columns, openings, room sizes, fixture or furniture dimensions, colliders or positions. Edge radii, if approved, stay inside existing bounding boxes.",
+ "options": {
+  "A": "Realtime PBR upgrade of walkthrough.html: 1024-2048 px procedural albedo/normal/roughness maps in world-scale UVs (veneer grain, vitrified tile with grout, plaster, linen weave, granite), warm window/ceiling light, ambient occlusion pass with a Standard/High toggle, small edge radii. Works offline; GLB gets the same maps.",
+  "B": "Offline path-traced stills (Blender Cycles from the GLB, CPU only, minutes per image) for the key viewpoints. Photographic light bounce and soft shadows, but stills not a walkable model. Needs the same material work as A.",
+  "C": "A then B: materials first, stills second."
+ },
+ "recommendation": "C, starting with A. B reuses A's materials, so A first costs nothing extra.",
+ "limits_to_state_honestly": [
+  "Browser realtime PBR will look like good architectural visualisation, not a photograph. The generated ideation images stay more photographic.",
+  "Materials shown are design intent. Real veneer, tile and fabric selections need physical samples (RFI-001/003 style site checks), not a render."
+ ],
+ "risks_and_dependencies": [
+  "Ambient occlusion and larger textures cost frame rate on weak laptops; Standard mode keeps current performance.",
+  "walkthrough.html grows (currently 868 KB) and GLB grows (currently 7.7 MB) with embedded maps.",
+  "Defect fixes D1-D8 from the fresh-context review are a separate revision to avoid mixing visual and geometric changes."
+ ],
+ "specialists_activated": [],
+ "model_routing": {
+  "planned_launches": [],
+  "runtime_available_models": [],
+  "router_results": [],
+  "actual_model_usage": []
+ },
+ "rfis_created_or_updated": [],
+ "validation_plan": [
+  "Scripted check that fixtures, furniture and colliders are identical to baseline R-007.",
+  "Before/after captures of Living, Master, Bedroom 2, Bedroom 3, Kitchen.",
+  "Frame-time check in headless Chromium for Standard and High.",
+  "Independent QA via router when available; otherwise labelled fresh-context review."
+ ],
+ "scope_approval": {
+  "status": "approved",
+  "approved_by": "User",
+  "approved_at": "2026-10-13",
+  "note": "Route A then B (realtime PBR first, path-traced stills second); 2-3 mm edge radii on joinery/furniture approved within existing bounding boxes."
+ },
+ "qa": {
+  "status": "author-checks-only-independent-qa-not-performed",
+  "reviewer": null,
+  "results": [
+   "verification/verify-geometry.json: 1920 meshes, max bbox delta 0 ft, fixtures/furniture/colliders/viewpoints identical",
+   "GLB export validated (glTF 2.0, 17.9 MB)",
+   "Visual before/after review of 5 rooms x day/evening"
+  ]
+ },
+ "promotion_approval": {
+  "status": "pending"
+ },
+ "draft_artifacts": [
+  "studio-control/drafts/R-008/ (see MANIFEST.md)"
+ ],
+ "approved_baseline_artifacts_to_change": [
+  "output/jaipur-home/model/interior.js",
+  "output/jaipur-home/model/realism.js (new)",
+  "output/jaipur-home/model/textures-baked.js (new)",
+  "output/jaipur-home/model/three-postfx.js (new)",
+  "output/jaipur-home/model/jaipur-first-floor.glb",
+  "output/jaipur-home/walkthrough.template.html",
+  "output/jaipur-home/rebuild_walkthrough.py",
+  "output/jaipur-home/walkthrough.html",
+  "output/jaipur-home/renders/*",
+  "README, CHANGELOG, docs/PROJECT_HANDOFF.md, project-state.json, artifact-manifest.json, decision-log.json (at promotion only)"
+ ],
+ "open_next_actions": [
+  "Measure load time and frame rate on a real GPU laptop",
+  "Path-traced stills (route B) in progress",
+  "Independent QA via model router when available",
+  "Defect fixes D1-D8 remain a separate revision"
+ ],
+ "promotion_record": [
+  {
+   "date": "2026-10-27",
+   "note": "Promoted 27 Oct 2026 on the user's instruction, merged on top of R-010/R-011/R-012; one conflicting hunk (materials block) hand-merged; no independent QA; geometry outside the bathroom identical to the 15 Oct baseline (R-012 harness); draft folder retired",
+   "user_instruction": "merge the complete draft to the main baseline version, and remove all the draft files after updating the baseline. I want to bring the project to a single 3d model level. Keep the RFIs, but remove all the previous draft 3d models and keep only the final merged model."
+  }
+ ]
+}

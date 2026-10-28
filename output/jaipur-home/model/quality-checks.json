@@ -1,0 +1,240 @@
+{
+  "approved_reference": "renders/approved-kitchen-reference.png",
+  "source_elevations": "Kitchen-editable-layout-vivek.pptx slides 2\u20133",
+  "liveGeometryChecks": {
+    "RODirectTapCutout": true,
+    "blindCornerReachUnblocked": true,
+    "equalDrawerTierHeights": true,
+    "fixedCornerShelf": true,
+    "fourBurners": true,
+    "geyserInSinkCupboard": true,
+    "hobUnderHood": true,
+    "hoodClearsWindow": true,
+    "noDiningOrHandwash": true,
+    "noDrawersUnderSink": true,
+    "rackCentredOverSink": true,
+    "rackExactlySinkWidth": true,
+    "singleLiftUpHood": true,
+    "sinkBaysHaveNoOverlap": true,
+    "tenFootCeiling": true,
+    "twoSinkBowls": true,
+    "windowAndExhaustBoundary": true
+  },
+  "architectureRetained": {
+    "walls": true,
+    "columns": true,
+    "rooms": true,
+    "voids": true,
+    "ceiling_ft": true
+  },
+  "finalLivingChecks": {
+    "mainSofaRun_ft": 11,
+    "sofaDepth_ft": 2.83,
+    "returnLength_ft": 5.3775,
+    "returnEndsAtAcWall": true,
+    "continuousCornerBack": true,
+    "plankSeparatedFromBackrest": true,
+    "plankControlsFaceUp": true,
+    "continuousSeatPlanes": 2,
+    "centreTable_in": [42, 20],
+    "rug_ft": [7.15, 10.1],
+    "tvDiagonal_in": 75,
+    "tvConsoleWidth_ft": 9.22,
+    "chargingPoints": 2,
+    "looseCushions": 5,
+    "architectGeometryUnchanged": true
+  },
+  "tvWallRevision": {
+    "windowId": "W5",
+    "panelShiftRight_in": 8.73,
+    "panelWindowClearance_mm": 61,
+    "panelTop_ft": 9.95,
+    "panelClearsWindow": true,
+    "panelReachesCeiling": true,
+    "consoleLeftAlignsWindowCentre": true,
+    "tvDiagonal_in": 75,
+    "architectOpeningUnchanged": true
+  },
+  "currentMainUpdate": {
+    "tvCentreRaised_ft": 1,
+    "tvDiagonal_in": 75,
+    "livingAcCentredOnSolidWall": true,
+    "entryControlsBelowW5": true,
+    "sofaPlankHasIntegratedControls": true,
+    "sofaPlankControlPanels": 2,
+    "changeLogMaintained": true
+  },
+  "practicalPoojaChecks": {
+    "cabinetWidth_ft": 3.5,
+    "cabinetDepth_in": 13.5,
+    "cabinetHeight_ft": 7,
+    "operablePocketFoldLeaves": 4,
+    "closedAndPocketedOpenStates": true,
+    "doorLeavesClearAdjacentCirculationWhenOpen": true,
+    "diyaTrayFasciaWidth_ft": 3.4,
+    "diyaTrayClearWidth_ft": 3.24,
+    "diyaTrayFullExtension_ft": 1,
+    "nonCombustibleTrayBase": true,
+    "removableBrassDripLiner": true,
+    "oilRetainingEdges": true,
+    "positiveStopsSpecified": true,
+    "minimumRunnerRating_kg": 25,
+    "permanentHighAndLowVentilation": true,
+    "externalReachableLightAndServiceControl": true,
+    "dailyAndBulkStorageSeparated": true,
+    "photoFrames": 8,
+    "idols": 7,
+    "trayOpeningAutomaticallyOpensShrine": true,
+    "shrineClosingAutomaticallyRetractsTray": true
+  },
+  "bedroom2Checks": {
+    "bedShiftTowardAlmirah_mm": 538,
+    "sideTableToWardrobeClearance_mm": 0,
+    "sideTableGraniteTopTouchesWardrobe": true,
+    "bedAndBothBedsideFunctionsRemainAligned": true,
+    "hallViewReducedToNarrowBedEdgeWithDoorFullyOpen": true,
+    "privacyScreenRejectedAndRemoved": true,
+    "constructedDoorwayUnchanged": true,
+    "masonryUnchanged": true
+  },
+  "exportChecks": {
+    "validGLB": true,
+    "fourBurners": true,
+    "twoRecessedBowls": true,
+    "singleLiftUpChimney": true,
+    "singleLiftUpRack": true,
+    "fixedCornerShelf": true,
+    "hiddenROWithCutout": true,
+    "hiddenGeyserBelowSink": true,
+    "openHoodIntake": true,
+    "removedDining": true,
+    "removedHandwash": true,
+    "exportedInMetres": true,
+    "accessDoorsExportedClosed": true
+  },
+  "glb": {
+    "bytes": 7587760,
+    "nodes": 2110,
+    "meshes": 1066,
+    "units": "metres"
+  },
+  "visualReviews": [
+    {
+      "pass": 0,
+      "perspective": "Practical puja operation",
+      "views": [
+        "Cabinet closed",
+        "Pocket-fold doors open",
+        "Full-width diya tray extended"
+      ],
+      "reviewed": [
+        "Four-leaf closure alignment",
+        "Door parking within side pockets",
+        "Tray width and pull-out reach",
+        "Accessible side control",
+        "Clear passage beside the unit"
+      ]
+    },
+    {
+      "pass": 0,
+      "perspective": "Current main living-room coordination",
+      "views": [
+        "TV wall",
+        "Living and AC wall",
+        "Sofa service plank"
+      ],
+      "reviewed": [
+        "TV mounting raised 1 ft",
+        "AC attached to solid wall",
+        "Controls mounted below W5",
+        "Both sofa-plank control panels visible and reachable"
+      ]
+    },
+    {
+      "pass": 0,
+      "perspective": "Final living-room layout",
+      "views": [
+        "Living from sofa wall",
+        "Living reverse / TV wall",
+        "Measured overhead"
+      ],
+      "reviewed": [
+        "Sofa and return dimensions",
+        "Table and rug placement",
+        "TV wall and pooja relationship",
+        "Door and stair circulation"
+      ]
+    },
+    {
+      "pass": 1,
+      "perspective": "Architecture and layout",
+      "views": [
+        "Complete kitchen",
+        "Window wall",
+        "RO wall"
+      ],
+      "reviewed": [
+        "Window and exhaust division",
+        "One chimney front",
+        "Base cupboard/drawer sequence",
+        "Sink and rack alignment"
+      ]
+    },
+    {
+      "pass": 2,
+      "perspective": "Interior cabinetry and access",
+      "views": [
+        "Window wall with access doors open",
+        "RO wall with access doors open",
+        "Enlarged corner shelf"
+      ],
+      "reviewed": [
+        "Single lift-up leaves",
+        "Fixed corner shelf with unobstructed sideways access",
+        "RO cutout tap",
+        "Geyser below sink",
+        "Drawer tiers"
+      ]
+    },
+    {
+      "pass": 3,
+      "perspective": "Cook and household ages 60+ and 28\u201335",
+      "views": [
+        "Complete kitchen with doors closed",
+        "Hob and preparation run",
+        "Night lighting"
+      ],
+      "reviewed": [
+        "Four burners under hood",
+        "Both sink bowls",
+        "Clear floor and preparation run",
+        "Base drawer access",
+        "Night/day controls"
+      ]
+    }
+  ],
+  "controlChecks": {
+    "accessDoorsOpenedAndClosed": true,
+    "poojaCabinetOpenedAndClosed": true,
+    "poojaDiyaTrayExtendedAndRetracted": true,
+    "poojaSafeSequenceInterlock": true,
+    "nightDayToggle": true,
+    "GLBDownload": true
+  },
+  "actualSinkRayIntersections": {
+    "nearestY_ft": 2.4525,
+    "nearestSurface": "Sink drain strainer",
+    "counterSurfaceY_ft": 3.03,
+    "result": "Both countertop openings lead to recessed bowls; no solid carcass top blocks them"
+  },
+  "limitations": [
+    "Concept geometry; not a fabrication drawing",
+    "Puja runner rating, heat clearance, ventilation free area and door hardware require vendor shop drawings and site verification before fabrication",
+    "Never close the puja cabinet over a burning or hot diya; keep the doors fully open and tray fully extended until the flame is extinguished and the liner has cooled",
+    "Living-room joinery and furniture require final finished-site measurements before ordering",
+    "Vendor appliance dimensions, hood installation height, physical door-clearance checks and services coordination remain provisional",
+    "Visual lighting, not a measured lux simulation",
+    "Live material/lighting detail differs from the approved photorealistic reference",
+    "Other room interiors retained; additional traced W8 window retained outside accepted camera framing"
+  ]
+}

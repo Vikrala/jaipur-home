@@ -1,0 +1,5 @@
+{
+  "mode": "Built-in image_gen",
+  "prompt": "Precise object edit. Preserve this image exactly except for the base cupboard immediately underneath the double-bowl kitchen sink, between the open corner swing-out cabinet and the open mini-geyser compartment on the right. Replace the three walnut drawer fronts at approximately x60%-73%, y64%-83% with TWO closed full-height walnut hinged cabinet doors of equal width in the SAME overall module width, with a normal narrow central vertical joint and matching slim silver handles. Remove horizontal drawer divisions in ONLY this sink base cupboard. It needs unobstructed interior room for sink bowls, waste pipes and service access. Do not change the double sink, taps, corner access cabinet/open door/two kidney trays/pans, open geyser cupboard, four burner hob, overhead rack/RO/cabinet doors, window, counter, floor, camera, lighting or architecture. Preserve all other drawer stacks and their consistent full widths. No new filler blocks or spacer strips, no text or watermark.",
+  "purpose": "Restore sink-base service cupboard doors in final v4 render"
+}

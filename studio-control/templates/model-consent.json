@@ -1,0 +1,21 @@
+{
+  "consent_id": "MC-XXX-YY",
+  "status": "pending | approved | declined | consumed | expired | revoked",
+  "revision_id": "R-XXX",
+  "agent_id": "R-XXX-role-01",
+  "role": "",
+  "model": "",
+  "reasoning_effort": "",
+  "model_tier": "premium",
+  "task": "",
+  "task_fingerprint": "sha256 of stable launch-relevant request fields",
+  "artifact_scope": [],
+  "why_standard_tier_is_insufficient": "",
+  "expected_deliverable": "",
+  "draft_only_and_no_external_action": true,
+  "approved_by": null,
+  "approved_at": null,
+  "expires_at": null,
+  "consumed_at": null,
+  "decline_reason": null
+}

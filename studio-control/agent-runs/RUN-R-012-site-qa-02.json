@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN-R-012-site-qa-02",
+  "revision_id": "R-012",
+  "agent_id": "R-012-site-qa-02",
+  "role": "site-qa-coordinator",
+  "launch_status": "completed",
+  "model": "claude-sonnet-5-5",
+  "reasoning_effort": "medium",
+  "model_tier": "standard",
+  "consent_id": null,
+  "consent_status": "not-required",
+  "selection_rationale": "First attempt (27 Oct 2026) blocked: router selected gpt-6-sol, unavailable. After the user-approved policy correction D-012, the router re-ran with the same request (task fingerprint 48e816e7a351...) and returned launch-allowed: standard-design-delivery -> claude-sonnet-5-5 / medium / standard.",
+  "runtime_available_models": [
+    "claude-fable-5-1",
+    "claude-haiku-5-5",
+    "claude-opus-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "task": "Independent QA of R-012 rev 3 (see studio-control/drafts/R-012/qa-launch-request-rev3.json).",
+  "artifact_scope": [
+    "studio-control/drafts/R-012"
+  ],
+  "write_scope": "studio-control/drafts/R-012",
+  "output_contract": "Populate the draft QA record for rev 3; no baseline edits.",
+  "contribution": "Independent QA of rev 3: result FAIL (fixable in draft). Verified scope isolation, baseline hashes, geyser and drain-route clearances. Found the ~150 mm drain-shift figure is wrong against the architect plan (drawn drain about 0.7 m away), the linear drain modelled ~12.6 mm proud, undisclosed WC/vanity changes, a stale QA record, weak checks, and no 60+ safety provisions; listed execution holds.",
+  "sources_actually_used": [
+    "studio-control/revisions/R-012.json",
+    "studio-control/drafts/R-012/ (packet, README, RFI-013, qa-record, interior.js, interior.js.diff, verification, evidence, walkthrough.html)",
+    "output/jaipur-home/model/interior.js",
+    "output/jaipur-home/model/plan-geometry.json",
+    "output/jaipur-home/architect-layout.pdf",
+    "output/jaipur-home/renders/bath-master.png",
+    "studio-control/project-state.json",
+    "studio-control/rfis.json",
+    "studio-control/model-policy.json"
+  ],
+  "output_artifacts": [
+    "studio-control/drafts/R-012/qa-record-rev3-independent.json"
+  ],
+  "started_at": "2026-10-27",
+  "completed_at": "2026-10-27",
+  "failure_reason": null,
+  "attempts": [
+    {
+      "status": "blocked",
+      "reason": "selected-model-unavailable (gpt-6-sol)"
+    },
+    {
+      "status": "launch-allowed",
+      "model": "claude-sonnet-5-5",
+      "reasoning_effort": "medium",
+      "policy_change": "D-012"
+    }
+  ],
+  "note": "The reviewer saw this file while it still read 'blocked' and flagged a provenance conflict; that was a stale record, corrected here after the run."
+}

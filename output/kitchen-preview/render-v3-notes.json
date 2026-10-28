@@ -1,0 +1,25 @@
+{
+  "mode": "Built-in image_gen",
+  "purpose": "Kitchen image revision only; 3D model unchanged",
+  "references": {
+    "existingCollection": "../jaipur-home-v3/research/review-ledger.json",
+    "kitchenPreviouslyReviewed": 100,
+    "existingObservations": "Aligned flat full-height cupboards, serviceable concealed hood, accessible drawers, continuous task light and clear window.",
+    "additionalVisualCheck": "Pinterest search result still-image cards reviewed for Indian modular cabinet alignment and concealed appliances; video playback not claimed.",
+    "search": "https://in.pinterest.com/search/pins/?q=indian%20modular%20kitchen%20uniform%20cabinets%20concealed%20RO"
+  },
+  "designNotes": [
+    "Marked cupboard bottom aligned with chimney cupboard bottom; same height measured from countertop, allowing for perspective.",
+    "Normal thin joinery reveals retained; broad spacer/dummy blocks removed.",
+    "Drying rack and adjacent RO behind matching shutters, shown open for access.",
+    "Mini geyser in separate partitioned base service compartment beside sink, shown open; final appliance size and services require vendor/site coordination."
+  ],
+  "preserved": [
+    "Double-bowl kitchen sink",
+    "Four-burner hob beneath concealed chimney",
+    "Exhaust above window",
+    "Ceiling-height cupboards",
+    "Open floor without dining table"
+  ],
+  "limitation": "Image is a visual concept, not a dimensioned installation or verified cabinet shop drawing."
+}

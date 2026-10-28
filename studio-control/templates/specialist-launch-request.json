@@ -1,0 +1,13 @@
+{
+  "revision_id": "R-XXX",
+  "agent_id": "R-XXX-layout-01",
+  "role": "layout-reviewer",
+  "task_class": "single-room-review",
+  "risk_level": "low | medium | high",
+  "task": "",
+  "requested_tools": [],
+  "artifact_scope": [],
+  "write_scope": "studio-control/drafts/R-XXX",
+  "output_contract": "Structured findings, cited evidence, risks, RFIs, and no baseline edits.",
+  "requested_reasoning_effort": null
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "R-004",
+  "status": "withdrawn-by-user",
+  "request": "Render the TV unit and living room with the TV/storage joinery visibly projecting from the recessed single-brick stair-enclosure wall, while retaining R-003's puja clear zone and ceiling-high storage.",
+  "work_mode": "draft",
+  "affected_zones": ["Living hall", "TV wall", "Puja standing zone"],
+  "disciplines": ["Interior joinery", "Visualisation", "Circulation"],
+  "sources_used": [
+    "studio-control/drafts/R-003/tv-unit-puja-clear-zone-concept.png",
+    "output/jaipur-home/architect-layout.pdf",
+    "output/jaipur-home/model/plan-geometry.json",
+    "output/jaipur-home/model/quality-checks.json",
+    "docs/PROJECT_HANDOFF.md"
+  ],
+  "source_versions_checked": [
+    "Architect layout SHA-256 91f749713a05e3654ae89833828eb3533d36b2dc29c4ed0d795c6e06e162c590",
+    "Current approved baseline: BASELINE-2026-09-23"
+  ],
+  "specialists_activated": [],
+  "model_routing": {
+    "planned_launches": [],
+    "runtime_available_models": [],
+    "router_results": [],
+    "actual_model_usage": []
+  },
+  "source_conflicts": [],
+  "proposal": "Draft an oblique full living-room visual in which the TV feature and overhead storage project approximately 381 mm (1 ft 3 in, plan footprint) from the recessed stair-enclosure wall. Show a clear side return/recessed wall line so the volume cannot read as flush. Retain W5, the 75-inch TV, R-003's open puja standing zone, separate perpendicular puja and kitchen beyond.",
+  "risks_and_dependencies": [
+    "381 mm is the plan dimension to illustrate; verify finished projection after plaster, wall finish and site measurement before fabrication.",
+    "TV bracket must have independent fixing to verified masonry/structural backing; it cannot depend on cabinet shutters or cladding.",
+    "The overhead storage requires a separate anchor strategy, usable access and services/ventilation coordination."
+  ],
+  "rfis_created_or_updated": [],
+  "draft_artifacts": ["studio-control/drafts/R-004/tv-unit-projected-living-room-concept.png"],
+  "approved_baseline_artifacts_to_change": [],
+  "validation_plan": [
+    "Check the TV/storage volume visibly projects from and leaves the stair wall recessed behind it.",
+    "Check W5, 75-inch TV, open puja standing zone, separate puja and kitchen sequence remain intact.",
+    "Obtain independent concept QA; no baseline promotion is requested."
+  ],
+  "scope_approval": {"status": "approved", "approved_by": "User", "approved_at": "2026-10-08"},
+  "qa": {"status": "not-started", "reviewer": null, "results": []},
+  "promotion_approval": {"status": "declined", "approved_by": "User", "approved_at": "2026-10-08"},
+  "promotion": {"status": "not-started", "promoted_at": null, "changed_artifacts": []},
+  "open_next_actions": ["Preserve as withdrawn draft history; do not use for design or fabrication."]
+}

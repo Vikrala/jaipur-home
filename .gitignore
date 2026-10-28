@@ -1,0 +1,26 @@
+# Local review and build output; source files and the approved model live elsewhere.
+/.kitchen-image-qa/
+/.kitchen-ppt-build/
+/tmp/
+
+# Historical distribution ZIPs duplicate project packages. Keep them locally.
+/output/*.zip
+
+# Machine-local and generated files.
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+node_modules/
+*.log
+
+# Credentials and private configuration must never be committed.
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+id_rsa
+id_ed25519

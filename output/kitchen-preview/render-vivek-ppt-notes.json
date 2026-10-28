@@ -1,0 +1,15 @@
+{
+  "mode": "Built-in image_gen",
+  "purpose": "Image-only revision from client-edited PowerPoint; no changes to PPT or 3D model",
+  "source": "/Users/kriti/Documents/ChatGPT/jaipur home/Kitchen-editable-layout-vivek.pptx",
+  "sourceInterpretation": "Revised wall elevations on slides 2 and 3 govern changes. Slide 1 is unchanged overview and its former geyser position is superseded by slide 3's explicit move beneath sink.",
+  "changes": [
+    "Window wall: two light drawer stacks, one wide three-drawer walnut stack beneath window, narrower three-drawer walnut stack beneath hob beside corner door.",
+    "Corner: fixed single shelf, access via full-height hinged door on window wall beneath hob, no swing-out trays or RO-wall corner door.",
+    "RO wall: dark three-drawer stack at corner, sink cupboard, light three-drawer stack before fridge.",
+    "Mini geyser moved into right half of sink cupboard.",
+    "Enlarged exhaust grille with access shutter handle above grille.",
+    "Night lighting and other previously accepted fittings retained."
+  ],
+  "limitation": "Visual interpretation of editable schematic cabinet layouts. Final appliance and shelf clearances need dimensioned vendor drawings."
+}

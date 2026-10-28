@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN-R-002-site-qa-01",
+  "revision_id": "R-002",
+  "agent_id": "R-002-site-qa-01",
+  "role": "site-qa-coordinator",
+  "launch_status": "completed",
+  "model": "gpt-6-sol",
+  "reasoning_effort": "medium",
+  "model_tier": "standard",
+  "consent_id": null,
+  "consent_status": "not-required",
+  "selection_rationale": "Deterministic router selected the available standard-tier site-QA model; launch allowed without consent.",
+  "runtime_available_models": ["gpt-6-luna", "gpt-6-sol", "gpt-6.1-sol", "gpt-6-astra"],
+  "task": "Independent visual QA of R-002 only; no baseline edits.",
+  "artifact_scope": ["studio-control/drafts/R-002/tv-unit-layout-specific-concept.png"],
+  "write_scope": "studio-control/drafts/R-002",
+  "output_contract": "Structured findings, cited evidence, risks, RFIs, and no baseline edits.",
+  "contribution": "Independently compared the R-002 render to the current approved living/TV views and handoff; verified the visible W5–TV–separate puja–kitchen sequence, identified shutter/TV operation ambiguity, and documented dimensional and site-check limits.",
+  "sources_actually_used": [
+    "studio-control/project-state.json",
+    "docs/PROJECT_HANDOFF.md",
+    "output/jaipur-home/model/quality-checks.json",
+    "output/jaipur-home/renders/final-living-reverse.png",
+    "output/jaipur-home/renders/final-tv-wall.png",
+    "studio-control/drafts/R-002/tv-unit-layout-specific-concept.png"
+  ],
+  "output_artifacts": ["studio-control/drafts/R-002/qa-tv-unit-layout-specific-concept.json"],
+  "started_at": null,
+  "completed_at": "2026-10-08T02:59:31+05:30",
+  "failure_reason": null
+}

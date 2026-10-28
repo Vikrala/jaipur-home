@@ -1,0 +1,182 @@
+{
+ "schema_version": "1.0",
+ "decisions": [
+  {
+   "id": "D-001",
+   "status": "approved",
+   "topic": "Architect layout authority",
+   "decision": "OP-1 constructed layout and parsed geometry control all interior work.",
+   "sources": [
+    "architect-layout",
+    "plan-geometry"
+   ]
+  },
+  {
+   "id": "D-002",
+   "status": "approved",
+   "topic": "Maintained baseline",
+   "decision": "output/jaipur-home is the single maintained model; numbered versions are history.",
+   "sources": [
+    "baseline-readme",
+    "baseline-changelog"
+   ]
+  },
+  {
+   "id": "D-003",
+   "status": "approved",
+   "topic": "Kitchen",
+   "decision": "Retain approved kitchen/elevation logic, aligned four-burner hob/chimney, double-bowl sink/rack alignment, fixed corner shelf, and removal of dining/handwash.",
+   "sources": [
+    "kitchen-elevation",
+    "kitchen-reference",
+    "baseline-qa"
+   ]
+  },
+  {
+   "id": "D-004",
+   "status": "approved",
+   "topic": "Living hall",
+   "decision": "Retain 75 in TV, full-height backing clear of W5, continuous L-sofa, no hall dining table/handwash/partition, and TV wall along stair enclosure.",
+   "sources": [
+    "design-handoff",
+    "baseline-changelog",
+    "baseline-qa"
+   ]
+  },
+  {
+   "id": "D-005",
+   "status": "approved",
+   "topic": "Puja",
+   "decision": "Retain 42 in x 13.5 in perpendicular puja envelope, four pocket-fold leaves, seven idols, eight photos, two drawers and a full-width independent diya tray with fire/ventilation safeguards.",
+   "sources": [
+    "design-handoff",
+    "hall-puja-selection",
+    "baseline-qa"
+   ]
+  },
+  {
+   "id": "D-006",
+   "status": "rejected",
+   "topic": "Bedroom 2 privacy screen",
+   "decision": "Do not reintroduce the inner-entry privacy screen by default; retain the 538 mm bed-group shift toward the almirah.",
+   "sources": [
+    "baseline-changelog",
+    "baseline-qa"
+   ]
+  },
+  {
+   "id": "D-007",
+   "status": "approved",
+   "topic": "Model corrections to architect plan",
+   "decision": "R-006 corrections promoted on 13 Oct 2026: Bedroom 2 AC west wall, W2/W9 sills, mirrors, Bedroom 3 east-wall run, Master hidden locker, store brick return, two-way D6/D9. Bedroom 2 bed-group shift unchanged.",
+   "sources": [
+    "architect-layout",
+    "plan-geometry",
+    "baseline-changelog"
+   ]
+  },
+  {
+   "id": "D-008",
+   "status": "approved",
+   "topic": "Bedroom 3 folding iron table",
+   "decision": "Per the revised architect plan for Bedroom 3, the TV unit is replaced by a 5 ft 6 in x 1 ft 9 in folding iron table; Bedroom 3 has no TV. Table height, hinge and stowed form are assumptions pending RFI-009.",
+   "sources": [
+    "design-handoff",
+    "baseline-changelog"
+   ]
+  },
+  {
+   "id": "D-009",
+   "status": "approved",
+   "topic": "Bedroom 2 east-wall almirah overlap",
+   "decision": "R-010 promoted on 15 Oct 2026: the Bedroom 2 oak end store is 1 ft 3 in long (was 2 ft), matching the architect chain 3 in + 1 ft 3 in + 10 ft 9 in = 12 ft 3 in, so it abuts the 10 ft 9 in wardrobe without overlap. Nothing else changed; bed-group shift unchanged.",
+   "sources": [
+    "architect-layout",
+    "plan-geometry",
+    "baseline-changelog"
+   ]
+  },
+  {
+   "id": "D-010",
+   "status": "approved",
+   "topic": "Revised architect layout (14 Oct 2026)",
+   "decision": "R-011 promoted on 15 Oct 2026 on the user's instruction (no draft, straight to baseline): Bedroom 2 study unit 5 ft x 1 ft 6 in replaces the TV unit and the AC moves to the south wall; lobby shoe rack 1 ft x 3 ft; rear-shaft kota shelf 1 ft 9 in x 4 ft 3 in; Bedroom 3 east wall 2 ft 9 in / 2 ft / 5 ft / 1 ft 6 in / 4 ft 3 in with a 5 ft iron table (supersedes the 5 ft 6 in size in D-008). Kitchen/dining AC and the locker label were not modelled. Heights and fittings not on the plan are assumptions (RFI-011, RFI-012).",
+   "sources": [
+    "architect-layout",
+    "baseline-changelog",
+    "design-handoff"
+   ]
+  },
+  {
+   "id": "D-011",
+   "status": "approved",
+   "topic": "Architect layout PDF replaced",
+   "decision": "architect-layout.pdf is now the architect's revised sheet dated 14 Oct 2026; the 10 Sep 2026 original is kept as architect-layout-2026-09-10-superseded.pdf. RFI-010 closed.",
+   "sources": [
+    "architect-layout"
+   ]
+  },
+  {
+   "id": "D-012",
+   "status": "approved",
+   "topic": "Specialist model policy for Claude Code",
+   "decision": "27 Oct 2026, user-approved control-state correction: claude-sonnet-5-5 added as a standard-tier model (low/medium); the standard-design-delivery rule now lists gpt-6-sol then claude-sonnet-5-5 as an explicit ordered preference. Premium rules and consent requirements are unchanged.",
+   "sources": [
+    "model-policy",
+    "user-instruction"
+   ]
+  },
+  {
+   "id": "D-013",
+   "status": "approved",
+   "topic": "Promotion of R-012 and R-008; single-model consolidation",
+   "decision": "27 Oct 2026, user instruction: merge R-012 rev 4.1 (master bathroom, raised washer) and R-008 (realism pass, chosen by the user) into output/jaipur-home; add a viewer control to hide the master-bath glass; retire all other draft and numbered model copies (moved to macOS Trash); R-009 Blender render kit not merged; keep RFIs (RFI-013 added) and logs.",
+   "sources": [
+    "user-instruction",
+    "studio-control/qa/R-012/qa-record-rev4-independent.json"
+   ],
+   "verbatim": "merge the complete draft to the main baseline version, and remove all the draft files after updating the baseline. I want to bring the project to a single 3d model level. Keep the RFIs, but remove all the previous draft 3d models and keep only the final merged model."
+  },
+  {
+   "id": "D-014",
+   "status": "approved",
+   "topic": "R-015 master bath open shower; 1 mm floor joints",
+   "decision": "27 Oct 2026, user instruction: remove both master-bath glass returns (with frames, floor channels and the glass-mounted towel rail), remove the hide/show glass button and the black border strip on the floor; set every floor tile joint in the house to 1 mm.",
+   "sources": [
+    "user-instruction"
+   ],
+   "verbatim": "in the bathroom of master bedroom, remove the glass partitions, and the button also to hide and show the partitions. Also remove the black line on the flooring between the partition. Also there should be only 1mm gap between the flooring tiles, not more than that in the entire house"
+  },
+  {
+   "id": "D-015",
+   "status": "approved",
+   "topic": "R-016 QA fixes 1-5",
+   "decision": "27 Oct 2026, user instruction: apply QA items 1-5 (towel bar/hooks moved, stale text corrected, WC collider, captions and header); keep stills; 1 mm joints unchanged.",
+   "sources": [
+    "user-instruction",
+    "studio-control/qa/BASELINE-2026-10-27/QA-REPORT.md"
+   ],
+   "verbatim": "Yes, apply fixes 1–5: move the towel bar and hooks, correct the stale glass and backsplash text, fix the WC collider, update captions and header date. Leave stills as they are."
+  },
+  {
+   "id": "D-016",
+   "status": "approved",
+   "topic": "R-017 smoother walkthrough movement",
+   "decision": "28 Oct 2026, user instruction: make movement smooth without lowering detail. Shadow caching, one draw per frame and eased motion applied; render quality settings unchanged.",
+   "sources": [
+    "user-instruction"
+   ],
+   "verbatim": "the movement in the app is very jittery, is there anything that can be done to make it smooth, I don't want the detailing to go down then it's currently"
+  },
+  {
+   "id": "D-017",
+   "status": "approved",
+   "topic": "R-018 bathroom wall tile to ceiling",
+   "decision": "28 Oct 2026, user instruction: bathroom wall tiles floor to ceiling in both bathrooms. Common bath north (lobby-side) wall tiled too, confirmed by the user: 'Keep it tiled'.",
+   "sources": [
+    "user-instruction"
+   ],
+   "verbatim": "the bathroom wall tiles must go up to the ceiling all the way up, for both the bathrooms."
+  }
+ ]
+}

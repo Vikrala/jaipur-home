@@ -1,0 +1,15 @@
+{
+ "schema_version": "1.0",
+ "revision_id": "R-013",
+ "status": "promoted",
+ "date": "2026-10-27",
+ "request": "remove the plant in the living room in front of the main door from the 3d model",
+ "work_mode": "direct baseline edit on user instruction (as R-010/R-011)",
+ "affected_zones": [
+  "living"
+ ],
+ "change": "Deleted plant(px(430),pz(436),2.7) at x 14.85, z 22.57 ft, in line with D6 (living/lobby, east wall x 19.25, z 22.13-25.63); rebuilt walkthrough, re-exported GLB",
+ "not_changed": "All other geometry; kitchen and terrace plants; stills not regenerated",
+ "specialists_activated": [],
+ "qa": "Author check in browser: no meshes left in the plant zone, no errors; independent QA not run"
+}

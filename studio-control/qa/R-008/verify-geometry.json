@@ -1,0 +1,26 @@
+{
+  "fixtures": true,
+  "furniture": true,
+  "colliders": true,
+  "viewpoints": true,
+  "meshCountEqual": true,
+  "meshCount": [
+    1920,
+    1920
+  ],
+  "maxBoundingBoxDeltaFt": 0,
+  "boundsOutside0p0005ft": 0,
+  "meshNameMismatches": 0,
+  "lightsBaseline": {
+    "PointLight": 17,
+    "HemisphereLight": 1,
+    "DirectionalLight": 1
+  },
+  "lightsR008": {
+    "PointLight": 17,
+    "HemisphereLight": 1,
+    "DirectionalLight": 1,
+    "RectAreaLight": 9
+  },
+  "pass": true
+}

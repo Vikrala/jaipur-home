@@ -1,0 +1,60 @@
+{
+ "schema_version": "1.0",
+ "revision_id": "R-009",
+ "status": "retired-not-merged",
+ "request": "User (14 Oct 2026): R-008 browser view is better and performs well with soft shadows off, but still not photorealistic. Open to a new library or to rendering outside the browser.",
+ "work_mode": "draft",
+ "affected_zones": [
+  "All first-floor rooms (visual only)"
+ ],
+ "disciplines": [
+  "Visualisation"
+ ],
+ "sources_used": [
+  "studio-control/drafts/R-008 (GLB, procedural texture sets, scene-lights-viewpoints)",
+  "User feedback 14 Oct 2026"
+ ],
+ "audit_findings": [
+  "Browser real-time rendering cannot do true global illumination; light does not bounce, so surfaces look uniformly lit.",
+  "GLB textures are 512 px, too soft for close views.",
+  "R-008 Cycles stills were over-exposed and cream-on-cream with little tonal range."
+ ],
+ "geometry_policy": "No change to any geometry. Only texture resolution, lighting, camera and render settings.",
+ "decision": "Primary photoreal route is offline Blender Cycles (free app). The browser walkthrough stays as the fast layout tool. No new JS library added.",
+ "deliverables": [
+  "drafts/R-009/render-kit: jaipur-first-floor.blend (Day and Evening scenes, 27 cameras), tex/, render.py, render-jaipur.sh, README.md, previews/",
+  "drafts/R-009/tools: build_blend.py, bake_ultra.cjs, texmap.py, realism.js (ultra-quality bake)",
+  "drafts/R-009/render-kit/renders/final-cloud: 10 cloud-rendered stills (Living, Master, Kitchen, Bedroom 2, Bedroom 3; Day and Evening), 1200x800, 96 samples, PNG+JPG"
+ ],
+ "limits_to_state_honestly": [
+  "Procedural materials, not scanned photographs.",
+  "Simple furniture forms limit realism regardless of renderer.",
+  "Not yet rendered on the user's Mac, timings unmeasured.",
+  "Colour transform is Khronos PBR Neutral (the cloud Blender build has no AgX config); AgX may look better on the user's Blender but was not verified."
+ ],
+ "validation_done": [
+  "Geometry unchanged: scene built from the R-008 GLB, no mesh edits (author check).",
+  "Six test renders (Living, Master, Kitchen, day and evening) inspected by author.",
+  "Ten 1200x800 renders inspected by author; Bedroom 2 daylight re-rendered at +1.4 EV (no direct sun reaches it)."
+ ],
+ "qa": {
+  "status": "author-checks-only-independent-qa-not-performed"
+ },
+ "promotion": {
+  "status": "not-requested",
+  "note": "Nothing in output/jaipur-home was changed."
+ },
+ "known_issues": [
+  "Navy rectangle above the Living passage in evening views is a baseline model element, not fixed here.",
+  "Thin brown sliver beside the Bedroom 3 AC (baseline geometry, unconfirmed).",
+  "1200x800 at 96 samples is the most the 2-core cloud machine can do; Mac GPU at 2400x1600/512 samples (render-jaipur.sh final) will be cleaner."
+ ],
+ "render_settings": "Cycles, Khronos PBR Neutral, window light portals, sun 1.5 deg, indirect clamp off, OIDN denoise",
+ "promotion_record": [
+  {
+   "date": "2026-10-27",
+   "note": "Retired 27 Oct 2026 in the single-model consolidation; Blender render kit moved to Trash, not merged",
+   "user_instruction": "merge the complete draft to the main baseline version, and remove all the draft files after updating the baseline. I want to bring the project to a single 3d model level. Keep the RFIs, but remove all the previous draft 3d models and keep only the final merged model."
+  }
+ ]
+}

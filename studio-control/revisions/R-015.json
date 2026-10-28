@@ -1,0 +1,33 @@
+{
+ "schema_version": "1.0",
+ "revision_id": "R-015",
+ "status": "promoted",
+ "date": "2026-10-27",
+ "request": "in the bathroom of master bedroom, remove the glass partitions, and the button also to hide and show the partitions. Also remove the black line on the flooring between the partition. Also there should be only 1mm gap between the flooring tiles, not more than that in the entire house",
+ "work_mode": "direct baseline edit on user instruction",
+ "affected_zones": [
+  "master bathroom",
+  "all floors"
+ ],
+ "changes": [
+  "master shower glass returns, brass frames, wall profiles, floor channels and glass colliders removed",
+  "glass-mounted towel rail and stand-offs removed",
+  "hide/show master bath glass button and setBathGlass code removed",
+  "black shower-front border tile removed (linear drain retained)",
+  "tile and bathTile textures re-baked with 1 mm joints (sub-texel coverage)",
+  "master bath octagon floor redrawn with 1 mm joints",
+  "viewpoint captions and feature notes updated",
+  "GLB re-exported"
+ ],
+ "assumptions": [
+  "'black line between the partitions' = the black border strip across the shower front",
+  "master octagon black dot inserts are pattern, not joints",
+  "wall tile joint trims unchanged (request covered flooring)"
+ ],
+ "risks": [
+  "open shower wets the vanity, WC and washer route: whole-floor waterproofing, falls and anti-slip added to RFI-013",
+  "1 mm joints need rectified tiles, levelling clips and epoxy grout; contractor to confirm tile batch tolerance"
+ ],
+ "qa": "Author browser checks: no glass objects, colliders or button remain; joint profile on baked textures is about 1 texel (about 1.2 mm per texel); visual check of master bath and living. Independent QA not run.",
+ "specialists_activated": []
+}

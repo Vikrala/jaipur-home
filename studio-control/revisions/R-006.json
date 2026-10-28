@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "R-006",
+  "status": "promoted",
+  "request": "Correct the 3D model against the architect's 10 Sep 2026 plan, for every discrepancy found in the PDF-vs-model review except discrepancy 1 (Bedroom 2 bed-group shift, which stays as the approved baseline).",
+  "work_mode": "draft",
+  "affected_zones": [
+    "Master bedroom",
+    "Bedroom 2",
+    "Bedroom 3",
+    "Store",
+    "Master bathroom ventilation window",
+    "Doors D6 and D9",
+    "Renders and image prompts"
+  ],
+  "disciplines": [
+    "Interior joinery",
+    "Openings coordination",
+    "Visualisation",
+    "Model QA"
+  ],
+  "sources_used": [
+    "output/jaipur-home/architect-layout.pdf",
+    "output/jaipur-home/model/plan-geometry.json",
+    "output/jaipur-home/model/plan-data.js",
+    "output/jaipur-home/model/interior.js",
+    "output/jaipur-home/walkthrough.template.html",
+    "output/jaipur-home/image-prompts.json",
+    "build_geometry.py",
+    "studio-control/project-state.json"
+  ],
+  "source_versions_checked": [
+    "Architect layout SHA-256 91f749713a05e3654ae89833828eb3533d36b2dc29c4ed0d795c6e06e162c590",
+    "Current approved baseline: BASELINE-2026-09-23",
+    "plan-geometry.json equals build_geometry.py output except the 14 Sep ventilation-shaft naming already in the baseline"
+  ],
+  "specialists_activated": [],
+  "model_routing": {
+    "planned_launches": [],
+    "runtime_available_models": [],
+    "router_results": [],
+    "actual_model_usage": []
+  },
+  "source_conflicts": [
+    "Drawing shows W9 at sill 1 ft 6 in and lintel 9 ft 6 in (an 8 ft tall opening into the washing ventilation shaft); baseline had a 7 ft 6 in sill high ventilator. Followed the drawing; RFI proposed.",
+    "Drawing shows swing arcs on both sides of D6 and D9; baseline modelled one swing each. Modelled as two-way (switchable); the preferred default side is not stated.",
+    "Brick return height is not dimensioned; modelled full height and flagged provisional."
+  ],
+  "proposal": "Bring the model back to the drawing for: Bedroom 2 AC on the west wall; W2 sill 2 ft 6 in and W9 sill 1 ft 6 in; MIRROR panels at the Master east-wall store, the Bedroom 2 north wall and the Bedroom 3 store; Bedroom 3 east-wall run set to 2 ft 10 in wardrobe, 2 ft store, 5 ft 6 in TV unit, 11 in shelf and 4 ft 3 in wardrobe; Master LOCKER HIDDEN in the NW bedside; BRICK return at the store south edge; D6 and D9 as two-way doors; Bedroom 2 TV console collider rotation fix; regenerate the stale 12 Sep model renders and mark superseded prompts. Discrepancy 1 untouched.",
+  "excluded_from_scope": [
+    "Discrepancy 1: Bedroom 2 bed group shifted 538 mm, with its bedside, store and wardrobe consequence. The shifted group is a protected baseline decision."
+  ],
+  "risks_and_dependencies": [
+    "Bedroom 2 north mirror is drawn above the unshifted right bedside; with the baseline shifted bed group it lands behind the shifted bedside and art zone. Resolve together with discrepancy 1.",
+    "Master hidden locker size, lock and anchoring are not dimensioned on the drawing; modelled as a concealed steel box.",
+    "W9 is now an 8 ft tall opening to the shaft: guarding, weather and security need professional confirmation.",
+    "Photoreal images in output/jaipur-home/realistic were AI-edited from the old 12 Sep renders and are not regenerated here; they stay stale until re-run."
+  ],
+  "rfis_created_or_updated": [
+    "RFI-006",
+    "RFI-007",
+    "RFI-008"
+  ],
+  "draft_artifacts": [
+    "studio-control/drafts/R-006/ (see MANIFEST.md)"
+  ],
+  "approved_baseline_artifacts_to_change": [
+    "output/jaipur-home/model/plan-geometry.json",
+    "output/jaipur-home/model/plan-data.js",
+    "output/jaipur-home/model/interior.js",
+    "output/jaipur-home/model/jaipur-first-floor.glb",
+    "output/jaipur-home/walkthrough.template.html",
+    "output/jaipur-home/walkthrough.html",
+    "output/jaipur-home/renders/*",
+    "output/jaipur-home/image-prompts.json",
+    "output/jaipur-home/README.md",
+    "output/jaipur-home/CHANGELOG.md",
+    "docs/PROJECT_HANDOFF.md",
+    "studio-control/project-state.json",
+    "studio-control/artifact-manifest.json",
+    "studio-control/rfis.json",
+    "studio-control/decision-log.json"
+  ],
+  "validation_plan": [
+    "Scripted numeric checks against drawing dimensions (verify-results.json).",
+    "Visual capture of each changed element.",
+    "Independent QA by a second reviewer (pending; specialist models unavailable in this session).",
+    "Site check of W9, brick return and locker before execution."
+  ],
+  "scope_approval": {
+    "status": "approved",
+    "approved_by": "User",
+    "approved_at": "2026-10-13",
+    "note": "Request: Except discrepancy 1, make corrections in the 3d model."
+  },
+  "qa": {
+    "status": "author-checks-complete-independent-qa-not-performed",
+    "reviewer": null,
+    "results": [
+      "See drafts/R-006/qa-r006-model-corrections.json"
+    ]
+  },
+  "promotion_approval": {
+    "status": "approved",
+    "approved_by": "User",
+    "approved_at": "2026-10-13"
+  },
+  "promotion": {
+    "status": "completed",
+    "promoted_at": "2026-10-13",
+    "changed_artifacts": [
+      "output/jaipur-home/model/plan-geometry.json",
+      "output/jaipur-home/model/plan-data.js",
+      "output/jaipur-home/model/interior.js",
+      "output/jaipur-home/model/jaipur-first-floor.glb",
+      "output/jaipur-home/walkthrough.template.html",
+      "output/jaipur-home/walkthrough.html",
+      "output/jaipur-home/renders/*",
+      "output/jaipur-home/image-prompts.json",
+      "output/jaipur-home/README.md",
+      "output/jaipur-home/CHANGELOG.md",
+      "docs/PROJECT_HANDOFF.md",
+      "studio-control/project-state.json",
+      "studio-control/artifact-manifest.json",
+      "studio-control/rfis.json",
+      "studio-control/decision-log.json"
+    ]
+  },
+  "open_next_actions": [
+    "Independent QA was not performed (specialist models unavailable); re-run when available.",
+    "Site checks: W9, brick return, Master locker."
+  ]
+}

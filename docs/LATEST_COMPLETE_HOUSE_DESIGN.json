@@ -1,0 +1,371 @@
+{
+  "document": {
+    "name": "Jaipur Home — Latest Complete House Design Handoff",
+    "prepared_on": "2026-10-07",
+    "status": "current design baseline for continuation; concept and coordination only",
+    "authoritative_model_root": "output/jaipur-home",
+    "continuation_rule": "Apply future approved changes in output/jaipur-home, record them in output/jaipur-home/CHANGELOG.md, and do not create a new numbered baseline folder."
+  },
+  "authority_order": [
+    "output/jaipur-home/architect-layout.pdf and output/jaipur-home/model/plan-geometry.json",
+    "output/jaipur-home/README.md and output/jaipur-home/CHANGELOG.md",
+    "Kitchen-editable-layout-vivek.pptx and output/jaipur-home/renders/approved-kitchen-reference.png",
+    "output/hall-concepts/final-selection/final-specification.md, unless a later current-model changelog entry supersedes it",
+    "Historical output/jaipur-home-v2 through output/jaipur-home-v7 folders only for provenance"
+  ],
+  "project_brief": {
+    "location_assumption": "Jaipur, Rajasthan; exact orientation/site exposure was not recorded",
+    "project_type": "constructed first-floor residential interior and visual-coordination project",
+    "user_groups": [
+      "older adults 60+",
+      "younger adults approximately 28-35"
+    ],
+    "design_character": [
+      "modern",
+      "warm",
+      "low-maintenance",
+      "cohesive",
+      "practical Indian residence"
+    ],
+    "hard_constraints": [
+      "Do not change architect-traced walls, columns, rooms, openings, stairs, lift well, or ventilation shafts without explicit approval and relevant professional sign-off.",
+      "Retain 10 ft ceiling model assumption.",
+      "No kitchen dining set, kitchen pendants, separate living-to-kitchen handwash, hall dining table, hall sink/handwash, or hall partition.",
+      "Keep the kitchen approval, living-room layout, puja envelope and bedroom-2 bed correction intact unless specifically superseded."
+    ],
+    "unknowns_not_to_invent": [
+      "final site dimensions after finishes",
+      "orientation",
+      "budget",
+      "contractor",
+      "actual appliance models",
+      "electrical loads",
+      "final family routine details"
+    ]
+  },
+  "model_and_drawing": {
+    "layout_source": "Suresh Ji F_F OP-1 Interior Layout.pdf, revised by the architect on 2026-10-14 and held as architect-layout.pdf (original archived as architect-layout-2026-09-10-superseded.pdf)",
+    "layout_source_date": "2026-10-14 (revision of the 2026-09-10 original)",
+    "plot_model_envelope_ft": [
+      27,
+      60
+    ],
+    "ceiling_ft": 10,
+    "glb_units": "metres",
+    "glb_current": "output/jaipur-home/model/jaipur-first-floor.glb",
+    "interactive_current": "output/jaipur-home/walkthrough.html",
+    "layout_machine_record": "output/jaipur-home/model/plan-geometry.json",
+    "architecture_retained": {
+      "walls": true,
+      "columns": true,
+      "rooms": true,
+      "voids": true,
+      "openings": true
+    },
+    "rooms": [
+      {
+        "id": "master",
+        "name": "Master bedroom",
+        "drawing_size": "11 ft 0 in x 15 ft 3 in"
+      },
+      {
+        "id": "bedroom-2",
+        "name": "Bedroom 2",
+        "drawing_size": "14 ft 1.5 in x 12 ft 3 in"
+      },
+      {
+        "id": "bedroom-3",
+        "name": "Bedroom 3",
+        "drawing_size": "10 ft 6 in x 15 ft 6 in"
+      },
+      {
+        "id": "bath-master",
+        "name": "Master bathroom",
+        "drawing_size": "5 ft 7.5 in x 9 ft 0 in plus washing niche"
+      },
+      {
+        "id": "bath-common",
+        "name": "Common bathroom",
+        "drawing_size": "4 ft 6 in x 8 ft 9 in"
+      },
+      {
+        "id": "living",
+        "name": "Living hall",
+        "drawing_size": "12 ft 6 in x 18 ft 1.5 in"
+      },
+      {
+        "id": "kitchen",
+        "name": "Kitchen/dining envelope",
+        "drawing_size": "14 ft 7.5 in x 12 ft 3 in"
+      },
+      {
+        "id": "store",
+        "name": "Store",
+        "drawing_size": "as drawn"
+      },
+      {
+        "id": "lobby",
+        "name": "Lift lobby",
+        "drawing_size": "6 ft 9 in x 4 ft 4 in"
+      },
+      {
+        "id": "lift",
+        "name": "Lift",
+        "drawing_size": "5 ft 0 in x 5 ft 0 in"
+      },
+      {
+        "id": "stairs",
+        "name": "Staircase",
+        "drawing_size": "two flights; 3 ft 3 in wide"
+      },
+      {
+        "id": "terrace",
+        "name": "Front open area",
+        "drawing_size": "as drawn"
+      }
+    ],
+    "confirmed_ventilation_voids": [
+      "rear ventilation shaft",
+      "washing ventilation shaft",
+      "lift-side ventilation shaft"
+    ],
+    "void_note": "Lower termination/structural build-up has not been supplied; void depictions are visual depth cues only."
+  },
+  "final_design": {
+    "global_palette": [
+      "walnut",
+      "warm stone",
+      "terracotta",
+      "dusty blue",
+      "soft beige/sand",
+      "restrained brass"
+    ],
+    "kitchen": {
+      "status": "approved visual/cabinet direction; site and appliance fit still required",
+      "controlling_sources": [
+        "Kitchen-editable-layout-vivek.pptx",
+        "output/jaipur-home/renders/approved-kitchen-reference.png"
+      ],
+      "base_cabinet_logic": [
+        "two light drawer stacks",
+        "one unsplit wide walnut drawer stack below main window",
+        "narrow hob-side drawer stack",
+        "full-height corner door with one fixed shelf",
+        "all drawer tiers aligned",
+        "no swing-out corner trays and no RO-wall access through corner"
+      ],
+      "sink_ro_wall": [
+        "drawers left of sink",
+        "two full-height sink gates",
+        "light drawers before fridge",
+        "no drawers beneath either bowl",
+        "double bowl sink; sink and drying rack equal 3.30 ft / 1006 mm width and common centreline",
+        "RO behind cut-out gate with direct dispensing-spout access",
+        "mini geyser concealed below right bowl"
+      ],
+      "cooking_ventilation": [
+        "four-burner hob under concealed chimney on shared centreline",
+        "one lift-up chimney access front",
+        "exhaust service shutter confined to right window pane, ending at jamb, with separate grille and handle",
+        "hob shifted 14.43 in / 366 mm right in correction; modelled hood-to-window clearance 77 mm and hood-to-exhaust-frame clearance 21.7 mm"
+      ],
+      "explicitly_removed": [
+        "dining set",
+        "pendants",
+        "separate living-to-kitchen handwash"
+      ],
+      "pre_fabrication": [
+        "confirm appliance cut sheets",
+        "confirm chimney duct and installation height",
+        "coordinate water, gas, RO waste, geyser and dedicated electrical circuits",
+        "produce measured shutter and counter shop drawings"
+      ]
+    },
+    "living_hall": {
+      "envelope": "12 ft 6 in x 18 ft 1.5 in",
+      "composition_selection": "L1 spatial/palette base + L2 TV/service joinery + L3 botanical artwork",
+      "spatial_rules": [
+        "TV is on stair-enclosure wall",
+        "puja turns perpendicular at stair/Bedroom-3 edge and faces kitchen/Bedroom-3 approach",
+        "do not make puja freestanding or facing sofa",
+        "no dining table, handwash, accent chair or partition"
+      ],
+      "sofa": {
+        "main_run_ft": 11,
+        "specified_return_ft": 4.5,
+        "current_model_return_ft": 5.3775,
+        "depth_in": "34-36; current model records 33.96",
+        "back_height_in": 30,
+        "construction": "transportable structural modules allowed below; top upholstery must read as a continuous bench plane with no visible divisions"
+      },
+      "furniture": {
+        "rug": "7 ft 2 in x 10 ft 1 in",
+        "centre_table": "42 in x 20 in",
+        "target_long_side_circulation": "36 in minimum; about 39.5 in recorded"
+      },
+      "service_plank": {
+        "material": "walnut finish over 18 mm BWP plywood and 50 mm service cavity",
+        "top_height_mm": 650,
+        "lighting": "dimmable concealed 2700K wall wash; accessible ventilated driver",
+        "end_modules": "two accessible modules, each Indian 6A + USB-A + USB-C",
+        "latest_condition": "plank separated from sofa back and controls face upward"
+      },
+      "tv_wall": {
+        "tv": "75 in 16:9, approx. 1661 x 935 mm",
+        "tv_latest_revision": "centre raised 1 ft; current model records 5 ft screen centre",
+        "backing": "full height to 10 ft ceiling; shifted 8.73 in / 220 mm right to clear W5 by modelled 61 mm",
+        "console": "hidden ventilated service bays; current model 9.22 ft wide, older selected spec says 8 ft 6 in; final site-measured console must retain left edge at W5 centreline",
+        "entry_controls": "below W5 above console",
+        "fixing": "masonry/structural backing only"
+      },
+      "ac_and_art": {
+        "AC": "centred on solid left wall",
+        "art": "two botanical works using anti-glare acrylic"
+      }
+    },
+    "puja": {
+      "envelope": "42 in wide x max 13.5 in deep x approx. 84 in high",
+      "selection": "P1 visual language with P3 flush side-pocket and tray operation",
+      "inventory": {
+        "idols": 7,
+        "max_idol_height_in": 4,
+        "photos": 8,
+        "photo_rails": 2,
+        "photos_per_rail": 4,
+        "tallest_photo_in": 9,
+        "drawers": 2
+      },
+      "door_operation": "four narrow fluted toughened-glass leaves in brass/walnut frames; each side pair folds, pivots and retracts into a flush side pocket; no door leaf may obstruct hall or adjacent 32 in door path",
+      "diya_tray": {
+        "clear_width_ft": 3.24,
+        "full_extension_ft": 1,
+        "construction": "stone/non-combustible base, removable brass drip liner, raised oil lip, positive stops",
+        "minimum_runner_rating_kg": 25,
+        "interlock": "opening tray opens shrine; closing shrine retracts tray first"
+      },
+      "fire_and_ventilation": [
+        "non-combustible altar/back/overhead hot zone",
+        "18 in minimum clear above flame",
+        "permanent high and low ventilation in every door state",
+        "doors fully open and tray fully extended for diya/incense/dhoop",
+        "close only after every flame/ember is extinguished and lining has cooled"
+      ],
+      "hardware": "manufacturer-rated synchronised pocket-fold hardware, adjustable guides/soft-close, and removable service access panel; full-size supplier mock-up mandatory"
+    },
+    "bedrooms": {
+      "master": {
+        "modelled_layout": "6 ft x 6 ft 6 in bed, bedside drawers, west wardrobe, TV storage and console",
+        "intent": "clear floor, bedside controls, closed storage"
+      },
+      "bedroom_2": {
+        "r011_revised_layout": "TV unit replaced by a 5 ft x 1 ft 6 in study unit on the south wall (face 3 ft 9 in from bed foot); TV removed; AC moved from west wall to south wall over the unit; desk height and pedestal are assumptions (RFI-012)",
+        "latest_approved_change": "bed and both bedside tables shifted 538 mm toward east almirah",
+        "wardrobe_side_table_gap_mm": 0,
+        "wardrobe_side_table_top": "touches wardrobe exactly without overlap",
+        "moved_with_bed": [
+          "charging points",
+          "headboard artwork",
+          "ceiling fan"
+        ],
+        "rejected": "inner-entry privacy screen was removed; do not re-add by default",
+        "east_wall_run": "R-010 (15 Oct 2026): 3 in offset + 1 ft 3 in oak end store + 10 ft 9 in wardrobe = 12 ft 3 in, as on the architect plan; store and wardrobe no longer overlap",
+        "unchanged": [
+          "constructed doorway",
+          "masonry",
+          "bed size",
+          "wardrobe"
+        ]
+      },
+      "bedroom_3": {
+        "modelled_layout": "5 ft 6 in x 6 ft 3 in bed, bedside tables, east-wall run 2 ft 9 in wardrobe + 2 ft mirror store + 5 ft x 1 ft 9 in folding iron table + 1 ft 6 in shelf + 4 ft 3 in wardrobe; no TV",
+        "constraint": "retain doorway/terrace-window relationship",
+        "revision": "R-011"
+      }
+    },
+    "wet_utility_and_external": {
+      "lobby": "R-011: shoe rack 1 ft x 3 ft against the east wall from the lift-entry wall face; height and shelving assumed (RFI-012)",
+      "rear_shaft": "R-011: kota/granite shelf 1 ft 9 in x 4 ft 3 in on the shaft west wall; height, slab and supports assumed; shaft status unchanged (RFI-011)",
+      "master_bath": "anti-slip concept tile, vanity, mixer shower, concealed cistern, high window and washing-niche relationship",
+      "common_bath": "retain 4 ft 6 in width; vanity, WC, shower, exhaust/high ventilation and external switch concept",
+      "washing_niche": "washer, inlet tap, hose, switched outlet and shaft concept; site-confirm protected electrical circuit and plumbing",
+      "store": "shelving retained; do not infer separate handwash from older model labels",
+      "lift_stair_terrace": "visual concepts only; lift vendor and built stair govern; terrace requires separate waterproofing, slope, drain, parapet and weatherproof-electrical check",
+      "master_bath_R012": "Shower 900 x 1,220 mm fully open (glass returns removed R-015), no border strip, flush back-wall linear drain over the architect drain point (outlet shift ~75 mm), falls away from walkway; 745 mm route to WC and washer, no longer separated from the shower; 25 L vertical geyser NW corner above vanity, underside 2,256 mm; floating vanity, WC sage upper cupboard, brass fittings (user-confirmed); towel bar and robe hooks on the east wall south of the shower line (R-016); 1 mm floor joints (R-015); grab-bar/seat blocking; washer marble top 610 mm with baskets; holds RFI-004/005/006/013"
+    }
+  },
+  "qa_and_model_state": {
+    "quality_record": "output/jaipur-home/model/quality-checks.json",
+    "glb": {
+      "valid": true,
+      "nodes": 2110,
+      "meshes": 1066,
+      "access_doors_export_state": "closed"
+    },
+    "verified_current_conditions": [
+      "architect geometry retained",
+      "kitchen has four burners and two recessed sink bowls",
+      "single lift-up chimney and drying-rack access doors",
+      "fixed reachable corner shelf; hidden RO and geyser configuration",
+      "no kitchen dining or separate handwash",
+      "W5-clear full-height TV panel and console aligned to its centreline",
+      "operable four-leaf puja closure and safe tray sequence",
+      "current bedroom-2 bed/wardrobe correction",
+      "day/night, kitchen access, puja access and GLB-download controls checked"
+    ],
+    "limitations": [
+      "Concept geometry, not fabrication drawing or BIM.",
+      "Visual lighting is not a measured lux design.",
+      "Vendor appliance dimensions, hood installation height, cabinet fixing and physical shutter clearances are provisional.",
+      "Puja runner rating, heat clearance, ventilation free area and door hardware require supplier drawings and site verification.",
+      "Wet-area/terrace waterproofing and drainage have not been designed by this model."
+    ],
+    "updated_2026_10_27": "Single maintained model output/jaipur-home; R-008 + R-012 merged; R-012 author checks 33/33 and independent QA pass-with-holds (studio-control/qa/R-012); GLB re-exported; real-GPU load/frame rate not measured"
+  },
+  "history": [
+    {
+      "stage": "whole-home 3D simulation",
+      "outcome": "architect-traced first-floor model, walkthrough and GLB created"
+    },
+    {
+      "stage": "kitchen revisions",
+      "outcome": "14 September kitchen image/PPT elevation direction approved; later hob/hood alignment correction retained"
+    },
+    {
+      "stage": "hall/puja plan correction",
+      "outcome": "constructed OP-1 confirmed perpendicular compact puja at stair/Bedroom-3 edge; no hall sink/table"
+    },
+    {
+      "stage": "hall/puja references",
+      "outcome": "L1/L2/L3 and P1/P2/P3 studies; selected L1+L2+L3 and P1+P3 blend"
+    },
+    {
+      "stage": "living and puja operation",
+      "outcome": "TV wall, service plank, pocket-fold puja, full-width safe diya tray and inventory finalised"
+    },
+    {
+      "stage": "bedroom-2 correction",
+      "outcome": "privacy screen rejected; bed group shifted 538 mm toward almirah"
+    },
+    {
+      "stage": "maintenance handoff",
+      "outcome": "output/jaipur-home set as one maintained baseline; numbered versions are history"
+    },
+    {
+      "stage": "revised architect layout R-011",
+      "outcome": "14 Oct 2026 revised plan adopted: Bedroom 2 study unit and AC move, lobby shoe rack, rear-shaft kota shelf, Bedroom 3 east-wall run"
+    },
+    {
+      "stage": "single-model consolidation (27 Oct 2026)",
+      "outcome": "R-012 master bathroom (back-wall flush linear drain, arched glass returns, 25 L vertical geyser, 610 mm raised washer, glass towel rail, grab-bar blocking) and R-008 realism merged into output/jaipur-home; drafts and v2-v7 retired; 'Hide master bath glass' viewer control added; RFI-013 opened. Superseded in part by R-015 (glass returns, glass towel rail and the viewer control removed) and R-016 (towel bar moved)"
+    }
+  ],
+  "continuation_protocol": [
+    "Read docs/PROJECT_HANDOFF.md, this JSON, current README, CHANGELOG and quality-checks before proposing changes.",
+    "Use plan-geometry.json and architect-layout.pdf to validate geometry; renders never override plan geometry.",
+    "Ask for site measurement/vendor information where a request becomes execution-sensitive.",
+    "Update only output/jaipur-home for approved changes, rerun relevant QA/captures, and append dated changelog record.",
+    "Never claim construction approval from this 3D concept alone."
+  ],
+  "floor_tile_joint": "1 mm on all floor tiles (R-015, 27 Oct 2026)",
+  "bathroom_wall_tile_height": "Floor to ceiling (10 ft) on all walls of both bathrooms incl. master washing niche, above D3/D5, above W9/W4, and common bath north wall (R-018, 28 Oct 2026)"
+}

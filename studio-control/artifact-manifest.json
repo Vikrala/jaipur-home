@@ -1,0 +1,120 @@
+{
+ "schema_version": "1.0",
+ "generated_for": "BASELINE-2026-10-27",
+ "hash_algorithm": "sha256",
+ "artifacts": [
+  {
+   "id": "project-persona",
+   "path": "AGENTS.md",
+   "role": "Project-wide persona and operating policy",
+   "authority_rank": 2,
+   "sha256": "0ea69e5aa15eee1c7d4420f62d7247327c48071a0fea06cca310dad03bb7d6ad"
+  },
+  {
+   "id": "design-handoff",
+   "path": "docs/PROJECT_HANDOFF.md",
+   "role": "Human-readable approved design continuity",
+   "authority_rank": 2,
+   "sha256": "3e8da428f8220c40c23c434db0405519e545f71334f8d0b4551babfc7acaca1e"
+  },
+  {
+   "id": "design-state",
+   "path": "docs/LATEST_COMPLETE_HOUSE_DESIGN.json",
+   "role": "Structured approved design context",
+   "authority_rank": 2,
+   "sha256": "07ad816f7655a105e2cebecd729d975accfa69b409347619c9704e340fa67d9a"
+  },
+  {
+   "id": "architect-layout",
+   "path": "output/jaipur-home/architect-layout.pdf",
+   "role": "Constructed OP-1 layout drawing",
+   "authority_rank": 1,
+   "sha256": "b3ee9caf6fca59c4d087539cc309e0b6d975ef80b0f1126912576f889dd0c90f"
+  },
+  {
+   "id": "plan-geometry",
+   "path": "output/jaipur-home/model/plan-geometry.json",
+   "role": "Machine-readable traced layout geometry",
+   "authority_rank": 1,
+   "sha256": "e1deccb37655369d086923ddaa645c3c48fc297a98a62a8c9b60609cf81669f3"
+  },
+  {
+   "id": "baseline-readme",
+   "path": "output/jaipur-home/README.md",
+   "role": "Current maintained-model summary",
+   "authority_rank": 2,
+   "sha256": "28c6aca08b75d2564e11a599413a9cd24d26523c2bddf4b9b7ef0a92e1c6ddc6"
+  },
+  {
+   "id": "baseline-changelog",
+   "path": "output/jaipur-home/CHANGELOG.md",
+   "role": "Dated approved revision history",
+   "authority_rank": 2,
+   "sha256": "564f561b5fa9b28a2e44b6d56ec670e47f8d596b8eaf5a98a6828995f17df53b"
+  },
+  {
+   "id": "baseline-qa",
+   "path": "output/jaipur-home/model/quality-checks.json",
+   "role": "Current model QA and limitations",
+   "authority_rank": 2,
+   "sha256": "a0b54c6fc831b7e3c171350bb68705a6f41667c29ae67e1ab479ff9eabad1a4e"
+  },
+  {
+   "id": "kitchen-elevation",
+   "path": "Kitchen-editable-layout-vivek.pptx",
+   "role": "Approved kitchen elevation source",
+   "authority_rank": 3,
+   "sha256": "ab49aa876b11187fbcddc7c3b34a491382e08ca02e4d227153660bb31c848da6"
+  },
+  {
+   "id": "kitchen-reference",
+   "path": "output/jaipur-home/renders/approved-kitchen-reference.png",
+   "role": "Approved kitchen visual reference",
+   "authority_rank": 3,
+   "sha256": "548081a390dd4e0157a5d1f79c36a3032bfa7b76b46e1fd83cb7dbe26b7c910f"
+  },
+  {
+   "id": "hall-puja-selection",
+   "path": "output/hall-concepts/final-selection/final-specification.md",
+   "role": "Approved hall/puja selection; current changelog supersedes conflicts",
+   "authority_rank": 3,
+   "sha256": "99eb7a9e6915b97cc9fcb388a331c20ef0ee81e7209d1860c1156b36a043fffa"
+  },
+  {
+   "id": "model-routing-policy",
+   "path": "studio-control/model-policy.json",
+   "role": "Explicit specialist model, reasoning and premium-consent policy",
+   "authority_rank": 2,
+   "sha256": "626cca1650872240aece9224812ff10b103357ef03c19ec32813d0f16c32c12c"
+  },
+  {
+   "id": "interior.js",
+   "path": "output/jaipur-home/model/interior.js",
+   "role": "Single maintained 3D model scene logic",
+   "authority_rank": 2,
+   "sha256": "42fd1dfba8c7f467063af92d03f46aa6901823178d7d88227ffc78c65f4777d3"
+  },
+  {
+   "id": "jaipur-first-floor.glb",
+   "path": "output/jaipur-home/model/jaipur-first-floor.glb",
+   "role": "Single maintained 3D model (GLB, metres)",
+   "authority_rank": 2,
+   "sha256": "638cd50eed678f16740fccff49faa3693c091b76fb7e10afaa1f074c78b92ab7"
+  },
+  {
+   "id": "walkthrough.html",
+   "path": "output/jaipur-home/walkthrough.html",
+   "role": "Standalone walkthrough of the single model",
+   "authority_rank": 2,
+   "sha256": "b2c99a621b964f862719c53726b17af0cebf946730779f00ddf8c78084db0fd0"
+  },
+  {
+   "id": "rfis.json",
+   "path": "studio-control/rfis.json",
+   "role": "RFI register",
+   "authority_rank": 2,
+   "sha256": "38a6f7859a862ba85415c9d1ffe4c32be89c6d366292ea0bc9d44dc19027942e"
+  }
+ ],
+ "verification_rule": "A hash mismatch triggers targeted source review. It is not by itself approval to alter the baseline."
+}

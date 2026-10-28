@@ -1,0 +1,168 @@
+{
+  "errors": [],
+  "livingPrinted": "12′6″ × 18′1½″",
+  "pooja": {
+    "name": "Pooja unit",
+    "type": "furniture",
+    "x": 17.127499999999998,
+    "z": 38.56375,
+    "w": 3.5,
+    "d": 1.125,
+    "height": 7,
+    "source": "Architect footprint retained; four operable P1-style pocket-fold leaves; full-width independent diya tray; two task-specific drawers; exactly seven idols and eight photographs"
+  },
+  "photographFrames": 8,
+  "framedPhotographs": 8,
+  "retractableDoorLeaves": 4,
+  "operablePoojaDoors": 4,
+  "fullWidthDiyaTray": {
+    "name": "Pooja full-width diya tray",
+    "type": "fire-safe pull-out",
+    "x": 17.127499999999998,
+    "z": 38.56375,
+    "w": 3.4,
+    "d": 1.02,
+    "height": 2.6,
+    "source": "Cabinet-width fascia; clear tray fits between cabinet sides. Non-combustible base with removable brass drip liner, raised oil lip, positive stops and 25 kg minimum full-extension runners"
+  },
+  "idolMeshes": 205,
+  "sofaSeats": 2,
+  "sofaMain": {
+    "name": "L sofa west",
+    "x0": 6.9799999999999995,
+    "z0": 23.5075,
+    "x1": 9.809999999999999,
+    "z1": 34.5075,
+    "h": 1.8,
+    "type": "sofa"
+  },
+  "sofaReturn": {
+    "name": "L sofa return",
+    "x0": 6.75,
+    "z0": 21.240000000000002,
+    "x1": 12.1275,
+    "z1": 24.07,
+    "h": 1.8,
+    "type": "sofa"
+  },
+  "centreTable": {
+    "name": "Centre table",
+    "x0": 12.816,
+    "z0": 27.3,
+    "x1": 14.484,
+    "z1": 30.8,
+    "h": 1.36,
+    "type": "table"
+  },
+  "livingRug": {
+    "name": "Living 7 ft 2 in × 10 ft 1 in rug",
+    "type": "furniture",
+    "x": 13.65,
+    "z": 29.05,
+    "w": 7.15,
+    "d": 10.1,
+    "height": 0.1,
+    "source": "Final living selection: L1 warm neutral rug"
+  },
+  "looseCushions": 5,
+  "chargingPoints": [
+    "Sofa south-end charging",
+    "Sofa return-end charging"
+  ],
+  "poojaCollision": {
+    "name": "Pooja cabinet",
+    "x0": 15.377499999999998,
+    "z0": 38.00125,
+    "x1": 18.877499999999998,
+    "z1": 39.12625,
+    "h": 7,
+    "type": "cabinet"
+  },
+  "tvConsole": {
+    "name": "Living TV floating console with hidden ventilated service bays",
+    "type": "cabinet",
+    "x": 18.62625,
+    "z": 31.490000000000002,
+    "w": 1.25,
+    "d": 9.219999999999999,
+    "h": 1.38
+  },
+  "tvWallRevision": {
+    "windowEnd": 28.1325,
+    "windowCentre": 26.880000000000003,
+    "panelMinZ": 28.33249990463257,
+    "panelMaxZ": 35.88250009536743,
+    "panelTop": 9.949999847412109,
+    "panelClearsWindow": true,
+    "panelReachesCeiling": true,
+    "consoleLeft": 26.880000000000003,
+    "consoleEndsAtWindowCentre": true
+  },
+  "currentMainRevision": {
+    "livingTv": {
+      "name": "Living 75 inch TV — raised 1 ft",
+      "type": "electrical",
+      "x": 17.939999999999998,
+      "z": 32.1075,
+      "w": 5.45,
+      "d": 0.2,
+      "height": 5,
+      "source": "Proposed television and concealed power/data"
+    },
+    "livingAc": {
+      "name": "Living AC — centred on left wall",
+      "type": "AC",
+      "x": 9.44,
+      "z": 21.1,
+      "w": 2.9,
+      "d": 0.7,
+      "height": 8.45,
+      "source": "Proposed interior detail"
+    },
+    "entryControls": {
+      "name": "Living entry controls — below W5",
+      "type": "switch",
+      "x": 19.06,
+      "z": 26.880000000000003,
+      "w": 0.81,
+      "d": 0.04,
+      "height": 2.15,
+      "source": "Proposed interior detail"
+    },
+    "sofaControlPanels": [
+      {
+        "name": "Sofa south-end charging",
+        "type": "switch/socket",
+        "x": 6.89,
+        "z": 35.2275,
+        "w": 0.82,
+        "d": 0.05,
+        "height": 2.19,
+        "source": "Accessible switches, Indian 6A socket, USB-A and USB-C on walnut sofa plank"
+      },
+      {
+        "name": "Sofa return-end charging",
+        "type": "switch/socket",
+        "x": 11.647499999999999,
+        "z": 21.14,
+        "w": 0.82,
+        "d": 0.05,
+        "height": 2.19,
+        "source": "Accessible switches, Indian 6A socket, USB-A and USB-C on walnut sofa plank"
+      }
+    ],
+    "sofaPlank": {
+      "name": "Low illuminated sofa service plank",
+      "type": "furniture",
+      "x": 6.84,
+      "z": 28.45375,
+      "w": 0.25,
+      "d": 14.467499999999998,
+      "height": 2.17,
+      "source": "Narrow walnut plank separated from upholstery; both switch and charging panels face upward"
+    },
+    "bedroom2BedShiftTowardAlmirah_mm": 538,
+    "bedroom2SideTableTopTouchesWardrobe": true,
+    "bedroom2SideTableToWardrobeClearance_mm": 0
+  }
+}

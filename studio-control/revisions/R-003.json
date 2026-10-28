@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "R-003",
+  "status": "withdrawn-by-user",
+  "request": "Revise the layout-specific TV-unit visual by removing the tall TV-unit cabinet next to the puja and the corresponding low-console segment, creating a clear standing zone for one person at the puja. Add ceiling-height shallow storage above the TV feature at the same depth as the TV unit.",
+  "work_mode": "draft",
+  "affected_zones": ["Living hall", "TV wall", "Puja standing zone"],
+  "disciplines": ["Interior joinery", "Visualisation", "Circulation"],
+  "sources_used": [
+    "studio-control/drafts/R-002/tv-unit-layout-specific-concept.png",
+    "output/jaipur-home/architect-layout.pdf",
+    "output/jaipur-home/model/plan-geometry.json",
+    "output/jaipur-home/model/quality-checks.json",
+    "docs/PROJECT_HANDOFF.md"
+  ],
+  "source_versions_checked": [
+    "Architect layout SHA-256 91f749713a05e3654ae89833828eb3533d36b2dc29c4ed0d795c6e06e162c590",
+    "Current approved baseline: BASELINE-2026-09-23"
+  ],
+  "specialists_activated": [],
+  "model_routing": {
+    "planned_launches": [],
+    "runtime_available_models": [],
+    "router_results": [],
+    "actual_model_usage": []
+  },
+  "source_conflicts": [],
+  "proposal": "Keep W5, the 75-inch TV, shallow left storage and the separate perpendicular puja. Remove all TV-unit vertical storage and lower console immediately beside the puja, leaving a continuous clear floor zone of approximately 750-900 mm for one person to stand at the shrine. Add a closed shallow ceiling-high overhead cabinet above the fixed TV panel, matching the 250-300 mm TV-unit depth, with a bottom edge kept clear of the screen and service access retained.",
+  "risks_and_dependencies": [
+    "The proposed puja standing zone is a visual planning target; confirm its final clear width against the built doorway, puja door operation and existing circulation on site.",
+    "A ceiling-high overhead cabinet must not carry the TV bracket and needs separate, accessible electrical/data routing and ventilation strategy.",
+    "The TV unit remains limited by W5 clearance and needs a measured shop drawing before fabrication."
+  ],
+  "rfis_created_or_updated": [],
+  "draft_artifacts": ["studio-control/drafts/R-003/tv-unit-puja-clear-zone-concept.png"],
+  "approved_baseline_artifacts_to_change": [],
+  "validation_plan": [
+    "Check that the tall cabinet and low console next to the puja are both removed and the floor area is visibly clear.",
+    "Check that the overhead storage is shallow, aligned to the TV-unit depth, and does not visually compromise TV clearance or bracket access.",
+    "Obtain independent concept QA; no baseline promotion is requested."
+  ],
+  "scope_approval": {"status": "approved", "approved_by": "User", "approved_at": "2026-10-08"},
+  "qa": {
+    "status": "completed-with-site-checks",
+    "reviewer": "R-003-site-qa-01",
+    "results": [
+      "The puja-side tall cabinet and its matching lower-console segment are removed in the draft; a continuous clear floor zone is visible.",
+      "The shallow closed overhead storage reads to the ceiling and is visually separate from the TV bracket zone.",
+      "Confirm the actual puja standing width, door/tray operation, overhead anchors, W5 shutter swing, TV fixing and ventilation through a measured shop drawing."
+    ]
+  },
+  "promotion_approval": {"status": "declined", "approved_by": "User", "approved_at": "2026-10-08"},
+  "promotion": {"status": "not-started", "promoted_at": null, "changed_artifacts": []},
+  "open_next_actions": ["Preserve as withdrawn draft history; do not use for design or fabrication."]
+}

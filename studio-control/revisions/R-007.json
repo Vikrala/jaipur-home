@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "R-007",
+  "status": "promoted",
+  "request": "The architect's plan for the bedroom next to the kitchen (Bedroom 3) has changed. Update the 3D model to match the revised drawing.",
+  "work_mode": "draft",
+  "affected_zones": [
+    "Bedroom 3"
+  ],
+  "disciplines": [
+    "Interior joinery",
+    "Visualisation"
+  ],
+  "sources_used": [
+    "User-supplied revised plan image of Bedroom 3, 13 Oct 2026 (drafts/R-007/source/bedroom-3-revised-plan-2026-10-13.png)",
+    "output/jaipur-home/architect-layout.pdf (10 Sep 2026, superseded for this room)",
+    "output/jaipur-home/model/interior.js",
+    "studio-control/revisions/R-006.json"
+  ],
+  "source_versions_checked": [
+    "Baseline after R-006 promotion (13 Oct 2026)",
+    "Architect layout SHA-256 91f749713a05e3654ae89833828eb3533d36b2dc29c4ed0d795c6e06e162c590 (old)"
+  ],
+  "specialists_activated": [],
+  "model_routing": {
+    "planned_launches": [],
+    "runtime_available_models": [],
+    "router_results": [],
+    "actual_model_usage": []
+  },
+  "source_conflicts": [
+    "The revised drawing is an image of one room, not a full replacement PDF. architect-layout.pdf still shows the TV unit; it is not replaced.",
+    "Revised plan shows only the plan outline of the FOLDING IRON TABLE. Height, hinge side, stowed form and power are not given."
+  ],
+  "proposal": "Replace the Bedroom 3 TV unit (5 ft 6 in x 1 ft deep, with TV) with a FOLDING IRON TABLE 5 ft 6 in long x 1 ft 9 in deep on the east wall, same position. Modelled as a wall-hinged padded leaf, surface 2 ft 9 in high (assumed), that folds up into a shallow frame; open by default as drawn; folded state frees the floor. Added a proposed socket below the table. Bedroom 3 TV removed. Everything else in the room already matched the revised drawing (bed, ST. boxes, 2 ft 10 in wardrobe, 2 ft store with mirror, 11 in shelf, 4 ft 3 in wardrobe, 2 ft 3 in bed-to-table gap).",
+  "risks_and_dependencies": [
+    "Table height, hinge, leg and fold-up details are assumptions for a hardware supplier or carpenter to confirm.",
+    "Removing the TV leaves Bedroom 3 with no TV position; confirm this is intended.",
+    "Photoreal images in realistic/ were not regenerated; the Bedroom 3 prompt is marked for review."
+  ],
+  "rfis_created_or_updated": [
+    "RFI-009",
+    "RFI-010"
+  ],
+  "draft_artifacts": [
+    "studio-control/drafts/R-007/"
+  ],
+  "approved_baseline_artifacts_to_change": [
+    "output/jaipur-home/model/interior.js",
+    "output/jaipur-home/model/jaipur-first-floor.glb",
+    "output/jaipur-home/walkthrough.template.html",
+    "output/jaipur-home/walkthrough.html",
+    "output/jaipur-home/renders/bedroom-3.png",
+    "output/jaipur-home/renders/overview.png",
+    "output/jaipur-home/renders/measured-overhead.png",
+    "output/jaipur-home/renders/final-measured-overhead.png",
+    "output/jaipur-home/image-prompts.json",
+    "output/jaipur-home/README.md",
+    "output/jaipur-home/CHANGELOG.md",
+    "docs/PROJECT_HANDOFF.md",
+    "studio-control/artifact-manifest.json",
+    "studio-control/rfis.json",
+    "studio-control/decision-log.json"
+  ],
+  "validation_plan": [
+    "Scripted numeric checks against the revised drawing.",
+    "Visual capture of open and folded states.",
+    "Independent QA (pending)."
+  ],
+  "scope_approval": {
+    "status": "approved",
+    "approved_by": "User",
+    "approved_at": "2026-10-13",
+    "note": "Request: update the 3d as per this."
+  },
+  "qa": {
+    "status": "author-checks-complete-independent-qa-not-performed",
+    "reviewer": null,
+    "results": [
+      "See drafts/R-007/qa-r007-bedroom-3-iron-table.json"
+    ]
+  },
+  "promotion_approval": {
+    "status": "approved",
+    "approved_by": "User",
+    "approved_at": "2026-10-13"
+  },
+  "promotion": {
+    "status": "completed",
+    "promoted_at": "2026-10-13",
+    "changed_artifacts": [
+      "output/jaipur-home/model/interior.js",
+      "output/jaipur-home/model/jaipur-first-floor.glb",
+      "output/jaipur-home/walkthrough.template.html",
+      "output/jaipur-home/walkthrough.html",
+      "output/jaipur-home/renders/bedroom-3.png",
+      "output/jaipur-home/renders/overview.png",
+      "output/jaipur-home/renders/measured-overhead.png",
+      "output/jaipur-home/renders/final-measured-overhead.png",
+      "output/jaipur-home/image-prompts.json",
+      "output/jaipur-home/README.md",
+      "output/jaipur-home/CHANGELOG.md",
+      "docs/PROJECT_HANDOFF.md",
+      "studio-control/artifact-manifest.json",
+      "studio-control/rfis.json",
+      "studio-control/decision-log.json"
+    ]
+  },
+  "open_next_actions": [
+    "Independent QA was not performed (specialist models unavailable).",
+    "Confirm folding iron table details (RFI-009) and supply the full revised PDF (RFI-010)."
+  ]
+}

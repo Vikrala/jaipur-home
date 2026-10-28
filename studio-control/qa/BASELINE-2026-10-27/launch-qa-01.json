@@ -1,0 +1,23 @@
+{
+ "revision_id": "QA-2026-10-27",
+ "risk_level": "medium",
+ "requested_tools": [
+  "Read",
+  "Grep",
+  "Glob",
+  "Bash (read-only)"
+ ],
+ "artifact_scope": [
+  "output/jaipur-home/",
+  "docs/PROJECT_HANDOFF.md",
+  "docs/LATEST_COMPLETE_HOUSE_DESIGN.json",
+  "studio-control/rfis.json"
+ ],
+ "output_contract": "Structured findings with severity, cited file:line or plan evidence, risks, RFIs; no baseline edits.",
+ "requested_reasoning_effort": "medium",
+ "agent_id": "BASELINE-site-qa-01",
+ "role": "site-qa-coordinator",
+ "task_class": "routine-site-qa",
+ "task": "Independent QA of the single maintained 3D model after R-013..R-015: geometry vs architect plan, regressions, code defects, doc/model consistency.",
+ "write_scope": "studio-control/drafts/QA-2026-10-27"
+}

@@ -1,0 +1,22 @@
+{
+ "schema_version": "1.0",
+ "revision_id": "R-018",
+ "status": "promoted",
+ "date": "2026-10-28",
+ "request": "the bathroom wall tiles must go up to the ceiling all the way up, for both the bathrooms.",
+ "work_mode": "direct baseline edit on user instruction",
+ "source": "user screenshot of master bathroom (tiles stopping at 7 ft 2 in)",
+ "changes": [
+  "all bathroom wall tile raised from 0.04-7.19 ft to 0.04-9.98 ft (10 ft ceiling) in master bath, master washing niche and common bath",
+  "tile added above D3 and D5 (lintel 8.25 ft), above W9 (9.5 ft) and above W4 (9.0 ft); W4 band 7.5-9.0 ft left open",
+  "master shower green vertical tile continues to the ceiling (top course cut to ~145 mm)",
+  "common bath north (lobby-side) wall tiled full height; it was previously painted",
+  "horizontal joint lines continued at 8 ft; GLB re-exported (18,970,412 bytes)"
+ ],
+ "assumption": "Common bath north wall tiled full height — confirmed by the user 28 Oct 2026 ('Keep it tiled').",
+ "not_done": [
+  "stills not regenerated"
+ ],
+ "qa": "Browser mesh check: every bathroom wall tile spans y 0.04-9.98 ft, with the door and window openings clear. Visual check of the master and common bathrooms looking up. Exhausts remain within the W9/W4 openings.",
+ "specialists_activated": []
+}

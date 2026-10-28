@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "R-005",
+  "status": "withdrawn-by-user",
+  "request": "Correct the R-004 render so the compact puja turns perpendicular to the TV/stair wall, while retaining the corrected 381 mm projected TV unit and open puja standing zone.",
+  "work_mode": "draft",
+  "affected_zones": ["Living hall", "TV wall", "Puja"],
+  "disciplines": ["Interior joinery", "Visualisation", "Circulation"],
+  "sources_used": [
+    "studio-control/drafts/R-004/tv-unit-projected-living-room-concept.png",
+    "studio-control/drafts/R-004/qa-tv-unit-projected-living-room-concept.json",
+    "output/jaipur-home/architect-layout.pdf",
+    "docs/PROJECT_HANDOFF.md"
+  ],
+  "source_versions_checked": [
+    "Architect layout SHA-256 91f749713a05e3654ae89833828eb3533d36b2dc29c4ed0d795c6e06e162c590",
+    "Current approved baseline: BASELINE-2026-09-23"
+  ],
+  "specialists_activated": [],
+  "model_routing": {"planned_launches": [], "runtime_available_models": [], "router_results": [], "actual_model_usage": []},
+  "source_conflicts": ["R-004 QA found the rendered puja front appeared parallel to the TV wall, conflicting with the approved perpendicular puja relationship."],
+  "proposal": "Maintain the R-004 projecting TV unit and all other layout elements. Rotate the compact puja 90 degrees so its front faces the kitchen/Bedroom-3 approach and its narrow side—not its front—reads toward the TV/living view. Keep the puja separate from TV joinery and preserve the open one-person standing zone.",
+  "risks_and_dependencies": ["Puja pocket-fold door travel and diya-tray operation require a measured mock-up.", "The projected TV unit and overhead storage still require site verification and independent fixing."],
+  "rfis_created_or_updated": [],
+  "draft_artifacts": ["studio-control/drafts/R-005/tv-unit-projected-perpendicular-puja-concept.png"],
+  "approved_baseline_artifacts_to_change": [],
+  "validation_plan": ["Check that puja visibly reads perpendicular to the TV wall and remains separate.", "Check that TV volume remains visibly projected and puja standing zone is unobstructed.", "Obtain independent QA; no promotion requested."],
+  "scope_approval": {"status": "approved", "approved_by": "User", "approved_at": "2026-10-08"},
+  "qa": {
+    "status": "completed-with-site-checks",
+    "reviewer": "R-005-site-qa-01",
+    "results": [
+      "The TV/console/overhead-storage volume visibly projects from a recessed wall line.",
+      "The puja now turns perpendicular: its narrow side reads toward the living/TV view while its front faces the kitchen approach.",
+      "Exact 381 mm projection, TV size, puja standing clearance and door/tray operations remain site/shop-drawing checks."
+    ]
+  },
+  "promotion_approval": {"status": "declined", "approved_by": "User", "approved_at": "2026-10-08"},
+  "promotion": {"status": "not-started", "promoted_at": null, "changed_artifacts": []},
+  "open_next_actions": ["Preserve as withdrawn draft history; do not use for design or fabrication."]
+}

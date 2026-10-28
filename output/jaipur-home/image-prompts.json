@@ -1,0 +1,91 @@
+{
+  "created": "2026-09-12",
+  "images": [
+    {
+      "room": "living",
+      "tool": "built-in image_gen",
+      "reference": "renders/living.png",
+      "prompt": "Transform this measured 3D render into a realistic professional interior photograph of the SAME living room. Strictly preserve the camera, all walls, door openings, passage visible at right, 10 foot ceiling, L-shaped sofa footprint, coffee table position, AC and plant. Keep the simple warm ivory walls, cream supportive sofa with muted sage cushions, light oak laminate coffee table with slim black legs, matte light beige vitrified floor, single understated sage abstract artwork, modern standard-budget split AC. Improve only physical realism: fabric weave, believable upholstered cushions, natural wood laminate grain, tile grout, realistic wall paint, soft daytime global illumination and gentle shadows. Match our standard-budget modern Jaipur family home, timeless for 5–10 years and easy to maintain. Keep visible electrical sockets, lever door hardware and recessed light. No premium marble, no wall panelling, no false ceiling, no rugs, no new furniture, no architectural changes, no text or watermark. Photographic realism and restrained styling.",
+      "reference_status": "regenerated-in-R-006"
+    },
+    {
+      "room": "kitchen",
+      "tool": "built-in image_gen",
+      "reference": "renders/kitchen.png",
+      "prompt": "Use case: sketch-to-render. Edit target: the supplied measured kitchen 3D render. Convert it into one exceptionally realistic architectural interior photograph of a standard-budget family home in Jaipur, India. Preserve the EXACT camera composition, 10-foot ceiling height, room proportions (14 feet 7.5 inches by 12 feet 3 inches), every wall, window aperture, cabinet location, foreground dining table and chairs, hob and chimney placement on the image LEFT counter, sink on the BACK/right return, and refrigerator at far RIGHT. Only improve materials and realistic soft daylight/global illumination, contact shadows, metal reflections and small functional hardware detail. Warm ivory washable paint, affordable light oak woodgrain laminate and matte greige laminate modular fronts with visible easy-grip handles, continuous sealed charcoal granite worktops, matte beige vitrified floor tile. The four-seat dining table stays 4 feet 6 inches by 2 feet 6 inches with soft cream upholstered chairs. Render a real recessed stainless steel sink bowl with drain and single-lever mixer tap, standard three-burner gas hob with correct trivets and knobs, standard stainless chimney hood with duct, exhaust grille, switched three-pin sockets, warm diffused pendant and under-cabinet strip exactly where reference shows them. Subtle fine vertical woodgrain, fabric texture, soft believable lighting. Keep the small pottery on the counter and small plant on table. No premium marble, no island, no added partition, no added windows or doors, no moved appliances, no extra furniture, no decorative clutter, no rugs. No text, logos or watermarks. The input is the geometry authority; maintain all visible placements and perspective.",
+      "reference_status": "regenerated-in-R-006",
+      "prompt_status": "superseded",
+      "superseded_reason": "Text describes a foreground dining table and chairs. Protected decision: kitchen dining set and pendants remain removed; the approved 14 Sep kitchen has no dining table.",
+      "action": "Rewrite the prompt from the approved kitchen README/CHANGELOG before re-running; do not re-run as written."
+    },
+    {
+      "room": "master",
+      "tool": "built-in image_gen",
+      "reference": "renders/master.png",
+      "prompt": "Transform this measured 3D render into a realistic interior photograph of the EXACT same master bedroom for older adults, with no special mobility requirements. Strictly preserve camera, all wall and door/window positions, 10 foot ceiling, tall oak wardrobe at left, bed footprint and orientation, both oak bedside drawer cabinets with dark granite tops, muted sage bedding, upholstered ivory headboard, simple sage artwork and wall-mounted reading lights, curtains and ceiling fan. Use standard-budget oak laminate rather than solid luxury timber, washable cotton bedding with natural folds, matte ivory walls, matte light beige vitrified tiles, realistic chrome handles and visible charging sockets. Improve only materials, fabric and soft natural daylight/global illumination. Keep this modest, calm and low maintenance, coherent with a warm neutral Jaipur family home. No premium marble, no new wardrobe or walls, no panelling, no architectural changes, no rug, no new decor, no words, watermark or logos. Make a realistic architectural photograph while keeping the reference geometry.",
+      "reference_status": "regenerated-in-R-006"
+    },
+    {
+      "room": "bedroom-2",
+      "tool": "built-in image_gen",
+      "reference": "renders/bedroom-2.png",
+      "prompt": "Edit the attached measured 3D render into a photoreal architectural interior photograph. Preserve the EXACT camera composition, architecture, all wall and opening positions, 10 foot ceiling and every furniture footprint, door position, socket, fan or AC visible. Only improve physical materials, fabric folds, natural light and shadows. Standard-budget modern Jaipur family home, warm ivory paint, oak laminate furniture, matte light beige vitrified floor tiles, no premium marble, no wall panelling, no rugs, no new furniture, no architecture change, no text, watermark or logos. Keep the ivory upholstered headboard and oak bed, two oak bedside cabinets with sealed dark granite tops and visible charging sockets, restrained sage washable cotton bedding and cushions, one sage abstract picture, sage-grey full-height wardrobe at right with chrome bar handles, sheer cotton curtains at the existing left window, and the partially visible existing open wooden door. Realistic but modest materials, consistent with the previously generated master bedroom.",
+      "reference_status": "regenerated-in-R-006"
+    },
+    {
+      "room": "bedroom-3",
+      "tool": "built-in image_gen",
+      "reference": "renders/bedroom-3.png",
+      "prompt": "Edit the attached measured 3D render into a photoreal architectural interior photograph. Preserve the EXACT camera composition, architecture, all wall and opening positions, 10 foot ceiling and every furniture footprint, door position, socket, fan or AC visible. Only improve physical materials, fabric folds, natural light and shadows. Standard-budget modern Jaipur family home, warm ivory paint, oak laminate furniture, matte light beige vitrified floor tiles, no premium marble, no wall panelling, no rugs, no new furniture, no architecture change, no text, watermark or logos. Keep the smaller bed at the exact position, ivory upholstered headboard, oak storage bed, taupe washable cotton runner and cushions, bedside oak drawer cabinet with dark granite top, one taupe abstract artwork, neutral wardrobe on the right, the existing open oak door and exact glimpse of the living room through it, split AC above the opening and visible charging sockets. Calm contemporary styling for adults ages 28–35, practical and easy to clean.",
+      "reference_status": "regenerated-in-R-007",
+      "prompt_status": "review",
+      "review_note": "R-007: the Bedroom 3 TV unit was replaced by a folding iron table on the east wall. This prompt does not mention the TV, but confirm the east-wall wardrobes and iron table before re-running."
+    },
+    {
+      "room": "bath-master",
+      "tool": "built-in image_gen",
+      "reference": "renders/bath-master.png",
+      "prompt": "Edit the attached measured 3D render into a photoreal architectural interior photograph. Preserve the EXACT camera composition, architecture, all wall and opening positions, 10 foot ceiling and every furniture footprint, door position, socket, fan or AC visible. Only improve physical materials, fabric folds, natural light and shadows. Standard-budget modern Jaipur family home, warm ivory paint, oak laminate furniture, matte light beige vitrified floor tiles, no premium marble, no wall panelling, no rugs, no new furniture, no architecture change, no text, watermark or logos. Keep the EXACT narrow bathroom composition, washer niche at rear-left, concealed cistern and open-seated ceramic WC at rear-right, chrome health faucet, chrome mixer/hand shower and overhead shower on right wall, transparent fixed glass shower screen, floor drain and every fixture exactly as seen. The dark small section of vanity top is foreground-right, not a new sink. Use plain matte beige bathroom tile with subtle grout, white ceramic sanitaryware, realistic chrome fittings, transparent glass without hazy frosting, white standard-budget front-load washing machine. No invented alcoves, no changes to washing niche or glass position, no new accessories. Bright gentle daylight and ceiling light, restrained standard-budget finish.",
+      "reference_status": "regenerated-in-R-006"
+    },
+    {
+      "room": "bath-master-reverse",
+      "tool": "built-in image_gen",
+      "reference": "renders/bath-master-reverse.png",
+      "prompt": "Turn the attached measured 3D bathroom render into a photorealistic architectural photograph, preserving EXACT camera composition, 10 foot ceiling, every wall, doorway, opening and all fixture positions. This is the reverse view of the same modest master bathroom: plain warm beige matte tiles, dark sealed granite-topped ivory vanity with white ceramic recessed basin, realistic chrome lever tap and drain, rectangular mirror with slim LED light bar, right-side existing oak doorway revealing the sage and ivory master bed, overhead chrome shower with mixer and hand shower on the left, and a transparent fixed glass screen exactly as seen in foreground. Keep part of the concealed cistern on left edge; do not add a WC if cropped out. The glass must look clear rather than hazy. Realistic ceramic, chrome, matte tiles with restrained grout, washable ivory paint and soft natural light. Standard budget, practical and easy to clean, no premium stone, no new walls, no changed door or sink or shower layout, no new decor, no rugs, no text, watermark or logos. Only improve material and lighting realism; respect all geometry in reference.",
+      "reference_status": "regenerated-in-R-006"
+    },
+    {
+      "room": "bath-common",
+      "tool": "built-in image_gen",
+      "reference": "renders/bath-common.png",
+      "prompt": "Transform the attached measured 3D render into a photoreal architectural photograph of this EXACT standard-budget common bathroom. Keep the exact camera, narrow 4 foot 6 inch room width, 10 foot ceiling, every wall and door frame, closed door at right and fixture positions. Preserve the foreground ivory vanity with charcoal sealed-granite top, recessed white ceramic basin and chrome lever tap/drain, rectangular mirror and slim warm LED bar above, ceramic wall-hung toilet with open seat at the far end, tiled concealed-cistern box with dual flush plate behind it, health faucet and paper holder, and visible edge of the transparent shower glass on the right. Do not add a shower head or fixtures beyond this camera frame. Make the glass clear, ceramics believable, chrome realistically reflective, and use plain matte beige tiles with fine grout and washable ivory upper walls. Soft realistic daylight from the existing high window out of frame, balanced ceiling light. Clean, modest, contemporary interior coherent with an oak/ivory/sage Jaipur home. No premium marble, no architectural change, no new doors, windows, furniture or extra decor, no rugs, no text, logos or watermarks. Only improve lighting/material realism while preserving all reference geometry.",
+      "reference_status": "regenerated-in-R-006"
+    },
+    {
+      "room": "store",
+      "tool": "built-in image_gen",
+      "reference": "renders/store.png",
+      "prompt": "Edit the attached measured 3D scene into a photoreal architectural interior photograph. Preserve EXACT camera, all walls, openings, all fixture positions and 10 foot room ceiling. Only improve materials and lighting. Standard-budget Jaipur family home, warm ivory paint, oak laminate, light neutral matte tiles, understated chrome hardware. No premium marble, new architecture, new furniture or decor, rugs, text, logos or watermarks. Keep the exact separate handwash basin with dark granite top and ivory cabinet and mirror in foreground, oak/ivory store shelves behind, existing two-door stainless-steel refrigerator at left, water-pot cabinet partially at far left, and exact glimpse of cream/sage sofa at right. Do not reposition the refrigerator or basin. Photoreal SS reflections, ceramic basin with real recess and drain, chrome lever mixer, modest sealed-granite worktop, soft natural daylight. Keep the plant/decor count as shown.",
+      "reference_status": "regenerated-in-R-006",
+      "prompt_status": "superseded",
+      "superseded_reason": "Text describes a separate handwash basin with mirror in the foreground. Protected decision: the separate living-to-kitchen handwash remains removed.",
+      "action": "Rewrite the prompt without the handwash before re-running; do not re-run as written."
+    },
+    {
+      "room": "lobby",
+      "tool": "built-in image_gen",
+      "reference": "renders/lobby.png",
+      "prompt": "Edit the attached measured 3D scene into a photoreal architectural interior photograph. Preserve EXACT camera, all walls, openings, all fixture positions and 10 foot room ceiling. Only improve materials and lighting. Standard-budget Jaipur family home, warm ivory paint, oak laminate, light neutral matte tiles, understated chrome hardware. No premium marble, new architecture, new furniture or decor, rugs, text, logos or watermarks. Keep the narrow existing lift lobby with centered CLOSED stainless-steel lift doors and door surround, existing CLOSED oak laminate room-entry door on left, white modular switch panel on right, matte light beige tiled floor with skirting. Do not add a second lift or broaden the corridor. Realistic brushed steel panels, laminate grain, quiet ceiling illumination and subtle ambient daylight. The lift call station should stay at its modelled position, if not visible do not add it elsewhere.",
+      "reference_status": "regenerated-in-R-006"
+    },
+    {
+      "room": "stairs",
+      "tool": "built-in image_gen",
+      "reference": "renders/stairs.png",
+      "prompt": "Edit the attached measured 3D scene into a photoreal architectural interior photograph. Preserve EXACT camera, all walls, openings, all fixture positions and 10 foot room ceiling. Only improve materials and lighting. Standard-budget Jaipur family home, warm ivory paint, oak laminate, light neutral matte tiles, understated chrome hardware. No premium marble, new architecture, new furniture or decor, rugs, text, logos or watermarks. Keep the exact stair geometry and camera, two 3 foot 3 inch flights in their existing footprint, light beige tile treads with thin charcoal nosing, slim vertical stainless-steel railing and oak handrail along left, existing returning flight forming the stair-shaped mass at right, ivory walls and landing at top. Do not widen stairs or invent windows. The vertical stair profile is provisional, so preserve the reference geometry precisely. Realistic matte stone-look tile, restrained laminate handrail and stainless steel, soft ambient light, standard budget. No balustrade replacement or architectural alteration.",
+      "reference_status": "regenerated-in-R-006"
+    }
+  ],
+  "r006_note": "R-006 draft: the reference renders under renders/ were regenerated from the corrected model (daylight, 1920x1280). The photoreal images in realistic/ were generated from the old 12 Sep renders and must be re-run from the new references before use."
+}

@@ -1,0 +1,5 @@
+{
+  "schema_version": "1.0",
+  "records": [],
+  "record_rule": "A record is valid only for one exact agent_id, model, reasoning_effort and task_fingerprint. It is consumed at launch and must never be reused."
+}

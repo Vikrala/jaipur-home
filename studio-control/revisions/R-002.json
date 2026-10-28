@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "R-002",
+  "status": "withdrawn-by-user",
+  "request": "Redo the TV-unit visual render so it follows the approved Jaipur Home living-room layout, geometry and design specifications rather than a generic TV-wall composition.",
+  "work_mode": "draft",
+  "affected_zones": ["Living hall", "TV wall", "W5 window interface", "Puja interface"],
+  "disciplines": ["Interior joinery", "Visualisation", "Services coordination"],
+  "sources_used": [
+    "output/jaipur-home/architect-layout.pdf",
+    "output/jaipur-home/model/plan-geometry.json",
+    "output/jaipur-home/model/quality-checks.json",
+    "docs/PROJECT_HANDOFF.md",
+    "output/jaipur-home/renders/final-tv-wall.png",
+    "output/jaipur-home/renders/final-living-reverse.png",
+    "User-supplied concealed-TV-unit reference image"
+  ],
+  "source_versions_checked": [
+    "Architect layout SHA-256 91f749713a05e3654ae89833828eb3533d36b2dc29c4ed0d795c6e06e162c590",
+    "Current approved baseline: BASELINE-2026-09-23"
+  ],
+  "specialists_activated": [],
+  "model_routing": {
+    "planned_launches": [],
+    "runtime_available_models": [],
+    "router_results": [],
+    "actual_model_usage": []
+  },
+  "source_conflicts": [],
+  "proposal": "Draft a revised visual that replaces only the TV feature with a concealed-shutter composition. It must retain the actual large W5 window to the left, a 75-inch TV on the stair-enclosure wall, the current 9.22 ft / 2,810 mm low-console envelope, 10 ft model ceiling, and the compact perpendicular puja to the right. The unit is a shallow overlay to the existing wall; it does not fill the window bay or turn the puja into part of the TV joinery.",
+  "risks_and_dependencies": [
+    "Current modelled TV-backing clearance to W5 is 61 mm; shutter casing and handles must remain out of this reveal.",
+    "The 2,810 mm console envelope and TV dimensions are modelled coordination intent, not final site fabrication dimensions.",
+    "Shutter swing, bracket fixing, cable routes, equipment ventilation and the junction to the puja need a measured shop drawing."
+  ],
+  "rfis_created_or_updated": [],
+  "draft_artifacts": ["studio-control/drafts/R-002/tv-unit-layout-specific-concept.png"],
+  "approved_baseline_artifacts_to_change": [],
+  "validation_plan": [
+    "Check that the visual includes W5 left of the TV unit and the perpendicular puja to the right as separate elements.",
+    "Check 75-inch TV scale, ceiling-height context, continuous low console and concealed service intent.",
+    "Obtain independent visual QA before presenting the draft; no promotion requested."
+  ],
+  "scope_approval": {"status": "approved", "approved_by": "User", "approved_at": "2026-10-08"},
+  "qa": {
+    "status": "completed-with-site-checks",
+    "reviewer": "R-002-site-qa-01",
+    "results": [
+      "The visual preserves the W5-window -> TV feature -> separate perpendicular puja -> kitchen sequence from the approved living layout.",
+      "It is suitable as a layout-specific concept visual only; exact TV, console, ceiling and W5-clearance dimensions cannot be certified from the perspective render.",
+      "Resolve the shutter faces behind the TV, independent masonry bracket backing, W5 swing clearance, ventilation free area and service access in a measured shop drawing."
+    ]
+  },
+  "promotion_approval": {"status": "declined", "approved_by": "User", "approved_at": "2026-10-08"},
+  "promotion": {"status": "not-started", "promoted_at": null, "changed_artifacts": []},
+  "open_next_actions": ["Preserve as withdrawn draft history; do not use for design or fabrication."]
+}

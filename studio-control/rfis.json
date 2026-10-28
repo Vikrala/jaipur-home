@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0",
+  "rfis": [
+    {
+      "id": "RFI-001",
+      "status": "open",
+      "zone": "Kitchen",
+      "question": "Provide final manufacturer cut sheets for hob, chimney, fridge, RO, drying rack, geyser and sink before fabrication.",
+      "owner": "User / kitchen vendor",
+      "reason": "Cabinet, duct, plumbing and shutter clearances are concept-level."
+    },
+    {
+      "id": "RFI-002",
+      "status": "open",
+      "zone": "Puja",
+      "question": "Confirm selected pocket-fold hardware, full-size mock-up, runner rating, ventilation free area and fire-safe lining details.",
+      "owner": "Joinery hardware supplier / carpenter",
+      "reason": "The current concept is not a fabrication approval."
+    },
+    {
+      "id": "RFI-003",
+      "status": "open",
+      "zone": "Living",
+      "question": "Site-measure W5 reveal, wall condition, final floor/skirting levels, TV bracket fixing zone, console support and conduit routes.",
+      "owner": "Site supervisor / electrician / carpenter",
+      "reason": "Current TV-wall geometry is modelled, not surveyed for execution."
+    },
+    {
+      "id": "RFI-004",
+      "status": "open",
+      "zone": "Wet areas and terrace",
+      "question": "Provide waterproofing system, floor-slope, drain-test, plumbing penetration and weatherproof-electrical details.",
+      "owner": "Waterproofing specialist / plumbing contractor / licensed electrician",
+      "reason": "No execution design has been issued for these systems."
+    },
+    {
+      "id": "RFI-005",
+      "status": "open",
+      "zone": "Electrical/services",
+      "question": "Confirm appliance loads, circuiting, earthing, RCD protection, wire sizes, isolators and wet/outdoor fitting ratings.",
+      "owner": "Licensed electrician",
+      "reason": "The model shows coordination intent only; it is not an electrical design."
+    },
+    {
+      "id": "RFI-006",
+      "status": "open",
+      "zone": "Master bathroom / washing shaft",
+      "question": "Confirm W9 intent: drawing shows sill 1 ft 6 in and lintel 9 ft 6 in (8 ft tall opening into the shaft). Confirm guarding, security and weather protection.",
+      "owner": "Architect / site supervisor",
+      "reason": "Baseline had a 7 ft 6 in sill high ventilator; model now follows the drawing."
+    },
+    {
+      "id": "RFI-007",
+      "status": "open",
+      "zone": "Doors D6 and D9",
+      "question": "Confirm whether D6 and D9 are double-acting and which swing is the default.",
+      "owner": "Architect / joinery",
+      "reason": "Drawing shows swing arcs on both sides of each door."
+    },
+    {
+      "id": "RFI-008",
+      "status": "open",
+      "zone": "Store and Master bedroom",
+      "question": "Confirm the store BRICK return height and finish, and the Master hidden locker size, lock and anchoring.",
+      "owner": "Architect / site supervisor / joinery",
+      "reason": "Neither is dimensioned on the drawing; modelled with assumed values. The 14 Oct 2026 revised plan labels the Master locker just \"LOCKER\" (no longer \"HIDEEN\"); confirm whether it must stay concealed."
+    },
+    {
+      "id": "RFI-009",
+      "status": "open",
+      "zone": "Bedroom 3",
+      "question": "Confirm folding iron table hardware, surface height (2 ft 9 in assumed), hinge side, stowed form and the iron socket position and circuit.",
+      "owner": "Joinery hardware supplier / carpenter / licensed electrician",
+      "reason": "The 14 Oct 2026 plan dimensions the table 5 ft x 1 ft 9 in (R-011 aligned the model; R-007 had 5 ft 6 in) but shows only the outline, not height, hinge or stowed form."
+    },
+    {
+      "id": "RFI-010",
+      "status": "closed",
+      "zone": "Architect drawings",
+      "question": "Supply the full revised architect PDF so architect-layout.pdf can be replaced and checked against the model.",
+      "owner": "User / architect",
+      "reason": "Only an image of the revised Bedroom 3 was provided; the old PDF still shows the TV unit.",
+      "resolution": "Full revised architect PDF (dated 14-10-2026) supplied by the user on 15 Oct 2026 and adopted as architect-layout.pdf in R-011; the 10 Sep original is archived."
+    },
+    {
+      "id": "RFI-011",
+      "status": "open",
+      "zone": "Rear ventilation shaft",
+      "question": "The revised plan draws a KOTTA/GRENITE SELF 1 ft 9 in x 4 ft 3 in along the west wall of the rear shaft. Confirm shelf height, slab thickness, supports, waterproofing/drainage at the shaft floor, and that it does not obstruct the shaft's ventilation function.",
+      "owner": "Architect / site supervisor",
+      "reason": "The shaft is a protected, client-confirmed ventilation shaft and its lower termination was never supplied. The model assumes a 2 ft 6 in high, 1.5 in slab on three kota corbels."
+    },
+    {
+      "id": "RFI-012",
+      "status": "open",
+      "zone": "Bedroom 2 and lift lobby joinery",
+      "question": "The revised plan shows only outlines for the Bedroom 2 STUDY UNIT (5 ft x 1 ft 6 in) and the lobby SHOE RACK (1 ft x 3 ft). Confirm desk height, drawer/pedestal layout and AC clearance above the study unit, and the shoe-rack height and shelving.",
+      "owner": "Architect / joinery",
+      "reason": "The model assumes a 2 ft 6 in desk with an east three-drawer pedestal, and a 3 ft 3 in open shoe rack kept below the lobby controls."
+    },
+    {
+      "id": "RFI-013",
+      "status": "open",
+      "zone": "Master bathroom washing niche and shower",
+      "question": "(1) Provide the measured niche width/depth and final washer cut sheet. Confirm loaded weight, feet and door clearances, and inlet/drain head. Design a restrained, vibration-resistant support (frame or slab, not a loose marble slab) with anti-walk brackets and a marble finished top at 610 mm; decide whether a leak tray with waste is wanted. (2) Confirm the standpipe/trap position behind the platform (about 112 mm gap, about 229 mm above the machine base): anti-siphon/air-gap detail, an access hatch for rodding, and the architect's niche floor drain (plan about x 4.27, z 33.3 ft, under the platform). Confirm the inlet angle valve and IP-rated RCD socket above the machine top on opposite niche walls. (3) Shower drain, user decision 27 Oct 2026: linear drain along the BACK wall under the mixer, not at the entry. The architect plan shows the shower floor drain at about x 1.27 ft, z 26.37 ft (read from a raster, about ±30 mm); the channel passes over it and the outlet stays under it, about 75 mm toward the wall. Confirm against the actual sleeve and sunken-slab depth; floor falls (about 1:80–1:100) run AWAY from the open front; waterproofing must turn up behind the channel's wall flange; flush grate (no border strip since R-015), wet-slip rating for the octagon floor and grate. (4) User decision 27 Oct 2026: 25 L vertical geyser high in the north-west corner of the door wall above the vanity. Confirm the selected model's dimensions, weight full and connection side; the wall behind it backs onto the master-bedroom wardrobe end and a block of unknown type on the plan, so confirm wall construction and a fixing rated for the full tank; 143 mm ceiling gap for lifting/service; PRV discharge via the wall chase to a tundish into the vanity basin waste; insulated concealed hot line about 3 m to the shower mixer; dedicated circuit, isolator outside the bathroom, IP rating of the high-level outlet. (5) R-015, 27 Oct 2026: the glass returns and the through-glass towel rail are removed, so the shower is fully open. Waterproof the whole bathroom floor with an upturn of at least 300 mm on all walls, and full height in the shower zone. Confirm the floor falls carry spray to the back-wall drain without ponding near the vanity or the WC, choose an anti-slip rating for the whole floor, and relocate the towel rail outside the direct spray. (6) Shower downlight sits over the open shower zone: IP65 fitting on an RCD circuit (with RFI-005). (7) For the 60+ users: blocking or anchor plates behind tile for a vertical grab bar beside the mixer, a fold-down seat on the shower back wall (south end) and a fold-up grab bar on the back wall beside the WC (W9 sill at about 440 mm rules out the side wall). (8) Finishes and storage confirmed by the user 27 Oct 2026; site checks still needed: Master WC shallow sage upper cupboard (about 168 mm deep, 2,035–2,751 mm high; moisture-resistant, termite-treated board, sealed edges, wall fixing), brass WC flush plate and health faucet, tiled cistern enclosure, and the floating vanity (much less storage than the approved floor-standing cabinet). (9) East wall is shared with the living hall and carries the towel bar, hooks and washer valve: confirm construction, fixings and waterproofing. W9/exhaust interplay stays under RFI-006.",
+      "owner": "Architect/site supervisor, structural professional where required, appliance vendor, plumber, waterproofing applicator, licensed electrician, carpenter",
+      "reason": "The user requested a 610 mm elevated washer and a reference-style shower; independent QA on rev 3 found unconfirmed services, fixings and finishes. Existing drawings do not specify the washer load or support, service routes, drain outlet, hot-water source or blocking (glass removed in R-015), so these elements of the 3D draft are conceptual and fabrication is blocked.",
+      "added": "2026-10-27 (promoted with R-012)",
+      "updated": "2026-10-27 (R-015 glass removed; R-016 text corrected)"
+    }
+  ]
+}

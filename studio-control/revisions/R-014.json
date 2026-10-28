@@ -1,0 +1,37 @@
+{
+ "schema_version": "1.0",
+ "revision_id": "R-014",
+ "status": "promoted",
+ "date": "2026-10-27",
+ "request": "the evening version seems too dark. Increase the brightness of the light in the evening mode. Tiles have to be 4feet by 2feet. Pillows on all the beds and the couch do not look realistic at all, they look like curved edge cuboids. Same is for the different appliances in the house. The floor in front of the common bathroom is grey square and not tiles.",
+ "work_mode": "direct baseline edit on user instruction",
+ "affected_zones": [
+  "all rooms (lighting, floor tile)",
+  "bedrooms",
+  "living",
+  "kitchen",
+  "washing niche",
+  "passage outside common bath"
+ ],
+ "changes": [
+  "evening light levels raised (measured +40-55%)",
+  "floor tile re-baked to 4 ft x 2 ft",
+  "passage floor and ceiling added",
+  "softGeo pillow/cushion geometry for beds and sofa; loose cushions repositioned onto the seat",
+  "fridge, split AC (x4), washer door rebuilt with detail",
+  "texture loading via onload"
+ ],
+ "assumptions": [
+  "4x2 tile long side along plan x, straight lay",
+  "bathroom floors keep smaller anti-slip tile",
+  "kitchen backsplash shares the floor tile material and so also shows 4x2 [corrected by R-016: incorrect; the backsplash uses the bathTile set]"
+ ],
+ "qa": "Author browser checks: no page errors; colliders, fixtures, viewpoints identical to pre-change model; mesh diff limited to the listed objects; visual review of bedrooms, sofa, fridge, AC, washer, passage. Independent QA not run.",
+ "specialists_activated": [],
+ "follow_up": {
+  "date": "2026-10-27",
+  "issue": "User screenshots: small pillows and sofa back looked transparent with no texture; orientation felt wrong",
+  "cause": "softGeo axis remap for axis 'z' was a mirror (odd permutation) so triangle winding flipped; meshes rendered inside out",
+  "fix": "axis 'z' remap changed to a cyclic permutation; all 23 soft meshes verified 100% outward-facing; GLB re-exported"
+ }
+}

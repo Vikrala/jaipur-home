@@ -1,0 +1,28 @@
+{
+ "run_id": "RUN-R-012-site-qa-03",
+ "revision_id": "R-012",
+ "agent_id": "R-012-site-qa-03",
+ "role": "site-qa-coordinator",
+ "date": "2026-10-27",
+ "request": "studio-control/drafts/R-012/qa-launch-request-rev4.json",
+ "router_status": "launch-allowed",
+ "routing_rule": "standard-design-delivery",
+ "model": "claude-sonnet-5-5",
+ "reasoning_effort": "medium",
+ "model_tier": "standard",
+ "consent_status": "not-required",
+ "task_fingerprint": "a0b5c687076e0a1054c2c1c3fd01a78262f1d7bbf19cfcfadcf4289e54c9f67d",
+ "runtime_available_models": [
+  "claude-fable-5-1",
+  "claude-haiku-5-5",
+  "claude-opus-5-5",
+  "claude-sonnet-5-5"
+ ],
+ "launch_status": "completed",
+ "write_scope": "studio-control/drafts/R-012/qa-record-rev4-independent.json",
+ "outcome": "fail (fixable): 0 blockers, 3 fix-in-draft (stale 150 mm in R-012.json, unnamed shower feature record, towel rail 18 mm off glass) | rev 4.1 spot re-check: pass-with-holds",
+ "output_artifacts": [
+  "studio-control/drafts/R-012/qa-record-rev4-independent.json"
+ ],
+ "contribution": "Independent read-only QA of rev 4; re-measured the architect drain point (1.27, 26.42 ft); found a code defect the author's 32 checks missed"
+}

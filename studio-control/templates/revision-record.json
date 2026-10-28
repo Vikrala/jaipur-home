@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "R-XXX",
+  "status": "proposed",
+  "request": "",
+  "work_mode": "review | draft | approval-required | approved-update",
+  "affected_zones": [],
+  "disciplines": [],
+  "sources_used": [],
+  "source_versions_checked": [],
+  "specialists_activated": [],
+  "model_routing": {
+    "planned_launches": [],
+    "runtime_available_models": [],
+    "router_results": [],
+    "actual_model_usage": []
+  },
+  "source_conflicts": [],
+  "proposal": "",
+  "risks_and_dependencies": [],
+  "rfis_created_or_updated": [],
+  "draft_artifacts": [],
+  "approved_baseline_artifacts_to_change": [],
+  "validation_plan": [],
+  "scope_approval": {"status": "pending", "approved_by": null, "approved_at": null},
+  "qa": {"status": "not-started", "reviewer": null, "results": []},
+  "promotion_approval": {"status": "pending", "approved_by": null, "approved_at": null},
+  "promotion": {"status": "not-started", "promoted_at": null, "changed_artifacts": []},
+  "open_next_actions": []
+}

@@ -1,0 +1,190 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "R-012",
+  "rev": "3",
+  "independent_qa_specialist": "R-012-site-qa-02",
+  "model": "claude-sonnet-5-5",
+  "reasoning_effort": "medium",
+  "date": "2026-10-27",
+  "checks": [
+    {
+      "name": "Approved baseline untouched",
+      "status": "pass",
+      "evidence": "shasum -a 256 output/jaipur-home/model/interior.js = c93377869d7902615063e28422a098c091f3c3a0ab2e2931d4f81967e53570c7 (matches). Baseline GLB 6035e0d0...ce95575, walkthrough.template.html 7c4dd80d...e0c5, plan-data.js a35e90a5..., three.min.js and gltf-exporter.js are byte-identical to the draft copies; baseline interior.js/GLB mtimes are 15 Oct 2026, before R-012."
+    },
+    {
+      "name": "Interior.js diff matches the published interior.js.diff",
+      "status": "pass",
+      "evidence": "Regenerated diff -u baseline vs studio-control/drafts/R-012/model/interior.js is identical (after the header lines) to interior.js.diff. Draft walkthrough.html embeds model/interior.js verbatim (substring match true, 1 geyser mesh name, no 'Horizontal storage geyser')."
+    },
+    {
+      "name": "Scope isolation: diff confined to master bathroom / washing niche",
+      "status": "pass-with-hold",
+      "evidence": "Reviewed all hunks: new 'masterBathFloor' texture and 'Master bath ...' materials appended at the end of existing chains (no RNG/order shift); floor material switched only for r.id==='bath-master'; tap()/basin() gain optional finish args (defaults preserve old output); toilet() branches on name==='Master WC'; master-bath/washing blocks; utility cupboard y 5.25 -> 6.55 (inside the niche); 5 viewpoints (bath-master, bath-master-entry, bath-master-reverse, washing). No kitchen, living, pooja, bedroom, common-bath, stair, lift, shaft, door/window/wall data changes. Hold: the author's 'no change outside' check (r012-checks.js ZONE x 0.7-6.8, z 20.5-34.3) skips any mesh that merely intersects the zone and compares only name + bounding box (no material, light, visibility, viewpoint test), so it is supporting evidence, not proof; my manual diff review is what establishes isolation."
+    },
+    {
+      "name": "Protected decisions (project-state.json)",
+      "status": "pass",
+      "evidence": "No change to constructed walls, columns, openings (D3, W9 data untouched; wall tile boxes are added finishes around W9's 1.5-3.375 ft opening), 10 ft ceiling (geyser top 2,905 mm, ceiling 3,048 mm), approved kitchen, living, Bedroom 2 decisions. plan-data.js identical to baseline."
+    },
+    {
+      "name": "Geyser: vertical, placement, D3 and spray",
+      "status": "pass-with-hold",
+      "evidence": "interior.js: cylinder r 0.656 ft (400 mm dia) x 2.13 ft (649 mm) high at x 1.044-2.356, z 21.0675-22.3795, y 7.40-9.53 ft (underside 2,256 mm, top 2,905 mm). Vertical (h>w) and a placeholder: no cut sheet, so '25 L plausible' is unverified. D3 opening x 3.6225-6.375 ft (plan-geometry.json); hinge east, leaf swings into the bath (confirmed in interior.js line 149-152 and the architect door arc) so geyser east edge 2.356 ft is 1.27 ft (386 mm) clear of the opening and far outside the leaf arc. Rain head at (about 2.18 ft, 24.97 ft, 7.02 ft) is ~790 mm in plan from the geyser; vanity-side glass apex is 2,027 mm, below the 2,256 mm underside; geyser south face is only ~176 mm behind the glass line, so splash/steam exposure and the geyser IP rating are not proven."
+    },
+    {
+      "name": "Geyser: headroom, ceiling gap, mirror, light, outlet, towel ring",
+      "status": "pass-with-hold",
+      "evidence": "Underside 2,256 mm >= 2,100 mm; ceiling gap 143 mm: enough only to hang a tank on a bracket, thin for lifting a ~35-40 kg tank (weight is my estimate, not a product figure) and for service access; unproven. Mirror top 6.67 ft = 2,033 mm so the tank sits 223 mm above the mirror and arched mirror backlight (no collision). IP outlet at (2.95, 7.75 ft = 2,362 mm, z 21.07) is 180 mm east of the tank and directly above the hand-towel ring (x 2.98, 1,152 mm): vertical separation ok. Shower downlight at px(228),pz(475) = (2.23, 25.0) sits inside the shower enclosure and is not mentioned in the packet/RFI-005 holds. PRV drain line and hot/cold drops end mid-wall (y about 6.65-6.8 ft); no floor trap/termination is modelled in the NW corner and no hot-water route to the shower mixer (~3 m away on the west wall) is shown."
+    },
+    {
+      "name": "Geyser wall backing",
+      "status": "unverified",
+      "evidence": "Architect plan (rendered raster of output/jaipur-home/architect-layout.pdf) shows the master-bedroom granite wardrobe (2 ft x 5 ft 9 in) ending against the bath north wall at x 0.75-2.75 ft, and a blue-filled block in the wall at roughly x 0.75-2.3 ft whose legend meaning I could not establish. The geyser (x 1.04-2.36) and its wall chase are therefore directly behind a wardrobe end and possibly a column/duct. Wall type, thickness (~0.75 ft traced) and fixing capacity are not established; leak path into the wardrobe is an execution hold."
+    },
+    {
+      "name": "Drain stays off the door-to-vanity/WC/washer routes",
+      "status": "pass",
+      "evidence": "Recomputed: drain x 3.444-3.664, z 23.12-26.82; shower front line x 3.834; return glass faces z 22.9575 and 26.9825; D3 plane z 21.0075, so the drain starts 644 mm inside the room and 52 mm behind the front line. Landing (x 3.6225-6.375, z 21.01-22.97) and vanity zone are north of the vanity-side return; walkway x 3.834-6.277 never includes x<3.834. The drain is crossed only by someone stepping into the shower. The author's first run failed because the landing zone ran behind the glass; widening to 'split landing' is geometrically justified (glass blocks that strip), not a rigging of the test."
+    },
+    {
+      "name": "Drain surface flush / trip",
+      "status": "fail",
+      "evidence": "interior.js line 878: rb(width-.30,.03,.22,0,.035,...) puts the brass drain top at y 0.05 ft = 15 mm against a finished floor top of 0.008 ft = 2.4 mm, i.e. ~12.6 mm proud in the model, at the exact step-in point. The check 'Black border flush (<=5 mm)' tests only the black border (top 4.6 mm, ~2 mm proud) and not the drain; the packet's 'flush, no kerb' claim is therefore unsupported for the drain and visually the drain reads as a raised grille in rev3-bath-from-door-drain.png. The 5 mm tolerance is also lenient for a 60+ user."
+    },
+    {
+      "name": "Drain outlet shift basis (user decision 3)",
+      "status": "fail",
+      "evidence": "Packet/RFI-013/R-012 say the outlet shifts 'about 150 mm'. Baseline model drain is at x 3.15 ft (shower() local z 1.55 from x 1.60), new channel centre x 3.554 ft = ~123 mm, but that baseline drain is itself a model placeholder. The architect plan (rendered raster) shows the nearest drawn floor drain at about x 1.3 ft, z 26.4 ft (about 0.55 ft off the west wall, south of the mixer symbol at z 25.0). Relative to that, the channel (x 3.44-3.66, z 23.1-26.8) is roughly 0.7 m east and the fall direction runs toward the walkway. The user accepted the shift on a ~150 mm premise; basis must be corrected and re-confirmed. My reading is from a low-resolution raster, so it needs confirmation against the CAD/site."
+    },
+    {
+      "name": "Border tile / kerb / slip",
+      "status": "pass-with-hold",
+      "evidence": "Border box(width+.05,.006,.10) at y .012 ft: top 4.6 mm, ~2 mm above floor in model; brass glass channels at the return bases are modelled 21 mm high but lie along the sides (z 22.97/26.97), not across any route. No wet-floor slip rating, falls or sunken-slab depth is specified (RFI-004). Open front with no kerb and the drain at the front means all shower falls run toward the dry walkway: a blocked drain or mis-set fall discharges straight onto the route to the WC and washer."
+    },
+    {
+      "name": "Washer 610 mm top and support",
+      "status": "pass-with-hold",
+      "evidence": "marble top box centre 1.945 ft + 0.055 = 2.000 ft = 609.6 mm (check reads 610). Machine 619 x 625 mm sits at x 4.025-6.055 on a 704 mm platform (x 3.885-6.195), niche faces 3.7975-6.2775 so ~69 mm side gaps each side. Marble top is modelled 33 mm thick over a ~610 mm clear span between 150 mm cheeks; the front 'concealed cross support' is a thin box. Not accepted as structure: needs designed frame/slab, anchorage, anti-walk restraint, load path (RFI-013 item 1 already holds this). No fall, drip edge or leak tray on the top; 21 mm front upstand will retain a door spill."
+    },
+    {
+      "name": "Washer services reachability",
+      "status": "pass-with-hold",
+      "evidence": "Valve at x 6.275, y 5.20 ft (1,585 mm), z 31.533; socket at x 3.825, y 5.45 ft (1,661 mm); both 95-170 mm above the 1,490 mm machine top and ~225 mm behind its front face, 747 mm apart on opposite walls: reachable with an arm over the machine edge and not under a tap. Machine side gaps are ~69 mm so isolation/replacement of the valve is reachable only over the machine top. Sockets at 1,661 mm directly above the top are a drip/splash risk; IP rating and RCD are holds only. Cupboard bottom 6.775 ft leaves 575 mm; ok for services, needs a step stool for contents."
+    },
+    {
+      "name": "Washer drain hose and standpipe",
+      "status": "pass-with-hold",
+      "evidence": "Hose runs behind the machine and loops to y 4.45 ft (1,356 mm) before dropping into a standpipe whose top is 2.75 ft (838 mm), only ~229 mm above the machine base (610 mm). The loop high point helps against siphoning, but the packet's 'air gap' is not modelled or checked and drain-head/anti-siphon limits are unknown (no cut sheet). Standpipe at (4.19, 33.703) is in a ~112 mm gap behind the platform (platform back z 33.487, niche tile face ~33.85), so cleaning/rodding needs the platform or baskets moved. Architect plan shows the niche floor drain at about x 4.27, z 33.3 ft (raster reading), i.e. under the platform behind the baskets; standpipe is ~0.45 ft off it. Execution hold."
+    },
+    {
+      "name": "Usability 60+ and 28-35 users",
+      "status": "pass-with-hold",
+      "evidence": "Dry route 745 mm (front line 3.834 to east tile face 6.277), ~684 mm at the towel bar (projects ~61 mm over z 24.25-25.8); WC centreline 408 mm to the glass face and 514 mm to the W9 wall (threshold 400 mm is the author's own); vanity-to-glass gap 36 mm (43 mm to glass centre): a narrow dirt-trap slot; vanity standing pocket 590 mm wide x 437 mm deep before opening east. Open door leaf ends z ~23.6, ~200 mm short of the towel bar. Towel bar and hooks are 2.2 ft (675 mm) beyond the shower front line and not reachable from inside the shower (the 'reachable from the shower entry' check only tests z-overlap). No grab-bar blocking, seat or glass-mounted towel rail is provided or flagged for the 60+ user; the mixer is on the far (west) wall 900 mm from the open front. WC bowl is visible from the doorway beyond the WC-side return (privacy)."
+    },
+    {
+      "name": "Render inspection vs code and packet",
+      "status": "pass-with-hold",
+      "evidence": "rev3-bath-vanity-geyser.png shows the tank high in the NW corner above the basin, ring and arched return; rev3-bath-from-door-drain.png shows the brass drain and black border across the shower front, towel bar and hooks on the east wall, raised washer with baskets and the lifted cupboard: consistent with code and packet. Problems: both rev3 PNGs are small (about 608 x 370) with browser-UI bands cropped in, the drain visibly reads as a raised grille, and after-bath-master*.jpg, after-plan-top.jpg, after-wc-side.jpg are rev 2 (25 Oct) images with the horizontal geyser era layout and no geyser; after-washer-close/after-washing are valid for rev 3 because washer geometry is unchanged. Nothing in evidence shows the outlet, PRV line or the WC upper cupboard clearly."
+    },
+    {
+      "name": "Author checks: do they test what they claim",
+      "status": "pass-with-hold",
+      "evidence": "23/23 in verify-results.json match r012-checks.js. Sound: marble 610 mm, route/drain-off-route (zones derived from geometry), geyser headroom/ceiling/D3 east edge, standpipe behind platform. Weak: (a) 'No browser errors' is tautological, harness.html sets b.errors=[] and verify-results.json admits console inspection by hand; (b) GLB > 100,000 bytes proves export only; (c) shower 'at least 900 mm' uses a >=890 mm threshold (actual 899/1,219 mm between glass centres); (d) dry route >=700 mm is measured to the tile face and ignores the towel bar; (e) the towel-bar check is a bounding-box overlap, not a reach test; (f) the flush check ignores the drain body; (g) the vanity-to-glass check measures to glass centre; (h) no check on the WC upper cupboard, shower downlight or PRV route. I did not re-run the harness (no Node/Playwright); I recomputed the key numbers by hand from interior.js and plan-geometry.json and they match."
+    },
+    {
+      "name": "Records consistency: revision, packet, RFI-013, qa-record",
+      "status": "fail",
+      "evidence": "R-012.json, DECISION-PACKET.md and RFI-013.json agree on the three decisions, 2,256/2,905/143 mm geyser numbers and 23/23 checks. Inconsistencies: (1) qa-record.json (site-qa-01, rev 1 static) still lists stale 'unresolved'/'partial' statuses and 'no draft GLB, no renders' next to rev2/rev3 author sections: it does not read as a clean record for rev 3; (2) the Master WC shallow sage upper cupboard, new brass WC fittings, tiled cistern enclosure and vanity change from storage cabinet to a shallow floating unit appear in interior.js but not in the packet, R-012.json proposal or RFI-013 holds; (3) drain shift '~150 mm' basis (see above); (4) agent-runs/RUN-R-012-site-qa-02.json says launch_status 'blocked', model null, because model_router.py selected gpt-6-sol which is unavailable and model-policy.json catalogs no Claude models, while this QA is running as claude-sonnet-5-5 / medium; R-012.json specialists_activated and model_routing do not yet record site-qa-02; (5) R-012.json 'baseline artifacts to change' and promotion plan are consistent with the project's file list."
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocker-before-promotion",
+      "finding": "Drain shift magnitude is mis-stated. The packet, RFI-013 and R-012 say the outlet moves about 150 mm; that figure is relative to a modelled baseline placeholder (123 mm by code). The architect plan appears to draw the shower floor drain near the west wall (about x 1.3 ft, z 26.4 ft), making the new entry channel about 0.7 m away with falls running toward the walkway. The user's acceptance of decision 3 rests on the 150 mm figure.",
+      "recommended_action": "Design Director to confirm the architect FD position at full resolution/site, restate the shift and fall direction against it, and re-confirm decision 3 with the user before promotion. Show the architect FD on the draft plan evidence."
+    },
+    {
+      "severity": "blocker-before-promotion",
+      "finding": "Review provenance conflict: RUN-R-012-site-qa-02.json is 'blocked' (router chose gpt-6-sol, unavailable; no Claude model in model-policy.json) yet this QA ran as claude-sonnet-5-5 at medium effort. Project policy says no silent fallback.",
+      "recommended_action": "Design Director/user to resolve per policy (policy update or recorded override), correct the run record to the model actually used and its contribution, and add site-qa-02 to R-012.json specialists_activated and model_routing. Until then, treat this record as advisory."
+    },
+    {
+      "severity": "fix-in-draft",
+      "finding": "Linear drain is modelled ~12.6 mm proud of the floor at the shower step-in, contradicting the 'flush, no kerb' claim; the flush check covers only the black border and allows 5 mm.",
+      "recommended_action": "Lower the drain body so its top is flush with the finished floor (grating top at 2.4 mm), keep border at <= 0 mm proud in the model, add a drain-flush check, and re-render the door view at higher resolution."
+    },
+    {
+      "severity": "fix-in-draft",
+      "finding": "Undisclosed additions: Master WC shallow sage upper cupboard (2,035-2,754 mm high, ~168 mm deep) and brass WC fittings/tiled cistern enclosure, and a reduced-storage floating vanity, are in interior.js but not in the packet, R-012.json or RFI-013.",
+      "recommended_action": "Add them to the decision packet as user-visible changes with the moisture/termite-resistant board, wall fixing and clearance holds, or remove the cupboard if not wanted; add to RFI-013."
+    },
+    {
+      "severity": "fix-in-draft",
+      "finding": "qa-record.json mixes rev 1 static QA with rev 2/rev 3 author self-checks and carries obsolete 'unresolved' statuses and 'no renders' notes; the after-*.jpg evidence is rev 2 and unlabelled.",
+      "recommended_action": "Archive the rev 1 record, write a rev 3 record that points to this independent record, and rename/label stale evidence images as rev 2. Re-capture the two rev 3 renders at full resolution without UI bands."
+    },
+    {
+      "severity": "fix-in-draft",
+      "finding": "Weak/tautological checks: browser-error capture is hard-coded to none, towel reach, route width and flush checks are looser than their names, and nothing checks the shower downlight, WC cupboard or PRV route.",
+      "recommended_action": "Add a real pageerror/console hook, a reach-distance check for the towel position, measure the route to the towel-bar face (about 684 mm), and add the missing checks before relying on 23/23."
+    },
+    {
+      "severity": "fix-in-draft",
+      "finding": "Towel and safety provisions for the 60+ user are not designed: bar/hooks are 675 mm beyond the open front, no glass-side or shower-side towel rail, no grab-bar/seat blocking, mixer on the far wall.",
+      "recommended_action": "Add a brass towel rail on the dry face of the vanity-side return (or within one arm length of the entry), mark blocking zones in the green wall for a grab bar/fold-down seat, and consider moving the mixer toward the front half of the wall."
+    },
+    {
+      "severity": "execution-hold",
+      "finding": "Geyser: wall backs onto the master-bedroom wardrobe end and a block of unknown type on the plan; full-tank fixing (my estimate 35-40 kg, not a product figure), 143 mm ceiling gap, outside isolator versus an in-bathroom outlet, IP rating given 176 mm from the glass line and the 2,140 mm rain head, PRV discharge termination (no floor trap modelled), hot-water route ~3 m to the shower mixer, and 25 L capacity versus a rain head plus hand shower.",
+      "recommended_action": "Add to RFI-013/RFI-005: confirm wall construction and chase with the architect, selected model's cut sheet, isolator position, PRV route to a trap, supply routing and user capacity expectation; a licensed plumber/electrician to sign off."
+    },
+    {
+      "severity": "execution-hold",
+      "finding": "Washer: standpipe sits in a ~112 mm gap behind the platform and only ~229 mm above the machine base; air gap/anti-siphon not modelled; architect niche floor drain appears at about x 4.27, z 33.3 ft under the platform; marble 33 mm over a ~610 mm span is not a structural top; no leak tray or fall.",
+      "recommended_action": "Obtain washer cut sheet drain-head limits, plumber detail for standpipe/trap with an access hatch, designed support frame and restraint (RFI-013), and decide whether a leak tray with waste or a floor-level trap is wanted under the platform."
+    },
+    {
+      "severity": "execution-hold",
+      "finding": "Open 1,220 mm front with no kerb: all shower falls run to the front drain adjacent to the dry route; floor falls, sunken slab depth, waterproofing continuity at the channel and the glass floor channels, slip rating of the octagon floor and brass drain grate are unspecified.",
+      "recommended_action": "Hold under RFI-004: plumber/waterproofer to confirm falls, sunken depth, test and wet-slip rating before ordering tile and glass; keep the fallback fixed front panel in view."
+    },
+    {
+      "severity": "execution-hold",
+      "finding": "Shared east wall (about 0.375 ft traced) with the living hall carries the washer valve, hooks and towel bar; W9 sill/exhaust interplay (exhaust at px(232),8.68 ft appears to sit inside W9's 1.5-3.375 ft opening in the baseline, pre-existing); glass fixing for arched fluted returns and reeded-face orientation for hard-water cleaning.",
+      "recommended_action": "Fold into RFI-004/006/013: wall construction and waterproofing on the east wall, exhaust/W9 conflict, glass supplier detail with smooth face to the wet side."
+    },
+    {
+      "severity": "note",
+      "finding": "Scope isolation, baseline hash, door swing clearance (hinge to return corner 3.15 ft vs leaf ~2.6 ft), geyser clearance from D3, 610 mm top and the drain-off-route geometry are verified independently and pass. Dry walkway 745 mm is below a 900 mm walker-friendly width; acceptable for current users but not future-proof.",
+      "recommended_action": "Record as accepted trade-off or widen by reducing return length/shower depth if the user wants it."
+    }
+  ],
+  "open_rfis": [
+    "RFI-013 (draft): add architect-FD-based drain shift, geyser model/wall backing/fixing/PRV/isolator/IP, WC upper cupboard, standpipe access and anti-siphon, designed washer support",
+    "RFI-004: waterproofing, falls, sunken slab, drain outlet relocation, slip rating, wet-floor channel continuity (open)",
+    "RFI-005: wet-area circuits for geyser, washer socket, mirror light and shower downlight (open)",
+    "RFI-006: W9 shaft opening, guarding and exhaust interplay (open)",
+    "Site check: confirm architect floor-drain positions (shower about x 1.3, z 26.4 ft; niche about x 4.27, z 33.3 ft per plan raster), wall behind the geyser, east wall thickness, door D3 swing against hooks and towel bar",
+    "Governance: reconcile RUN-R-012-site-qa-02.json (blocked) with the model actually used"
+  ],
+  "result": "fail",
+  "sources_actually_used": [
+    "studio-control/revisions/R-012.json",
+    "studio-control/drafts/R-012/DECISION-PACKET.md",
+    "studio-control/drafts/R-012/README.md",
+    "studio-control/drafts/R-012/RFI-013.json",
+    "studio-control/drafts/R-012/qa-record.json",
+    "studio-control/drafts/R-012/qa-launch-request-rev3.json",
+    "studio-control/drafts/R-012/model/interior.js",
+    "output/jaipur-home/model/interior.js (shasum verified)",
+    "studio-control/drafts/R-012/interior.js.diff (regenerated and compared)",
+    "output/jaipur-home/model/plan-geometry.json (bath-master, D3, W9)",
+    "studio-control/drafts/R-012/verification/r012-checks.js, harness.html, verify-results.json",
+    "studio-control/drafts/R-012/walkthrough.html (embed check)",
+    "evidence: rev3-bath-vanity-geyser.png, rev3-bath-from-door-drain.png, after-washer-close.jpg, after-washing.jpg, after-plan-top.jpg, before-plan-top.jpg; output/jaipur-home/renders/bath-master.png",
+    "output/jaipur-home/architect-layout.pdf (rasterised via sips/qlmanage, low resolution; bathroom and niche crops)",
+    "studio-control/project-state.json, rfis.json, model-policy.json, agent-runs/RUN-R-012-site-qa-02.json",
+    "shasum of baseline GLB, template, plan-data.js, three.min.js, gltf-exporter.js"
+  ]
+}

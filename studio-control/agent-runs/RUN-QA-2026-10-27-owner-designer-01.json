@@ -1,0 +1,28 @@
+{
+ "run_id": "RUN-QA-2026-10-27-owner-designer-01",
+ "revision_id": "QA-2026-10-27 (review of BASELINE-2026-10-27 after R-015)",
+ "agent_id": "BASELINE-ffe-01",
+ "role": "interior-ffe-designer",
+ "date": "2026-10-27",
+ "request": "studio-control/qa/BASELINE-2026-10-27/launch-owner-designer-01.json",
+ "router_status": "launch-allowed",
+ "routing_rule": "standard-design-delivery",
+ "model": "claude-sonnet-5-5",
+ "reasoning_effort": "medium",
+ "model_tier": "standard",
+ "consent_status": "not-required",
+ "task_fingerprint": "4d853ac895a4f86a910ebc2475f7fc1becec294ebe05a50aff221857aedbb898",
+ "runtime_available_models": [
+  "claude-fable-5-1",
+  "claude-haiku-5-5",
+  "claude-opus-5-5",
+  "claude-sonnet-5-5"
+ ],
+ "launch_status": "completed",
+ "write_scope": "none used (read-only; report returned to coordinator)",
+ "outcome": "Owner: open shower wets WC/washer route for 60+ users; washer in wet room; kitchen uppers too high. Designer: 1 mm joints vs movement; palette coherence in kitchen; stale stills; lighting layers",
+ "output_artifacts": [
+  "studio-control/qa/BASELINE-2026-10-27/QA-REPORT.md"
+ ],
+ "contribution": "Daily-use and design-quality review"
+}

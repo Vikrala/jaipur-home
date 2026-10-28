@@ -1,0 +1,273 @@
+{
+ "schema_version": "1.0",
+ "revision_id": "R-012",
+ "status": "promoted",
+ "request": "User, 25 October 2026: redo only the master bathroom using the attached green-tile/brass/fluted-glass reference, and raise the washing machine 2 ft on a marble-topped support; do not change unrelated areas. Rev 2 (same day): user asked to review the draft for obvious mistakes and real-use problems and update it. Rev 3 (27 Oct 2026): user decisions — (1) open shower front agreed; (2) a 25 L vertical geyser in the bathroom; (3) linear-drain outlet shift agreed, provided the drain is not in the path of entering the bathroom.",
+ "work_mode": "draft",
+ "affected_zones": [
+  "Master bathroom",
+  "Master bathroom washing niche"
+ ],
+ "disciplines": [
+  "Interior finishes and fixtures",
+  "Utility appliance support",
+  "Waterproofing and services coordination",
+  "3D visualisation"
+ ],
+ "sources_used": [
+  "User screenshot dated 25 October 2026 (visual inspiration, not instructions)",
+  "output/jaipur-home/architect-layout.pdf and model/plan-geometry.json (constructed master bathroom and washing-niche geometry)",
+  "output/jaipur-home/model/interior.js and walkthrough.template.html (current maintained model)",
+  "output/jaipur-home/README.md and CHANGELOG.md",
+  "studio-control/project-state.json, artifact-manifest.json and rfis.json"
+ ],
+ "source_versions_checked": [
+  "Baseline interior.js SHA-256 c93377869d7902615063e28422a098c091f3c3a0ab2e2931d4f81967e53570c7",
+  "Baseline walkthrough.template.html SHA-256 7c4dd80d74997a4e7b3c1504292931b03d3ce42d8ecc639d0e9fe0eec282e0c5",
+  "Baseline GLB SHA-256 6035e0d0e61ca1748847d02dac18ff7728bc14f3e967ae1ac7e1d717ece95575"
+ ],
+ "specialists_activated": [
+  {
+   "agent_id": "R-012-site-qa-01",
+   "role": "site-qa-coordinator",
+   "contribution": "Independent static scope, geometry and execution-risk review; identified washer service-access holds and RFI ID collision"
+  },
+  {
+   "agent_id": "R-012-site-qa-02",
+   "role": "site-qa-coordinator",
+   "contribution": "Independent QA of rev 3 (FAIL, fixable): drain-shift figure wrong against architect plan; drain modelled proud; undisclosed WC/vanity changes; stale QA record; weak checks; 60+ provisions missing"
+  },
+  {
+   "agent_id": "R-012-site-qa-03",
+   "role": "site-qa-coordinator",
+   "model": "claude-sonnet-5-5",
+   "reasoning_effort": "medium",
+   "model_tier": "standard",
+   "consent": "not-required",
+   "run_record": "studio-control/agent-runs/RUN-R-012-site-qa-03.json",
+   "contribution": "Independent QA of rev 4 (fail: 3 mechanical fixes) and spot re-check of rev 4.1 (pass-with-holds); re-measured the architect drain point"
+  }
+ ],
+ "model_routing": {
+  "planned_launches": [
+   "studio-control/drafts/R-012/qa-launch-request.json",
+   "studio-control/drafts/R-012/qa-launch-request-rev3.json"
+  ],
+  "runtime_available_models": [
+   "gpt-6.1-sol",
+   "gpt-6-astra",
+   "gpt-6-sol",
+   "gpt-6-luna",
+   "gpt-5.6-sol"
+  ],
+  "router_results": [
+   {
+    "status": "launch-allowed",
+    "routing_rule": "standard-design-delivery",
+    "model": "gpt-6-sol",
+    "reasoning_effort": "medium",
+    "model_tier": "standard",
+    "consent_status": "not-required"
+   },
+   {
+    "status": "blocked",
+    "reason": "selected-model-unavailable",
+    "selected_model": "gpt-6-sol",
+    "runtime_available_models": [
+     "claude-fable-5-1",
+     "claude-haiku-5-5",
+     "claude-opus-5-5",
+     "claude-sonnet-5-5"
+    ]
+   },
+   {
+    "status": "launch-allowed",
+    "routing_rule": "standard-design-delivery",
+    "model": "claude-sonnet-5-5",
+    "reasoning_effort": "medium",
+    "model_tier": "standard",
+    "consent_status": "not-required",
+    "policy_change": "D-012"
+   },
+   {
+    "agent_id": "R-012-site-qa-03",
+    "model": "claude-sonnet-5-5",
+    "reasoning_effort": "medium",
+    "model_tier": "standard",
+    "consent": "not-required",
+    "router_status": "launch-allowed"
+   }
+  ],
+  "actual_model_usage": [
+   {
+    "agent_id": "R-012-site-qa-01",
+    "model": "gpt-6-sol",
+    "reasoning_effort": "medium",
+    "model_tier": "standard",
+    "consent_status": "not-required"
+   },
+   {
+    "agent_id": "R-012-site-qa-02",
+    "model": "claude-sonnet-5-5",
+    "reasoning_effort": "medium",
+    "model_tier": "standard",
+    "consent_status": "not-required"
+   }
+  ]
+ },
+ "source_conflicts": [],
+ "proposal": "Rev 2: enclose a 900 × 1,220 mm shower between two fixed arched fluted returns (vanity side and WC side) with an open front, brass linear drain (rev 4: along the back wall under the mixer; rev 2–3 had it at the entry) and black border tile; fix the brass mixer set to the green-tiled wall; keep a dry 745 mm route to the WC and washer; add towel bar, robe hooks and hand-towel ring; keep the arched mirror within the vanity; tile the WC-side and niche walls; add a 25 L vertical geyser high in the corner of the door wall above the vanity (rev 3; a vertical tank does not fit over the door). Washer stays on a 610 mm marble-topped support with front upstand and laundry baskets below; inlet valve and RCD socket sit above the machine on opposite walls; drain hose runs behind to a standpipe; overhead cupboard raised to 6 ft 7 in.",
+ "risks_and_dependencies": [
+  "The reference image shows a larger twin-panel shower; the narrower built room can accommodate the material language but its exact shower composition must follow site measurements and door clearances.",
+  "Marble alone must not carry the washer's dynamic load. The support frame, slab thickness, anchorage, vibration pads and appliance restraint need a structural/site detail before construction.",
+  "Actual washer cut sheet, door swing, inlet/drain hose limits, service isolation and overhead-cupboard clearances are unknown.",
+  "Master bathroom waterproofing, shower slope/drain and electrical wet-area protection remain subject to RFI-004 and RFI-005.",
+  "W9 opening and shaft protection remain subject to RFI-006.",
+  "Open 1,220 mm shower front will still let some splash reach the entry zone; a short fixed front panel is the fallback if the user wants it.",
+  "Linear-drain outlet: rev 4 channel runs along the back wall over the architect drain point (plan ≈ x 1.27, z 26.37–26.42 ft); outlet shift about 75 mm; depends on the actual sleeve and sunken-slab depth (the earlier '150 mm' figure was wrong and is superseded).",
+  "25 L vertical geyser body (~400 mm dia × 650 mm) is a placeholder; the selected model's height must fit between the 2,256 mm underside and the 3,048 mm ceiling with service access, and its wall fixing must carry the full tank."
+ ],
+ "rfis_created_or_updated": [
+  "RFI-013 proposed in draft only (rev 3 updates items 3 and 4); global rfis.json unchanged"
+ ],
+ "draft_artifacts": [
+  "studio-control/drafts/R-012/DECISION-PACKET.md",
+  "studio-control/drafts/R-012/README.md",
+  "studio-control/drafts/R-012/RFI-013.json",
+  "studio-control/drafts/R-012/evidence/",
+  "studio-control/drafts/R-012/evidence/rev3/rev3-bath-from-door-drain.png",
+  "studio-control/drafts/R-012/evidence/rev3/rev3-bath-vanity-geyser.png",
+  "studio-control/drafts/R-012/interior.js.diff",
+  "studio-control/drafts/R-012/model/interior.js",
+  "studio-control/drafts/R-012/qa-launch-request-rev3.json",
+  "studio-control/drafts/R-012/qa-record-rev3-independent.json",
+  "studio-control/drafts/R-012/superseded-rev3/qa-record.rev1-3.json",
+  "studio-control/drafts/R-012/superseded-rev1/",
+  "studio-control/drafts/R-012/superseded-rev2/",
+  "studio-control/drafts/R-012/verification/harness.html",
+  "studio-control/drafts/R-012/verification/r012-checks.js",
+  "studio-control/drafts/R-012/verification/verify-results.json",
+  "studio-control/drafts/R-012/verification/verify_r012.cjs",
+  "studio-control/drafts/R-012/walkthrough.html",
+  "studio-control/drafts/R-012/qa-record.json",
+  "studio-control/drafts/R-012/evidence/rev4/",
+  "studio-control/drafts/R-012/superseded-rev3/"
+ ],
+ "approved_baseline_artifacts_to_change": [
+  "output/jaipur-home/model/interior.js",
+  "output/jaipur-home/walkthrough.html",
+  "output/jaipur-home/model/jaipur-first-floor.glb",
+  "output/jaipur-home/renders/bath-master.png",
+  "output/jaipur-home/renders/bath-master-reverse.png",
+  "output/jaipur-home/renders/washing.png",
+  "output/jaipur-home/CHANGELOG.md",
+  "output/jaipur-home/README.md",
+  "docs/PROJECT_HANDOFF.md",
+  "studio-control/artifact-manifest.json"
+ ],
+ "validation_plan": [
+  "Check JavaScript syntax and standalone HTML rebuild",
+  "Review master bath and washing views, including shower entry, machine door/service access and overhead clearance",
+  "Compare unaffected scene geometry with the baseline",
+  "Obtain independent QA before any promotion"
+ ],
+ "validation_done": [
+  "Draft interior.js passed Node.js syntax check; draft walkthrough.html rebuilt from the unchanged template",
+  "Independent static QA in studio-control/drafts/R-012/superseded-rev3/qa-record.rev1-3.json confirmed unchanged plan/template and a 609.6 mm marble-top elevation",
+  "Browser security policy blocked local-file visual review; no rendered-view or GLB verification claimed",
+  "Rev 2: rendered rev 1 and rev 2 views in headless Chromium (evidence/); 18/18 automated geometry and usability checks pass against the reconstructed baseline; draft GLB export succeeded (8.16 MB, not independently inspected)",
+  "Rev 3 (27 Oct 2026): draft walkthrough rebuilt; 23/23 checks pass in harness.html run in the Claude desktop browser pane against output/jaipur-home/walkthrough.html (1,788 outside meshes unchanged; geyser placement, headroom and ceiling gap; drain off the door landing, swing, vanity zone and walkway; flush border; GLB export 7.90 MB, not independently inspected). The first run failed the drain-route check because the test zone ran behind the glass return; the zone, not the model, was corrected. Two rev 3 views were rendered and saved in evidence/."
+ ],
+ "scope_approval": {
+  "status": "approved",
+  "approved_by": "user",
+  "approved_at": "2026-10-25",
+  "note": "This request explicitly authorises the master bathroom and 2 ft raised washer scope, while limiting unrelated changes."
+ },
+ "qa": {
+  "status": "rev3-independent-qa-fail-fixable",
+  "reviewer": "R-012-site-qa-01 (rev 1 static); rev 2 self-check by draft author; rev 3 independent: R-012-site-qa-02 (claude-sonnet-5-5, medium)",
+  "results": [
+   "Plan data and template match baseline",
+   "Master fixture centres preserved",
+   "Marble top at 609.6 mm",
+   "Washer services and visual shower entry require review",
+   "Rev 2: shower enclosure, dry route, washer services and clearances verified by script; independent review still required",
+   "Rev 3: user decisions applied; geyser and drain-route checks pass by script; independent review still required",
+   "Rev 3 independent QA FAIL (fixable): see drafts/R-012/qa-record-rev3-independent.json. Design Director check of the architect PDF confirms the drawn shower drain sits by the west wall about 0.5 ft out, at z about 26.4 ft, so the linear drain at the entry is about 0.7 m from it, not 150 mm."
+  ],
+  "rev4": {
+   "specialist": "R-012-site-qa-03",
+   "record": "studio-control/drafts/R-012/qa-record-rev4-independent.json",
+   "rev4_result": "fail (3 fix-in-draft)",
+   "rev4_1_result": "pass-with-holds"
+  }
+ },
+ "promotion_approval": {
+  "date": "2026-10-27",
+  "by": "user",
+  "verbatim": "merge the complete draft to the main baseline version, and remove all the draft files after updating the baseline. I want to bring the project to a single 3d model level. Keep the RFIs, but remove all the previous draft 3d models and keep only the final merged model."
+ },
+ "promotion": {
+  "status": "not-started",
+  "promoted_at": null,
+  "changed_artifacts": []
+ },
+ "open_next_actions": [
+  "Execution holds under RFI-004/005/006/013"
+ ],
+ "user_decisions": [
+  {
+   "date": "2026-10-27",
+   "topic": "Shower front",
+   "decision": "Open 1,220 mm front (agreed)"
+  },
+  {
+   "date": "2026-10-27",
+   "topic": "Hot water",
+   "decision": "25 L vertical geyser in the master bathroom"
+  },
+  {
+   "date": "2026-10-27",
+   "topic": "Linear drain",
+   "decision": "Outlet shift about 150 mm toward the shower entry agreed, provided the drain is not in the path of entering the bathroom",
+   "superseded_by": "2026-10-27 re-decision: drain along the back wall under the mixer (the 150 mm premise was wrong)"
+  },
+  {
+   "date": "2026-10-27",
+   "decision": "Drain re-decided after QA: move the linear drain to the back wall under the mixer, near the architect's drain point; make rev 4 with the other QA fixes and re-run QA",
+   "verbatim": "Move the linear drain to the back wall under the mixer, near the architect's drain point. Then make rev 4 with the other QA fixes and re-run QA."
+  },
+  {
+   "date": "2026-10-27",
+   "decision": "Confirmed draft additions (WC upper cupboard, brass WC fittings with tiled cistern box, floating vanity) and accepted trade-offs (676 mm narrowest dry route, mixer on the back wall)",
+   "verbatim": "Keep the WC upper cupboard, the brass WC fittings with the tiled cistern box, and the floating vanity. I accept the 676 mm narrowest route and the mixer on the back wall."
+  },
+  {
+   "date": "2026-10-27",
+   "decision": "Hold R-012 as a draft; promotion not approved yet",
+   "verbatim": "Hold R-012 as a draft for now; don't promote yet."
+  }
+ ],
+ "rev4": {
+  "date": "2026-10-27",
+  "changes": [
+   "Linear drain moved from the shower entry to the back wall under the mixer; passes over architect FD (≈ x 1.27, z 26.37 ft); outlet shift about 75 mm; falls away from the open front",
+   "Drain grate, slots and border flush (≤ 1 mm in model)",
+   "Through-glass brass towel rail on the dry face of the vanity-side return, 1,100 mm high, 72 mm from the opening corner",
+   "Blocking recorded for vertical grab bar by the mixer, fold-down seat, WC fold-up bar",
+   "Shower downlight flagged IP65/RCD; geyser PRV to tundish into basin waste; hot line about 3 m to mixer",
+   "Checks strengthened to 32; evidence re-captured and sorted; qa-record archived and re-indexed",
+   "WC cupboard, brass WC fittings/tiled cistern box and floating vanity disclosed for user confirmation"
+  ],
+  "superseded": "studio-control/drafts/R-012/superseded-rev3/",
+  "validation": "verification/verify-results.json 32/32 (harness in browser pane; first run 31/32 due to harness probe bug)"
+ },
+ "promotion_record": [
+  {
+   "date": "2026-10-27",
+   "note": "Promoted 27 Oct 2026 (rev 4.1) with R-008 into output/jaipur-home; draft folder retired; QA records in studio-control/qa/R-012/",
+   "user_instruction": "merge the complete draft to the main baseline version, and remove all the draft files after updating the baseline. I want to bring the project to a single 3d model level. Keep the RFIs, but remove all the previous draft 3d models and keep only the final merged model."
+  }
+ ]
+}
