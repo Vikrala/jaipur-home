@@ -1,8 +1,14 @@
 # Jaipur home — coordinated main 3D model
 
-This is the single maintained model. It retains the approved kitchen, puja unit, final living-room furniture and architect-traced floor geometry. The full-height TV backing clears W5 and reaches the 10 ft ceiling; the low console extends left to the window centreline. The 75 in TV has been raised 1 ft, the living AC is centred on the solid left wall, the main controls sit below W5 above the console, and the sofa has an illuminated walnut service plank with integrated switches and charging.
+This is the single maintained 3D model. Edit `model/interior.js`, rebuild `walkthrough.html`, update the GLB when geometry changes, and commit each coherent update to Git. Git history is the revision record; do not make a separate 3D draft folder for routine changes. Site-dependent details remain labelled as concept work until measured and coordinated.
 
-See `CHANGELOG.md` for the dated revision history. Future approved changes should update this folder directly rather than creating numbered copies.
+**R-019 kitchen–living ledge (28 October 2026):** A floor-supported, kitchen-facing drawer unit now sits back near the sofa and meets the west wall along its side. The current concept is 1,067 mm long, approximately 600 mm deep and 762 mm high above finished floor. A light stone-look top, shallow dark fluting on the living face, two kitchen-side drawer stacks and an illustrative shielded warm light are modelled. The traced plan gives approximately 101 mm between the sofa end and the ledge and 1,562 mm on the east approach before finish tolerances. Confirm the built wall, sofa gap, clear route, concealed services and anti-tip fixing before joinery detailing.
+
+The [R-019 plan diagram](renders/kitchen-living-ledge-plan.svg) stays with this model for placement review; it is not a measured shop drawing.
+
+The model retains the approved kitchen, puja unit, final living-room furniture and architect-traced floor geometry. The full-height TV backing clears W5 and reaches the 10 ft ceiling; the low console extends left to the window centreline. The 75 in TV has been raised 1 ft, the living AC is centred on the solid left wall, the main controls sit below W5 above the console, and the sofa has an illuminated walnut service plank with integrated switches and charging.
+
+See `CHANGELOG.md` and Git history for the dated revision history. Future model changes update this folder directly.
 
 The puja unit remains inside the architect's 3 ft 6 in × 1 ft 1.5 in footprint. It contains exactly seven small idols and eight photographs, an independent pull-out diya tray, two drawers and four P1-style fluted-glass leaves shown retracted into P3-style flush side pockets. The doors close only above the tray and drawer line.
 

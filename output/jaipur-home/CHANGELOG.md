@@ -2,6 +2,13 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 28 October 2026 - R-019 kitchen–living ledge and Git workflow
+
+- Integrated the user's slab/storage change into the single maintained model. The 1,067 mm long, approximately 600 mm deep, 762 mm high unit is set back near the sofa and meets the west wall along its side. Drawers face the kitchen; the living face has shallow dark fluting, a light stone-look top and an illustrative warm under-lip light.
+- The traced model leaves approximately 101 mm at the sofa end and 1,562 mm on the east approach before finish tolerances. Wall scribing, anti-tip restraint, concealed wiring and operating clearances need site/fabricator checks; this is not a fabrication drawing.
+- Updated the interactive walkthrough and the GLB. The GLB uses simple box geometry for the new joinery; the walkthrough has the richer live material/edge depiction.
+- Per the user's workflow instruction, Git commits now track each coherent change to this one maintained model. Routine revisions no longer create separate 3D draft folders or wait for a draft-promotion step. The architect layout and protected room decisions still govern physical changes.
+
 ## 28 October 2026 - R-018 bathroom wall tile to the ceiling
 
 Applied directly to this model on the user's instruction.

@@ -1,6 +1,6 @@
 {
   "approved_reference": "renders/approved-kitchen-reference.png",
-  "source_elevations": "Kitchen-editable-layout-vivek.pptx slides 2\u20133",
+  "source_elevations": "Kitchen-editable-layout-vivek.pptx slides 2–3",
   "liveGeometryChecks": {
     "RODirectTapCutout": true,
     "blindCornerReachUnblocked": true,
@@ -36,8 +36,14 @@
     "plankSeparatedFromBackrest": true,
     "plankControlsFaceUp": true,
     "continuousSeatPlanes": 2,
-    "centreTable_in": [42, 20],
-    "rug_ft": [7.15, 10.1],
+    "centreTable_in": [
+      42,
+      20
+    ],
+    "rug_ft": [
+      7.15,
+      10.1
+    ],
     "tvDiagonal_in": 75,
     "tvConsoleWidth_ft": 9.22,
     "chargingPoints": 2,
@@ -113,9 +119,9 @@
     "accessDoorsExportedClosed": true
   },
   "glb": {
-    "bytes": 7587760,
-    "nodes": 2110,
-    "meshes": 1066,
+    "bytes": 18979448,
+    "nodes": 2481,
+    "meshes": 1549,
     "units": "metres"
   },
   "visualReviews": [
@@ -198,7 +204,7 @@
     },
     {
       "pass": 3,
-      "perspective": "Cook and household ages 60+ and 28\u201335",
+      "perspective": "Cook and household ages 60+ and 28–35",
       "views": [
         "Complete kitchen with doors closed",
         "Hob and preparation run",
@@ -235,6 +241,41 @@
     "Vendor appliance dimensions, hood installation height, physical door-clearance checks and services coordination remain provisional",
     "Visual lighting, not a measured lux simulation",
     "Live material/lighting detail differs from the approved photorealistic reference",
-    "Other room interiors retained; additional traced W8 window retained outside accepted camera framing"
-  ]
+    "Other room interiors retained; additional traced W8 window retained outside accepted camera framing",
+    "R-019 ledge is concept joinery; GLB uses simplified box geometry, and site fit/anti-tip/stone support are unverified."
+  ],
+  "kitchenLivingLedgeR019": {
+    "status": "current working model; site verification pending",
+    "placement_ft": {
+      "x": [
+        6.75,
+        10.25
+      ],
+      "z": [
+        34.84,
+        36.80850393700788
+      ]
+    },
+    "overall_length_mm": 1066.8,
+    "depth_mm": 600,
+    "top_height_mm": 762,
+    "storage_access": "kitchen",
+    "west_wall_model_gap_mm": 0,
+    "sofa_end_model_gap_mm": 101.346,
+    "east_approach_before_finishes_mm": 1562.1,
+    "source": "user instructions and architect-traced plan geometry",
+    "checks": [
+      "Source script syntax passed",
+      "GLB glTF 2.0 structure and added node bounds checked",
+      "No box overlap with traced walls, sofa, fridge or puja; west side touches wall face",
+      "Walkthrough rebuilt from maintained source"
+    ],
+    "holds": [
+      "As-built wall and sofa measurement",
+      "Drawer and adjacent door operation",
+      "Stone support and anti-tip fixing",
+      "Concealed LED supply and accessible driver",
+      "Rendered visual review not completed in this environment"
+    ]
+  }
 }

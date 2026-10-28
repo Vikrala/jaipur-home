@@ -2,7 +2,7 @@
 
 **Prepared:** 7 October 2026  
 **Purpose:** a precise continuation brief for any architect, designer, visualisation artist, contractor-facing agent, or Codex chat.  
-**Current authoritative design baseline:** [`output/jaipur-home`](../output/jaipur-home/). This is the *single maintained* model. Do not start a new numbered model folder for approved changes; update this folder and its [`CHANGELOG.md`](../output/jaipur-home/CHANGELOG.md).
+**Current working model:** [`output/jaipur-home`](../output/jaipur-home/). This is the *single maintained* model. From 28 October 2026, update this folder directly and record each coherent change in Git, its [`CHANGELOG.md`](../output/jaipur-home/CHANGELOG.md) and relevant checks. Do not create a separate 3D draft folder for routine changes.
 
 ## 1. Read this first — scope, authority, and non-negotiables
 
@@ -15,6 +15,8 @@ This project is a first-floor interior/3D coordination exercise for a residentia
 3. The dated decisions in [`output/jaipur-home/CHANGELOG.md`](../output/jaipur-home/CHANGELOG.md); later entries supersede earlier visual concepts.
 4. The approved kitchen image / editable elevation source: [`Kitchen-editable-layout-vivek.pptx`](../Kitchen-editable-layout-vivek.pptx), supported by [`renders/approved-kitchen-reference.png`](../output/jaipur-home/renders/approved-kitchen-reference.png).
 5. The selected hall and puja package: [`output/hall-concepts/final-selection/final-specification.md`](../output/hall-concepts/final-selection/final-specification.md), except where a later entry in the maintained model changelog makes a specific revision.
+
+Git history records current model changes. A Git commit tracks the design state; it does not certify site conditions or execution details.
 
 ### Do not change without explicit user approval
 
@@ -84,6 +86,10 @@ This project is a first-floor interior/3D coordination exercise for a residentia
 | Single-model consolidation (27 Oct 2026) | R-012 master bathroom and R-008 realism merged; all drafts and v2–v7 retired (to Trash). | One 3D model only: `output/jaipur-home`. RFIs kept; RFI-013 added. |
 
 ## 4. Approved kitchen — highest-confidence finished design
+
+### R-019 kitchen–living ledge added to the working model (28 October 2026)
+
+The user requested a 3 ft 6 in / 1,067 mm long slab with storage, approximately 600 mm deep, with its top 2 ft 6 in / 762 mm above finished floor. After review, the unit was set back near the sofa and brought flush to the west wall along its side. The floor-supported base has kitchen-facing drawer storage; the living face has shallow dark fluting and a light stone-look top. The model shows about 101 mm to the sofa end and 1,562 mm on the east kitchen approach before finish tolerances. Verify the finished wall and skirting, sofa gap, drawer/door operation, concealed services, stone support and anti-tip fixing before fabrication. The approved kitchen wall cabinetry, appliances, dining omission and puja remain unchanged.
 
 ### Controlling sources
 
@@ -258,8 +264,8 @@ Source: architect's "Revised Interior Layout OP-1", dated 14 October 2026, now `
 1. Read this handoff, the structured JSON, the current `README.md`, `CHANGELOG.md`, and `quality-checks.json`.
 2. Use `plan-geometry.json`/architect PDF to test every proposed placement; never use a generated render as geometry authority.
 3. Check whether the request changes a construction-fixed element. If yes, seek user decision plus architect/structural sign-off where applicable.
-4. If changing the model, update `output/jaipur-home` only, retain the architect geometry, rerun/refresh relevant QA captures, and append a dated changelog entry stating exactly what changed and what did not.
-5. For an execution question, produce a measured drawing/specification list and flag outstanding site/vendor confirmations. Do not claim that the 3D model is approved for construction.
+4. If changing the model, update `output/jaipur-home` only, retain the architect geometry, rebuild affected outputs, run focused checks and append a dated changelog entry. Commit each coherent change to Git instead of creating a routine 3D draft folder.
+5. For an execution question, produce a measured drawing/specification list and flag outstanding site/vendor confirmations. Do not claim that a Git commit or the 3D model is approved for construction.
 
 ## 9. Outstanding decisions and site-verification register
 
@@ -268,6 +274,7 @@ Source: architect's "Revised Interior Layout OP-1", dated 14 October 2026, now `
 | Critical | Final joinery dimensions | Site measure after final floor, skirting, plaster/stone thickness and window/door reveals are known. |
 | Critical | Pooja door/tray | Hardware supplier's rated pocket-fold system, full-size mock-up, 25 kg tray runners, ventilation free area and fire-safe lining confirmation. |
 | Critical | Kitchen appliance/service fit | Actual appliance cut sheets, chimney duct/installation height, RO/gas/water/drain routes, geyser circuit and shutter clearances. |
+| High | Kitchen–living ledge R-019 | Measure finished wall/sofa fit and 1,562 mm model approach, test drawer and adjacent door operation, and detail stone support, anti-tip fixing and any concealed LED supply. |
 | Critical | TV wall | Masonry fixing location, W5 reveal clearance, conduit paths, console support and equipment ventilation. |
 | High | Wet areas/terrace | Waterproofing, floor slope, drain test, grout/sealant and plumbing penetration strategy—not available from model. |
 | High | Electrical | Licensed electrician to confirm loads, circuiting, earthing, RCD protection, appliance isolators, wire sizes and wet/outdoor fitting ratings. |

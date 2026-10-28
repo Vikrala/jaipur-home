@@ -2,13 +2,13 @@
   "document": {
     "name": "Jaipur Home — Latest Complete House Design Handoff",
     "prepared_on": "2026-10-07",
-    "status": "current design baseline for continuation; concept and coordination only",
+    "status": "single Git-tracked working model for design coordination; site verification remains required",
     "authoritative_model_root": "output/jaipur-home",
-    "continuation_rule": "Apply future approved changes in output/jaipur-home, record them in output/jaipur-home/CHANGELOG.md, and do not create a new numbered baseline folder."
+    "continuation_rule": "Make authorized model edits in output/jaipur-home, rebuild affected outputs and commit each coherent change to Git. Do not create a routine separate 3D draft folder."
   },
   "authority_order": [
     "output/jaipur-home/architect-layout.pdf and output/jaipur-home/model/plan-geometry.json",
-    "output/jaipur-home/README.md and output/jaipur-home/CHANGELOG.md",
+    "Current output/jaipur-home model, README, CHANGELOG and Git history",
     "Kitchen-editable-layout-vivek.pptx and output/jaipur-home/renders/approved-kitchen-reference.png",
     "output/hall-concepts/final-selection/final-specification.md, unless a later current-model changelog entry supersedes it",
     "Historical output/jaipur-home-v2 through output/jaipur-home-v7 folders only for provenance"
@@ -179,7 +179,23 @@
         "confirm chimney duct and installation height",
         "coordinate water, gas, RO waste, geyser and dedicated electrical circuits",
         "produce measured shutter and counter shop drawings"
-      ]
+      ],
+      "kitchen_living_ledge_R019": {
+        "status": "current working-model concept; not fabrication-issued",
+        "length_mm": 1066.8,
+        "depth_mm_approx": 600,
+        "top_height_mm": 762,
+        "placement": "set back near sofa, west side meets living/kitchen wall",
+        "storage": "two kitchen-facing drawer stacks",
+        "sofa_end_model_gap_mm": 101.346,
+        "east_approach_model_mm_before_finishes": 1562.1,
+        "site_holds": [
+          "finished wall/skirting and sofa measure",
+          "door/drawer operation",
+          "stone support and anti-tip fixing",
+          "concealed LED supply if retained"
+        ]
+      }
     },
     "living_hall": {
       "envelope": "12 ft 6 in x 18 ft 1.5 in",
@@ -297,8 +313,8 @@
     "quality_record": "output/jaipur-home/model/quality-checks.json",
     "glb": {
       "valid": true,
-      "nodes": 2110,
-      "meshes": 1066,
+      "nodes": 2481,
+      "meshes": 1549,
       "access_doors_export_state": "closed"
     },
     "verified_current_conditions": [
@@ -310,14 +326,16 @@
       "W5-clear full-height TV panel and console aligned to its centreline",
       "operable four-leaf puja closure and safe tray sequence",
       "current bedroom-2 bed/wardrobe correction",
-      "day/night, kitchen access, puja access and GLB-download controls checked"
+      "day/night, kitchen access, puja access and GLB-download controls checked",
+      "R-019 ledge modelled near sofa, flush to west wall, with kitchen-facing drawers; model clearances are conditional on site measure"
     ],
     "limitations": [
       "Concept geometry, not fabrication drawing or BIM.",
       "Visual lighting is not a measured lux design.",
       "Vendor appliance dimensions, hood installation height, cabinet fixing and physical shutter clearances are provisional.",
       "Puja runner rating, heat clearance, ventilation free area and door hardware require supplier drawings and site verification.",
-      "Wet-area/terrace waterproofing and drainage have not been designed by this model."
+      "Wet-area/terrace waterproofing and drainage have not been designed by this model.",
+      "R-019 joinery, support, fixing and electrical feed require site/fabricator checks; GLB joinery is simplified geometry."
     ],
     "updated_2026_10_27": "Single maintained model output/jaipur-home; R-008 + R-012 merged; R-012 author checks 33/33 and independent QA pass-with-holds (studio-control/qa/R-012); GLB re-exported; real-GPU load/frame rate not measured"
   },
@@ -357,14 +375,17 @@
     {
       "stage": "single-model consolidation (27 Oct 2026)",
       "outcome": "R-012 master bathroom (back-wall flush linear drain, arched glass returns, 25 L vertical geyser, 610 mm raised washer, glass towel rail, grab-bar blocking) and R-008 realism merged into output/jaipur-home; drafts and v2-v7 retired; 'Hide master bath glass' viewer control added; RFI-013 opened. Superseded in part by R-015 (glass returns, glass towel rail and the viewer control removed) and R-016 (towel bar moved)"
+    },
+    {
+      "stage": "R-019 kitchen-living ledge and Git workflow (28 Oct 2026)",
+      "outcome": "One maintained model updated with the wall-abutting, sofa-side storage ledge; Git commits now record coherent changes instead of routine 3D draft folders."
     }
   ],
   "continuation_protocol": [
-    "Read docs/PROJECT_HANDOFF.md, this JSON, current README, CHANGELOG and quality-checks before proposing changes.",
-    "Use plan-geometry.json and architect-layout.pdf to validate geometry; renders never override plan geometry.",
-    "Ask for site measurement/vendor information where a request becomes execution-sensitive.",
-    "Update only output/jaipur-home for approved changes, rerun relevant QA/captures, and append dated changelog record.",
-    "Never claim construction approval from this 3D concept alone."
+    "Read docs/PROJECT_HANDOFF.md, this JSON, studio-control/project-state.json and the current README/CHANGELOG before a design change.",
+    "Use plan-geometry.json and the architect PDF for geometry; renders do not override constructed layout.",
+    "Edit the one model in output/jaipur-home, rebuild affected walkthrough/GLB outputs, run focused checks and commit each coherent update to Git.",
+    "Record site/vendor holds clearly; a Git commit and concept model do not constitute construction approval."
   ],
   "floor_tile_joint": "1 mm on all floor tiles (R-015, 27 Oct 2026)",
   "bathroom_wall_tile_height": "Floor to ceiling (10 ft) on all walls of both bathrooms incl. master washing niche, above D3/D5, above W9/W4, and common bath north wall (R-018, 28 Oct 2026)"

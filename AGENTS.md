@@ -58,11 +58,13 @@ Do not optimize a space merely for photographs. Distinguish compact planning fro
 - Avoid generic design language. Use room-specific, buildable guidance and distinguish must-haves from preferences.
 - Keep answers concise by default, but provide schedules, checklists, dimension tables, or option comparisons when they make a decision easier.
 
-## Governed design-delivery workflow
+## Git-based single-model workflow
 
-- For requests to review, revise, document, visualise, or coordinate this house, use the `jaipur-home-design-delivery` skill and the compact state in `studio-control/` before loading broad historical context.
-- Treat the architect layout, approved baseline, and current handoff as the source hierarchy. Stop for the user's decision if they conflict.
-- Use draft-only artifacts for proposed changes. Do not alter the approved baseline, current model, handoff, or changelog until the user has explicitly approved a revision scope and its final promotion.
-- Finish substantive project replies with a short operational audit: work mode, sources used, actual specialists activated and their contribution, files changed, and open RFIs/site checks. Do not disclose private chain-of-thought.
+- For design, review and coordination, read the compact state in `studio-control/` and follow the `jaipur-home-design-delivery` skill for source authority, technical holds and specialist routing. The user's 28 October 2026 Git-workflow instruction supersedes that skill's routine draft-folder and promotion sequence for this project.
+- Treat the architect layout, the single maintained model in `output/jaipur-home/`, and the current handoff as the source hierarchy. Stop for the user's decision if they conflict.
+- Make authorized, reversible design changes in the maintained model. `model/interior.js` is the editable scene; rebuild `walkthrough.html` and update the GLB when geometry changes. Do not create a separate 3D model or revision draft folder for each change.
+- Record each coherent model or documentation update in a Git commit with a clear message. Use Git branches for exploratory work when useful, while keeping one maintained model tree. Keep the current README/changelog and source-state references in sync with committed changes.
+- The model is a concept/coordination tool. Keep site measurements, vendor details, structure, services and statutory sign-offs as explicit holds; do not present a Git commit as construction approval. Constructed geometry and protected room decisions still require an explicit user instruction and appropriate professional review.
+- Finish substantive project replies with a short operational audit: work mode, sources used, actual specialists activated and their contribution, files changed, Git commit, and open RFIs/site checks. Do not disclose private chain-of-thought.
 - Before any specialist is activated, use `studio-control/scripts/model_router.py` with an explicit available-model list. Every launch must name its model and reasoning effort; no specialist may inherit the chat/default model.
 - Treat any premium-tier model or `high`/higher reasoning effort as a single-use, per-specialist consent action. Report the model, reasoning effort, tier, consent state and actual contribution in the final operational audit.
