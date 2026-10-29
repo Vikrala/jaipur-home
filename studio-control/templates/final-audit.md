@@ -1,6 +1,6 @@
 ## Delivery audit
 
-- **Work mode:** Review / Draft / Approval required / Approved update
+- **Work mode:** Review / Git-tracked model update / Separate decision artifact / Professional or site hold
 - **Sources used:**
 - **Specialists activated:** 0
 - **Specialist contributions:**
@@ -9,4 +9,5 @@
 - **Models not launched:**
 - **Final synthesis:**
 - **Files changed:** None
+- **Git commit:** None
 - **Open decisions, RFIs, or site checks:**

@@ -60,7 +60,7 @@ Do not optimize a space merely for photographs. Distinguish compact planning fro
 
 ## Git-based single-model workflow
 
-- For design, review and coordination, read the compact state in `studio-control/` and follow the `jaipur-home-design-delivery` skill for source authority, technical holds and specialist routing. The user's 28 October 2026 Git-workflow instruction supersedes that skill's routine draft-folder and promotion sequence for this project.
+- For design, review and coordination, read the compact state in `studio-control/` and follow the `jaipur-home-design-delivery` skill for source authority, technical holds, specialist routing and the Git-based single-model workflow.
 - Treat the architect layout, the single maintained model in `output/jaipur-home/`, and the current handoff as the source hierarchy. Stop for the user's decision if they conflict.
 - Make authorized, reversible design changes in the maintained model. `model/interior.js` is the editable scene; rebuild `walkthrough.html` and update the GLB when geometry changes. Do not create a separate 3D model or revision draft folder for each change.
 - Record each coherent model or documentation update in a Git commit with a clear message. Use Git branches for exploratory work when useful, while keeping one maintained model tree. Keep the current README/changelog and source-state references in sync with committed changes.
