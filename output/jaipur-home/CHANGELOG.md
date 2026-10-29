@@ -2,6 +2,13 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 28 October 2026 - R-020 kitchen worktop granite study
+
+- Brought the client's black-and-copper granite option from the other local checkout into this single maintained model. It appears on both kitchen worktop runs; the texture turns on the RO wall so its banding follows that run.
+- Saved the client photo as `kitchen-granite-reference.jpg`. The procedural and baked texture approximates the photo; the real slab figure, batch, thickness, edge and L-corner joint are not selected.
+- Rebuilt the standalone walkthrough and browser-exported the GLB from the combined live scene, retaining the R-019 ledge. Saved current kitchen and ledge screenshots in `renders/`. Older stills remain unchanged. Other granite and the architect-traced layout remain unchanged.
+- Resolved the local revision-label collision by retaining R-019 for the ledge and labelling this granite study R-020. The source material remains under consideration.
+
 ## 28 October 2026 - R-019 kitchen–living ledge and Git workflow
 
 - Integrated the user's slab/storage change into the single maintained model. The 1,067 mm long, approximately 600 mm deep, 762 mm high unit is set back near the sofa and meets the west wall along its side. Drawers face the kitchen; the living face has shallow dark fluting, a light stone-look top and an illustrative warm under-lip light.

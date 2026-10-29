@@ -9,7 +9,10 @@ if Path('/private/tmp/jaipur-GLTFExporter.js').exists():
     exporter=exporter.replace('export { GLTFExporter };','window.JAIPUR_GLTFExporter=GLTFExporter;')
     (BASE/'model/gltf-exporter.js').write_text('(function(){\n'+exporter+'\n})();\n')
 template=(BASE/'walkthrough.template.html').read_text()
-libraries='<script>\n'+(BASE/'model/three.min.js').read_text()+'\n</script>\n<script>\n'+(BASE/'model/gltf-exporter.js').read_text()+'\n</script>'
-out=template.replace('<!-- LIBRARIES -->',libraries).replace('<!-- PLAN -->','<script>\n'+(BASE/'model/plan-data.js').read_text()+'\n</script>').replace('<!-- INTERIOR -->','<script>\n'+(BASE/'model/interior.js').read_text()+'\n</script>')
+def inline(name):
+    return '<script>\n'+(BASE/'model'/name).read_text()+'\n</script>'
+libraries='\n'.join(inline(name) for name in ('three.min.js','three-postfx.js','gltf-exporter.js'))
+plan='\n'.join(inline(name) for name in ('plan-data.js','textures-baked.js','realism.js'))
+out=template.replace('<!-- LIBRARIES -->',libraries).replace('<!-- PLAN -->',plan).replace('<!-- INTERIOR -->',inline('interior.js'))
 (BASE/'walkthrough.html').write_text(out)
 print('Offline walkthrough:',BASE/'walkthrough.html','bytes:',len(out.encode()))

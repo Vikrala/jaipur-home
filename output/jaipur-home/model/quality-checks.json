@@ -242,8 +242,16 @@
     "Visual lighting, not a measured lux simulation",
     "Live material/lighting detail differs from the approved photorealistic reference",
     "Other room interiors retained; additional traced W8 window retained outside accepted camera framing",
-    "R-019 ledge is concept joinery; GLB uses simplified box geometry, and site fit/anti-tip/stone support are unverified."
+    "R-019 ledge is concept joinery; site fit/anti-tip/stone support are unverified.",
+    "R-020 kitchen granite is a visual approximation of the client photo, not a final material or slab batch selection."
   ],
+  "kitchenGraniteR020": {
+    "status": "rendered for consideration; actual slab selection pending",
+    "locations": ["Kitchen window-wall worktop", "Kitchen RO-wall worktop"],
+    "source": "output/jaipur-home/kitchen-granite-reference.jpg",
+    "checks": ["Both worktop runs use the kitchenGranite material", "RO-wall texture orientation follows its length", "Standalone walkthrough contains the baked texture", "Combined kitchen and ledge browser views inspected without page errors", "Browser-exported GLB includes both granite materials and the R-019 ledge"],
+    "holds": ["Supplier trade name and actual slab batch", "Slab thickness and edge profile", "L-corner cut and joint placement"]
+  },
   "kitchenLivingLedgeR019": {
     "status": "current working model; site verification pending",
     "placement_ft": {
@@ -275,7 +283,7 @@
       "Drawer and adjacent door operation",
       "Stone support and anti-tip fixing",
       "Concealed LED supply and accessible driver",
-      "Rendered visual review not completed in this environment"
+      "Combined model browser views inspected; site fit and fabrication details remain unverified"
     ]
   }
 }

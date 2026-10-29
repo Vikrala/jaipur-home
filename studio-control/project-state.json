@@ -7,7 +7,7 @@
     "revision_id": "BASELINE-2026-10-27",
     "root": "output/jaipur-home",
     "authority": "Historical design starting point and protected decisions. The same output/jaipur-home folder is now the Git-tracked working model.",
-    "note": "Single model. Includes R-006, R-007, R-010, R-011 and (27 Oct 2026) R-008 realism + R-012 master bathroom. All drafts and numbered copies retired. R-013, R-014 and R-015 (open master shower, 1 mm floor joints) applied directly. R-016 QA fixes applied. R-017 (28 Oct 2026) smoother movement, render quality unchanged. R-018 bathroom wall tile to ceiling. R-019 kitchen-living ledge integrated on 28 Oct 2026: set back near sofa, wall-abutting, kitchen-side drawers; site fit pending."
+    "note": "Single model. Includes R-006, R-007, R-010, R-011 and (27 Oct 2026) R-008 realism + R-012 master bathroom. All drafts and numbered copies retired. R-013, R-014 and R-015 (open master shower, 1 mm floor joints) applied directly. R-016 QA fixes applied. R-017 (28 Oct 2026) smoother movement, render quality unchanged. R-018 bathroom wall tile to ceiling. R-019 kitchen-living ledge integrated on 28 Oct 2026: set back near sofa, wall-abutting, kitchen-side drawers; site fit pending. R-020 kitchen worktop granite study rendered from the client photo on both runs; material selection pending."
   },
   "boot_pack": {
     "persona": "AGENTS.md",
@@ -70,7 +70,7 @@
     "RFI-013"
   ],
   "unresolved_conflicts": [],
-  "updated_at": "2026-10-28",
+  "updated_at": "2026-10-29",
   "update_rule": "Update with each coherent Git-tracked model or control-state change; preserve source hierarchy and site holds.",
   "workflow": {
     "effective_date": "2026-10-28",
@@ -93,6 +93,6 @@
       "model/jaipur-first-floor.glb"
     ],
     "change_tracking": "Git commits; no routine per-revision 3D draft folder",
-    "current_change": "R-019 kitchen-living ledge integrated 28 October 2026; site fit pending"
+    "current_change": "R-019 kitchen-living ledge and R-020 kitchen granite study integrated; site fit and stone selection pending"
   }
 }

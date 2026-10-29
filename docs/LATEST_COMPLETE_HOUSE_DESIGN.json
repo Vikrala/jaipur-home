@@ -379,6 +379,10 @@
     {
       "stage": "R-019 kitchen-living ledge and Git workflow (28 Oct 2026)",
       "outcome": "One maintained model updated with the wall-abutting, sofa-side storage ledge; Git commits now record coherent changes instead of routine 3D draft folders."
+    },
+    {
+      "stage": "R-020 kitchen granite study (28 Oct 2026)",
+      "outcome": "Client-considered black-and-copper granite rendered on both kitchen worktop runs; merged into the same model as the R-019 ledge. Actual stone selection pending."
     }
   ],
   "continuation_protocol": [
@@ -388,5 +392,6 @@
     "Record site/vendor holds clearly; a Git commit and concept model do not constitute construction approval."
   ],
   "floor_tile_joint": "1 mm on all floor tiles (R-015, 27 Oct 2026)",
+  "kitchen_worktop_granite": "R-020 (28 Oct 2026): client site-photo black-and-copper granite rendered on both kitchen runs for review; material remains under consideration. Confirm slab batch, thickness, edge and L-corner joint with supplier. Other granite unchanged.",
   "bathroom_wall_tile_height": "Floor to ceiling (10 ft) on all walls of both bathrooms incl. master washing niche, above D3/D5, above W9/W4, and common bath north wall (R-018, 28 Oct 2026)"
 }

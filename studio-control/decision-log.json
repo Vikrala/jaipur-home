@@ -177,6 +177,17 @@
     "user-instruction"
    ],
    "verbatim": "the bathroom wall tiles must go up to the ceiling all the way up, for both the bathrooms."
+  },
+  {
+   "id": "D-018",
+   "status": "under-consideration",
+   "topic": "R-020 kitchen worktop granite study",
+   "decision": "28 Oct 2026: client is considering the site-photo black-and-copper granite for the kitchen worktops. It is rendered on both runs for review, but the actual slab is not selected.",
+   "sources": [
+    "user-instruction",
+    "output/jaipur-home/kitchen-granite-reference.jpg"
+   ],
+   "verbatim": "This is the image of the granite that we are considering for the kitchen slab, render the kitchen slab as per this granite"
   }
  ]
 }

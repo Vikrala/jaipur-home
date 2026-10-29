@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_for": "single-working-model-git-workflow-2026-10-28",
+  "generated_for": "single-working-model-r020-2026-10-29",
   "hash_algorithm": "sha256",
   "artifacts": [
     {
@@ -8,21 +8,21 @@
       "path": "AGENTS.md",
       "role": "Project-wide persona and operating policy",
       "authority_rank": 2,
-      "sha256": "589f57958f4e019b254af40db34433985ea40e25a2b9e358fd1df3ad89667545"
+      "sha256": "f2bd63c861c69bbbc98f030defde592e35a9eea321faae2e4bde1bdd1a92f1cb"
     },
     {
       "id": "design-handoff",
       "path": "docs/PROJECT_HANDOFF.md",
       "role": "Human-readable approved design continuity",
       "authority_rank": 2,
-      "sha256": "43a13524615a21721d107054652d10848e5ce39a75ad55f8f97230c0d68bfeaa"
+      "sha256": "e26838ba601eea2b0ef4ab0562643857fc0f9d438fef1dccc7515e2a9de35330"
     },
     {
       "id": "design-state",
       "path": "docs/LATEST_COMPLETE_HOUSE_DESIGN.json",
       "role": "Structured approved design context",
       "authority_rank": 2,
-      "sha256": "81aff42325f3732ea17b7cca4e6a9ab3b801fcf6ac10143d145ca8f6a66a2870"
+      "sha256": "c6ea4bda3873d20a9b41d2bfbc06a5ba1b3ae39cf4c1ddeb2c9f87bfc206c31b"
     },
     {
       "id": "architect-layout",
@@ -43,21 +43,21 @@
       "path": "output/jaipur-home/README.md",
       "role": "Current maintained-model summary",
       "authority_rank": 2,
-      "sha256": "23b7c9bf1eaa1aef1813af6911527bdcddcaf50db3bec22fea25d103c55c9e71"
+      "sha256": "af2248c101377309629707a994e6c8309c77237214d3ed17dac8792118af4acb"
     },
     {
       "id": "baseline-changelog",
       "path": "output/jaipur-home/CHANGELOG.md",
       "role": "Dated approved revision history",
       "authority_rank": 2,
-      "sha256": "a71f9dedad3d4a9e1b8f31b206c58d5454fddb7b9511598b90b9928be125cc58"
+      "sha256": "3cd2bb7be31a0a8ea351923b9a061fbbcf1ebeda0301a51f12960bdd7dfc244a"
     },
     {
       "id": "baseline-qa",
       "path": "output/jaipur-home/model/quality-checks.json",
       "role": "Current model QA and limitations",
       "authority_rank": 2,
-      "sha256": "b07d3f2a72035f3bd654bdf72b4a2761fcee898bc398420b0042b4842e13fc1d"
+      "sha256": "f6d449a5de4fc50602cd2e89b5c54fab2d953442f1162d34b508c21ffc813658"
     },
     {
       "id": "kitchen-elevation",
@@ -92,21 +92,21 @@
       "path": "output/jaipur-home/model/interior.js",
       "role": "Single maintained 3D model scene logic",
       "authority_rank": 2,
-      "sha256": "60628ebf293e7a55e457507f8ea6e34a4af7e6c21a4adebcd7a9fd58bafd2100"
+      "sha256": "b4be2daae8fdf2808fac65cd82eb61fc55987c44b31e742b8bbf61386bf82838"
     },
     {
       "id": "jaipur-first-floor.glb",
       "path": "output/jaipur-home/model/jaipur-first-floor.glb",
       "role": "Single maintained 3D model (GLB, metres)",
       "authority_rank": 2,
-      "sha256": "00bb6ecf159cee64cba03f3fc6f259dc6e7472cf34bf9bfc44e21b23642a4ba5"
+      "sha256": "c82f0f07eb0a10fa61110f328fc67ce9d1a60ae0ef85eb946e9851701f1985f0"
     },
     {
       "id": "walkthrough.html",
       "path": "output/jaipur-home/walkthrough.html",
       "role": "Standalone walkthrough of the single model",
       "authority_rank": 2,
-      "sha256": "2d04a38c48c0cff4b19e322a1de45483754baf20b3e1c8488b99e9ef37f987a3"
+      "sha256": "ab9616a88f49f8c5996142b064b5b21b3bfabb1f8b6d42d2667477b47c332ee6"
     },
     {
       "id": "rfis.json",
@@ -120,14 +120,14 @@
       "path": "output/jaipur-home/walkthrough.template.html",
       "role": "Maintained walkthrough source template",
       "authority_rank": 2,
-      "sha256": "9b466d3983bcfd8fc1437c1c2207c2888b2ddcfe2920553bda9e72135ca5da71"
+      "sha256": "5dd89a461a93bef620ff8adc18dce5591d053fb6599d3a4c306071d68a974c3d"
     },
     {
       "id": "model-index",
       "path": "output/jaipur-home/index.html",
       "role": "Current model entry page",
       "authority_rank": 2,
-      "sha256": "63cb5679f03c8008e74307e0d71819d396165b875bc9f0b939878aa11c81931a"
+      "sha256": "817c020e7cc513386fdd8fbfd8a67087a8b0cdd6d1b18d0d84eedb252ea66a0f"
     },
     {
       "id": "r019-glb-sync",
@@ -142,6 +142,62 @@
       "role": "R-019 plan review diagram; not a measured drawing",
       "authority_rank": 3,
       "sha256": "55978add14979b0d9ee93effad5c0f0fad38f5e26c15ebceeb89fc72c230db59"
+    },
+    {
+      "id": "repo-readme",
+      "path": "README.md",
+      "role": "GitHub repository entry and current model overview",
+      "authority_rank": 2,
+      "sha256": "40f5a79e58c5a83ce0fd0618edb53879da60c94fd1e93cd8cd7d4ff900f5f921"
+    },
+    {
+      "id": "kitchen-granite-photo",
+      "path": "output/jaipur-home/kitchen-granite-reference.jpg",
+      "role": "Client photo for the under-consideration kitchen granite",
+      "authority_rank": 3,
+      "sha256": "8186b5f57eed56d774d8e94a0512ebad7059028df7a2053b50adfa5a1c302b91"
+    },
+    {
+      "id": "realism.js",
+      "path": "output/jaipur-home/model/realism.js",
+      "role": "Procedural material source for the maintained model",
+      "authority_rank": 2,
+      "sha256": "5237860b9a320ccd564888f5aeaaa0b19dab2c6b145257f18c96dc00101234c3"
+    },
+    {
+      "id": "textures-baked.js",
+      "path": "output/jaipur-home/model/textures-baked.js",
+      "role": "Baked material textures for the offline walkthrough",
+      "authority_rank": 2,
+      "sha256": "7bd9b9fc49154b31e01d392a753f59bd1595a8f3afb4dba993e19c1ab002bde2"
+    },
+    {
+      "id": "walkthrough-builder",
+      "path": "build_walkthrough.py",
+      "role": "Reproducible standalone walkthrough builder",
+      "authority_rank": 2,
+      "sha256": "1ddc2e099d8b68bcaf5fc70375121f867dcc1f8ee72f6f2e9a41d08d85cd65b9"
+    },
+    {
+      "id": "r020-record",
+      "path": "studio-control/revisions/R-020.json",
+      "role": "Kitchen granite study provenance",
+      "authority_rank": 2,
+      "sha256": "1cffb061ece1b6852412b3b288148d7dbf1f8e1d0e19216dff0704217a11dae6"
+    },
+    {
+      "id": "current-kitchen-screenshot",
+      "path": "output/jaipur-home/renders/current-kitchen-granite.png",
+      "role": "Current combined model browser view of kitchen worktops",
+      "authority_rank": 3,
+      "sha256": "13a0075a6b728676ab92d7ad3688e48cb2d4c6abf36c1d4b1ffc168d855c5b2b"
+    },
+    {
+      "id": "current-ledge-screenshot",
+      "path": "output/jaipur-home/renders/current-kitchen-living-ledge.png",
+      "role": "Current combined model browser view of kitchen-living ledge",
+      "authority_rank": 3,
+      "sha256": "7d6f4577851a851b0aad3c84e9edadfa8adba56d5d6f342f63a1bf354b4fbe16"
     }
   ],
   "verification_rule": "Manifest hashes identify current source snapshots. Git commits are the change record; a hash mismatch calls for targeted review, not an automatic rollback."

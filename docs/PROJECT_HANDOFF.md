@@ -91,6 +91,10 @@ Git history records current model changes. A Git commit tracks the design state;
 
 The user requested a 3 ft 6 in / 1,067 mm long slab with storage, approximately 600 mm deep, with its top 2 ft 6 in / 762 mm above finished floor. After review, the unit was set back near the sofa and brought flush to the west wall along its side. The floor-supported base has kitchen-facing drawer storage; the living face has shallow dark fluting and a light stone-look top. The model shows about 101 mm to the sofa end and 1,562 mm on the east kitchen approach before finish tolerances. Verify the finished wall and skirting, sofa gap, drawer/door operation, concealed services, stone support and anti-tip fixing before fabrication. The approved kitchen wall cabinetry, appliances, dining omission and puja remain unchanged.
 
+### R-020 kitchen worktop granite study (28 October 2026)
+
+The client's [site-photo granite](../output/jaipur-home/kitchen-granite-reference.jpg) is rendered on both kitchen worktop runs for review. The model approximates a polished black base with crinkled copper/rust banding; the banding follows each run. It is **under consideration**, not a final stone selection. Confirm the actual slab batch, thickness, edge profile and L-corner cut/joint before fabrication. Other granite surfaces remain unchanged.
+
 ### Controlling sources
 
 - Current visual/model: [`output/jaipur-home`](../output/jaipur-home/).
@@ -285,7 +289,7 @@ Source: architect's "Revised Interior Layout OP-1", dated 14 October 2026, now `
 
 - Visual lighting is illustrative; there is no measured lux study.
 - Material textures and live model lighting can differ from photorealistic reference renders.
-- The GLB was re-exported on 27 Oct 2026 after the R-008/R-012 merge. It is valid glTF 2.0, but it is not a BIM or fabrication model.
+- The GLB was browser-exported again on 29 Oct 2026 from the combined R-019 ledge and R-020 kitchen granite scene. It is valid glTF 2.0, but it is not a BIM or fabrication model.
 - After R-008, the walkthrough is heavier (about 4 MB HTML). Load time and frame rate on a real GPU have not been measured.
 - Sink/chimney, TV console and puja dimensions are concept-level until vendor and site coordination.
 - W8 is deliberately retained in architecture even if it falls outside older accepted camera framing.

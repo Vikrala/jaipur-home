@@ -140,6 +140,36 @@ function granite(S){
  return {albedo:alb,normal:normalFromHeight(hgt,S,.9),rough:grey(S,rough)};
 }
 
+/* R-020: client's considered kitchen granite (site photo 28 Oct 2026): polished black base with dense, crinkled
+   gneiss banding and flowing copper/rust patches. Flow runs along u. Periodic in u and v so the 8 ft sample tiles. */
+function kitchenGranite(S){
+ const hgt=new Float32Array(S*S),rough=new Float32Array(S*S);
+ const black=hex('#100f0e'),band=hex('#3b342e'),copper=hex('#9c6248'),copperHi=hex('#c78a69'),fels=hex('#e2b49a');
+ const alb=toCanvas(S,(x,y,i,o)=>{
+  const u=x/S,v=y/S;
+  const w1=fbm(u,v,2,3,4,901),w2=fbm(u,v,3,2,4,907);
+  // Large swirls, mid-scale waves (~70 mm) and fine crenulations give the folded banding seen in the slab.
+  let q=v+.14*(fbm(u+.35*w2,v+.2*w1,2,3,5,911)-.5)+.05*(w1-.5);
+  q+=.055*(fbm(u,q,7,4,4,915)-.5)+.02*(fbm(u,q,16,6,3,917)-.5);
+  q+=.008*(fbm(u,q,36,12,3,919)-.5)+.0025*(fbm(u,q,110,30,2,923)-.5);
+  const ph=q*190+4*(fbm(u,v,7,5,3,929)-.5),st=.5+.5*Math.sin(ph*6.2832),st2=.5+.5*Math.sin((ph*2.37+fbm(u,q,20,20,2,931)*2)*6.2832);
+  const con=.55+.45*fbm(u,q,6,20,3,933);
+  const dark=clamp((Math.pow(st,1.6)*.7+Math.pow(st2,3)*.3)*con);
+  // Copper zones: soft, flow-elongated, then fragmented by fine noise and carried in the light bands.
+  const m=fbm(u,q,3,14,5,941),m2=fbm(u,q,10,44,3,947),m3=fbm(u,q,26,110,2,949);
+  const cz=sstep(.44,.66,m*.72+m2*.28),frag=sstep(.38,.62,m3*.6+(1-dark)*.4);
+  const g=hash(x,y,951),g2=hash(x>>1,y>>1,953);
+  let c=mix3(black,band,clamp(dark*.85+(g-.5)*.3));
+  let cu=clamp(cz*frag*1.25);
+  cu=Math.max(cu,(1-dark)>.6&&g2>.965?.35*sstep(.3,.5,m):0); // stray copper flecks along light bands
+  c=mix3(c,mix3(copper,copperHi,clamp(m2*1.5-.25+(g-.5)*.5)),cu);
+  if(cu>.5&&g2>.975)c=mix3(c,fels,.35);
+  const k=1+(g-.5)*.12;o[0]=c[0]*k;o[1]=c[1]*k;o[2]=c[2]*k;
+  rough[i]=.12+(1-cu)*.03+(g-.5)*.03;hgt[i]=(g-.5)*.05;
+ });
+ return {albedo:alb,normal:normalFromHeight(hgt,S,.5),rough:grey(S,rough)};
+}
+
 /* ---------- public builders ---------- */
 function buildProcedural(renderer,quality){
  const A=Math.min(8,renderer.capabilities.getMaxAnisotropy()),hi=quality!=='low',S=hi?1024:512,sets={};
@@ -156,6 +186,7 @@ function buildProcedural(renderer,quality){
  reg('cotton',weave(512,72,.25,.015),.55);
  reg('pile',pile(512),2);
  reg('granite',granite(512),2);
+ reg('kitchenGranite',kitchenGranite(hi?1024:512),8);
  return sets;
 }
 
@@ -196,5 +227,5 @@ function build(renderer,quality){
  if(window.JAIPUR_TEXDATA)return loadBaked(renderer);
  return {sets:buildProcedural(renderer,quality),ready:Promise.resolve()};
 }
-window.JAIPUR_REALISM={build,buildProcedural,environment,hash,vnoise,fbm};
+window.JAIPUR_REALISM={build,buildProcedural,environment,hash,vnoise,fbm,kitchenGranite};
 })();

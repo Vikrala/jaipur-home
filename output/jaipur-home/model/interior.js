@@ -47,6 +47,8 @@ const ivory=mat('Washable warm chalk paint','#f1e9dc',1,0,pbr(TX.plaster,.8)),wh
  taupe=mat('Dusty blue laminate','#8496a1',1,0,{...pbr(TX.suede,.5),bevel:true}),stone=mat('Matte vitrified floor tile','#ffffff',1,0,{...pbr(TX.tile,.9),physical:true,clearcoat:.42,clearcoatRoughness:.14}),
  bathStone=mat('Anti slip bathroom tile','#ffffff',1,0,pbr(TX.bathTile,1.1)),
  granite=mat('Sealed dark granite','#b5b4af',1,0,{...pbr(TX.granite,.6),physical:true,clearcoat:.3,clearcoatRoughness:.18}),
+ // R-020 (28 Oct 2026): client-considered kitchen slab from the site photo: polished black with copper banding, flow along u.
+ kitchenGranite=mat('Client-considered black and copper granite, polished','#ffffff',1,0,{...pbr(TX.kitchenGranite,.35),physical:true,clearcoat:.5,clearcoatRoughness:.08}),
  linen=mat('Wipeable sand upholstery','#e9dcc7',1,0,{...pbr(TX.linen,1.5),physical:true,sheen:.55,sheenRoughness:.6,sheenColor:new T.Color('#d9ccb6')}),
  bedding=mat('Cotton bedding','#fbf8ef',1,0,{...pbr(TX.cotton,1),physical:true,sheen:.8,sheenRoughness:.6,sheenColor:new T.Color('#ffffff')}),
  blanket=mat('Terracotta cotton throw','#b6795d',1,0,{...pbr(TX.linen,1.3),physical:true,sheen:1,sheenRoughness:.5,sheenColor:new T.Color('#d9a58c')}),
@@ -616,8 +618,11 @@ sinkBase.remove(sinkBase.children.find(o=>o.name==='Carcass horizontal'&&o.posit
 sideFront(sinkBase,K.sinkWidth/2,2.71,K.depth,oak,-K.sinkWidth/4,-1,'Left sink cupboard door').position.y=.20;
 sideFront(sinkBase,K.sinkWidth/2,2.71,K.depth,oak,K.sinkWidth/4,1,'Right sink geyser service door',true).position.y=.20;
 sinkBase.userData.frontCount=2;sinkBase.userData.drawers=0;
-worktop(K.counterEnd-.75,K.depth,2.96,building,[],(K.counterEnd+.75)/2,windowZ,'Continuous window-wall granite');
-worktop(K.depth,K.westEnd-K.westStart,2.96,building,[[0,K.sinkCentre-(K.westEnd+K.westStart)/2,1.47,K.sinkWidth-.14]],kc,(K.westEnd+K.westStart)/2,'RO-wall granite with double-sink aperture');
+// R-020: the RO-wall run is cut lengthwise from the slab too, so its texture turns 90° to keep the banding along the run.
+const kitchenGraniteRun=kitchenGranite.clone();kitchenGraniteRun.name='Client-considered black and copper granite, polished (RO-wall run)';mats[kitchenGraniteRun.name]=kitchenGraniteRun;
+for(const k of ['map','normalMap','roughnessMap']){const t=kitchenGranite[k].clone();t.center.set(.5,.5);t.rotation=Math.PI/2;kitchenGraniteRun[k]=t;}
+worktop(K.counterEnd-.75,K.depth,2.96,building,[],(K.counterEnd+.75)/2,windowZ,'Continuous window-wall granite',kitchenGranite);
+worktop(K.depth,K.westEnd-K.westStart,2.96,building,[[0,K.sinkCentre-(K.westEnd+K.westStart)/2,1.47,K.sinkWidth-.14]],kc,(K.westEnd+K.westStart)/2,'RO-wall granite with double-sink aperture',kitchenGraniteRun);
 const doubleSink=new T.Group();doubleSink.name='Equal-width double bowl sink';doubleSink.position.set(kc,K.counterTop+.075,K.sinkCentre);doubleSink.rotation.y=Math.PI/2;building.add(doubleSink);
 const bowlWidth=(K.sinkWidth-.22)/2,centre=(bowlWidth+.04)/2;
 const bowlSteel=mat('Recessed brushed sink steel','#52616a',.44,.65);
