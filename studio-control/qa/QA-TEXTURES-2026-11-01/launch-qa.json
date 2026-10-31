@@ -1,0 +1,20 @@
+{
+  "revision_id": "QA-TEXTURES-2026-11-01",
+  "agent_id": "QA-TEXTURES-2026-11-01-site-qa-01",
+  "role": "site-qa-coordinator",
+  "task_class": "routine-site-qa",
+  "risk_level": "medium",
+  "task": "Independently audit the main Jaipur Home walkthrough's texture loading and material assignments across the house in day and evening views. Diagnose the dark TV backing and drawer gaps shown in the user's 1 November screenshot. Identify actual material names and whether any maps are missing or failed. Report actionable defects with evidence; make no edits.",
+  "requested_tools": ["read-only filesystem inspection", "browser render inspection"],
+  "artifact_scope": [
+    "output/jaipur-home/model/interior.js",
+    "output/jaipur-home/model/realism.js",
+    "output/jaipur-home/model/textures-baked.js",
+    "output/jaipur-home/walkthrough.html",
+    "output/jaipur-home/renders/",
+    "user screenshot Screenshot 2026-11-01 at 12.11.33 AM.png"
+  ],
+  "write_scope": "read-only",
+  "output_contract": "Structured independent QA findings covering every texture family and the suspect TV/drawer surfaces, with material names, image or code evidence, severity, and remaining uncertainty; no file edits.",
+  "requested_reasoning_effort": null
+}

@@ -1,0 +1,20 @@
+{
+  "status": "launch-allowed",
+  "routing_rule": "standard-design-delivery",
+  "agent_id": "QA-TEXTURES-2026-11-01-site-qa-01",
+  "role": "site-qa-coordinator",
+  "model": "gpt-6-sol",
+  "reasoning_effort": "medium",
+  "model_tier": "standard",
+  "selection_rationale": "Standard, bounded design-delivery work. Models are an explicit, ordered preference: gpt-6-sol in Codex, claude-sonnet-5-5 in Claude Code; if neither is available the launch is blocked.",
+  "task_fingerprint": "5c5af6dbe66ecd91cd1bb0fafb89be80f7173540678766b7bb8a8854fc1769fc",
+  "runtime_available_models": [
+    "gpt-6-astra",
+    "gpt-6-luna",
+    "gpt-6-sol",
+    "gpt-6.1-sol",
+    "gpt-6.1-terra"
+  ],
+  "premium": false,
+  "consent_status": "not-required"
+}

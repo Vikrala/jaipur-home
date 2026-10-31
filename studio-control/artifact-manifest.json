@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "generated_for": "BASELINE-2026-10-27",
+ "generated_for": "QA-TEXTURES-2026-11-01",
  "hash_algorithm": "sha256",
  "artifacts": [
   {
@@ -15,7 +15,7 @@
    "path": "docs/PROJECT_HANDOFF.md",
    "role": "Human-readable approved design continuity",
    "authority_rank": 2,
-   "sha256": "4fc7e0923216d88d595b7187f786c54d6bb1c6758eda8a8107de59f9300bb039"
+   "sha256": "d8fc10cd5e42b82a3b7e4af63e9dc3c03d9710eda2648e9ac6057654e922ee24"
   },
   {
    "id": "design-state",
@@ -43,21 +43,21 @@
    "path": "output/jaipur-home/README.md",
    "role": "Current maintained-model summary",
    "authority_rank": 2,
-   "sha256": "d1b0beb0d97012e3d1ccf40f871637c5ce13c69f52aacccf8d57c24d5a46dbd7"
+   "sha256": "1402ef2c93848f551e4b4e4b06dae229b5815099c0777e2790c83c8ece9eef78"
   },
   {
    "id": "baseline-changelog",
    "path": "output/jaipur-home/CHANGELOG.md",
    "role": "Dated approved revision history",
    "authority_rank": 2,
-   "sha256": "1698cfba27fc7cb0cb9d8d931dec7398e4effee4fecf422572aaff92bf0e4545"
+   "sha256": "0e8e83b704be3e68e08c03fbf1e83e5b656434b2eea5953cec9435d1b91ea280"
   },
   {
    "id": "baseline-qa",
    "path": "output/jaipur-home/model/quality-checks.json",
    "role": "Current model QA and limitations",
    "authority_rank": 2,
-   "sha256": "a0b54c6fc831b7e3c171350bb68705a6f41667c29ae67e1ab479ff9eabad1a4e"
+   "sha256": "f3be06cb209e2048272f7b8734cfba6244638617ddcfef6777af21307080e307"
   },
   {
    "id": "kitchen-elevation",
@@ -92,21 +92,21 @@
    "path": "output/jaipur-home/model/interior.js",
    "role": "Single maintained 3D model scene logic",
    "authority_rank": 2,
-   "sha256": "9adee8dfc8ceb977e6bccc6ca70dbf46d50abb2034988eb1f57bc7a2f0291348"
+   "sha256": "e8461bd393b71956aef99ffa11901bf10aa3e83f9f408bc81d9cb2e50df69c51"
   },
   {
    "id": "jaipur-first-floor.glb",
    "path": "output/jaipur-home/model/jaipur-first-floor.glb",
    "role": "Single maintained 3D model (GLB, metres)",
    "authority_rank": 2,
-   "sha256": "1c71d48f937992058cdad27bd1636c0ee98b9b111d508320e036326637f2bc32"
+   "sha256": "fed6f6692640854cb9200f42906c5b713514cbeda9017f2abaab6b4b621e1a7c"
   },
   {
    "id": "walkthrough.html",
    "path": "output/jaipur-home/walkthrough.html",
    "role": "Standalone walkthrough of the single model",
    "authority_rank": 2,
-   "sha256": "8841ba55bd20e08ef8b75a79f29165df8914f70122ea4946d24871639643bfe4"
+   "sha256": "0358b3ad3f244812021365329568610caa7fd05acdc2635423afde0efb8c6a76"
   },
   {
    "id": "rfis.json",
@@ -134,7 +134,7 @@
    "path": "output/jaipur-home/model/floor-tile-render-check.json",
    "role": "Room material and render/export verification",
    "authority_rank": 2,
-   "sha256": "65aa4d87477d316094bd8c52bb8b2906a8ffe33a40b1a9fbe9a20523b63c1898"
+   "sha256": "7c090fd10fc27ac66cd7e813c42b1262e9eeb935b54fb4e646ac4f6ea3b6adf3"
   },
   {
    "id": "walkthrough-template",
@@ -156,7 +156,35 @@
    "role": "Client supplied showroom tile photo",
    "authority_rank": 3,
    "sha256": "2e109d42a86ebfa46e10190feb8f97afe0daad659b75079c8c5963f36a029650"
+  },
+  {
+   "id": "texture-recipe",
+   "path": "output/jaipur-home/model/realism.js",
+   "role": "Procedural texture source, including grout-free stone",
+   "authority_rank": 2,
+   "sha256": "a3e2d0673a4253c88189756d169e1897db8fa7eb5f22b2ce3a84333c6bac8fee"
+  },
+  {
+   "id": "baked-textures",
+   "path": "output/jaipur-home/model/textures-baked.js",
+   "role": "Embedded PBR texture maps for the offline walkthrough",
+   "authority_rank": 2,
+   "sha256": "dd5050106de31801b392365af68d33f54ae9b071a3037d3cdfd10a072c5d9225"
+  },
+  {
+   "id": "texture-bake-tool",
+   "path": "output/jaipur-home/model/build-tools/bake.cjs",
+   "role": "Repeatable baked texture generator",
+   "authority_rank": 2,
+   "sha256": "6cb24a962e666c8b80e3356955fabe1711f05bbb85ca5a5a6d79ce0a6c1a1df1"
+  },
+  {
+   "id": "texture-qa",
+   "path": "studio-control/qa/QA-TEXTURES-2026-11-01/QA-REPORT.md",
+   "role": "Independent texture and GLB QA report",
+   "authority_rank": 2,
+   "sha256": "76fb1f5ea940250e7f308637a2725a370f85a016ea5d942022d1b96eef1306a9"
   }
  ],
- "verification_rule": "A hash mismatch triggers targeted source review. It is not by itself approval to alter the baseline."
+ "verification_rule": "A hash mismatch triggers targeted source review. User-authorised main-model changes are recorded by Git."
 }

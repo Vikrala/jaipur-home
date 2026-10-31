@@ -252,6 +252,7 @@ Source: architect's "Revised Interior Layout OP-1", dated 14 October 2026, now `
 - [`output/jaipur-home/model/jaipur-first-floor.glb`](../output/jaipur-home/model/jaipur-first-floor.glb): current complete first-floor GLB; access doors exported closed.
 - [`output/jaipur-home/model/interior.js`](../output/jaipur-home/model/interior.js): current editable scene logic.
 - [`output/jaipur-home/model/quality-checks.json`](../output/jaipur-home/model/quality-checks.json): machine-recorded QA and limitations.
+- [`studio-control/qa/QA-TEXTURES-2026-11-01/`](../studio-control/qa/QA-TEXTURES-2026-11-01/): 1 November texture QA; the warm ivory TV/puja stone bake and puja drawer rails are corrected in the current model. TV depth was adjusted to eliminate the broad evening cast shadow. Confirm bracket and tray clearances on site.
 - [`output/hall-concepts/final-render-v2`](../output/hall-concepts/final-render-v2/): final review image set / prompts.
 - [`output/hall-concepts/final-selection`](../output/hall-concepts/final-selection/): selected hall/puja specification and selected visuals.
 - Numbered copies v2–v7 and all draft folders were retired on 27 Oct 2026; `output/jaipur-home` is the only 3D model. Their history is summarised at the end of `output/jaipur-home/CHANGELOG.md`; QA records are in `studio-control/qa/`.

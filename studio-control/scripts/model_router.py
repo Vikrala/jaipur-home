@@ -76,7 +76,9 @@ def resolve(policy: dict[str, Any], consents: dict[str, Any], request: dict[str,
         return {"status": "blocked", "reason": "missing-launch-contract-fields", "missing_fields": missing}
     if request.get("model") or request.get("reasoning_effort"):
         return {"status": "blocked", "reason": "caller-model-override-forbidden", "detail": "The router, not a caller or parent chat, selects the specialist model and reasoning effort."}
-    if not request["write_scope"].startswith(f"studio-control/drafts/{request['revision_id']}"):
+    # Read-only reviews need no draft folder. Keep the historical draft scope valid
+    # for old launch records, while direct model changes remain the director's work.
+    if request["write_scope"] != "read-only" and not request["write_scope"].startswith(f"studio-control/drafts/{request['revision_id']}"):
         return {"status": "blocked", "reason": "write-scope-outside-approved-draft"}
 
     rule = next((candidate for candidate in policy["routing_rules"] if matches(candidate, request)), None)

@@ -507,7 +507,9 @@ cabinet('Living TV floating console with hidden ventilated service bays',px(490.
 box(.07,.30,1.18,17.96,.82,tvConsoleLeft+.55,charcoal,building,'TV console concealed ventilation grille');
 box(.07,.30,1.18,17.96,.82,tvConsoleRight-.55,charcoal,building,'TV console concealed ventilation grille');
 box(.045,.045,tvConsoleWidth-.40,17.92,.23,tvConsoleZ,warmLight,building,'TV console shielded underlight');
-tv('Living 75 inch TV — raised 1 ft',px(479.4),tvPanelZ,5.45,-Math.PI/2,5.0);
+// Keep the screen near its backing; the previous 1.2 ft stand-off threw a
+// large rectangular shadow across the stone in the evening view.
+tv('Living 75 inch TV — raised 1 ft',px(479.4)+1.0,tvPanelZ,5.45,-Math.PI/2,5.0);
 botanicalArt(6.79,5.30,27.00,2.30,3.25,Math.PI/2,'#bd7654');
 botanicalArt(6.79,5.18,30.72,1.85,2.80,Math.PI/2,'#c38a67');
 feature('Living TV concealed service route','electrical',18.35,tvConsoleZ,tvConsoleWidth,1.25,1.38,'Full-height backing clears W5; console reaches window centreline; removable ventilated bays; two 32 mm conduits; IR repeater; 75 inch screen');
@@ -796,6 +798,10 @@ box(poojaW-.16,poojaH-.22,.055,0,poojaH/2+.10,-poojaD/2+.03,tvStone,pooja,'Non-c
 // A deep lower drawer takes bulky puja supplies; the shallower upper drawer keeps
 // daily cotton, matchbox and cleaning cloth accessible without bending as far.
 for(const [yy,hh,label] of [[.63,.80,'Deep puja supply drawer'],[1.48,.66,'Daily-use puja drawer']]){box(poojaW-.18,hh,.07,0,yy,poojaD/2+.04,oak,pooja,label);box(.62,.045,.08,0,yy+.02,poojaD/2+.09,brass,pooja,'Pooja drawer pull');}
+// Recessed walnut carcass rails close the raw wall-coloured voids while keeping
+// a small working reveal between drawers and below the independently moving tray.
+box(poojaW-.18,.095,.06,0,1.09,poojaD/2+.0375,oak,pooja,'Pooja walnut rail between drawers');
+box(poojaW-.18,.34,.06,0,2.005,poojaD/2+.0375,oak,pooja,'Pooja walnut rail below diya tray');
 // Full cabinet-width, independently accessible tray on heavy-duty full-extension
 // runners. The raised perimeter contains oil; the brass liner lifts out to wash.
 poojaTrayGroup=new T.Group();poojaTrayGroup.name='Full-width pull-out diya tray assembly';poojaTrayGroup.position.set(0,2.31,.08);pooja.add(poojaTrayGroup);

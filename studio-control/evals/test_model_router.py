@@ -56,6 +56,13 @@ class ModelRouterTests(unittest.TestCase):
         self.assertEqual(result["reasoning_effort"], "medium")
         self.assertEqual(result["consent_status"], "not-required")
 
+    def test_read_only_qa_launch_needs_no_draft_scope(self) -> None:
+        request = self.request("site-qa-coordinator", "routine-site-qa", "medium", "R-001-qa-01")
+        request["write_scope"] = "read-only"
+        result = router.resolve(self.policy, {"records": []}, request, {"gpt-6-sol"})
+        self.assertEqual(result["status"], "launch-allowed")
+        self.assertEqual(result["model"], "gpt-6-sol")
+
     def test_premium_launch_requires_exact_consent(self) -> None:
         request = self.request("kitchen-bath-utility-specialist", "kitchen-bath-utility", "medium", "R-001-kitchen-01")
         result = router.resolve(self.policy, {"records": []}, request, {"gpt-6.1-sol"})

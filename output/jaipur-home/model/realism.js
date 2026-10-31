@@ -43,7 +43,9 @@ const hex=(h)=>[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.s
 /* Vitrified tile / stone slab. tiles = tiles per side (2 gives a 2x2 sheet of 600 mm tiles in a 4 ft sample);
    tilesX/tilesY override it for rectangular tiles (1 x 2 in a 4 ft sample = 4 ft x 2 ft tiles, long side along u). */
 function tileSet(opt){
- const S=opt.size,tiles=opt.tiles,tpx=S/(opt.tilesX||tiles),tpy=S/(opt.tilesY||tiles),base=hex(opt.base),vein=hex(opt.vein),grout=hex(opt.grout),gw=opt.groutPx;
+ // A grout-free slab is one full texture cell. Dividing by tiles=0 made its
+ // local coordinates NaN and baked the TV/pooja stone maps as solid black.
+ const S=opt.size,tiles=opt.tiles,tpx=tiles>0?S/(opt.tilesX||tiles):S,tpy=tiles>0?S/(opt.tilesY||tiles):S,base=hex(opt.base),vein=hex(opt.vein),grout=hex(opt.grout),gw=opt.groutPx;
  const hgt=new Float32Array(S*S),rough=new Float32Array(S*S);
  const alb=toCanvas(S,(x,y,i,o)=>{
   const tx=Math.floor(x/tpx),ty=Math.floor(y/tpy),lx=(x-tx*tpx)/tpx,ly=(y-ty*tpy)/tpy;

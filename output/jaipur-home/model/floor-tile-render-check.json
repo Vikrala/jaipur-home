@@ -1,5 +1,5 @@
 {
-  "browser": "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
+  "browser": "Google Chrome",
   "errors": [],
   "audit": {
     "tileError": null,
@@ -72,5 +72,5 @@
     "lobby",
     "living-evening"
   ],
-  "glbBytes": 19547904
+  "glbBytes": 19632916
 }

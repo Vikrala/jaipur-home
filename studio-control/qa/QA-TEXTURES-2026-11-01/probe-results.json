@@ -1,0 +1,1074 @@
+{
+  "materials": [
+    {
+      "name": "Washable warm chalk paint",
+      "color": "f1e9dc",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        247,
+        247,
+        247
+      ],
+      "normalMean": [
+        126,
+        123,
+        252
+      ],
+      "roughnessMean": [
+        223,
+        223,
+        223
+      ],
+      "meshes": 140
+    },
+    {
+      "name": "Walnut laminate",
+      "color": "f7ead8",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "1024x1024",
+      "mapMean": [
+        147,
+        104,
+        70
+      ],
+      "normalMean": [
+        128,
+        129,
+        255
+      ],
+      "roughnessMean": [
+        132,
+        132,
+        132
+      ],
+      "meshes": 258
+    },
+    {
+      "name": "Brushed stainless steel",
+      "color": "bac0bd",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 384
+    },
+    {
+      "name": "Ivory skirting and trim",
+      "color": "d8d1c4",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        247,
+        247,
+        247
+      ],
+      "normalMean": [
+        126,
+        123,
+        252
+      ],
+      "roughnessMean": [
+        223,
+        223,
+        223
+      ],
+      "meshes": 193
+    },
+    {
+      "name": "Glossy ivory showroom floor tile, 2 ft x 4 ft",
+      "color": "ffffff",
+      "map": true,
+      "normal": false,
+      "roughness": false,
+      "image": "1774x887",
+      "mapMean": [
+        229,
+        226,
+        224
+      ],
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 9
+    },
+    {
+      "name": "Master bath matte octagon and black-dot anti-slip floor",
+      "color": "ffffff",
+      "map": true,
+      "normal": false,
+      "roughness": false,
+      "image": "512x512",
+      "mapMean": [
+        52,
+        54,
+        51
+      ],
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 1
+    },
+    {
+      "name": "Anti slip bathroom tile",
+      "color": "ffffff",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "1024x1024",
+      "mapMean": [
+        184,
+        172,
+        156
+      ],
+      "normalMean": [
+        134,
+        135,
+        200
+      ],
+      "roughnessMean": [
+        210,
+        210,
+        210
+      ],
+      "meshes": 45
+    },
+    {
+      "name": "rear-void shaft depth cue",
+      "color": "6b736c",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 1
+    },
+    {
+      "name": "washing-void shaft depth cue",
+      "color": "6b736c",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 1
+    },
+    {
+      "name": "lift-void shaft depth cue",
+      "color": "6b736c",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 1
+    },
+    {
+      "name": "Charcoal powder coat",
+      "color": "383b38",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 363
+    },
+    {
+      "name": "Window glazing",
+      "color": "182d47",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 9
+    },
+    {
+      "name": "Warm diffused light",
+      "color": "ffedd3",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 65
+    },
+    {
+      "name": "Cotton bedding",
+      "color": "fbf8ef",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        255,
+        255,
+        255
+      ],
+      "normalMean": [
+        108,
+        88,
+        209
+      ],
+      "roughnessMean": [
+        237,
+        237,
+        237
+      ],
+      "meshes": 12
+    },
+    {
+      "name": "Wipeable sand upholstery",
+      "color": "e9dcc7",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        255,
+        255,
+        255
+      ],
+      "normalMean": [
+        119,
+        87,
+        220
+      ],
+      "roughnessMean": [
+        238,
+        238,
+        238
+      ],
+      "meshes": 25
+    },
+    {
+      "name": "Terracotta cotton throw",
+      "color": "b6795d",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        255,
+        255,
+        255
+      ],
+      "normalMean": [
+        119,
+        87,
+        220
+      ],
+      "roughnessMean": [
+        238,
+        238,
+        238
+      ],
+      "meshes": 8
+    },
+    {
+      "name": "",
+      "color": "ffffff",
+      "map": true,
+      "normal": false,
+      "roughness": false,
+      "image": "64x64",
+      "mapMean": [
+        42,
+        30,
+        18
+      ],
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 10
+    },
+    {
+      "name": "Sealed dark granite",
+      "color": "b5b4af",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        44,
+        45,
+        40
+      ],
+      "normalMean": [
+        129,
+        127,
+        254
+      ],
+      "roughnessMean": [
+        92,
+        92,
+        92
+      ],
+      "meshes": 10
+    },
+    {
+      "name": "Matte sand laminate",
+      "color": "dfd1bc",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        251,
+        251,
+        251
+      ],
+      "normalMean": [
+        131,
+        130,
+        255
+      ],
+      "roughnessMean": [
+        179,
+        179,
+        179
+      ],
+      "meshes": 45
+    },
+    {
+      "name": "TV dark screen",
+      "color": "1d2828",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 2
+    },
+    {
+      "name": "Master rear curtains cotton",
+      "color": "e1dccf",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        255,
+        255,
+        255
+      ],
+      "normalMean": [
+        119,
+        87,
+        220
+      ],
+      "roughnessMean": [
+        238,
+        238,
+        238
+      ],
+      "meshes": 2
+    },
+    {
+      "name": "Mirror silver",
+      "color": "bfcacc",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 5
+    },
+    {
+      "name": "White ceramic",
+      "color": "f1f0e9",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 101
+    },
+    {
+      "name": "Black appliance glass",
+      "color": "151c1d",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 17
+    },
+    {
+      "name": "Kota stone shelf",
+      "color": "8c9189",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 4
+    },
+    {
+      "name": "Muted terracotta laminate",
+      "color": "b88872",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        251,
+        251,
+        251
+      ],
+      "normalMean": [
+        131,
+        130,
+        255
+      ],
+      "roughnessMean": [
+        179,
+        179,
+        179
+      ],
+      "meshes": 15
+    },
+    {
+      "name": "Bedroom 2 rear shaft curtains cotton",
+      "color": "e1dccf",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        255,
+        255,
+        255
+      ],
+      "normalMean": [
+        119,
+        87,
+        220
+      ],
+      "roughnessMean": [
+        238,
+        238,
+        238
+      ],
+      "meshes": 2
+    },
+    {
+      "name": "Bedroom 2 south window curtains cotton",
+      "color": "e1dccf",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        255,
+        255,
+        255
+      ],
+      "normalMean": [
+        119,
+        87,
+        220
+      ],
+      "roughnessMean": [
+        238,
+        238,
+        238
+      ],
+      "meshes": 2
+    },
+    {
+      "name": "Dusty blue cotton throw",
+      "color": "71899b",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        255,
+        255,
+        255
+      ],
+      "normalMean": [
+        119,
+        87,
+        220
+      ],
+      "roughnessMean": [
+        238,
+        238,
+        238
+      ],
+      "meshes": 3
+    },
+    {
+      "name": "Dusty blue laminate",
+      "color": "8496a1",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        251,
+        251,
+        251
+      ],
+      "normalMean": [
+        131,
+        130,
+        255
+      ],
+      "roughnessMean": [
+        179,
+        179,
+        179
+      ],
+      "meshes": 12
+    },
+    {
+      "name": "Bedroom 3 front curtains cotton",
+      "color": "e1dccf",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        255,
+        255,
+        255
+      ],
+      "normalMean": [
+        119,
+        87,
+        220
+      ],
+      "roughnessMean": [
+        238,
+        238,
+        238
+      ],
+      "meshes": 2
+    },
+    {
+      "name": "Living low-pile warm greige rug",
+      "color": "cbbdaa",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        236,
+        236,
+        236
+      ],
+      "normalMean": [
+        128,
+        137,
+        240
+      ],
+      "roughnessMean": [
+        247,
+        247,
+        247
+      ],
+      "meshes": 1
+    },
+    {
+      "name": "Terracotta pottery",
+      "color": "b27659",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 9
+    },
+    {
+      "name": "Warm ivory TV stone",
+      "color": "ffffff",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "1024x1024",
+      "mapMean": [
+        216,
+        204,
+        188
+      ],
+      "normalMean": [
+        128,
+        127,
+        255
+      ],
+      "roughnessMean": [
+        72,
+        72,
+        72
+      ],
+      "meshes": 2
+    },
+    {
+      "name": "Kitchen matte sand laminate",
+      "color": "d0b48d",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "512x512",
+      "mapMean": [
+        251,
+        251,
+        251
+      ],
+      "normalMean": [
+        131,
+        130,
+        255
+      ],
+      "roughnessMean": [
+        179,
+        179,
+        179
+      ],
+      "meshes": 143
+    },
+    {
+      "name": "Geyser hot marker",
+      "color": "b34839",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 2
+    },
+    {
+      "name": "Geyser cold marker",
+      "color": "397fa0",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 2
+    },
+    {
+      "name": "Client-selected black and copper granite, polished",
+      "color": "ffffff",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "2048x2048",
+      "mapMean": [
+        21,
+        17,
+        16
+      ],
+      "normalMean": [
+        129,
+        128,
+        255
+      ],
+      "roughnessMean": [
+        38,
+        38,
+        38
+      ],
+      "meshes": 1
+    },
+    {
+      "name": "Client-selected black and copper granite, polished (RO-wall run)",
+      "color": "ffffff",
+      "map": true,
+      "normal": true,
+      "roughness": true,
+      "image": "2048x2048",
+      "mapMean": [
+        21,
+        17,
+        16
+      ],
+      "normalMean": [
+        129,
+        128,
+        255
+      ],
+      "roughnessMean": [
+        38,
+        38,
+        38
+      ],
+      "meshes": 1
+    },
+    {
+      "name": "Recessed brushed sink steel",
+      "color": "52616a",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 10
+    },
+    {
+      "name": "Clear shower glass",
+      "color": "e4ecea",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 6
+    },
+    {
+      "name": "Plant soil",
+      "color": "3d362a",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 3
+    },
+    {
+      "name": "Muted foliage",
+      "color": "68744d",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 48
+    },
+    {
+      "name": "Brushed brass",
+      "color": "b08a46",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 90
+    },
+    {
+      "name": "Fluted toughened glass",
+      "color": "d9e2df",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 4
+    },
+    {
+      "name": "Master bath warm pale stone wall tile",
+      "color": "e2ddd1",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 10
+    },
+    {
+      "name": "Master bath glazed forest-green vertical tile A",
+      "color": "425748",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 39
+    },
+    {
+      "name": "Master bath glazed forest-green vertical tile B",
+      "color": "354d3e",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 39
+    },
+    {
+      "name": "Master bath glazed forest-green vertical tile C",
+      "color": "536650",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 39
+    },
+    {
+      "name": "Master washer sealed light marble slab",
+      "color": "ece8df",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 3
+    },
+    {
+      "name": "Master bath moisture-resistant sage cabinet",
+      "color": "737c66",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 1
+    },
+    {
+      "name": "Master washer tile-faced structural support concept",
+      "color": "e4e0d8",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 2
+    },
+    {
+      "name": "Master laundry basket woven seagrass-look polypropylene",
+      "color": "b49a72",
+      "map": false,
+      "normal": false,
+      "roughness": false,
+      "image": null,
+      "mapMean": null,
+      "normalMean": null,
+      "roughnessMean": null,
+      "meshes": 2
+    }
+  ],
+  "hits": [
+    {
+      "y": 2.5,
+      "objects": [
+        {
+          "name": "Living TV ceiling-height warm stone backing panel",
+          "material": "Warm ivory TV stone",
+          "x": 19.069999999254943,
+          "distance": 8.269999999254942
+        },
+        {
+          "name": "Living and lobby / stairs",
+          "material": "Washable warm chalk paint",
+          "x": 19.2525,
+          "distance": 8.4525
+        },
+        {
+          "name": "Stair tread 17",
+          "material": "Anti slip bathroom tile",
+          "x": 19.62750002861023,
+          "distance": 8.827500028610228
+        },
+        {
+          "name": "Stair tread 7",
+          "material": "Anti slip bathroom tile",
+          "x": 23.00250002861023,
+          "distance": 12.202500028610228
+        },
+        {
+          "name": "North perimeter",
+          "material": "Washable warm chalk paint",
+          "x": 26.25,
+          "distance": 15.45
+        }
+      ]
+    },
+    {
+      "y": 5.5,
+      "objects": [
+        {
+          "name": "",
+          "material": "",
+          "x": 18.860999999999997,
+          "distance": 8.060999999999996
+        },
+        {
+          "name": "TV screen",
+          "material": "TV dark screen",
+          "x": 18.865499999813732,
+          "distance": 8.065499999813731
+        },
+        {
+          "name": "TV bezel",
+          "material": "Charcoal powder coat",
+          "x": 18.892500000596044,
+          "distance": 8.092500000596043
+        },
+        {
+          "name": "Living TV ceiling-height warm stone backing panel",
+          "material": "Warm ivory TV stone",
+          "x": 19.069999999254943,
+          "distance": 8.269999999254942
+        },
+        {
+          "name": "Living and lobby / stairs",
+          "material": "Washable warm chalk paint",
+          "x": 19.2525,
+          "distance": 8.4525
+        },
+        {
+          "name": "Stair tread 17",
+          "material": "Anti slip bathroom tile",
+          "x": 19.62750002861023,
+          "distance": 8.827500028610228
+        },
+        {
+          "name": "North perimeter",
+          "material": "Washable warm chalk paint",
+          "x": 26.25,
+          "distance": 15.45
+        }
+      ]
+    },
+    {
+      "y": 7.5,
+      "objects": [
+        {
+          "name": "Living TV ceiling-height warm stone backing panel",
+          "material": "Warm ivory TV stone",
+          "x": 19.069999999254943,
+          "distance": 8.269999999254942
+        },
+        {
+          "name": "Living and lobby / stairs",
+          "material": "Washable warm chalk paint",
+          "x": 19.2525,
+          "distance": 8.4525
+        },
+        {
+          "name": "North perimeter",
+          "material": "Washable warm chalk paint",
+          "x": 26.25,
+          "distance": 15.45
+        }
+      ]
+    }
+  ],
+  "tv": {
+    "material": "Warm ivory TV stone",
+    "mapMean": [
+      216,
+      204,
+      188
+    ],
+    "position": [
+      19.12,
+      5.664999999999999,
+      32.1075
+    ],
+    "size": [
+      0.10000000149011612,
+      8.569999694824219,
+      7.550000190734863
+    ],
+    "normalScale": [
+      0.8,
+      0.8
+    ],
+    "roughness": 1,
+    "clearcoat": 0.35
+  },
+  "pooja": [
+    {
+      "name": "Deep puja supply drawer",
+      "y": 0.63,
+      "z": 0.6025,
+      "material": "Walnut laminate"
+    },
+    {
+      "name": "Pooja drawer pull",
+      "y": 0.65,
+      "z": 0.6525,
+      "material": "Brushed brass"
+    },
+    {
+      "name": "Daily-use puja drawer",
+      "y": 1.48,
+      "z": 0.6025,
+      "material": "Walnut laminate"
+    },
+    {
+      "name": "Pooja drawer pull",
+      "y": 1.5,
+      "z": 0.6525,
+      "material": "Brushed brass"
+    },
+    {
+      "name": "Pooja walnut rail between drawers",
+      "y": 1.09,
+      "z": 0.6,
+      "material": "Walnut laminate"
+    },
+    {
+      "name": "Pooja walnut rail below diya tray",
+      "y": 2.005,
+      "z": 0.6,
+      "material": "Walnut laminate"
+    }
+  ],
+  "errors": []
+}

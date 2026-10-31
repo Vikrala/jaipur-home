@@ -227,6 +227,18 @@
     "counterSurfaceY_ft": 3.03,
     "result": "Both countertop openings lead to recessed bowls; no solid carcass top blocks them"
   },
+  "textureChecks_2026_11_01": {
+    "result": "pass",
+    "bakedFamilies": 11,
+    "decodedBakedMaps": 33,
+    "tvStoneMeanRGB": [216, 204, 188],
+    "tvStoneDayEveningVisual": "warm ivory veined stone; no broad cast-shadow block",
+    "poojaDrawerReveals": "two walnut rails present; only narrow working reveals visible",
+    "browserPageErrors": 0,
+    "glbMaterialCount": 74,
+    "glbEmbeddedImageCount": 63,
+    "evidence": "studio-control/qa/QA-TEXTURES-2026-11-01/"
+  },
   "limitations": [
     "Concept geometry; not a fabrication drawing",
     "Puja runner rating, heat clearance, ventilation free area and door hardware require vendor shop drawings and site verification before fabrication",

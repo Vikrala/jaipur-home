@@ -2,6 +2,14 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - TV stone and puja texture QA
+
+- Repaired the procedural stone recipe for a grout-free slab and rebaked only its albedo, normal and roughness maps. A zero tile count had produced black maps, making the intended warm ivory TV backing and puja back liner appear dark blue or grey.
+- Added recessed walnut carcass rails between the two puja drawers and below the independent diya tray. The wide blue recesses were exposed wall, not missing walnut texture. The drawer and tray clearances remain visible as narrow working reveals.
+- Brought the 75 in TV closer to its backing by 305 mm (1 ft). Its prior stand-off cast a large rectangular evening shadow across the corrected stone. TV size, centre height, panel location and W5 clearance remain as established.
+- Rebuilt the standalone walkthrough, GLB and nine current floor-view renders. Browser day/evening checks and independent specialist QA checked the corrected stone, walnut reveals, all 11 baked texture families and the exported GLB.
+- On site, confirm the TV bracket fixes into masonry/structure, with enough depth for ventilation, plugs and cable bend radius. Confirm the puja rail and tray running clearances with the joinery fabricator.
+
 ## 31 October 2026 - Glossy ivory 2 ft x 4 ft floor tile and Git workflow
 
 - The client's showroom tile is now the visualised finish on all dry interior floors: living, kitchen, store, lobby, lift landing, bedrooms and the short passage. Bathroom and terrace anti-slip floor concepts remain separate.

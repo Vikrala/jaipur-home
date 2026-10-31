@@ -9,7 +9,7 @@
     {"name": "Architect layout/geometry preserved or authorised", "status": "pending", "evidence": ""},
     {"name": "Protected decisions checked", "status": "pending", "evidence": ""},
     {"name": "Safety and professional-signoff boundaries stated", "status": "pending", "evidence": ""},
-    {"name": "Draft/approved-baseline separation preserved", "status": "pending", "evidence": ""},
+    {"name": "Direct main-model changes traced and checked before Git commit", "status": "pending", "evidence": ""},
     {"name": "Artifact completeness and traceability", "status": "pending", "evidence": ""}
   ],
   "result": "pending",

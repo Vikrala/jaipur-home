@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "QA-TEXTURES-2026-11-01",
+  "authoring_specialist": "Director / root agent",
+  "independent_qa_specialist": "QA-TEXTURES-2026-11-01-site-qa-01",
+  "review_scope": [
+    "TV backing and puja drawer/liner materials",
+    "All 11 baked PBR texture families and 33 JPEG maps",
+    "Day and evening walkthrough renders; AO on and off",
+    "Current GLB embedded materials and images"
+  ],
+  "checks": [
+    {
+      "name": "Source hierarchy respected",
+      "status": "pass",
+      "evidence": "Architect-traced geometry and current handoff/changelog retained; finish corrected to specified warm ivory stone."
+    },
+    {
+      "name": "Architect layout/geometry preserved or authorised",
+      "status": "pass",
+      "evidence": "Walls, openings, TV dimensions and centre height, and puja footprint remain; TV mount depth adjusted to remove a render shadow."
+    },
+    {
+      "name": "Protected decisions checked",
+      "status": "pass",
+      "evidence": "Kitchen and floor tile assignments unchanged; 7 idols, 8 photographs, two drawers, independent diya tray retained."
+    },
+    {
+      "name": "Safety and professional-signoff boundaries stated",
+      "status": "pass",
+      "evidence": "RFI-001 and RFI-002 remain open for joinery, flame/ventilation, TV bracket and site clearances."
+    },
+    {
+      "name": "Direct main-model changes traced and checked before Git commit",
+      "status": "pass",
+      "evidence": "Changed realism.js, baked stone maps and interior.js in output/jaipur-home; rebuilt walkthrough, GLB and nine current renders; captured QA views."
+    },
+    {
+      "name": "Artifact completeness and traceability",
+      "status": "pass",
+      "evidence": "Probe results, day/evening captures, render/export check and independent specialist findings recorded."
+    },
+    {
+      "name": "Texture maps and output validated",
+      "status": "pass",
+      "evidence": "All 33 baked maps decode; stone mean RGB approximately 214/203/188; zero browser page errors; GLB has 74 materials and 63 embedded images."
+    }
+  ],
+  "result": "pass",
+  "open_rfis": [
+    "RFI-001",
+    "RFI-002"
+  ]
+}
