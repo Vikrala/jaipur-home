@@ -10,12 +10,15 @@
     "kitchen_lofts_meet_flat_ceiling": true,
     "metre_scale_preserved": true,
     "ceiling_viewpoints_in_walkthrough": true,
-    "rendered_plan_exists": true
+    "rendered_plan_exists": true,
+    "all_false_ceiling_planes_matte_white": true,
+    "dropped_bands_matte_white": true,
+    "warm_wall_colour_retained": true
   },
   "glb_nodes": 2479,
   "kitchen_loft_groups": 11,
-  "source_sha256": "02772adbbd0ec3ce78e1e7d21062559aa85941581e31c3ee5119d0b2c3402839",
-  "glb_sha256": "75bffc539f6c93392c4fbd2bed16a0d2ec6b9a95e4dfc0237bfdf0d00827a352",
+  "source_sha256": "1e78dec847bea6d83f04c3ee569275fce24263789591c8f9f8215010a494aa25",
+  "glb_sha256": "1ef56a93b4d12a4c6492592f83f11448678eba9cb5de5b78d44ddd5619a88f66",
   "limitations": [
     "No measured ceiling/beam section or service drawings supplied; levels are visual assumptions.",
     "No local WebGL visual review: the browser security policy blocked opening the standalone local walkthrough.",

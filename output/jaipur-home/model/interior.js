@@ -161,8 +161,8 @@ box(27,.32,55.75,13.5,-.21,27.88,trim,building,'Floor slab envelope');
 // pending a measured section, beam/duct survey and actual fitting depths. No slab geometry is altered.
 const ceilingLevels={master:9.78,'bedroom-2':9.78,'bedroom-3':9.78,living:9.78,
  kitchen:9.62,store:9.82,lobby:9.82,'bath-master':9.82,'bath-common':9.82};
-const falseCeilingPaint=mat('Warm matte gypsum false ceiling','#f4eee5',.95),
- bathCeilingPaint=mat('Moisture resistant bathroom ceiling finish','#f0eee8',.92),
+const falseCeilingPaint=mat('Matte white gypsum false ceiling','#ffffff',1),
+ bathCeilingPaint=mat('Matte white moisture resistant bathroom ceiling finish','#ffffff',1),
  coveGlow=mat('Concealed warm ceiling cove','#ffe7c1',.5,0,{emissive:'#ffd9a4',emissiveIntensity:.72});
 function ceilingRing(name,x0,z0,x1,z1,width,drop,accent){
  const y=ceilingLevels[name]-drop/2;

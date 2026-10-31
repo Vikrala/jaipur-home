@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "generated_for": "FALSE-CEILING-2026-11-01",
+ "generated_for": "FALSE-CEILING-WHITE-2026-11-01",
  "hash_algorithm": "sha256",
  "artifacts": [
   {
@@ -15,14 +15,14 @@
    "path": "docs/PROJECT_HANDOFF.md",
    "role": "Human-readable approved design continuity",
    "authority_rank": 2,
-   "sha256": "61fbff52d280905bef58cc20b56821f4657380d42c7105dc40219ba71ec9799e"
+   "sha256": "4239f92654766c1cd9e3b48707273da76245db05d83bc133d536fb06712a0def"
   },
   {
    "id": "design-state",
    "path": "docs/LATEST_COMPLETE_HOUSE_DESIGN.json",
    "role": "Structured approved design context",
    "authority_rank": 2,
-   "sha256": "3c5fb82c37f64d9daeba13cf0baed54f3648e6732375b072d6711a3bea38b5d3"
+   "sha256": "2a4793e489b7945ee42076e6422690fa8f0cebfabaadd44aed6a6f9a1be91823"
   },
   {
    "id": "architect-layout",
@@ -43,14 +43,14 @@
    "path": "output/jaipur-home/README.md",
    "role": "Current maintained-model summary",
    "authority_rank": 2,
-   "sha256": "e471d037dc41827b286b48d832f371da1d2257dc78d25119aa981c8557e3bd8d"
+   "sha256": "064f43780842ca1569da27756fc14e7c09d3d163959433550276985d34def19c"
   },
   {
    "id": "baseline-changelog",
    "path": "output/jaipur-home/CHANGELOG.md",
    "role": "Dated approved revision history",
    "authority_rank": 2,
-   "sha256": "0dfc80c9a00bde8fb300635cfe937e2f8ceb60a823e7abe64038fabbda426f73"
+   "sha256": "0e021266f8a63812297572df248cb7236fc302472fe52b25f516768051235cbc"
   },
   {
    "id": "baseline-qa",
@@ -92,21 +92,21 @@
    "path": "output/jaipur-home/model/interior.js",
    "role": "Single maintained 3D model scene logic",
    "authority_rank": 2,
-   "sha256": "02772adbbd0ec3ce78e1e7d21062559aa85941581e31c3ee5119d0b2c3402839"
+   "sha256": "1e78dec847bea6d83f04c3ee569275fce24263789591c8f9f8215010a494aa25"
   },
   {
    "id": "jaipur-first-floor.glb",
    "path": "output/jaipur-home/model/jaipur-first-floor.glb",
    "role": "Single maintained 3D model (GLB, metres)",
    "authority_rank": 2,
-   "sha256": "75bffc539f6c93392c4fbd2bed16a0d2ec6b9a95e4dfc0237bfdf0d00827a352"
+   "sha256": "1ef56a93b4d12a4c6492592f83f11448678eba9cb5de5b78d44ddd5619a88f66"
   },
   {
    "id": "walkthrough.html",
    "path": "output/jaipur-home/walkthrough.html",
    "role": "Standalone walkthrough of the single model",
    "authority_rank": 2,
-   "sha256": "98b089fe1b79eaa1c5486d878ea765f82f6106cb3e3b6bcdf59be1efdd37c2e6"
+   "sha256": "ce64d1c931f7456fa2c09128e7e7f6a58f3edb8494620c94c4e7b0c8017abb90"
   },
   {
    "id": "rfis.json",
@@ -190,14 +190,14 @@
    "path": "output/jaipur-home/renders/false-ceiling-reflected-plan.png",
    "role": "Proposed reflected ceiling concept plan",
    "authority_rank": 2,
-   "sha256": "b637af26c5b2f1f835ac6b922b2301acc3e724ca3197301c519c89333ffba437"
+   "sha256": "f7b7e61bba70498f4463f66e4ce6b0c725a6e5220ee27b66e8db4e91ec51b98b"
   },
   {
    "id": "false-ceiling-checks",
    "path": "output/jaipur-home/model/false-ceiling-checks.json",
    "role": "Static GLB and ceiling-coordinate verification",
    "authority_rank": 2,
-   "sha256": "663ba2eecf3256e546da4df78beb27350905da9101de3d35bbe70018923ddfb5"
+   "sha256": "dcdec83472f1a499b7b040cf29a44fc7c20859a0a27cba349c26ef0d0b171814"
   }
  ],
  "verification_rule": "A hash mismatch triggers targeted source review. User-authorised main-model changes are recorded by Git."

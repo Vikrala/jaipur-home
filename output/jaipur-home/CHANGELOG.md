@@ -2,6 +2,12 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Matte white false ceiling finish
+
+- Changed every proposed false ceiling plane and dropped band to a clear matte white, including kitchen, bathrooms, store, lobby and passage. The warm wall paint and the bedroom/living decorative inset lines remain distinct.
+- Rebuilt the standalone walkthrough, updated the GLB ceiling materials and refreshed the reflected ceiling concept plan. Ceiling levels and layout are unchanged.
+
+
 ## 1 November 2026 - False ceilings throughout the enclosed floor
 
 - Added shallow dropped perimeter trays to the three bedrooms and living room, with a warm brass line in the master, muted blue lines in Bedrooms 2 and 3, and a warm cove line in the living room. Kept central fan/lighting fields high and simple.

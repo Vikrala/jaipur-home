@@ -373,6 +373,7 @@
   "false_ceiling": {
     "date": "2026-11-01",
     "status": "User-authorised visual concept; site section and services coordination held under RFI-014",
+    "finish": "Matte white on all proposed false ceiling planes and dropped bands, visibly lighter than the warm chalk walls; decorative inset lines retained",
     "assumed_slab_soffit_mm": 3048,
     "finished_centre_levels_mm_approx": {"master": 2981, "bedroom_2": 2981, "bedroom_3": 2981, "living": 2981, "kitchen": 2932, "bathrooms_store_lobby_passage": 2993},
     "design": "Shallow perimeter trays in all three bedrooms and living; simple flat kitchen; plain flat baths, washing niche, store, lobby and passage. Lift cabin remains a vendor item; stair and terrace remain open.",
