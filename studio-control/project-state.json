@@ -7,7 +7,7 @@
   "revision_id": "BASELINE-2026-10-27",
   "root": "output/jaipur-home",
   "authority": "Current maintained model; later approved changes must update this folder rather than create a numbered baseline.",
-  "note": "Single model. Includes R-006, R-007, R-010, R-011 and (27 Oct 2026) R-008 realism + R-012 master bathroom. All drafts and numbered copies retired. R-013, R-014 and R-015 (open master shower, 1 mm floor joints) applied directly. R-016 QA fixes applied. R-017 (28 Oct 2026) smoother movement, render quality unchanged. R-018 bathroom wall tile to ceiling."
+  "note": "Single model. Includes R-006, R-007, R-010, R-011 and (27 Oct 2026) R-008 realism + R-012 master bathroom. Historical drafts and numbered copies retired. R-013, R-014 and R-015 (open master shower, 1 mm floor joints) applied directly. R-016 QA fixes applied. R-017 (28 Oct 2026) smoother movement, render quality unchanged. R-018 bathroom wall tile to ceiling. R-019 kitchen slab rendered in the client-considered black-and-copper granite. On 31 Oct 2026, the client showroom glossy ivory 2 x 4 ft tile was applied to dry interior floors. Git commits are now the revision trail."
  },
  "boot_pack": {
   "persona": "AGENTS.md",
@@ -42,7 +42,7 @@
    "The request changes a protected decision or approved baseline",
    "The request is safety-critical or execution-sensitive",
    "A source conflict is detected",
-   "A final promotion or independent QA is requested"
+   "A direct baseline change or independent QA is requested"
   ]
  },
  "model_routing": {
@@ -70,6 +70,6 @@
   "RFI-013"
  ],
  "unresolved_conflicts": [],
- "updated_at": "2026-10-28",
- "update_rule": "Only update after an approved baseline promotion or a user-approved control-state correction."
+ "updated_at": "2026-10-31",
+ "update_rule": "Update with a completed, user-authorised direct Git change or a user-approved control-state correction."
 }

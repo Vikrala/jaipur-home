@@ -27,6 +27,21 @@ function rng(seed){return()=>{seed=(seed*1664525+1013904223)>>>0;return seed/429
 const RZ=window.JAIPUR_REALISM,FX=window.JAIPUR_FX,RZB=RZ.build(renderer,'high'),TX=RZB.sets;
 function pbr(set,ns=1){return {map:set.map,normalMap:set.normalMap,normalScale:new T.Vector2(ns,ns),roughnessMap:set.roughnessMap};}
 function uvScale(g,su,sv){const uv=g.attributes.uv;for(let i=0;i<uv.count;i++)uv.setXY(i,uv.getX(i)*su,uv.getY(i)*sv);uv.needsUpdate=true;return g;}
+// Client showroom tile: 2 ft x 4 ft polished ivory. The established laying direction has its long edge along x.
+// Embed the image in the standalone HTML so file:// browsers can upload it as a WebGL texture.
+const floorTileCanvas=document.createElement('canvas');floorTileCanvas.width=1774;floorTileCanvas.height=887;
+const floorTileCtx=floorTileCanvas.getContext('2d');floorTileCtx.fillStyle='#eee9e1';floorTileCtx.fillRect(0,0,1774,887);
+const floorTileMap=new T.CanvasTexture(floorTileCanvas);floorTileMap.wrapS=floorTileMap.wrapT=T.RepeatWrapping;
+floorTileMap.colorSpace=T.SRGBColorSpace;floorTileMap.anisotropy=renderer.capabilities.getMaxAnisotropy();floorTileMap.repeat.set(1/4,1/2);
+const floorTileReady=new Promise(resolve=>{
+ const img=new Image();img.onload=()=>{
+  floorTileCtx.save();floorTileCtx.translate(1774,0);floorTileCtx.rotate(Math.PI/2);floorTileCtx.drawImage(img,0,0,887,1774);floorTileCtx.restore();
+  // One millimetre joint at 1.46 pixels/mm for the 610 x 1,220 mm tile.
+  floorTileCtx.strokeStyle='rgba(134,123,114,.60)';floorTileCtx.lineWidth=1.46;
+  floorTileCtx.strokeRect(.73,.73,1774-1.46,887-1.46);floorTileMap.needsUpdate=true;resolve();
+ };img.onerror=()=>{window.JAIPUR_FLOOR_TILE_ERROR='Tile image failed to decode';resolve();};
+ img.src=window.JAIPUR_FLOOR_TILE_DATA;
+});
 // R-012: master-bath octagon floor keeps its own canvas texture (R-008 replaced the other canvas textures with PBR sets).
 function masterBathFloorTexture(){
  const c=document.createElement('canvas');c.width=c.height=512;const a=c.getContext('2d');
@@ -44,9 +59,11 @@ function mat(name,color,roughness=.7,metalness=0,extra={}){const {physical,bevel
 const ivory=mat('Washable warm chalk paint','#f1e9dc',1,0,pbr(TX.plaster,.8)),white=mat('White ceramic','#f1f0e9',.14,0,{physical:true,clearcoat:.6,clearcoatRoughness:.06}),
  oak=mat('Walnut laminate','#f7ead8',1,0,{...pbr(TX.walnut,1),physical:true,clearcoat:.22,clearcoatRoughness:.38,bevel:true,grain:true}),
  greige=mat('Matte sand laminate','#dfd1bc',1,0,{...pbr(TX.suede,.5),bevel:true}),sage=mat('Muted terracotta laminate','#b88872',1,0,{...pbr(TX.suede,.5),bevel:true}),
- taupe=mat('Dusty blue laminate','#8496a1',1,0,{...pbr(TX.suede,.5),bevel:true}),stone=mat('Matte vitrified floor tile','#ffffff',1,0,{...pbr(TX.tile,.9),physical:true,clearcoat:.42,clearcoatRoughness:.14}),
+ taupe=mat('Dusty blue laminate','#8496a1',1,0,{...pbr(TX.suede,.5),bevel:true}),stone=mat('Glossy ivory showroom floor tile, 2 ft x 4 ft','#ffffff',.13,0,{map:floorTileMap,physical:true,clearcoat:.95,clearcoatRoughness:.07}),
  bathStone=mat('Anti slip bathroom tile','#ffffff',1,0,pbr(TX.bathTile,1.1)),
  granite=mat('Sealed dark granite','#b5b4af',1,0,{...pbr(TX.granite,.6),physical:true,clearcoat:.3,clearcoatRoughness:.18}),
+ // R-019 (28 Oct 2026): client-selected kitchen slab from the site photo: polished black with copper banding, flow along u.
+ kitchenGranite=mat('Client-selected black and copper granite, polished','#ffffff',1,0,{...pbr(TX.kitchenGranite,.35),physical:true,clearcoat:.5,clearcoatRoughness:.08}),
  linen=mat('Wipeable sand upholstery','#e9dcc7',1,0,{...pbr(TX.linen,1.5),physical:true,sheen:.55,sheenRoughness:.6,sheenColor:new T.Color('#d9ccb6')}),
  bedding=mat('Cotton bedding','#fbf8ef',1,0,{...pbr(TX.cotton,1),physical:true,sheen:.8,sheenRoughness:.6,sheenColor:new T.Color('#ffffff')}),
  blanket=mat('Terracotta cotton throw','#b6795d',1,0,{...pbr(TX.linen,1.3),physical:true,sheen:1,sheenRoughness:.5,sheenColor:new T.Color('#d9a58c')}),
@@ -616,8 +633,11 @@ sinkBase.remove(sinkBase.children.find(o=>o.name==='Carcass horizontal'&&o.posit
 sideFront(sinkBase,K.sinkWidth/2,2.71,K.depth,oak,-K.sinkWidth/4,-1,'Left sink cupboard door').position.y=.20;
 sideFront(sinkBase,K.sinkWidth/2,2.71,K.depth,oak,K.sinkWidth/4,1,'Right sink geyser service door',true).position.y=.20;
 sinkBase.userData.frontCount=2;sinkBase.userData.drawers=0;
-worktop(K.counterEnd-.75,K.depth,2.96,building,[],(K.counterEnd+.75)/2,windowZ,'Continuous window-wall granite');
-worktop(K.depth,K.westEnd-K.westStart,2.96,building,[[0,K.sinkCentre-(K.westEnd+K.westStart)/2,1.47,K.sinkWidth-.14]],kc,(K.westEnd+K.westStart)/2,'RO-wall granite with double-sink aperture');
+// R-019: the RO-wall run is cut lengthwise from the slab too, so its texture turns 90° to keep the banding along the run.
+const kitchenGraniteRun=kitchenGranite.clone();kitchenGraniteRun.name='Client-selected black and copper granite, polished (RO-wall run)';mats[kitchenGraniteRun.name]=kitchenGraniteRun;
+for(const k of ['map','normalMap','roughnessMap']){const t=kitchenGranite[k].clone();t.center.set(.5,.5);t.rotation=Math.PI/2;kitchenGraniteRun[k]=t;}
+worktop(K.counterEnd-.75,K.depth,2.96,building,[],(K.counterEnd+.75)/2,windowZ,'Continuous window-wall granite',kitchenGranite);
+worktop(K.depth,K.westEnd-K.westStart,2.96,building,[[0,K.sinkCentre-(K.westEnd+K.westStart)/2,1.47,K.sinkWidth-.14]],kc,(K.westEnd+K.westStart)/2,'RO-wall granite with double-sink aperture',kitchenGraniteRun);
 const doubleSink=new T.Group();doubleSink.name='Equal-width double bowl sink';doubleSink.position.set(kc,K.counterTop+.075,K.sinkCentre);doubleSink.rotation.y=Math.PI/2;building.add(doubleSink);
 const bowlWidth=(K.sinkWidth-.22)/2,centre=(bowlWidth+.04)/2;
 const bowlSteel=mat('Recessed brushed sink steel','#52616a',.44,.65);
@@ -1207,5 +1227,5 @@ window.JAIPUR={scene,building,renderer,camera,go,viewpoints,fixtures,furniture,c
 root.querySelector('[data-action="model"]').addEventListener('click',async()=>{const button=root.querySelector('[data-action="model"]');button.disabled=true;try{const bytes=await window.JAIPUR.glb();const url=URL.createObjectURL(new Blob([new Uint8Array(bytes)],{type:'model/gltf-binary'}));const a=document.createElement('a');a.href=url;a.download='jaipur-home-main.glb';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}finally{button.disabled=false;}});
 root.dataset.kitchenQa=JSON.stringify(kitchenQA());
 function enterHash(){const id=decodeURIComponent(location.hash.slice(1));go(viewpoints[id]?id:'overview');}
-window.addEventListener('hashchange',enterHash);setNight(true);enterHash();requestAnimationFrame(animate);RZB.ready.then(()=>{render();window.JAIPUR_READY=true;});
+window.addEventListener('hashchange',enterHash);setNight(true);enterHash();requestAnimationFrame(animate);Promise.all([RZB.ready,floorTileReady]).then(()=>{render();window.JAIPUR_READY=true;});
 })();

@@ -2,6 +2,27 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 31 October 2026 - Glossy ivory 2 ft x 4 ft floor tile and Git workflow
+
+- The client's showroom tile is now the visualised finish on all dry interior floors: living, kitchen, store, lobby, lift landing, bedrooms and the short passage. Bathroom and terrace anti-slip floor concepts remain separate.
+- Tile module: 610 × 1,220 mm (2 × 4 ft), straight laid with the long side along the existing plan x direction and 1 mm joints. The image was cleaned from `IMG_9981.HEIC` to remove showroom reflections; the model repeats one sample, so actual boxes will vary.
+- The standalone walkthrough embeds the tile image so local `file://` browsers can render it. The GLB and nine current floor views were regenerated. The material assignment, texture repeat and GLB structure were checked.
+- The project workflow now uses direct edits to this single model, followed by checks and one coherent Git commit. Routine draft/promotion gates are retired; historical records remain provenance.
+- Before execution, confirm supplier wet slip data and test a wet sample underfoot, especially in the kitchen and older-adult routes; check shade variation, thickness, flatness and finished-floor clearances on site.
+
+## 28 October 2026 - R-019 kitchen slab in the client's granite
+
+Applied directly to this model on the user's instruction. This granite is under consideration, not a final selection.
+
+- **Both kitchen worktop runs now show the granite from the client's site photo.** The photo is saved as `kitchen-granite-reference.jpg`. The texture shows:
+  - a polished black base;
+  - dense, crinkled banding;
+  - flowing copper and rust patches.
+- **The banding runs along each run, both the window wall and the RO wall,** the way a fabricator would normally cut it. The joint at the L-corner and the exact figure are to be agreed when the slab is selected.
+- The texture is an approximation of the photo, and real slabs vary by block and batch.
+- Other granite in the house, such as the bedside tops, the locker lid and the vanity, is unchanged.
+- The GLB is re-exported. The stills are not regenerated.
+
 ## 28 October 2026 - R-018 bathroom wall tile to the ceiling
 
 Applied directly to this model on the user's instruction.

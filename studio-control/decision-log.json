@@ -177,6 +177,28 @@
     "user-instruction"
    ],
    "verbatim": "the bathroom wall tiles must go up to the ceiling all the way up, for both the bathrooms."
+  },
+  {
+   "id": "D-018",
+   "status": "under-consideration",
+   "topic": "R-019 kitchen worktop granite",
+   "decision": "28 Oct 2026: client is considering the site-photo black-and-copper granite for the kitchen slab; rendered in the model for evaluation. Not a final selection.",
+   "sources": [
+    "user-instruction",
+    "output/jaipur-home/kitchen-granite-reference.jpg"
+   ],
+   "verbatim": "This is the image of the granite that we are considering for the kitchen slab, render the kitchen slab as per this granite"
+  },
+  {
+   "id": "D-019",
+   "status": "approved",
+   "topic": "Glossy ivory 2 ft x 4 ft flooring and direct Git workflow",
+   "decision": "31 Oct 2026: show the client showroom glossy ivory tile on all dry interior floors of the single maintained model, at 610 x 1,220 mm with 1 mm joints and the established long-side plan-x laying direction. Retain separate anti-slip concepts in bathrooms and terrace. User directed future authorised changes to be made directly in the main model and committed after checks, with no routine draft or promotion gate.",
+   "sources": [
+    "user-instruction",
+    "output/jaipur-home/model/floor-tile-reference.png"
+   ],
+   "verbatim": "Update the flooring with this tile and show me how the house will look like. tile is 2feet by 4feet; ... work directly on the main/base model directly"
   }
  ]
 }

@@ -105,6 +105,7 @@ This project is a first-floor interior/3D coordination exercise for a residentia
 - Chimney: one lift-up access front; hood body/intake remains accessible. Chimney service tower is not storage.
 - Exhaust service shutter: confined to the right window pane; terminates at the jamb; has a separate grille and handle.
 - Kitchen dining set, pendants, and separate living-to-kitchen handwash are removed.
+- **Kitchen slab (R-019, under consideration):** the client's site-photo granite ([`kitchen-granite-reference.jpg`](../output/jaipur-home/kitchen-granite-reference.jpg)) is rendered as a polished black-and-copper banded granite on both worktop runs, with the banding along each run. The model texture is an approximation of the photo. The trade name, batch, thickness and finish still need confirming with the supplier. Other granite in the house is unchanged.
 
 ### Verified geometry/QA
 
@@ -217,6 +218,8 @@ Source: architect's "Revised Interior Layout OP-1", dated 14 October 2026, now `
 - **Not modelled by instruction:** AC symbol on the kitchen/dining east wall; plan label "LOCKER" (no longer "HIDEEN").
 
 ### Bathrooms, washing and store
+
+- **Main flooring (31 Oct 2026):** the client's glossy ivory showroom tile is rendered on the dry interior floors in the living room, kitchen, store, lobby, lift landing, all bedrooms and short passage. Model module 610 × 1,220 mm (2 × 4 ft), long side along plan x, 1 mm joints. `output/jaipur-home/floor-tile-showroom-source.HEIC` is the supplied photo; `model/floor-tile-reference.png` is its cleaned visual approximation. Real boxes and lighting will differ. Bathrooms and terrace retain their separate anti-slip floor concepts. Obtain wet slip data and test a wet sample before specifying it for the kitchen or older-adult circulation; site-check thickness and thresholds.
 
 - Master bath (R-012, promoted 27 Oct 2026):
   - **Shower:** 900 × 1,220 mm, fully open, with no glass returns, screen or kerb. The glass was removed in R-015, 27 Oct 2026, so the whole bathroom floor is treated as wet.

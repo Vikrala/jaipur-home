@@ -8,21 +8,21 @@
    "path": "AGENTS.md",
    "role": "Project-wide persona and operating policy",
    "authority_rank": 2,
-   "sha256": "0ea69e5aa15eee1c7d4420f62d7247327c48071a0fea06cca310dad03bb7d6ad"
+   "sha256": "a968513f06659f27f5f2fc74bba09b31ade5362757b167f45583de723aeb3d35"
   },
   {
    "id": "design-handoff",
    "path": "docs/PROJECT_HANDOFF.md",
    "role": "Human-readable approved design continuity",
    "authority_rank": 2,
-   "sha256": "3e8da428f8220c40c23c434db0405519e545f71334f8d0b4551babfc7acaca1e"
+   "sha256": "4fc7e0923216d88d595b7187f786c54d6bb1c6758eda8a8107de59f9300bb039"
   },
   {
    "id": "design-state",
    "path": "docs/LATEST_COMPLETE_HOUSE_DESIGN.json",
    "role": "Structured approved design context",
    "authority_rank": 2,
-   "sha256": "07ad816f7655a105e2cebecd729d975accfa69b409347619c9704e340fa67d9a"
+   "sha256": "20001da3d9becc26c6222d4bb5b42e48a6b4c823188912e281788ad9c5cc62fd"
   },
   {
    "id": "architect-layout",
@@ -43,14 +43,14 @@
    "path": "output/jaipur-home/README.md",
    "role": "Current maintained-model summary",
    "authority_rank": 2,
-   "sha256": "28c6aca08b75d2564e11a599413a9cd24d26523c2bddf4b9b7ef0a92e1c6ddc6"
+   "sha256": "d1b0beb0d97012e3d1ccf40f871637c5ce13c69f52aacccf8d57c24d5a46dbd7"
   },
   {
    "id": "baseline-changelog",
    "path": "output/jaipur-home/CHANGELOG.md",
    "role": "Dated approved revision history",
    "authority_rank": 2,
-   "sha256": "564f561b5fa9b28a2e44b6d56ec670e47f8d596b8eaf5a98a6828995f17df53b"
+   "sha256": "1698cfba27fc7cb0cb9d8d931dec7398e4effee4fecf422572aaff92bf0e4545"
   },
   {
    "id": "baseline-qa",
@@ -92,21 +92,21 @@
    "path": "output/jaipur-home/model/interior.js",
    "role": "Single maintained 3D model scene logic",
    "authority_rank": 2,
-   "sha256": "42fd1dfba8c7f467063af92d03f46aa6901823178d7d88227ffc78c65f4777d3"
+   "sha256": "9adee8dfc8ceb977e6bccc6ca70dbf46d50abb2034988eb1f57bc7a2f0291348"
   },
   {
    "id": "jaipur-first-floor.glb",
    "path": "output/jaipur-home/model/jaipur-first-floor.glb",
    "role": "Single maintained 3D model (GLB, metres)",
    "authority_rank": 2,
-   "sha256": "638cd50eed678f16740fccff49faa3693c091b76fb7e10afaa1f074c78b92ab7"
+   "sha256": "1c71d48f937992058cdad27bd1636c0ee98b9b111d508320e036326637f2bc32"
   },
   {
    "id": "walkthrough.html",
    "path": "output/jaipur-home/walkthrough.html",
    "role": "Standalone walkthrough of the single model",
    "authority_rank": 2,
-   "sha256": "b2c99a621b964f862719c53726b17af0cebf946730779f00ddf8c78084db0fd0"
+   "sha256": "8841ba55bd20e08ef8b75a79f29165df8914f70122ea4946d24871639643bfe4"
   },
   {
    "id": "rfis.json",
@@ -114,6 +114,48 @@
    "role": "RFI register",
    "authority_rank": 2,
    "sha256": "38a6f7859a862ba85415c9d1ffe4c32be89c6d366292ea0bc9d44dc19027942e"
+  },
+  {
+   "id": "floor-tile-image",
+   "path": "output/jaipur-home/model/floor-tile-reference.png",
+   "role": "Client showroom floor tile, cleaned visual source",
+   "authority_rank": 3,
+   "sha256": "cbfb5b495c8339e1d6147720d81285fac028bf5f2386d596c1261f847a5ca1bd"
+  },
+  {
+   "id": "floor-tile-data",
+   "path": "output/jaipur-home/model/floor-tile-data.js",
+   "role": "Embedded offline walkthrough tile texture",
+   "authority_rank": 2,
+   "sha256": "18aec601846177d58edcb14f9cb6d1dba24f737e2541cf446973eca7fec29c14"
+  },
+  {
+   "id": "floor-tile-render-check",
+   "path": "output/jaipur-home/model/floor-tile-render-check.json",
+   "role": "Room material and render/export verification",
+   "authority_rank": 2,
+   "sha256": "65aa4d87477d316094bd8c52bb8b2906a8ffe33a40b1a9fbe9a20523b63c1898"
+  },
+  {
+   "id": "walkthrough-template",
+   "path": "output/jaipur-home/walkthrough.template.html",
+   "role": "Standalone walkthrough source template",
+   "authority_rank": 2,
+   "sha256": "ad40625f1d47961c8db5812516ced4c8bb8957cb498e850cd7fd6738444fda49"
+  },
+  {
+   "id": "main-index",
+   "path": "output/jaipur-home/index.html",
+   "role": "Current maintained model landing page",
+   "authority_rank": 2,
+   "sha256": "a7726fc6c4db2e3aed0b1a58443dd149df94b2fc950f645f7a2a5a09af055278"
+  },
+  {
+   "id": "floor-tile-source-photo",
+   "path": "output/jaipur-home/floor-tile-showroom-source.HEIC",
+   "role": "Client supplied showroom tile photo",
+   "authority_rank": 3,
+   "sha256": "2e109d42a86ebfa46e10190feb8f97afe0daad659b75079c8c5963f36a029650"
   }
  ],
  "verification_rule": "A hash mismatch triggers targeted source review. It is not by itself approval to alter the baseline."

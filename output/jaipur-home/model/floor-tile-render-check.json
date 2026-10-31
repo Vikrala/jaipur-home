@@ -1,0 +1,76 @@
+{
+  "browser": "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
+  "errors": [],
+  "audit": {
+    "tileError": null,
+    "material": "Glossy ivory showroom floor tile, 2 ft x 4 ft",
+    "repeat": [
+      0.25,
+      0.5
+    ],
+    "roughness": 0.13,
+    "clearcoat": 0.95,
+    "floors": [
+      {
+        "room": "master",
+        "material": "Glossy ivory showroom floor tile, 2 ft x 4 ft"
+      },
+      {
+        "room": "bedroom-2",
+        "material": "Glossy ivory showroom floor tile, 2 ft x 4 ft"
+      },
+      {
+        "room": "bedroom-3",
+        "material": "Glossy ivory showroom floor tile, 2 ft x 4 ft"
+      },
+      {
+        "room": "bath-master",
+        "material": "Master bath matte octagon and black-dot anti-slip floor"
+      },
+      {
+        "room": "bath-common",
+        "material": "Anti slip bathroom tile"
+      },
+      {
+        "room": "living",
+        "material": "Glossy ivory showroom floor tile, 2 ft x 4 ft"
+      },
+      {
+        "room": "kitchen",
+        "material": "Glossy ivory showroom floor tile, 2 ft x 4 ft"
+      },
+      {
+        "room": "store",
+        "material": "Glossy ivory showroom floor tile, 2 ft x 4 ft"
+      },
+      {
+        "room": "lobby",
+        "material": "Glossy ivory showroom floor tile, 2 ft x 4 ft"
+      },
+      {
+        "room": "lift",
+        "material": "Glossy ivory showroom floor tile, 2 ft x 4 ft"
+      },
+      {
+        "room": "stairs",
+        "material": null
+      },
+      {
+        "room": "terrace",
+        "material": "Anti slip bathroom tile"
+      }
+    ]
+  },
+  "views": [
+    "overview",
+    "living",
+    "living-reverse",
+    "kitchen",
+    "master",
+    "bedroom-2",
+    "bedroom-3",
+    "lobby",
+    "living-evening"
+  ],
+  "glbBytes": 19547904
+}

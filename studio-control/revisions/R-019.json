@@ -1,0 +1,24 @@
+{
+ "schema_version": "1.0",
+ "revision_id": "R-019",
+ "status": "promoted",
+ "date": "2026-10-28",
+ "request": "This is the image of the granite that we are considering for the kitchen slab, render the kitchen slab as per this granite",
+ "work_mode": "direct baseline edit on user instruction (material change, slab under consideration)",
+ "source": "client site photo of granite slabs, saved as output/jaipur-home/kitchen-granite-reference.jpg",
+ "changes": [
+  "new procedural texture recipe kitchenGranite in realism.js (polished black base, crinkled banding, copper/rust flow, sparse feldspar flecks), 8 ft sample, baked at 2048 px into textures-baked.js",
+  "new material 'Client-selected black and copper granite, polished' (clearcoat .5) on the window-wall worktop; RO-wall run uses a 90-degree-rotated copy so the banding follows the run",
+  "other granite (bedside tops, locker lid, vanity, utility) unchanged",
+  "GLB re-exported (19,124,012 bytes)"
+ ],
+ "assumptions": [
+  "the texture approximates the photo; actual slab figure varies by block and batch",
+  "banding laid along each run; the fabricator's actual cut and joint position at the L-corner are to be agreed at slab selection"
+ ],
+ "not_done": [
+  "stills not regenerated"
+ ],
+ "qa": "Browser check: both kitchen worktop meshes use the new material and the texture loads; evening and daylight views compared visually with the site photo.",
+ "specialists_activated": []
+}

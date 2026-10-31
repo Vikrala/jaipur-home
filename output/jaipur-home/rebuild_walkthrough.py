@@ -6,6 +6,6 @@ template = (base / 'walkthrough.template.html').read_text()
 def script(name):
     return '<script>\n' + (base / 'model' / name).read_text() + '\n</script>'
 result = template.replace('<!-- LIBRARIES -->', script('three.min.js') + script('three-postfx.js') + script('gltf-exporter.js'))
-result = result.replace('<!-- PLAN -->', script('plan-data.js')).replace('<!-- INTERIOR -->', script('textures-baked.js') + script('realism.js') + '\n' + script('interior.js'))
+result = result.replace('<!-- PLAN -->', script('plan-data.js')).replace('<!-- INTERIOR -->', script('textures-baked.js') + script('realism.js') + script('floor-tile-data.js') + '\n' + script('interior.js'))
 (base / 'walkthrough.html').write_text(result)
 print('Rebuilt:', base / 'walkthrough.html')

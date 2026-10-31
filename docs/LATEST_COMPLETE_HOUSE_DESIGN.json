@@ -367,5 +367,7 @@
     "Never claim construction approval from this 3D concept alone."
   ],
   "floor_tile_joint": "1 mm on all floor tiles (R-015, 27 Oct 2026)",
+  "dry_area_floor_tile": "31 Oct 2026: client showroom glossy ivory tile visualised in living, kitchen, store, lobby, lift landing, bedrooms and short passage; 610 x 1,220 mm (2 x 4 ft), long side along plan x, 1 mm joints. Bathrooms and terrace retain separate anti-slip concepts. Photo-derived texture is approximate; wet grip, shade variation, thickness and levels require site check.",
+  "kitchen_worktop_granite": "Under consideration (R-019, 28 Oct 2026): client site-photo granite, polished black base with crinkled banding and copper/rust flow; rendered on both kitchen runs with banding along each run; supplier trade name, batch, thickness and edge profile to confirm",
   "bathroom_wall_tile_height": "Floor to ceiling (10 ft) on all walls of both bathrooms incl. master washing niche, above D3/D5, above W9/W4, and common bath north wall (R-018, 28 Oct 2026)"
 }

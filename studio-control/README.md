@@ -13,12 +13,11 @@ The maintained approved baseline remains `output/jaipur-home/`. `studio-control/
 
 ## Change protocol
 
-- Use an ID such as `R-001` before proposing any artifact change.
-- Fill a copy of `templates/revision-record.json` in `revisions/R-001.json`.
-- Create all proposed files inside `drafts/R-001/`; drafts must not replace approved files.
-- Obtain explicit scope approval, then draft and independently QA the output using `templates/qa-record.json`.
-- Present the final draft/diff for promotion approval.
-- Only after promotion approval may an agent update the approved baseline, this state, the project handoff, and the main model changelog.
+- For a user-authorised, reversible change, edit the maintained model in `output/jaipur-home/` directly.
+- Rebuild affected derived files, run checks suited to the change, and update the current README, changelog, handoff and state references.
+- Inspect the complete Git diff and commit one coherent final change. Preserve unrelated working-tree edits.
+- Use a separate review artifact or revision record only when requested or needed to resolve a source conflict. Historical `drafts/`, `revisions/` and `qa/` records remain provenance.
+- Stop for a user decision when source authorities conflict or a protected decision or constructed geometry would change. Identify any professional site check before execution.
 
 ## Safety boundary
 

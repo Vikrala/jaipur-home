@@ -2,7 +2,9 @@
 
 This is the single maintained model. It retains the approved kitchen, puja unit, final living-room furniture and architect-traced floor geometry. The full-height TV backing clears W5 and reaches the 10 ft ceiling; the low console extends left to the window centreline. The 75 in TV has been raised 1 ft, the living AC is centred on the solid left wall, the main controls sit below W5 above the console, and the sofa has an illuminated walnut service plank with integrated switches and charging.
 
-See `CHANGELOG.md` for the dated revision history. Future approved changes should update this folder directly rather than creating numbered copies.
+See `CHANGELOG.md` for the dated revision history. User-authorised changes update this folder directly; Git records the revisions.
+
+**31 October 2026 flooring:** The dry interior floors now show the client's glossy ivory showroom tile at 610 × 1,220 mm (2 × 4 ft), with the long edge along the established plan x direction and 1 mm joints. This applies to the living room, kitchen, store, lobby, lift landing, bedrooms and short passage. Bathroom and terrace floors retain their separate anti-slip concepts. `floor-tile-showroom-source.HEIC` preserves the supplied photo; the model image is a cleaned visual approximation of one sample. Actual shade, pattern variation, wet grip and tile thickness require checking on site. Current floor views are in `renders/floor-tile-*.png`, and `model/floor-tile-render-check.json` records the material assignment and GLB export check.
 
 The puja unit remains inside the architect's 3 ft 6 in × 1 ft 1.5 in footprint. It contains exactly seven small idols and eight photographs, an independent pull-out diya tray, two drawers and four P1-style fluted-glass leaves shown retracted into P3-style flush side pockets. The doors close only above the tray and drawer line.
 
