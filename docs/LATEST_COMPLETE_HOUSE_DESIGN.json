@@ -369,5 +369,13 @@
   "floor_tile_joint": "1 mm on all floor tiles (R-015, 27 Oct 2026)",
   "dry_area_floor_tile": "31 Oct 2026: client showroom glossy ivory tile visualised in living, kitchen, store, lobby, lift landing, bedrooms and short passage; 610 x 1,220 mm (2 x 4 ft), long side along plan x, 1 mm joints. Bathrooms and terrace retain separate anti-slip concepts. Photo-derived texture is approximate; wet grip, shade variation, thickness and levels require site check.",
   "kitchen_worktop_granite": "Under consideration (R-019, 28 Oct 2026): client site-photo granite, polished black base with crinkled banding and copper/rust flow; rendered on both kitchen runs with banding along each run; supplier trade name, batch, thickness and edge profile to confirm",
-  "bathroom_wall_tile_height": "Floor to ceiling (10 ft) on all walls of both bathrooms incl. master washing niche, above D3/D5, above W9/W4, and common bath north wall (R-018, 28 Oct 2026)"
+  "bathroom_wall_tile_height": "Floor to the assumed 10 ft slab soffit behind the proposed false ceiling on all walls of both bathrooms incl. master washing niche, above D3/D5, above W9/W4, and common bath north wall (R-018, 28 Oct 2026)",
+  "false_ceiling": {
+    "date": "2026-11-01",
+    "status": "User-authorised visual concept; site section and services coordination held under RFI-014",
+    "assumed_slab_soffit_mm": 3048,
+    "finished_centre_levels_mm_approx": {"master": 2981, "bedroom_2": 2981, "bedroom_3": 2981, "living": 2981, "kitchen": 2932, "bathrooms_store_lobby_passage": 2993},
+    "design": "Shallow perimeter trays in all three bedrooms and living; simple flat kitchen; plain flat baths, washing niche, store, lobby and passage. Lift cabin remains a vendor item; stair and terrace remain open.",
+    "kitchen_coordination": "Approved module logic retained; ceiling loft and exhaust-service fronts end at proposed 2932 mm plane."
+  }
 }

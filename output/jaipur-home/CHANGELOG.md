@@ -2,6 +2,14 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - False ceilings throughout the enclosed floor
+
+- Added shallow dropped perimeter trays to the three bedrooms and living room, with a warm brass line in the master, muted blue lines in Bedrooms 2 and 3, and a warm cove line in the living room. Kept central fan/lighting fields high and simple.
+- Added one plain flat ceiling to the kitchen; its existing loft fronts and exhaust service cupboard now terminate at the proposed finished ceiling without changing the approved module arrangement. Added plain flat ceilings to both bathrooms, the washing niche, store, lobby and short passage. The lift cabin ceiling, open stair and terrace remain as drawn.
+- Retained the 3,048 mm slab-soffit assumption. Provisional finished levels: about 2,981 mm in bedroom/living central fields, 2,932 mm in the kitchen, and 2,993 mm in baths/store/lobby/passage. Perimeter drops are about 61–70 mm below the central fields. Repositioned ceiling fittings and fan stems to those visual levels.
+- Rebuilt the standalone walkthrough and updated GLB geometry; added five ceiling viewpoints and a reflected ceiling concept plan. RFI-014 records the measured-section, fan fixing, lighting, moisture and service-access checks needed before an execution drawing.
+
+
 ## 1 November 2026 - TV stone and puja texture QA
 
 - Repaired the procedural stone recipe for a grout-free slab and rebaked only its albedo, normal and roughness maps. A zero tile count had produced black maps, making the intended warm ivory TV backing and puja back liner appear dark blue or grey.

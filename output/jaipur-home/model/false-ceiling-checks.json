@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-01",
+  "scope": "Visual false ceiling geometry in the maintained first-floor model",
+  "checks": {
+    "glb_structure_valid": true,
+    "all_nine_enclosed_room_planes": true,
+    "passage_plane": true,
+    "slab_soffit_retained": true,
+    "styled_bands_and_lines": true,
+    "kitchen_lofts_meet_flat_ceiling": true,
+    "metre_scale_preserved": true,
+    "ceiling_viewpoints_in_walkthrough": true,
+    "rendered_plan_exists": true
+  },
+  "glb_nodes": 2479,
+  "kitchen_loft_groups": 11,
+  "source_sha256": "02772adbbd0ec3ce78e1e7d21062559aa85941581e31c3ee5119d0b2c3402839",
+  "glb_sha256": "75bffc539f6c93392c4fbd2bed16a0d2ec6b9a95e4dfc0237bfdf0d00827a352",
+  "limitations": [
+    "No measured ceiling/beam section or service drawings supplied; levels are visual assumptions.",
+    "No local WebGL visual review: the browser security policy blocked opening the standalone local walkthrough.",
+    "This check covers GLB structure and model coordinates, not fitting depth, fan anchorage, electrical design or damp resistance."
+  ]
+}

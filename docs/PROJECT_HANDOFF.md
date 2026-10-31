@@ -39,7 +39,7 @@ This project is a first-floor interior/3D coordination exercise for a residentia
 | --- | --- |
 | Source drawing | `Suresh Ji F_F OP-1 Interior Layout.pdf`, original dated 10 September 2026; revised sheet dated 14 October 2026 adopted by R-011 (walls, columns, rooms, openings, stair, lift and shafts looked unchanged on comparison; `plan-geometry.json` not re-traced) |
 | Modelled plot envelope | 27 ft × 60 ft (8,230 × 18,288 mm), for model co-ordinates only |
-| Ceiling height | 10 ft (3,048 mm) |
+| Assumed structural slab soffit | 10 ft (3,048 mm); proposed false ceilings sit below it |
 | Main model units | GLB exported in metres; plan source/model script use feet internally |
 | Traced architecture status | Walls, columns, rooms and three ventilation shafts were retained through the revisions |
 
@@ -59,6 +59,12 @@ This project is a first-floor interior/3D coordination exercise for a residentia
 | Lift | 5 ft × 5 ft | Retained; coordinate with lift vendor before any finish/service change |
 | Stair | Two flights, 3 ft 3 in wide | Retained; stair vertical profile in the model is provisional |
 | Front open area/terrace | As drawn | Visual concept only; boundary/terrace construction details are provisional |
+
+### False ceiling concept — 1 November 2026
+
+The current model adds false ceilings to every enclosed room and the short passage, beneath the unchanged assumed 3,048 mm slab soffit. Bedroom central fields and the living central field are provisionally at about 2,981 mm; shallow perimeter trays drop another 61–70 mm. The master has a restrained warm brass inset line, Bedrooms 2 and 3 muted blue lines, and the living room a warm cove line. Fans and ceiling fittings are visually coordinated with these fields. The kitchen remains one simple flat plane at about 2,932 mm. Its approved loft and exhaust-service module arrangement is retained, with tops adjusted to meet the proposed finished ceiling. Both bathrooms, the washing niche, store, lobby and passage are plain flat at about 2,993 mm. The lift cabin remains a lift-vendor item; the stair void and open terrace do not gain ceilings. See the ceiling viewpoints in the walkthrough and `renders/false-ceiling-reflected-plan.png`.
+
+These heights are visual assumptions, not a measured section or reflected ceiling construction drawing. Before work, close RFI-014: measure slab and beams; coordinate AC/chimney/exhaust ducts, light fitting and driver depths, access panels, fan anchorage to structure, kitchen loft tops, and moisture-resistant bathroom details. Maintain ventilation and service access. Bathroom wall tile still runs to the assumed slab level behind the new ceiling.
 
 ### Ventilation shafts — retained, not fillable rooms
 

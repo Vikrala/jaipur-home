@@ -4073,7 +4073,7 @@ renderer.outputColorSpace=T.SRGBColorSpace; renderer.toneMapping=T.ACESFilmicTon
 renderer.toneMappingExposure=.98; renderer.localClippingEnabled=true;
 const camera=new T.PerspectiveCamera(62,1,.08,300);
 const building=new T.Group(); building.name='First floor — geometry units feet'; scene.add(building);
-const ceilings=new T.Group(); ceilings.name='10 ft ceilings'; building.add(ceilings);
+const ceilings=new T.Group(); ceilings.name='10 ft slab and proposed false ceilings'; building.add(ceilings);
 const doorLeaves=new T.Group(); doorLeaves.name='Interior doors'; building.add(doorLeaves);
 const fixtures=[], furniture=[], colliders=[], doorPivots=[], roomLights=[], emissives=[], kitchenStorage=[], kitchenFronts=[], kitchenDoorPivots=[],poojaDoorPivots=[];
 let realismOn=true,storageOpen=false,poojaOpen=false,diyaTrayOpen=false,poojaTrayGroup=null;
@@ -4218,13 +4218,42 @@ function contact(w,d,x,z,parent=building,opacity=.12){
 }
 // Ventilation shafts confirmed by client. Their lower termination is not supplied; the dark plane is a visual depth cue, not a structural slab specification.
 box(27,.32,55.75,13.5,-.21,27.88,trim,building,'Floor slab envelope');
+// The 10 ft plane remains the assumed slab soffit. These are provisional finished levels below it,
+// pending a measured section, beam/duct survey and actual fitting depths. No slab geometry is altered.
+const ceilingLevels={master:9.78,'bedroom-2':9.78,'bedroom-3':9.78,living:9.78,
+ kitchen:9.62,store:9.82,lobby:9.82,'bath-master':9.82,'bath-common':9.82};
+const falseCeilingPaint=mat('Warm matte gypsum false ceiling','#f4eee5',.95),
+ bathCeilingPaint=mat('Moisture resistant bathroom ceiling finish','#f0eee8',.92),
+ coveGlow=mat('Concealed warm ceiling cove','#ffe7c1',.5,0,{emissive:'#ffd9a4',emissiveIntensity:.72});
+function ceilingRing(name,x0,z0,x1,z1,width,drop,accent){
+ const y=ceilingLevels[name]-drop/2;
+ box(x1-x0,drop,width,(x0+x1)/2,y,z0+width/2,falseCeilingPaint,ceilings,name+' north dropped band');
+ box(x1-x0,drop,width,(x0+x1)/2,y,z1-width/2,falseCeilingPaint,ceilings,name+' south dropped band');
+ box(width,drop,z1-z0-2*width,x0+width/2,y,(z0+z1)/2,falseCeilingPaint,ceilings,name+' west dropped band');
+ box(width,drop,z1-z0-2*width,x1-width/2,y,(z0+z1)/2,falseCeilingPaint,ceilings,name+' east dropped band');
+ const lipY=ceilingLevels[name]-drop+.027,t=.035;
+ for(const [w,d,x,z] of [[x1-x0-2*width,t,(x0+x1)/2,z0+width],[x1-x0-2*width,t,(x0+x1)/2,z1-width],
+  [t,z1-z0-2*width,x0+width,(z0+z1)/2],[t,z1-z0-2*width,x1-width,(z0+z1)/2]])
+  box(w,.025,d,x,lipY,z,accent,ceilings,name+' inset ceiling line');
+}
 // R-014: the passage between the Bedroom 2 door (D4), the common bath and the living room is not a room in the traced
 // plan, so it had no floor or ceiling and showed the grey slab. It gets the same vitrified tile and ceiling as the living room.
 {const pass=[[12.1275,17.13],[15.63,17.13],[15.63,21.0075],[12.1275,21.0075]];polyPlane(pass,.008,stone,building,'Passage flooring (Bedroom 2 / common bath)');
- const cp=ivory.clone();cp.side=T.DoubleSide;polyPlane(pass,10,cp,ceilings,'Passage ceiling');}
+ const cp=ivory.clone();cp.side=T.DoubleSide;polyPlane(pass,10,cp,ceilings,'Passage slab soffit');
+ const fp=falseCeilingPaint.clone();fp.side=T.DoubleSide;polyPlane(pass,9.82,fp,ceilings,'Passage flat false ceiling');}
 for(const r of P.rooms){if(r.id==='stairs')continue;polyPlane(r.polygon,.008,r.id==='bath-master'?masterBathFloor:r.finish==='bath'?bathStone:r.finish==='outdoor'?bathStone:stone,building,r.name+' flooring');
- if(!['stairs','terrace','lift'].includes(r.id)){const ceilingPaint=ivory.clone();ceilingPaint.side=T.DoubleSide;polyPlane(r.polygon,10,ceilingPaint,ceilings,r.name+' ceiling');}
+ if(!['stairs','terrace','lift'].includes(r.id)){
+  const soffit=ivory.clone();soffit.side=T.DoubleSide;polyPlane(r.polygon,10,soffit,ceilings,r.name+' slab soffit');
+  const finish=(r.finish==='bath'?bathCeilingPaint:falseCeilingPaint).clone();finish.side=T.DoubleSide;
+  polyPlane(r.polygon,ceilingLevels[r.id],finish,ceilings,r.name+' false ceiling');
+ }
 }
+// A shallow perimeter tray gives the bedrooms and living room a deliberate ceiling composition.
+// The central panels stay high enough for the existing fan and room fittings.
+ceilingRing('master',.75,5.0025,11.7525,20.2575,.78,.20,brass);
+ceilingRing('bedroom-2',12.1275,.375,26.25,12.63,.82,.20,taupe);
+ceilingRing('bedroom-3',15.75,39.5025,26.25,55.005,.78,.20,taupe);
+ceilingRing('living',6.75,22.1325,19.2525,37.005,.95,.23,coveGlow);
 for(const v of P.voids){const [a,b,c,d]=v.bounds;box(c-a,.05,d-b,(a+c)/2,.007,(b+d)/2,mat(v.id+' shaft depth cue','#6b736c',.98),building,v.name+' — termination provisional');}
 function wallSegment(w,a,b,sill,lintel){
  if(b-a<.00001||lintel-sill<.00001)return;const [x0,z0,x1,z1]=w.bounds;
@@ -4382,16 +4411,17 @@ function ac(name,x,z,rotation=0){const g=new T.Group();g.position.set(x,8.45,z);
  box(2.7,.008,.02,0,.12,.335,trim,g,'AC front panel groove');box(.20,.06,.012,1.05,-.05,.316,black,g,'AC display');box(.03,.02,.006,1.0,-.05,.324,warmLight,g,'AC display LED');
  feature(name,'AC',x,z,2.9,.7,8.45);}
 function ceilingLight(room,x,z,ambientPower=26){
- cylinder(.40,.08,x,9.94,z,trim);cylinder(.32,.025,x,9.889,z,warmLight);const light=new T.PointLight('#ffe5bc',ambientPower,16,2);light.position.set(x,9.35,z);scene.add(light);roomLights.push({room,light,power:ambientPower});feature(room+' ceiling light','light',x,z,.8,.8,9.9);
+ const h=ceilingLevels[room]||9.95;
+ cylinder(.40,.08,x,h-.04,z,trim);cylinder(.32,.025,x,h-.09,z,warmLight);const light=new T.PointLight('#ffe5bc',ambientPower,16,2);light.position.set(x,h-.6,z);scene.add(light);roomLights.push({room,light,power:ambientPower});feature(room+' ceiling light','light',x,z,.8,.8,h-.04);
 }
-function downlight(room,x,z){cylinder(.17,.045,x,9.97,z,trim);cylinder(.13,.018,x,9.939,z,warmLight);feature(room+' downlight','light',x,z,.34,.34,9.95);}
+function downlight(room,x,z){const h=ceilingLevels[room]||9.95;cylinder(.17,.045,x,h-.025,z,trim);cylinder(.13,.018,x,h-.056,z,warmLight);feature(room+' downlight','light',x,z,.34,.34,h-.04);}
 // R-006: framed mirror panel fixed to a wall or cabinet face (plan labels MIRROR). Group local +z faces the room.
 function wallMirror(name,x,y,z,w,h,rotation=0,note='Architect plan: MIRROR'){
  const g=new T.Group();g.name=name;g.position.set(x,y,z);g.rotation.y=rotation;building.add(g);
  box(w+.1,h+.1,.04,0,h/2,-.005,oak,g,'Mirror frame');box(w,h,.03,0,h/2,.02,mirror,g,'Mirror glass');
  feature(name,'mirror',x,z,Math.abs(Math.cos(rotation))>.5?w:.05,Math.abs(Math.sin(rotation))>.5?w:.05,y+h,note);return g;
 }
-function fan(name,x,z){const g=new T.Group();g.position.set(x,8.7,z);building.add(g);cylinder(.045,.6,0,.4,0,charcoal,g);cylinder(.20,.15,0,.08,0,greige,g);for(let i=0;i<3;i++){const b=rb(1.7,.03,.27,.80,0,0,greige,g,.05,'Fan blade');const pivot=new T.Group();pivot.rotation.y=i*Math.PI*2/3;g.remove(b);pivot.add(b);g.add(pivot);}feature(name,'fan',x,z,3.5,3.5,8.7);}
+function fan(name,x,z){const room=roomAt(x,z),h=ceilingLevels[room]||9.78;const g=new T.Group();g.position.set(x,h-1.08,z);building.add(g);cylinder(.045,.75,0,.63,0,charcoal,g);cylinder(.20,.15,0,.08,0,greige,g);for(let i=0;i<3;i++){const b=rb(1.7,.03,.27,.80,0,0,greige,g,.05,'Fan blade');const pivot=new T.Group();pivot.rotation.y=i*Math.PI*2/3;g.remove(b);pivot.add(b);g.add(pivot);}feature(name,'fan',x,z,3.5,3.5,h-1.08);}
 function sconce(x,z,rotation=0,y=4.6){const g=new T.Group();g.position.set(x,y,z);g.rotation.y=rotation;building.add(g);cylinder(.11,.15,0,0,.08,metal,g).rotation.x=Math.PI/2;lineTube([[0,0,.15],[0,.1,.4],[0,.32,.4]],.025,metal,g);const o=mesh(new T.CylinderGeometry(.17,.23,.32,20),warmLight,g,'Diffused bedside light');o.position.set(0,.32,.4);}
 function plant(x,z,h=2,parent=building){cylinder(h*.15,h*.26,x,h*.13,z,porcelain,parent,h*.12);cylinder(h*.13,.03,x,h*.265,z,soil,parent);for(let i=0;i<8;i++){let a=i*2.399,hh=h*(.5+.5*(i%3)/2),dx=Math.cos(a)*h*.25,dz=Math.sin(a)*h*.25;lineTube([[x,h*.25,z],[x+dx*.5,hh*.8,z+dz*.5],[x+dx,hh,z+dz]],.012,leaf,parent);const l=sphere(h*.15,h*.4,h*.04,x+dx,hh-.1,z+dz,leaf,parent);l.rotation.set(.35,a,-.3);}}
 
@@ -4610,7 +4640,7 @@ function chair(x,z,rotation=0,label='Dining chair'){const g=new T.Group();g.posi
 // Cabinet/appliance dimensions are concept dimensions in feet, not a shop drawing.
 const kitchenSand=mat('Kitchen matte sand laminate','#d0b48d',1,0,{...pbr(TX.suede,.5),bevel:true});
 const K={counterTop:2.96,cabinetTop:2.91,plinth:.20,depth:2.25,
- wallBottom:5.10,tier:8.25,ceiling:10,wallDepth:1.20,
+ wallBottom:5.10,tier:8.25,ceiling:ceilingLevels.kitchen,slabHeight:10,wallDepth:1.20,
  windowStart:6.1275,windowEnd:10.3725,windowMullion:8.25,
  counterStart:.75,counterEnd:15.375,back:49.2525,front:47.0025,
  westStart:pz(711),westEnd:pz(826.92),sinkCentre:pz(755.6),sinkWidth:3.30};
@@ -4629,7 +4659,7 @@ function kitchenCase(name,x,z,w,d,bottom,top,rotation,finish,shelves=0){
   const az=Math.abs(Math.sin(rotation))>.5;collision(name,x-(az?d:w)/2,z-(az?w:d)/2,x+(az?d:w)/2,z+(az?w:d)/2,top,'cabinet');
   furniture.push({name,type:'cabinet',x,z,w:az?d:w,d:az?w:d,h:top});}
  g.userData={kitchen:true,width:w,depth:d,bottom,top,shelves,role:name};kitchenModules.push(g);
- kitchenStorage.push({name,type:'cupboard',width:w,bounds:new T.Box3().setFromObject(g).min.toArray().concat(new T.Box3().setFromObject(g).max.toArray()),shelves,ceilingHeight:top===10});
+ kitchenStorage.push({name,type:'cupboard',width:w,bounds:new T.Box3().setFromObject(g).min.toArray().concat(new T.Box3().setFromObject(g).max.toArray()),shelves,ceilingHeight:Math.abs(top-K.ceiling)<.001});
  return g;
 }
 function plainFront(g,w,h,d,finish=kitchenSand,xx=0,yy=0){
@@ -4759,20 +4789,20 @@ ro.userData.cutout={width:.60,height:1.04};ro.userData.directTap=true;
 feature('RO tap behind access cutout','tap',wallX+.55,roZ,.60,.44,K.wallBottom+1.16);
 // Loft gates aligned with the base/upper modules, all the way to the ceiling.
 overhead('RO wall walnut-bay upper cupboard',wallX,(K.sinkEnd+K.westEnd)/2,K.westEnd-K.sinkEnd,Math.PI/2);
-for(const [name,c,w,fronts] of [['RO loft',roZ,roW,1],['Rack loft',K.sinkCentre,K.sinkWidth,2],['Cookware loft',(K.sinkEnd+K.westEnd)/2,K.westEnd-K.sinkEnd,1]])overhead(name,wallX,c,w,Math.PI/2,K.tier,10,1,fronts);
+for(const [name,c,w,fronts] of [['RO loft',roZ,roW,1],['Rack loft',K.sinkCentre,K.sinkWidth,2],['Cookware loft',(K.sinkEnd+K.westEnd)/2,K.westEnd-K.sinkEnd,1]])overhead(name,wallX,c,w,Math.PI/2,K.tier,K.ceiling,1,fronts);
 const fridgeZ=pz(686.8);overhead('Fridge upper storage',wallX,fridgeZ,2.30,Math.PI/2,6.88,K.tier,1,2);
-overhead('Fridge ceiling loft',wallX,fridgeZ,2.30,Math.PI/2,K.tier,10,1,2);
+overhead('Fridge ceiling loft',wallX,fridgeZ,2.30,Math.PI/2,K.tier,K.ceiling,1,2);
 overhead('RO corner upper cupboard',wallX,(K.westEnd+48.0525)/2,48.0525-K.westEnd,Math.PI/2);
-overhead('RO corner loft',wallX,(K.westEnd+48.0525)/2,48.0525-K.westEnd,Math.PI/2,K.tier,10);
+overhead('RO corner loft',wallX,(K.westEnd+48.0525)/2,48.0525-K.westEnd,Math.PI/2,K.tier,K.ceiling);
 overhead('Window corner upper storage',2.475,wallZ,1.05,Math.PI);
-overhead('Window corner loft',2.475,wallZ,1.05,Math.PI,K.tier,10);
+overhead('Window corner loft',2.475,wallZ,1.05,Math.PI,K.tier,K.ceiling);
 // Chimney front: one lower lift-up gate and one upper loft gate.
 const hoodW=K.hoodEnd-K.hoodStart;
 const hood=kitchenCase('Concealed chimney single-lift cabinet',K.hobCentre,wallZ,hoodW,K.wallDepth,K.wallBottom,K.tier,Math.PI,kitchenSand);
 hood.remove(hood.children.find(o=>o.name==='Carcass horizontal'&&o.position.y<.1));
 worktop(hoodW-.11,K.wallDepth,.02,hood,[[0,0,hoodW-.25,1.0]],0,0,'Open extractor intake surround',metal,.03);
 liftFront(hood,hoodW,K.tier-K.wallBottom,K.wallDepth,kitchenSand,'Single chimney lift-up shutter');
-overhead('Single chimney loft gate',K.hobCentre,wallZ,hoodW,Math.PI,K.tier,10,0,1);
+overhead('Single chimney loft gate',K.hobCentre,wallZ,hoodW,Math.PI,K.tier,K.ceiling,0,1);
 box(hoodW-.18,.20,1.05,0,.12,0,metal,hood,'Concealed extractor body');
 box(hoodW-.25,.03,1.0,0,-.035,0,charcoal,hood,'Chimney grease grille');
 for(let i=0;i<16;i++)box(.025,.02,.86,-hoodW/2+.20+i*(hoodW-.40)/15,-.055,0,metal,hood,'Chimney filter baffle');
@@ -4780,17 +4810,17 @@ for(const xx of [-hoodW/2+.22,hoodW/2-.22])cylinder(.065,.02,xx,-.06,.32,warmLig
 lineTube([[0,.22,-.30],[0,2.2,-.36],[0,3.9,-.36]],.18,metal,hood).name='Concealed chimney duct';
 // Exhaust service shutter occupies ONLY the right window pane in the kitchen view.
 const exhaustWidth=K.windowMullion-K.windowStart,exhaustX=(K.windowMullion+K.windowStart)/2;
-const exhaustGate=kitchenCase('Right-window-pane exhaust service cupboard',exhaustX,wallZ,exhaustWidth,K.wallDepth,K.tier,10,Math.PI,kitchenSand);
-const ef=plainFront(exhaustGate,exhaustWidth,10-K.tier,K.wallDepth);
-ef.children.find(o=>o.name==='Silver horizontal handle').position.y=1.43;
+const exhaustGate=kitchenCase('Right-window-pane exhaust service cupboard',exhaustX,wallZ,exhaustWidth,K.wallDepth,K.tier,K.ceiling,Math.PI,kitchenSand);
+const ef=plainFront(exhaustGate,exhaustWidth,K.ceiling-K.tier,K.wallDepth);
+ef.children.find(o=>o.name==='Silver horizontal handle').position.y=K.ceiling-K.tier-.32;
 box(exhaustWidth-.25,.81,.08,0,.66,.08,charcoal,ef,'Exhaust grille within pane-width service shutter');
 for(let i=0;i<10;i++)box(exhaustWidth-.38,.017,.035,0,.32+i*.073,.132,metal,ef,'Exhaust horizontal grille slat');
 exhaustGate.userData.serviceSpan=[K.windowStart,K.windowMullion];exhaustGate.userData.frontCount=1;
-overhead('Other window-pane loft',(K.windowMullion+K.windowEnd)/2,wallZ,K.windowEnd-K.windowMullion,Math.PI,K.tier,10);
+overhead('Other window-pane loft',(K.windowMullion+K.windowEnd)/2,wallZ,K.windowEnd-K.windowMullion,Math.PI,K.tier,K.ceiling);
 // W8 is retained: only lofts above its head, no cabinet may cover its glazing.
 overhead('Between-window upper cabinets',11.4975,wallZ,2.25,Math.PI,K.wallBottom,K.tier,1,2);
-overhead('Between-window lofts',11.4975,wallZ,2.25,Math.PI,K.tier,10,1,2);
-overhead('W8 ceiling lofts',13.81125,wallZ,2.3775,Math.PI,K.tier,10,0,2);
+overhead('Between-window lofts',11.4975,wallZ,2.25,Math.PI,K.tier,K.ceiling,1,2);
+overhead('W8 ceiling lofts',13.81125,wallZ,2.3775,Math.PI,K.tier,K.ceiling,0,2);
 // Standard four-burner 2x2 hob, aligned exactly beneath the chimney.
 const gas=new T.Group();gas.name='Four burner modular hob';gas.position.set(K.hobCentre,3.055,windowZ);gas.rotation.y=Math.PI;building.add(gas);
 rb(2.50,.09,1.55,0,0,0,black,gas,.045,'Four burner black-glass hob');
@@ -4837,7 +4867,8 @@ function kitchenQA(){
   sinkBaysHaveNoOverlap:near(K.westStart+(K.sinkStart-K.westStart),K.sinkStart)&&near(K.sinkEnd+(K.westEnd-K.sinkEnd),K.westEnd),
   fixedCornerShelf:corner.userData.shelves===1&&corner.userData.accessWall==='window',blindCornerReachUnblocked:cornerRay.length>0&&cornerRay[0].point.x<1,
   RODirectTapCutout:ro.userData.directTap===true,
-  geyserInSinkCupboard:geyser.parent===sinkBase,tenFootCeiling:K.ceiling===10,
+  geyserInSinkCupboard:geyser.parent===sinkBase,tenFootSlabAssumption:K.slabHeight===10,
+  loftsMeetFalseCeiling:kitchenModules.filter(g=>/loft|exhaust service/i.test(g.name)).every(g=>near(g.userData.top,K.ceiling)),
   equalDrawerTierHeights:kitchenModules.filter(g=>g.userData.drawerLevels).every(g=>JSON.stringify(g.userData.drawerLevels)===JSON.stringify([.20,1.305,2.41,2.91])),
   noDiningOrHandwash:!furniture.some(f=>/dining|handwash/i.test(f.name))&&!fixtures.some(f=>/dining pendant|handwash basin/i.test(f.name))},
   sinkSurfaceHits:[-centre,centre].map(zz=>new T.Raycaster(new T.Vector3(kc,3.2,K.sinkCentre+zz),new T.Vector3(0,-1,0)).intersectObjects(building.children,true).slice(0,4).map(hit=>({name:hit.object.name,y:hit.point.y}))),
@@ -5193,6 +5224,11 @@ viewpoints.pooja={name:'Pooja',pos:[poojaX,4.35,poojaZ-7.2],target:[poojaX,3.55,
 viewpoints['window-wall']={name:'Kitchen window wall',pos:[10.8,5.3,43.5],target:[7.4,5.2,49.2],room:'kitchen',fov:72,detail:'Single wide drawer bay · one lift-up chimney shutter · exhaust aligned to right pane'};
 viewpoints['ro-wall']={name:'Kitchen RO and sink wall',pos:[8.4,5.0,42.6],target:[1.5,5.0,42.7],room:'kitchen',fov:72,detail:'Rack and sink share one width · two sink cupboard doors · geyser below sink'};
 viewpoints['corner-storage']={name:'Kitchen corner shelf',pos:[4.4,3.2,44.6],target:[3.65,1.65,48.1],room:'kitchen',fov:58,detail:'Open kitchen access doors to inspect the single fixed shelf beneath the hob'};
+viewpoints['living-ceiling']={name:'Living false ceiling',pos:[13.0,5.25,31.8],target:[13.0,9.55,29.5],room:'living',fov:76,detail:'Shallow warm cove perimeter around a high central plane; exact drop and lighting require site coordination'};
+viewpoints['master-ceiling']={name:'Master bedroom false ceiling',pos:[6.2,5.2,13.7],target:[6.2,9.55,12.3],room:'master',fov:76,detail:'Warm inset line and shallow perimeter tray around the fan'};
+viewpoints['bedroom-2-ceiling']={name:'Bedroom 2 false ceiling',pos:[19.1,5.2,7.0],target:[19.1,9.55,6.3],room:'bedroom-2',fov:76,detail:'Clean stepped tray with a muted blue inset line around the fan'};
+viewpoints['bedroom-3-ceiling']={name:'Bedroom 3 false ceiling',pos:[21.0,5.2,48.0],target:[21.0,9.55,47.0],room:'bedroom-3',fov:76,detail:'Shallow tray with a dusty blue inset line around the fan'};
+viewpoints['kitchen-ceiling']={name:'Kitchen flat false ceiling',pos:[8.0,5.1,43.2],target:[8.0,9.5,44.2],room:'kitchen',fov:76,detail:'One plain flat plane; loft tops meet its underside, subject to measured site clearance'};
 for(const v of P.voids){const [a,b,c,d]=v.bounds;viewpoints[v.id]={name:v.name,pos:[(a+c)/2,14,(b+d)/2+.4],target:[(a+c)/2,1,(b+d)/2],fov:60,detail:'Ventilation void retained · light washable walls · vertical termination provisional'};}
 const guide=root.querySelector('.view-detail'),roomName=root.querySelector('.view-name'),select=root.querySelector('select.room-select'),modeBtn=root.querySelector('[data-action="mode"]'),lightBtn=root.querySelector('[data-action="light"]'),doorBtn=root.querySelector('[data-action="doors"]'),hint=root.querySelector('.hint');
 for(const [id,v] of Object.entries(viewpoints)){const o=document.createElement('option');o.value=id;o.textContent=v.name;select.appendChild(o);}

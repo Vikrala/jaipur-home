@@ -107,6 +107,15 @@
       "reason": "The user requested a 610 mm elevated washer and a reference-style shower; independent QA on rev 3 found unconfirmed services, fixings and finishes. Existing drawings do not specify the washer load or support, service routes, drain outlet, hot-water source or blocking (glass removed in R-015), so these elements of the 3D draft are conceptual and fabrication is blocked.",
       "added": "2026-10-27 (promoted with R-012)",
       "updated": "2026-10-27 (R-015 glass removed; R-016 text corrected)"
+    },
+    {
+      "id": "RFI-014",
+      "status": "open",
+      "zone": "False ceilings: bedrooms, living, kitchen, bathrooms, store, lobby and passage",
+      "question": "Before setting out, provide measured finished-floor-to-slab and beam soffit levels in each room; locate AC, chimney and exhaust ducts, junction boxes, drivers, lighting cutouts and access panels. Confirm fan boxes and anchors fixed independently to the structural slab, fitting depths and service access. Check the kitchen loft top and chimney/exhaust service clearance against the proposed flat ceiling; confirm moisture-resistant bathroom ceiling board, sealed edges, ventilation and wet-area fitting protection.",
+      "owner": "Architect / site supervisor / ceiling contractor / licensed electrician / HVAC and kitchen vendors",
+      "reason": "The 3,048 mm slab height and proposed false ceiling levels are model assumptions without a measured section or coordinated service drawings. Ceiling work and cabinet fabrication must wait for these checks.",
+      "added": "2026-11-01"
     }
   ]
 }
