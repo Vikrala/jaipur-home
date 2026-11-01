@@ -2,6 +2,11 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Bedroom 2 sliding wardrobe and top-storage sketch
+
+- Added a new unapproved review sketch, `concepts/bedroom-2-sliding-wardrobe-loft-sketch-2026-11-01.png`, based on the client's separate sliding-wardrobe video. It shows a matching upper loft band with shelves behind its shutters and warm-greige main sliding leaves; one of each is open in the sketch to explain storage and movement.
+- Retained the corrected bedside, mirror and vertical switchboard from the prior concept. Bedroom 2 model, walkthrough and GLB remain unchanged pending the client's interpretation decision and site joinery checks.
+
 ## 1 November 2026 - Bedroom 2 concept sketch correction
 
 - Revised the unapproved sketch only: lowered the floating bedside top to mattress-top level, moved and extended the mirror from the top to the highest open shelf bay, and added a vertical switchboard between mirror and headboard from the tabletop to headboard top.

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "generated_for": "BEDROOM2-CORNER-SKETCH-V2-2026-11-01",
+ "generated_for": "BEDROOM2-SLIDING-WARDROBE-LOFT-SKETCH-2026-11-01",
  "hash_algorithm": "sha256",
  "artifacts": [
   {
@@ -43,14 +43,14 @@
    "path": "output/jaipur-home/README.md",
    "role": "Current maintained-model summary",
    "authority_rank": 2,
-   "sha256": "1b66fa1f354ee5b9b7ce0956a412500fe8e532084ed6514cc3e0fb1de34c1777"
+   "sha256": "dcd614a1659407d86666719ab05e8a306690decaba82c161ef08dc5eeffe9b5f"
   },
   {
    "id": "baseline-changelog",
    "path": "output/jaipur-home/CHANGELOG.md",
    "role": "Dated approved revision history",
    "authority_rank": 2,
-   "sha256": "eed2473ef89f622441f3124b89b1f9b2f249cc8017c76739c4092b58dc19a915"
+   "sha256": "3964199600af76116d5b7cfb56962bdabe1a035fc3fc163360f26c64235f18ed"
   },
   {
    "id": "baseline-qa",
@@ -253,7 +253,7 @@
    "path": "output/jaipur-home/concepts/README.md",
    "role": "Bedroom 2 concept sketch status, sources and prompt summary",
    "authority_rank": 4,
-   "sha256": "c77577d7365376920c5a721ffc58880f3e122fd01620649453b1010401d1f329"
+   "sha256": "383776da7805bb9d148de1396f1c0a610a50d29ac320284111c01084bc34d255"
   },
   {
    "id": "bedroom-2-wardrobe-corner-sketch-v2",
@@ -261,6 +261,13 @@
    "role": "Current unapproved Bedroom 2 corner concept sketch with corrected table, mirror and switchboard",
    "authority_rank": 4,
    "sha256": "5d34a3a52c3a9be086ba38011d784ebc323fdb9f71dc593dcdff12afaf133c0a"
+  },
+  {
+   "id": "bedroom-2-sliding-wardrobe-loft-sketch",
+   "path": "output/jaipur-home/concepts/bedroom-2-sliding-wardrobe-loft-sketch-2026-11-01.png",
+   "role": "Current unapproved Bedroom 2 sliding-wardrobe and top-storage review sketch",
+   "authority_rank": 4,
+   "sha256": "d68aeee58da76b0ed267c7abfda5b0521966f1f5268397be1c2e97771ec37d7a"
   }
  ],
  "verification_rule": "A hash mismatch triggers targeted source review. User-authorised main-model changes are recorded by Git."
