@@ -1,6 +1,6 @@
 {
   "date": "2026-11-01",
-  "scope": "Bedroom 2 client QA corrections: niche width, mirror, lighting, 229 mm compartment, bays and upper doors",
+  "scope": "Bedroom 2 open 229 mm compartment and east ceiling band projecting from the upper-door face",
   "browserErrors": [],
   "audit": {
     "main": true,
@@ -17,8 +17,10 @@
     "mirrorTopMm": 2374,
     "cornerDoorBottomMm": 2417,
     "nicheLedProfiles": 8,
+    "compartmentShelves": 0,
+    "ceilingBandProjectionMm": 250,
     "wardrobeTop": 9.58,
-    "ceilingFaceX": 24.25,
+    "ceilingFaceX": 23.322499995231627,
     "ceilingBottom": 9.579999998509884,
     "cornerUpperHinge": true,
     "floatingTable": true,
@@ -45,6 +47,6 @@
     "bedroom-2-ceiling-and-upper-storage",
     "bedroom-2-niche"
   ],
-  "glbBytes": 20242448,
+  "glbBytes": 20239920,
   "glbStaticState": "all Bedroom 2 wardrobe doors closed"
 }

@@ -2,6 +2,12 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Bedroom 2 open 9 in compartment and ceiling from the wardrobe
+
+- Removed the seven fixed shelves from the right bay's 229 mm compartment. It is now an open full-height slot, still 229 mm clear inside its boards; the rest of the bay is unchanged.
+- The east perimeter drop of the Bedroom 2 ceiling tray now treats the wardrobe as the boundary. The drop still covers the 2 ft wardrobe, then projects the same 250 mm band as the other three sides into the room from the upper-door face; its underside stays at about 2,920 mm with a 15 mm clearance above the upper doors. The muted blue inset line and step to the central field moved with it, so the tray reads from the wardrobe rather than from the wall behind it. Ceiling levels, fan and lights are unchanged.
+- Rebuilt the walkthrough, GLB and Bedroom 2 renders; `model/bedroom-2-wardrobe-checks.json` records zero compartment shelves and the 250 mm band projection. Ceiling setting-out remains under RFI-014.
+
 ## 1 November 2026 - Bedroom 2 client QA corrections
 
 Applied directly after an independent site-QA review and the client's six observations; the corrected 3D interpretation was approved in chat before modelling.

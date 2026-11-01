@@ -279,7 +279,7 @@
           "east_wall_footprint": "About 600 mm open niche plus 3,135 mm x 2 ft main wardrobe (two bays of about 1,567 mm)",
           "lower_doors": "Two broad sliding leaves overlapping 35 mm; either parks flush over the other bay; handles at about 1,050 mm centre",
           "upper_storage": "Two hinged doors per bay (about 766 mm each), aligned to the bays; separate hinged upper door over the niche, about 573 mm",
-          "right_bay": "Fixed full-height compartment with 229 mm clear inside its boards and fixed shelves about 300 mm apart; hanging, 520 mm shelf column, drawers, trays and open basket fit in the remaining width",
+          "right_bay": "Fixed full-height open compartment with 229 mm clear inside its boards and no shelves; hanging, 520 mm shelf column, drawers, trays and open basket fit in the remaining width",
           "bedside_mirror_switch": "Floating one-drawer right bedside at mattress height, about 535 mm deep in front of the mirror; pale blue-grey mirror from tabletop to about 2,374 mm, below the corner upper door; vertical switchboard between mirror and headboard",
           "walkthrough": "Independent lower left/right slide and upper left/right pair and corner upper-door controls; GLB exports closed",
           "execution_hold": "RFI-014 and RFI-015: measure site, verify wide-leaf hardware, pull-out access, fixings, LED driver/switching, wiring, ceiling services and the 486-521 mm bed-to-wardrobe lane",
@@ -397,6 +397,6 @@
     },
     "design": "Shallow perimeter trays in all three bedrooms and living; simple flat kitchen; plain flat baths, washing niche, store, lobby and passage. Lift cabin remains a vendor item; stair and terrace remain open.",
     "kitchen_coordination": "Approved module logic retained; ceiling loft and exhaust-service fronts end at proposed 2932 mm plane.",
-    "bedroom_2_coordination": "East perimeter drop widened to the 2 ft wardrobe face; dropped underside and upper cabinet top meet at approximately 2,920 mm. Slab soffit remains assumed at 3,048 mm; site checks under RFI-014/RFI-015."
+    "bedroom_2_coordination": "East perimeter drop covers the 2 ft wardrobe and projects a 250 mm band into the room from the upper-door face; underside at approximately 2,920 mm meets the wardrobe top. Slab soffit remains assumed at 3,048 mm; site checks under RFI-014/RFI-015."
   }
 }

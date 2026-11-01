@@ -22,18 +22,18 @@ const root=path.resolve(__dirname,'../..'),renders=path.join(root,'renders');
    const leafL=main?.getObjectByName('Bedroom 2 left broad sliding face'),leafR=main?.getObjectByName('Bedroom 2 right broad sliding face');
    const ceiling=JAIPUR.ceilings.getObjectByName('bedroom-2 east dropped band');
    const cb=bb(ceiling),gb=bb(gable),eb=endGables.sort((a,b)=>b.min.z-a.min.z)[0],nb=bb(niche),tb=bb(top),lb=bb(leafL),rb=bb(leafR),mb=bb(glass),db=bb(cornerDoor);
-   let leds=0;niche.traverse(o=>{if(o.name==='Bedroom 2 niche inner-corner warm LED profile')leds++;});
+   let leds=0,compShelves=0;main.traverse(o=>{if(/compartment fixed shelf/.test(o.name))compShelves++;});niche.traverse(o=>{if(o.name==='Bedroom 2 niche inner-corner warm LED profile')leds++;});
    return {main:!!main,lowerLeaves:Object.keys(w.slides),upperLeafCount:w.upperDoors.length,
     wardrobeLengthMm:mm(w.W),nicheWidthMm:mm(nb.max.z-nb.min.z),compartmentClearMm:mm(eb.min.z-gb.max.z),
     tableFrontToLeafGapMm:mm(lb.min.z-tb.max.z),leafOverlapMm:mm(lb.max.z-rb.min.z),
-    mirrorTopMm:mm(mb.max.y),cornerDoorBottomMm:mm(db.min.y),nicheLedProfiles:leds,
+    mirrorTopMm:mm(mb.max.y),cornerDoorBottomMm:mm(db.min.y),nicheLedProfiles:leds,compartmentShelves:compShelves,ceilingBandProjectionMm:mm(24.1425-cb.min.x),
     wardrobeTop:w.H,ceilingFaceX:cb.min.x,ceilingBottom:cb.min.y,
     cornerUpperHinge:!!w.nicheUpperHinge,floatingTable:!!top,tileError:window.JAIPUR_FLOOR_TILE_ERROR||null};
   });
   if(errors.length||!audit.main||audit.lowerLeaves.join(',')!=='left,right'||audit.upperLeafCount!==4||
      Math.abs(audit.compartmentClearMm-229)>1||Math.abs(audit.wardrobeLengthMm-3135)>2||Math.abs(audit.nicheWidthMm-601)>3||
      audit.tableFrontToLeafGapMm<5||Math.abs(audit.leafOverlapMm-35)>2||audit.mirrorTopMm>=audit.cornerDoorBottomMm||audit.nicheLedProfiles!==8||
-     Math.abs(audit.ceilingFaceX-24.25)>.005||Math.abs(audit.ceilingBottom-9.58)>.005||
+     Math.abs(audit.ceilingFaceX-23.3225)>.005||audit.compartmentShelves!==0||Math.abs(audit.ceilingBottom-9.58)>.005||
      !audit.cornerUpperHinge||!audit.floatingTable||audit.tileError)throw new Error(JSON.stringify({errors,audit}));
   await page.evaluate(()=>JAIPUR.setNight(false));
   async function save(view,name){const uri=await page.evaluate(id=>JAIPUR.capture(id,1800,1200),view);fs.writeFileSync(path.join(renders,name),Buffer.from(uri.split(',')[1],'base64'));}
@@ -68,7 +68,7 @@ const root=path.resolve(__dirname,'../..'),renders=path.join(root,'renders');
   });
   const glb=Buffer.from(glbBase64,'base64');if(glb.toString('ascii',0,4)!=='glTF')throw new Error('Invalid GLB header');
   fs.writeFileSync(path.join(root,'model','jaipur-first-floor.glb'),glb);
-  const result={date:'2026-11-01',scope:'Bedroom 2 client QA corrections: niche width, mirror, lighting, 229 mm compartment, bays and upper doors',browserErrors:errors,audit,
+  const result={date:'2026-11-01',scope:'Bedroom 2 open 229 mm compartment and east ceiling band projecting from the upper-door face',browserErrors:errors,audit,
    controls:{rightOpen:rightState,leftOpen:true,upperRightOpened:true,cornerUpperOpenedAndClosed:true},
    views:['overview','bedroom-2','bedroom-2-entry','bedroom-2-study','bedroom-2-wardrobe-closed','bedroom-2-wardrobe-closed-detail','bedroom-2-wardrobe-right-open','bedroom-2-wardrobe-left-open','bedroom-2-ceiling-and-upper-storage','bedroom-2-niche'],
    glbBytes:glb.length,glbStaticState:'all Bedroom 2 wardrobe doors closed'};

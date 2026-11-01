@@ -193,8 +193,9 @@ for(const r of P.rooms){if(r.id==='stairs')continue;polyPlane(r.polygon,.008,r.i
 // A shallow perimeter tray gives the bedrooms and living room a deliberate ceiling composition.
 // The central panels stay high enough for the existing fan and room fittings.
 ceilingRing('master',.75,5.0025,11.7525,20.2575,.78,.20,brass);
-// Bedroom 2 east drop now reaches the 2 ft wardrobe face; its underside meets the new loft at 9.58 ft.
-ceilingRing('bedroom-2',12.1275,.375,26.25,12.63,.82,.20,taupe,2.0);
+// Bedroom 2 east drop covers the 2 ft wardrobe and then projects the same 0.82 ft band into the room from the
+// upper-door face (x 24.1425 ft), so the tray reads from the wardrobe; its underside meets the loft at 9.58 ft.
+ceilingRing('bedroom-2',12.1275,.375,26.25,12.63,.82,.20,taupe,26.25-(24.1425-.82));
 ceilingRing('bedroom-3',15.75,39.5025,26.25,55.005,.78,.20,taupe);
 ceilingRing('living',6.75,22.1325,19.2525,37.005,.95,.23,coveGlow);
 for(const v of P.voids){const [a,b,c,d]=v.bounds;box(c-a,.05,d-b,(a+c)/2,.007,(b+d)/2,mat(v.id+' shaft depth cue','#6b736c',.98),building,v.name+' — termination provisional');}
@@ -421,10 +422,10 @@ function buildBedroom2Wardrobe(){
  box(W-.12,.07,D-.06,0,.245,0,b2Inside,main,'Bedroom 2 wardrobe base');
  box(W-.12,.07,D-.06,0,loftY,0,b2Inside,main,'Bedroom 2 upper-storage deck');
  box(W,.06,D,0,H-.03,0,oak,main,'Bedroom 2 wardrobe top beneath false ceiling');
- // The right compartment keeps a full 229 mm (0.751 ft) clear width; the hanging zone absorbs the difference.
+ // The right compartment is an open full-height slot with a full 229 mm (0.751 ft) clear width and no shelves;
+ // the hanging zone absorbs the difference.
  const compClear=.751,compGableX=W/2-.07-compClear-.03,colW=1.706,trays={};
  box(.06,loftY-.28,D-.10,compGableX,(loftY+.28)/2,0,b2Inside,main,'Bedroom 2 right bay 229 mm full-height compartment gable');
- for(const yy of [1.25,2.23,3.21,4.19,5.17,6.15,7.13])box(compClear,.055,D-.16,W/2-.07-compClear/2,yy,0,b2Inside,main,'Bedroom 2 229 mm compartment fixed shelf');
  for(const side of ['left','right']){
   const a=side==='left'?-W/2+.07:.035,workEnd=side==='left'?-.035:compGableX-.03,split=workEnd-colW-.0275;
   box(.055,loftY-.28,D-.16,split,(loftY+.28)/2,0,b2Inside,main,'Bedroom 2 '+side+' hanging and shelf-column gable');
@@ -506,7 +507,7 @@ function buildBedroom2Wardrobe(){
  furniture.push({name:'Bedroom 2 floating bedside table',type:'cabinet',x:px(b2RightTablePdfX),z:tZ,w:1.63,d:tD,h:1.39});
  collision('Bedroom 2 two-bay sliding wardrobe',24.25,b2SplitZ,26.25,b2EndZ,H,'cabinet');
  collision('Bedroom 2 bedside open shelf',24.25,b2NorthZ,26.25,b2SplitZ,H,'cabinet');
- feature('Bedroom 2 two-bay sliding wardrobe','joinery',25.25,(b2SplitZ+b2EndZ)/2,2,W,H,'Client-approved sketch, QA-corrected 1 Nov 2026: 3,135 mm long; two lower sliding leaves with 35 mm overlap, paired hinged upper doors per bay; right bay keeps a 229 mm clear full-height compartment; lower storage split at the shelf-column gable');
+ feature('Bedroom 2 two-bay sliding wardrobe','joinery',25.25,(b2SplitZ+b2EndZ)/2,2,W,H,'Client-approved sketch, QA-corrected 1 Nov 2026: 3,135 mm long; two lower sliding leaves with 35 mm overlap, paired hinged upper doors per bay; right bay keeps a 229 mm clear full-height open compartment without shelves; lower storage split at the shelf-column gable');
  feature('Bedroom 2 floating bedside and open niche','joinery',24.2,(b2NorthZ+b2SplitZ)/2,1.63,NW,H,'Client QA 1 Nov 2026: niche widened to about 600 mm, aligned with the mattress-height floating table; four equal tiers with inner-corner warm LED');
  return {main,slides,upperDoors,nicheUpperHinge,trays,bay,slideX,W,D,H,loftY,NW,compClear};
 }
