@@ -138,8 +138,8 @@ Confirm actual hob, chimney, fridge, RO, rack, geyser, sink and hardware model n
 - Current model has a 5.38 ft return extending to the AC-wall end; use the final model rather than older concept imagery if dimensions conflict.
 - Sofa back: about 30 in / 760 mm high.
 - Rug: modelled **7 ft 2 in × 10 ft 1 in** (2,179 × 3,073 mm).
-- Centre table: **42 × 20 in** (1,067 × 508 mm).
-- Clearance logic: 36 in target walking band; model/design package records about **39.5 in / 1,003 mm** on either long side of centred table.
+- Centre table (1 Nov 2026 client reference): **36 × 26 in** (914 × 660 mm) rounded walnut tray top at about **454 mm** high, on a central walnut pedestal. Three removable muted olive upholstered storage stools are modelled; two tuck beneath the ends and one is shown pulled out with its lid open. The timber and upholstery colours pick up the existing walnut joinery and botanical art. The reference photograph defines the form, not a confirmed product or manufacturer specification.
+- Clearance logic: 36 in target walking band. With the new table shifted 76 mm toward the TV wall, the current model geometry leaves approximately **916 mm** beside the sofa and **920 mm** beside the TV console when stools are tucked. The earlier 39.5 in side-band figure in this handoff was inconsistent with the present sofa/console geometry and is superseded. A pulled-out stool is a temporary use position, not a clear circulation condition. Verify actual furniture dimensions, the rug position and door routes on site before procurement.
 - Sofa service plank: narrow walnut plank, separated from upholstery and below sofa-back height. Top roughly 650 mm above finished floor, warm 2700K dimmable wall wash, one reachable module at each exposed end (Indian 6A + USB-A + USB-C). Driver must be in an accessible ventilated box.
 - Artwork: two botanical frames; use anti-glare acrylic rather than glass.
 - AC: current main revision centres it on the solid left wall.

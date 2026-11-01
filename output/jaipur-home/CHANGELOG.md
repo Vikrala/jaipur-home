@@ -2,6 +2,13 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Living coffee table from client reference
+
+- Replaced the 42 × 20 in four-leg table with a 36 × 26 in (914 × 660 mm) rounded walnut tray top on a central pedestal. Modelled tabletop height is about 454 mm.
+- Added three movable muted olive upholstered storage stools; two are tucked beneath the table ends and one is shown pulled out with its storage lid open. The walnut matches the TV and sofa joinery, while olive picks up the room's botanical artwork.
+- Retained the existing sofa, rug, TV/puja relationship and room layout. Shifted the table 76 mm toward the TV wall to keep the modelled long-side bands about 916 mm by the sofa and 920 mm by the console with stools tucked; verify the final furniture and clearances on site. Stool lid safety, support, upholstery and washable storage lining need a fabricator detail.
+- Rebuilt the standalone walkthrough and GLB, refreshed the overview and living renders, and added a dedicated table detail view. `model/living-table-checks.json` records the browser/export checks.
+
 ## 1 November 2026 - Matte white false ceiling finish
 
 - Changed every proposed false ceiling plane and dropped band to a clear matte white, including kitchen, bathrooms, store, lobby and passage. The warm wall paint and the bedroom/living decorative inset lines remain distinct.
