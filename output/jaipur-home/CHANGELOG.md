@@ -2,6 +2,12 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Bedroom 2 hinged-upper and 229 mm compartment sketches
+
+- Corrected both unapproved review images: upper storage now has two hinged shutters over each lower sliding bay, rather than sliding shutters. Upper bay divisions align with the two lower bays. The bedside mirror reaches the top of the upper cabinets.
+- The right-open sketch adds a fixed full-height gable that forms an approximately 229 mm (9 in) compartment at the outer right of the exposed lower bay. The hanging section, shelf column, drawer and pull-outs are shown within the remaining width. The narrow compartment's use remains unspecified.
+- Saved the corrected closed/open pair under `concepts/` and retained earlier sketches as provenance. No Bedroom 2 model, walkthrough or GLB change was made.
+
 ## 1 November 2026 - Bedroom 2 two-shutter closed/open sketch pair
 
 - Superseded the four-narrow-shutter review sketch after the client's correction. The main wardrobe beyond the corner shelves now has two bay-width sliding shutters total; the loft above it has its own aligned two-shutter sliding pair. Internal partitions remain behind the door fronts.
