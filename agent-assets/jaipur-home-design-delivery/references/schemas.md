@@ -1,20 +1,14 @@
 # Controlled Record Schemas
 
+Routine authorised model changes use Git commits, the current README/changelog and the compact project state. Use the records below when a separate decision, technical package, QA record or specialist launch calls for one; do not create a new `R-XXX` record for every model edit.
+
 ## Revision record
 
-Use `studio-control/templates/revision-record.json` without removing any field. Required before a draft exists:
-
-- `revision_id`, `request`, `work_mode`, `affected_zones`, `disciplines`;
-- `sources_used` and `source_versions_checked`;
-- `specialists_activated`, `proposal`, `risks_and_dependencies`, `validation_plan`;
-- `model_routing.planned_launches`, `runtime_available_models`, `router_results` and `actual_model_usage` where specialists are used;
-- a pending `scope_approval`.
-
-Promotion may occur only when scope and promotion approvals are recorded, independent QA is passed, and listed approved artifacts match the final diff.
+When a distinct revision packet is needed, use `studio-control/templates/revision-record.json` without removing fields. Record source authority, affected zones, proposal, risks, validation and relevant specialist routing. Approval fields record actual decisions; a historical template does not impose routine scope or promotion gates on Git-tracked changes. Protected decisions still require explicit user authorisation before alteration.
 
 ## QA record
 
-Use `studio-control/templates/qa-record.json`. The QA specialist must not be the authoring specialist for a critical deliverable. Record evidence rather than an unsupported pass assertion. A failed or unresolved check becomes an RFI or blocks promotion.
+For a substantive technical package or requested independent QA, use `studio-control/templates/qa-record.json`. The QA specialist must not be the authoring specialist for a critical deliverable. Record evidence rather than an unsupported pass assertion. A failed or unresolved execution check becomes an RFI or hold.
 
 ## RFI
 
@@ -22,7 +16,7 @@ An RFI must identify zone, unknown, why it matters, named owner and the executio
 
 ## Final user audit
 
-Use `studio-control/templates/final-audit.md`. It must distinguish design recommendation, draft artifact, approved baseline decision and site/vendor-confirmed fact.
+Use `studio-control/templates/final-audit.md`. State work mode, sources, actual specialists, changed files, Git commit and open decisions or site checks. Distinguish a model recommendation from a site/vendor-confirmed fact or professional sign-off.
 
 ## Model consent and run records
 

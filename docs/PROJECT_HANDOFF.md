@@ -2,7 +2,7 @@
 
 **Prepared:** 7 October 2026  
 **Purpose:** a precise continuation brief for any architect, designer, visualisation artist, contractor-facing agent, or Codex chat.  
-**Current authoritative design baseline:** [`output/jaipur-home`](../output/jaipur-home/). This is the *single maintained* model. Do not start a new numbered model folder for approved changes; update this folder and its [`CHANGELOG.md`](../output/jaipur-home/CHANGELOG.md).
+**Current working model:** [`output/jaipur-home`](../output/jaipur-home/). This is the *single maintained* model. From 28 October 2026, update this folder directly and record each coherent change in Git, its [`CHANGELOG.md`](../output/jaipur-home/CHANGELOG.md) and relevant checks. Do not create a separate 3D draft folder for routine changes.
 
 ## 1. Read this first — scope, authority, and non-negotiables
 
@@ -15,6 +15,8 @@ This project is a first-floor interior/3D coordination exercise for a residentia
 3. The dated decisions in [`output/jaipur-home/CHANGELOG.md`](../output/jaipur-home/CHANGELOG.md); later entries supersede earlier visual concepts.
 4. The approved kitchen image / editable elevation source: [`Kitchen-editable-layout-vivek.pptx`](../Kitchen-editable-layout-vivek.pptx), supported by [`renders/approved-kitchen-reference.png`](../output/jaipur-home/renders/approved-kitchen-reference.png).
 5. The selected hall and puja package: [`output/hall-concepts/final-selection/final-specification.md`](../output/hall-concepts/final-selection/final-specification.md), except where a later entry in the maintained model changelog makes a specific revision.
+
+Git history records current model changes. A Git commit tracks the design state; it does not certify site conditions or execution details.
 
 ### Do not change without explicit user approval
 
@@ -91,6 +93,14 @@ These heights are visual assumptions, not a measured section or reflected ceilin
 
 ## 4. Approved kitchen — highest-confidence finished design
 
+### R-019 kitchen–living ledge added to the working model (28 October 2026; merged into the current model 1 November 2026)
+
+The user requested a 3 ft 6 in / 1,067 mm long slab with storage, approximately 600 mm deep, with its top 2 ft 6 in / 762 mm above finished floor. After review, the unit was set back near the sofa and brought flush to the west wall along its side. The floor-supported base has kitchen-facing drawer storage; the living face has shallow dark fluting and a light stone-look top. The model shows about 101 mm to the sofa end and 1,562 mm on the east kitchen approach before finish tolerances. Verify the finished wall and skirting, sofa gap, drawer/door operation, concealed services, stone support and anti-tip fixing before fabrication. The approved kitchen wall cabinetry, appliances, dining omission and puja remain unchanged.
+
+### R-020 kitchen worktop granite study (28 October 2026)
+
+The client's [site-photo granite](../output/jaipur-home/kitchen-granite-reference.jpg) is rendered on both kitchen worktop runs for review. The model approximates a polished black base with crinkled copper/rust banding; the banding follows each run. It is **under consideration**, not a final stone selection. Confirm the actual slab batch, thickness, edge profile and L-corner cut/joint before fabrication. Other granite surfaces remain unchanged.
+
 ### Controlling sources
 
 - Current visual/model: [`output/jaipur-home`](../output/jaipur-home/).
@@ -111,7 +121,7 @@ These heights are visual assumptions, not a measured section or reflected ceilin
 - Chimney: one lift-up access front; hood body/intake remains accessible. Chimney service tower is not storage.
 - Exhaust service shutter: confined to the right window pane; terminates at the jamb; has a separate grille and handle.
 - Kitchen dining set, pendants, and separate living-to-kitchen handwash are removed.
-- **Kitchen slab (R-019, under consideration):** the client's site-photo granite ([`kitchen-granite-reference.jpg`](../output/jaipur-home/kitchen-granite-reference.jpg)) is rendered as a polished black-and-copper banded granite on both worktop runs, with the banding along each run. The model texture is an approximation of the photo. The trade name, batch, thickness and finish still need confirming with the supplier. Other granite in the house is unchanged.
+- **Kitchen slab (R-020, under consideration):** the client's site-photo granite ([`kitchen-granite-reference.jpg`](../output/jaipur-home/kitchen-granite-reference.jpg)) is rendered as a polished black-and-copper banded granite on both worktop runs, with the banding along each run. The model texture is an approximation of the photo. The trade name, batch, thickness and finish still need confirming with the supplier. Other granite in the house is unchanged.
 
 ### Verified geometry/QA
 
@@ -270,8 +280,8 @@ Source: architect's "Revised Interior Layout OP-1", dated 14 October 2026, now `
 1. Read this handoff, the structured JSON, the current `README.md`, `CHANGELOG.md`, and `quality-checks.json`.
 2. Use `plan-geometry.json`/architect PDF to test every proposed placement; never use a generated render as geometry authority.
 3. Check whether the request changes a construction-fixed element. If yes, seek user decision plus architect/structural sign-off where applicable.
-4. If changing the model, update `output/jaipur-home` only, retain the architect geometry, rerun/refresh relevant QA captures, and append a dated changelog entry stating exactly what changed and what did not.
-5. For an execution question, produce a measured drawing/specification list and flag outstanding site/vendor confirmations. Do not claim that the 3D model is approved for construction.
+4. If changing the model, update `output/jaipur-home` only, retain the architect geometry, rebuild affected outputs, run focused checks and append a dated changelog entry. Commit each coherent change to Git instead of creating a routine 3D draft folder.
+5. For an execution question, produce a measured drawing/specification list and flag outstanding site/vendor confirmations. Do not claim that a Git commit or the 3D model is approved for construction.
 
 ## 9. Outstanding decisions and site-verification register
 
@@ -280,6 +290,7 @@ Source: architect's "Revised Interior Layout OP-1", dated 14 October 2026, now `
 | Critical | Final joinery dimensions | Site measure after final floor, skirting, plaster/stone thickness and window/door reveals are known. |
 | Critical | Pooja door/tray | Hardware supplier's rated pocket-fold system, full-size mock-up, 25 kg tray runners, ventilation free area and fire-safe lining confirmation. |
 | Critical | Kitchen appliance/service fit | Actual appliance cut sheets, chimney duct/installation height, RO/gas/water/drain routes, geyser circuit and shutter clearances. |
+| High | Kitchen–living ledge R-019 | Measure finished wall/sofa fit and 1,562 mm model approach, test drawer and adjacent door operation, and detail stone support, anti-tip fixing and any concealed LED supply. |
 | Critical | TV wall | Masonry fixing location, W5 reveal clearance, conduit paths, console support and equipment ventilation. |
 | High | Wet areas/terrace | Waterproofing, floor slope, drain test, grout/sealant and plumbing penetration strategy—not available from model. |
 | High | Electrical | Licensed electrician to confirm loads, circuiting, earthing, RCD protection, appliance isolators, wire sizes and wet/outdoor fitting ratings. |
@@ -290,9 +301,13 @@ Source: architect's "Revised Interior Layout OP-1", dated 14 October 2026, now `
 
 - Visual lighting is illustrative; there is no measured lux study.
 - Material textures and live model lighting can differ from photorealistic reference renders.
-- The GLB was re-exported on 27 Oct 2026 after the R-008/R-012 merge. It is valid glTF 2.0, but it is not a BIM or fabrication model.
+- The GLB was browser-exported again on 29 Oct 2026 from the combined R-019 ledge and R-020 kitchen granite scene. It is valid glTF 2.0, but it is not a BIM or fabrication model.
 - After R-008, the walkthrough is heavier (about 4 MB HTML). Load time and frame rate on a real GPU have not been measured.
 - Sink/chimney, TV console and puja dimensions are concept-level until vendor and site coordination.
 - W8 is deliberately retained in architecture even if it falls outside older accepted camera framing.
 - Older artifacts mention a kitchen dining set or handwash; those are superseded by the approved omission. Avoid reviving rejected items due to stale render content.
 - The user did not provide a verified construction budget, site orientation, contractor details, product list, or measured post-finish dimensions in the retrievable project chats. These are genuine unknowns, not blanks an agent should fill with assumptions.
+
+### Merge of the GitHub history (1 November 2026)
+
+The 28–29 October work on GitHub (R-019 kitchen–living ledge, R-020 granite labelling, Git-workflow wording) was merged into the current model at the user's instruction. The ledge geometry is unchanged from GitHub. It overlaps the south end of the walnut sofa service plank and its upward-facing south charging panel, which run along the west wall past the sofa arm; this clash already existed in the GitHub version and is held as RFI-016 for a design decision.

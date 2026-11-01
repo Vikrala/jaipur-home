@@ -62,8 +62,8 @@ const ivory=mat('Washable warm chalk paint','#f1e9dc',1,0,pbr(TX.plaster,.8)),wh
  taupe=mat('Dusty blue laminate','#8496a1',1,0,{...pbr(TX.suede,.5),bevel:true}),stone=mat('Glossy ivory showroom floor tile, 2 ft x 4 ft','#ffffff',.13,0,{map:floorTileMap,physical:true,clearcoat:.95,clearcoatRoughness:.07}),
  bathStone=mat('Anti slip bathroom tile','#ffffff',1,0,pbr(TX.bathTile,1.1)),
  granite=mat('Sealed dark granite','#b5b4af',1,0,{...pbr(TX.granite,.6),physical:true,clearcoat:.3,clearcoatRoughness:.18}),
- // R-019 (28 Oct 2026): client-selected kitchen slab from the site photo: polished black with copper banding, flow along u.
- kitchenGranite=mat('Client-selected black and copper granite, polished','#ffffff',1,0,{...pbr(TX.kitchenGranite,.35),physical:true,clearcoat:.5,clearcoatRoughness:.08}),
+ // R-020 (28 Oct 2026): client-considered kitchen slab from the site photo: polished black with copper banding, flow along u.
+ kitchenGranite=mat('Client-considered black and copper granite, polished','#ffffff',1,0,{...pbr(TX.kitchenGranite,.35),physical:true,clearcoat:.5,clearcoatRoughness:.08}),
  linen=mat('Wipeable sand upholstery','#e9dcc7',1,0,{...pbr(TX.linen,1.5),physical:true,sheen:.55,sheenRoughness:.6,sheenColor:new T.Color('#d9ccb6')}),
  bedding=mat('Cotton bedding','#fbf8ef',1,0,{...pbr(TX.cotton,1),physical:true,sheen:.8,sheenRoughness:.6,sheenColor:new T.Color('#ffffff')}),
  blanket=mat('Terracotta cotton throw','#b6795d',1,0,{...pbr(TX.linen,1.3),physical:true,sheen:1,sheenRoughness:.5,sheenColor:new T.Color('#d9a58c')}),
@@ -814,8 +814,8 @@ sinkBase.remove(sinkBase.children.find(o=>o.name==='Carcass horizontal'&&o.posit
 sideFront(sinkBase,K.sinkWidth/2,2.71,K.depth,oak,-K.sinkWidth/4,-1,'Left sink cupboard door').position.y=.20;
 sideFront(sinkBase,K.sinkWidth/2,2.71,K.depth,oak,K.sinkWidth/4,1,'Right sink geyser service door',true).position.y=.20;
 sinkBase.userData.frontCount=2;sinkBase.userData.drawers=0;
-// R-019: the RO-wall run is cut lengthwise from the slab too, so its texture turns 90° to keep the banding along the run.
-const kitchenGraniteRun=kitchenGranite.clone();kitchenGraniteRun.name='Client-selected black and copper granite, polished (RO-wall run)';mats[kitchenGraniteRun.name]=kitchenGraniteRun;
+// R-020: the RO-wall run is cut lengthwise from the slab too, so its texture turns 90° to keep the banding along the run.
+const kitchenGraniteRun=kitchenGranite.clone();kitchenGraniteRun.name='Client-considered black and copper granite, polished (RO-wall run)';mats[kitchenGraniteRun.name]=kitchenGraniteRun;
 for(const k of ['map','normalMap','roughnessMap']){const t=kitchenGranite[k].clone();t.center.set(.5,.5);t.rotation=Math.PI/2;kitchenGraniteRun[k]=t;}
 worktop(K.counterEnd-.75,K.depth,2.96,building,[],(K.counterEnd+.75)/2,windowZ,'Continuous window-wall granite',kitchenGranite);
 worktop(K.depth,K.westEnd-K.westStart,2.96,building,[[0,K.sinkCentre-(K.westEnd+K.westStart)/2,1.47,K.sinkWidth-.14]],kc,(K.westEnd+K.westStart)/2,'RO-wall granite with double-sink aperture',kitchenGraniteRun);
@@ -941,6 +941,38 @@ switchPanel('Chimney service isolator',K.hobCentre,7.1,49.10,Math.PI,1,true);
 switchPanel('Kitchen entry controls',px(431),3.7,pz(861.1),Math.PI,4);
 ceilingLight('kitchen',px(317),pz(788),32);for(const [x,z] of [[248,747],[360,788],[390,830]])downlight('kitchen',px(x),pz(z));
 // Dining table/chairs/pendants and the living-to-kitchen handwash removed as approved.
+// R-019 current working model: the ledge sits back towards the sofa and meets
+// the west wall along its side. The 3.5 ft length, 600 mm depth, 762 mm height
+// and kitchen-facing storage follow the user brief. The base carries the top.
+const r019Ledge={x0:6.75,x1:10.25,z0:34.84,z1:34.84+600/304.8,top:2.5,depthMm:600};
+const r019Rib=mat('R-019 draft shallow dark fluting','#69615a',.78);
+const r019Drawer=mat('R-019 draft matte sand drawer fronts','#c9b59d',.84);
+const r019Group=new T.Group();r019Group.name='Kitchen-living ledge — R-019';building.add(r019Group);
+const r019CX=(r019Ledge.x0+r019Ledge.x1)/2,r019CZ=(r019Ledge.z0+r019Ledge.z1)/2;
+const r019W=r019Ledge.x1-r019Ledge.x0,r019D=r019Ledge.z1-r019Ledge.z0;
+// Cabinet and plinth carry the top to the floor. No wall-only stone cantilever is implied.
+box(r019W-.14,.32,r019D-.20,r019CX,.16,r019CZ+.05,charcoal,r019Group,'Recessed washable plinth');
+for(const xx of [r019Ledge.x0+.045,r019Ledge.x1-.045])
+ box(.09,2.10,r019D-.08,xx,1.38,r019CZ,greige,r019Group,'Floor-supported carcass side');
+box(.09,2.10,r019D-.08,r019CX,1.38,r019CZ,greige,r019Group,'Central drawer-stack divider');
+box(r019W-.12,2.10,.055,r019CX,1.38,r019Ledge.z0+.04,charcoal,r019Group,'Living-face backing');
+box(r019W-.12,.075,r019D-.08,r019CX,2.3965,r019CZ,charcoal,r019Group,'Continuous top support concept');
+rb(r019W,.066,r019D,r019CX,2.467,r019CZ,masterBathMarble,r019Group,.025,'Eased light stone-look ledge top');
+for(let xx=r019Ledge.x0+.12;xx<r019Ledge.x1-.08;xx+=.115)
+ box(.038,2.035,.028,xx,1.38,r019Ledge.z0-.004,r019Rib,r019Group,'Shallow wipeable living-face rib');
+// The warm glow is illustrative; driver, circuit and wiring route are not resolved.
+box(r019W-.18,.035,.04,r019CX,2.425,r019Ledge.z0-.016,warmLight,r019Group,'Illustrative shielded warm under-lip light');
+for(const xx of [r019Ledge.x0+.875,r019Ledge.x1-.875]){
+ box(1.64,1.40,.055,xx,1.14,r019Ledge.z1-.005,r019Drawer,r019Group,'Kitchen-facing deep storage drawer');
+ box(1.64,.54,.055,xx,2.14,r019Ledge.z1-.005,r019Drawer,r019Group,'Kitchen-facing shallow storage drawer');
+ for(const yy of [1.65,2.16])
+  box(.43,.034,.075,xx,yy,r019Ledge.z1+.065,metal,r019Group,'Accessible drawer pull');
+}
+contact(r019W,r019D,r019CX,r019CZ,building,.08);
+collision('Kitchen-living floor-supported ledge',r019Ledge.x0,r019Ledge.z0,r019Ledge.x1,r019Ledge.z1,r019Ledge.top,'cabinet');
+furniture.push({name:'Kitchen-living ledge — R-019',type:'cabinet',x:r019CX,z:r019CZ,w:r019W,d:r019D,h:r019Ledge.top});
+feature('Kitchen-living ledge — R-019','furniture',r019CX,r019CZ,r019W,r019D,r019Ledge.top,
+ 'Floor-supported unit set back towards sofa and flush to west wall by user request; 1067 mm length, 600 mm approximate depth, 762 mm finished top; kitchen-side storage; not approved for fabrication');
 function kitchenQA(){
  building.updateWorldMatrix(true,true);
  const cornerRay=new T.Raycaster(new T.Vector3(4,1.8,48),new T.Vector3(-1,0,0)).intersectObjects(corner.children,true);
@@ -1289,6 +1321,8 @@ const viewpoints={
  'tv-wall':{name:'Living TV wall',pos:[10.8,4.8,31.0],target:[18.2,4.7,tvPanelZ],room:'living',fov:60,detail:'Ceiling-height backing shifted right of W5 · console extends beneath half the window'},
  'sofa-wall':{name:'Living sofa service plank',pos:[14.6,4.1,30.0],target:[7.0,1.9,30.0],room:'living',fov:58,detail:'Walnut plank extends beyond both sofa arms · integrated switches, 6A socket, USB-A and USB-C'},
  kitchen:{name:'Approved kitchen',pos:[px(429),5.15,pz(698)],target:[px(247),4.85,pz(827)],detail:'Approved sand and walnut kitchen · double sink · four burners · hidden RO and geyser'},
+ 'r019-living-face':{name:'Kitchen-living ledge — living face',pos:[13.0,4.45,31.8],target:[8.5,1.7,35.3],room:'living',fov:60,detail:'Working model · set back towards sofa and flush to west wall · 1,067 × about 600 mm, top 762 mm · site fit pending'},
+ 'r019-storage':{name:'Kitchen-living ledge — kitchen drawers',pos:[12.2,4.45,40.6],target:[8.5,1.8,36.5],room:'kitchen',fov:60,detail:'Working model · kitchen-facing two-stack drawer storage · floor-supported, no dining or appliance change'},
  'kitchen-detail':{name:'Kitchen worktop',pos:[px(397),4.95,pz(783)],target:[px(247),4.8,pz(814)],room:'kitchen',detail:'One lift-up hood gate · sink-width rack · direct RO tap · accessible fixed corner shelf'},
  master:{name:'Master bedroom',pos:[px(356),5.1,pz(382)],target:[px(245),3.0,pz(221)],detail:'Older adults’ room · clear floor · bedside controls · closed storage'},
  'master-reverse':{name:'Master storage',pos:[px(235),5.0,pz(304)],target:[px(365),3.7,pz(248)],room:'master',detail:'Simple wardrobes and TV storage stay in their planned positions'},
@@ -1467,7 +1501,7 @@ function animate(t){const dt=Math.min((t-lastTime)/1000,.05)||.016;lastTime=t;
  if(Math.abs(bedroom2Wardrobe.nicheUpperHinge.rotation.y-cornerTarget)>.002){bedroom2Wardrobe.nicheUpperHinge.rotation.y+=(cornerTarget-bedroom2Wardrobe.nicheUpperHinge.rotation.y)*kDoor;dirty=true;renderer.shadowMap.needsUpdate=true;}
  if(dirty){dirty=false;draw();}
  requestAnimationFrame(animate);}
-window.JAIPUR={scene,building,renderer,camera,go,viewpoints,fixtures,furniture,colliders,P,ceilings,doorPivots,kitchenStorage,kitchenFronts,kitchenDoorPivots,poojaDoorPivots,poojaTrayGroup,kitchenQA,bedroom2Wardrobe,setBedroom2Sliding,setBedroom2UpperDoors,setStorageInspection,setPoojaOpen,setDiyaTrayOpen,setNight,setIronTable,setAO,setLivingRugVisible,
+window.JAIPUR={scene,building,renderer,camera,go,viewpoints,fixtures,furniture,colliders,P,ceilings,doorPivots,kitchenStorage,kitchenFronts,kitchenDoorPivots,poojaDoorPivots,poojaTrayGroup,kitchenQA,r019Ledge,bedroom2Wardrobe,setBedroom2Sliding,setBedroom2UpperDoors,setStorageInspection,setPoojaOpen,setDiyaTrayOpen,setNight,setIronTable,setAO,setLivingRugVisible,
  render,draw,width:27,ceiling:10,
  capture(id,w=1920,h=1280){go(id);renderer.setPixelRatio(1);renderer.setSize(w,h,false);composer.setPixelRatio(1);composer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();render();return canvas.toDataURL('image/png');},
  overhead(){go('overview');renderer.clippingPlanes=[new T.Plane(new T.Vector3(0,-1,0),3.8)];camera.position.set(13.5,85,27);camera.up.set(0,0,-1);camera.lookAt(13.5,0,27);camera.fov=39;camera.updateProjectionMatrix();render();return canvas.toDataURL('image/png');},
@@ -1487,7 +1521,7 @@ window.JAIPUR={scene,building,renderer,camera,go,viewpoints,fixtures,furniture,c
   setIronTable(ironWas);kitchenDoorPivots.forEach((p,i)=>p.hinge.rotation[p.axis]=angles[i]);
   setPoojaOpen(poojaWasOpen);setDiyaTrayOpen(trayWasOpen);
   exportRoot.scale.setScalar(ft);exportRoot.name='Suresh Ji first floor — metres';
-  exportRoot.userData={source:P.source,ceiling_m:10*ft,optional_partition:'omitted',ventilation_shafts:'three confirmed',kitchen:'Approved 14 September: four burners, double bowl sink, equal-width drying rack, hidden RO cutout, sink geyser, single lift-up chimney, fixed corner shelf',pooja:'Operable four-leaf pocket-fold cabinet with full-width fire-safe pull-out diya tray',bedroom_2:'Two broad lower sliding shutters; paired hinged upper shutters per bay; 229 mm outer right compartment; export closed',provisional:P.provisional};
+  exportRoot.userData={source:P.source,ceiling_m:10*ft,optional_partition:'omitted',ventilation_shafts:'three confirmed',kitchen:'Approved 14 September: four burners, double bowl sink, equal-width drying rack, hidden RO cutout, sink geyser, single lift-up chimney, fixed corner shelf',pooja:'Operable four-leaf pocket-fold cabinet with full-width fire-safe pull-out diya tray',r019:'Kitchen-living ledge in current working model; site measurements and joinery details pending',bedroom_2:'Two broad lower sliding shutters; paired hinged upper shutters per bay; 229 mm outer right compartment; export closed',provisional:P.provisional};
   const out=await e.parseAsync(exportRoot,{binary:true,onlyVisible:false,maxTextureSize:512});
   ceilings.visible=saved;render();return Array.from(new Uint8Array(out));
  }

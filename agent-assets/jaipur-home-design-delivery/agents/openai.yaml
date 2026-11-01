@@ -1,6 +1,6 @@
 interface:
   display_name: "Jaipur Home Design Delivery"
-  short_description: "Governed interior-design coordination"
-  default_prompt: "Use $jaipur-home-design-delivery to review this Jaipur Home request with controlled drafts and approvals."
+  short_description: "Git-tracked Jaipur Home design coordination"
+  default_prompt: "Use $jaipur-home-design-delivery to coordinate this Jaipur Home request in the single maintained Git-tracked model."
 policy:
   allow_implicit_invocation: true

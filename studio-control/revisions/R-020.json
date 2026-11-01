@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "R-020",
+  "status": "rendered-for-consideration",
+  "date": "2026-10-28",
+  "request": "Render the kitchen slab as the granite in the client's site photo; the stone is under consideration.",
+  "work_mode": "Git-tracked single-model material study",
+  "source": "output/jaipur-home/kitchen-granite-reference.jpg",
+  "changes": [
+    "Procedural and baked black-and-copper granite texture added to realism.js and textures-baked.js",
+    "Window-wall and RO-wall kitchen worktops use the study material; RO-wall texture turns 90 degrees so banding follows the run",
+    "Standalone walkthrough and GLB updated with the study material while retaining the R-019 kitchen-living ledge",
+    "Current kitchen and ledge walkthrough screenshots saved in output/jaipur-home/renders",
+    "Other granite surfaces remain unchanged"
+  ],
+  "assumptions": [
+    "Rendered texture approximates the site photo; real slab figure varies by block and batch",
+    "Fabricator must agree the L-corner cut and joint when the actual slab is selected"
+  ],
+  "holds": [
+    "Supplier trade name and physical slab batch",
+    "Thickness, finish and edge profile",
+    "L-corner joint and figure matching"
+  ],
+  "specialists_activated": []
+}

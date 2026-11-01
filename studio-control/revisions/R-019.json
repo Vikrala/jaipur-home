@@ -20,5 +20,6 @@
   "stills not regenerated"
  ],
  "qa": "Browser check: both kitchen worktop meshes use the new material and the texture loads; evening and daylight views compared visually with the site photo.",
- "specialists_activated": []
+ "specialists_activated": [],
+ "label_note": "Merged 1 Nov 2026 with the GitHub history, where the same granite study is R-020 (studio-control/revisions/R-020.json) and R-019 is the kitchen-living ledge. Treat this record as provenance for R-020."
 }

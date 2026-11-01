@@ -181,8 +181,8 @@
   {
    "id": "D-018",
    "status": "under-consideration",
-   "topic": "R-019 kitchen worktop granite",
-   "decision": "28 Oct 2026: client is considering the site-photo black-and-copper granite for the kitchen slab; rendered in the model for evaluation. Not a final selection.",
+   "topic": "R-020 kitchen worktop granite study",
+   "decision": "28 Oct 2026: client is considering the site-photo black-and-copper granite for the kitchen worktops. It is rendered on both runs for review, but the actual slab is not selected.",
    "sources": [
     "user-instruction",
     "output/jaipur-home/kitchen-granite-reference.jpg"

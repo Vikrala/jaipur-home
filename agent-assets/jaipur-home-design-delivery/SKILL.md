@@ -1,6 +1,6 @@
 ---
 name: jaipur-home-design-delivery
-description: Governed interior-design delivery for the Jaipur Home project: route reviews, drafts, technical coordination, visualisation, RFIs and site QA while preserving drawing authority, approval gates and draft-only specialist work. Use for this project's design or execution-coordination requests; exclude business, pricing, procurement and external communication.
+description: Design and execution coordination for the Jaipur Home project using one Git-tracked 3D model. Route reviews, technical checks, visualisation, RFIs and site QA while preserving drawing authority and professional holds. Exclude business, pricing, procurement and external communication.
 ---
 
 # Jaipur Home Design Delivery
@@ -9,33 +9,21 @@ Use this skill for substantive design, visualisation, technical-coordination, co
 
 ## Bootstrap cheaply
 
-Read `studio-control/project-state.json`, then the named handoff and manifest artifacts. Do not load the full PDF, GLB, all renders, or historical chats unless the request needs them. Re-read an approved artifact only when its manifest hash differs, the request changes it, a conflict arises, the task is execution-sensitive, or independent QA/promotion requires it.
+Read `studio-control/project-state.json`, then the named handoff and manifest artifacts. Check the current Git state and maintained model when relevant. Do not load the full PDF, GLB, all renders, or historical chats unless the request needs them. Re-read an approved source when its manifest hash differs, the request changes it, a conflict arises, or the task is execution-sensitive.
 
 Use the source hierarchy in `project-state.json`. The built/layout drawing controls geometry; inspiration, generated images, older chats and old numbered versions do not override it. Ask the user to resolve conflicting authorities.
 
 ## Route the request
 
-The Design Director owns the conversation and final synthesis. Activate only the smallest appropriate specialist team:
+The Design Director owns the conversation and final synthesis. Use no specialist for straightforward work. For complex work, consider the smallest suitable set of layout, interior/FF&E, kitchen/bath/utility, lighting/services, technical-documentation, visualisation or site-QA specialists. Activate a specialist only when the user or applicable project instructions authorise delegation.
 
-- no specialist for straightforward advice;
-- layout reviewer for circulation, room fit, openings, accessibility or zoning;
-- interior/FF&E designer for concept, materials, furniture, storage and maintenance;
-- kitchen/bath/utility specialist for wet areas, appliances, ventilation and cabinetry;
-- lighting/services coordinator for electrical, plumbing, HVAC, ceiling and appliance interfaces;
-- technical-documentation specialist for elevations, schedules, RFIs, checklists and joinery;
-- visualisation specialist for model/render drafts;
-- site-QA coordinator for snags, photo review and inspection packages.
+Read [workflow rules](references/workflow.md) for change routing. Read [schemas](references/schemas.md) before creating or updating a controlled record. Read [model routing](references/model-routing.md) before activating a specialist.
 
-Read [workflow rules](references/workflow.md) for revision and approval routing. Read [schemas](references/schemas.md) before creating or updating a controlled record.
-Read [model routing](references/model-routing.md) before activating a specialist.
+## Single-model Git controls
 
-## Draft and promotion controls
+Use `output/jaipur-home/` as the one maintained 3D model. For an authorised, reversible design change, edit its source (`model/interior.js`), rebuild `walkthrough.html` and the GLB when geometry changes, perform checks suited to the change, update the current README/changelog and relevant state references, and commit one coherent change to Git. Use a branch for exploration when useful. Git history supplies the revision trail; do not create a routine `R-XXX` draft folder or require separate scope and promotion approvals for each update.
 
-For any artifact change, create a revision record from `studio-control/templates/revision-record.json` and use a matching `studio-control/drafts/R-XXX/` folder. Explain scope, sources, specialists, affected zones, risks, files, validation and dependencies; wait for explicit scope approval before drafting.
-
-Specialists may write only draft artifacts. The Design Director may promote a draft only after independent QA and explicit promotion approval. Update the approved baseline, handoff, changelog, manifest/state and QA record only at promotion.
-
-Never silently overwrite, delete, roll back or create a new approved baseline.
+Create a separate review artifact or controlled revision record when the user requests one or a decision genuinely needs one. Preserve historical revision, draft and QA records as provenance. Do not silently change protected room decisions or constructed geometry. Resolve source conflicts with the user, and identify required measurements and professional checks before execution. A Git commit does not certify construction.
 
 ## Model routing and consent
 
@@ -51,4 +39,4 @@ Before every specialist launch, use `studio-control/scripts/model_router.py` wit
 
 ## Explain the work
 
-Finish every substantive reply using the final-audit template. State actual sources used, actual specialist count, each specialist's concrete contribution, model, reasoning effort, tier, consent status, final synthesis, changed files and open RFIs. Explain operational evidence and decisions, not private chain-of-thought.
+Finish every substantive reply using the final-audit template. State actual sources used, actual specialist count and contributions, changed files, Git commit and open RFIs or site checks. For each specialist actually launched, include its model, reasoning effort, tier and consent status. Explain operational evidence and decisions, not private chain-of-thought.

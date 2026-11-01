@@ -142,7 +142,7 @@ function granite(S){
  return {albedo:alb,normal:normalFromHeight(hgt,S,.9),rough:grey(S,rough)};
 }
 
-/* R-019: client's selected kitchen granite (site photo 28 Oct 2026): polished black base with dense, crinkled
+/* R-020: client's considered kitchen granite (site photo 28 Oct 2026): polished black base with dense, crinkled
    gneiss banding and flowing copper/rust patches. Flow runs along u. Periodic in u and v so the 8 ft sample tiles. */
 function kitchenGranite(S){
  const hgt=new Float32Array(S*S),rough=new Float32Array(S*S);

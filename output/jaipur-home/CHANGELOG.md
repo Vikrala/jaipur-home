@@ -2,6 +2,14 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Merged the GitHub history: kitchen–living ledge restored
+
+- GitHub's `main` held three 28–29 October commits that this checkout lacked. They were merged at the user's instruction, keeping all local work from 31 October onwards.
+- The R-019 kitchen–living ledge is now in the current model unchanged: floor-supported, about 1,067 mm long, 600 mm deep and 762 mm high, set back near the sofa and flush to the west wall, with kitchen-facing drawer stacks, a light stone-look top and dark fluting on the living face. Its two walkthrough views (**Kitchen-living ledge — living face** and **— kitchen drawers**) are restored; `renders/current-kitchen-living-ledge.png` and `renders/current-kitchen-granite.png` are refreshed from the merged model.
+- The kitchen granite study, developed in both histories, now carries one label, R-020, as GitHub had resolved; its texture and placement are the local version.
+- Known clash carried over from GitHub: the ledge overlaps the south end of the walnut sofa service plank and its south charging panel. Recorded as RFI-016 for a decision; no geometry was changed in the merge.
+- Rebuilt the walkthrough, GLB (now includes the ledge with full materials) and Bedroom 2/overview renders.
+
 ## 1 November 2026 - Bedroom 2 open 9 in compartment and ceiling from the wardrobe
 
 - Removed the seven fixed shelves from the right bay's 229 mm compartment. It is now an open full-height slot, still 229 mm clear inside its boards; the rest of the bay is unchanged.
@@ -101,7 +109,7 @@ Applied directly after an independent site-QA review and the client's six observ
 - The project workflow now uses direct edits to this single model, followed by checks and one coherent Git commit. Routine draft/promotion gates are retired; historical records remain provenance.
 - Before execution, confirm supplier wet slip data and test a wet sample underfoot, especially in the kitchen and older-adult routes; check shade variation, thickness, flatness and finished-floor clearances on site.
 
-## 28 October 2026 - R-019 kitchen slab in the client's granite
+## 28 October 2026 - R-020 kitchen slab in the client's granite
 
 Applied directly to this model on the user's instruction. This granite is under consideration, not a final selection.
 
@@ -113,6 +121,14 @@ Applied directly to this model on the user's instruction. This granite is under 
 - The texture is an approximation of the photo, and real slabs vary by block and batch.
 - Other granite in the house, such as the bedside tops, the locker lid and the vanity, is unchanged.
 - The GLB is re-exported. The stills are not regenerated.
+- This study was developed separately in this checkout and on GitHub. When the two histories were merged on 1 November 2026 it took the label R-020, freeing R-019 for the kitchen–living ledge below.
+
+## 28 October 2026 - R-019 kitchen–living ledge and Git workflow
+
+- Integrated the user's slab/storage change into the single maintained model. The 1,067 mm long, approximately 600 mm deep, 762 mm high unit is set back near the sofa and meets the west wall along its side. Drawers face the kitchen; the living face has shallow dark fluting, a light stone-look top and an illustrative warm under-lip light.
+- The traced model leaves approximately 101 mm at the sofa end and 1,562 mm on the east approach before finish tolerances. Wall scribing, anti-tip restraint, concealed wiring and operating clearances need site/fabricator checks; this is not a fabrication drawing.
+- Updated the interactive walkthrough and the GLB. The GLB uses simple box geometry for the new joinery; the walkthrough has the richer live material/edge depiction.
+- Per the user's workflow instruction, Git commits now track each coherent change to this one maintained model. Routine revisions no longer create separate 3D draft folders or wait for a draft-promotion step. The architect layout and protected room decisions still govern physical changes.
 
 ## 28 October 2026 - R-018 bathroom wall tile to the ceiling
 
