@@ -4576,8 +4576,9 @@ box(returnBoardLen-.22,.045,.06,returnBoardX,2.17,21.2725,warmLight,building,'Sh
 sofaControlPanel('Sofa south-end charging',6.89,2.19,sofaBoardEnd-.46,Math.PI/2);
 sofaControlPanel('Sofa return-end charging',returnBoardEnd-.48,2.19,21.14,0);
 feature('Low illuminated sofa service plank','furniture',sofaBoardX,sofaBoardZ,.25,sofaBoardLen,2.17,'Narrow walnut plank separated from upholstery; both switch and charging panels face upward');
-// Client reference (1 Nov 2026): rounded walnut tray table with a central pedestal and
-// three olive storage stools. The 36 x 26 in top keeps the long-side route above 36 in.
+// Client clarification (1 Nov 2026): four storage stools tuck into the four corners
+// formed by a full-height walnut plus support beneath the rounded timber-framed top.
+// The 36 x 26 in top keeps the long-side walking bands above 36 in in the model.
 const tableX=13.90,tableZ=29.05;
 rb(7.15,.10,10.10,13.65,.075,29.05,rugMat,building,.10,'Living low-pile washable rug');
 feature('Living 7 ft 2 in × 10 ft 1 in rug','furniture',13.65,29.05,7.15,10.10,.10,'Final living selection: L1 warm neutral rug');
@@ -4598,31 +4599,29 @@ function trayPiece(w,d,r,depth,y,name,ring=false){
 // Recessed top and continuous raised rim make the reference's tray profile legible.
 trayPiece(2.167,3.0,.34,.13,1.30,'Living rounded walnut tray top');
 trayPiece(2.167,3.0,.34,.06,1.43,'Living raised walnut tray rim',true);
-// Broad pedestal replaces spindly legs; low plinth avoids a difficult-to-clean gap.
-rb(.93,1.25,1.20,tableX,.675,tableZ,oak,building,.08,'Living coffee table central walnut pedestal');
-rb(1.02,.07,1.30,tableX,.055,tableZ,charcoal,building,.025,'Living coffee table recessed plinth');
+// Two intersecting vertical fins make the plus support and four stool bays.
+rb(1.98,1.28,.12,tableX,.66,tableZ,oak,building,.025,'Living coffee table plus support east-west');
+rb(.12,1.28,2.72,tableX,.66,tableZ,oak,building,.025,'Living coffee table plus support north-south');
 collision('Centre table',tableX-1.0835,tableZ-1.50,tableX+1.0835,tableZ+1.50,1.49,'table');
-function livingStorageStool(x,z,open=false){
- const g=new T.Group();g.name=open?'Living pull-out olive storage stool (lid open)':'Living tucked olive storage stool';g.position.set(x,0,z);building.add(g);
- rb(.88,.12,.88,0,.11,0,oliveStool,g,.035,'Olive storage-stool base');
+function livingStorageStool(x,z,corner){
+ const g=new T.Group();g.name='Living olive storage stool — '+corner;g.position.set(x,0,z);building.add(g);
+ rb(.96,.12,.96,0,.11,0,oliveStool,g,.035,'Olive storage-stool base');
  for(const side of [-1,1]){
-  rb(.88,.72,.10,0,.50,side*.39,oliveStool,g,.025,'Olive storage-stool upholstered wall');
-  rb(.10,.72,.68,side*.39,.50,0,oliveStool,g,.025,'Olive storage-stool upholstered wall');
-  box(.72,.62,.02,0,.54,side*.33,stoolLiner,g,'Washable storage-stool inner wall');
-  box(.02,.62,.64,side*.33,.54,0,stoolLiner,g,'Washable storage-stool inner wall');
+  rb(.96,.84,.10,0,.56,side*.43,oliveStool,g,.025,'Olive storage-stool upholstered wall');
+  rb(.10,.84,.76,side*.43,.56,0,oliveStool,g,.025,'Olive storage-stool upholstered wall');
+  box(.80,.74,.02,0,.60,side*.37,stoolLiner,g,'Washable storage-stool inner wall');
+  box(.02,.74,.72,side*.37,.60,0,stoolLiner,g,'Washable storage-stool inner wall');
  }
- rb(.66,.025,.66,0,.19,0,stoolLiner,g,.01,'Dark storage-stool cavity bottom');
+ rb(.74,.025,.74,0,.19,0,stoolLiner,g,.01,'Dark storage-stool cavity bottom');
  const lid=new T.Group();lid.name='Lift-up storage-stool lid';g.add(lid);
- if(open){lid.position.set(0,.88,.42);lid.rotation.x=.95;
-  soft(.94,.15,.94,0,.075,-.42,oliveStool,lid,'Open upholstered lid');}
- else soft(.94,.15,.94,0,.97,0,oliveStool,lid,'Closed upholstered lid');
- g.userData={storage:true,looseFurniture:true,widthFt:.94,depthFt:.94,heightFt:1.045};
- collision(g.name,x-.47,z-.47,x+.47,z+.47,1.045,'stool');
+ soft(1.0,.15,1.0,0,1.10,0,oliveStool,lid,'Closed upholstered storage lid');
+ g.userData={storage:true,looseFurniture:true,widthFt:1.0,depthFt:1.0,heightFt:1.175,corner};
+ collision(g.name,x-.50,z-.50,x+.50,z+.50,1.175,'stool');
 }
-livingStorageStool(tableX,tableZ-1.02);
-livingStorageStool(tableX,tableZ+1.02);
-livingStorageStool(tableX,tableZ+2.08,true);
-feature('Living rounded tray coffee table and three storage stools','furniture',tableX,tableZ,2.167,3.0,1.49,'Walnut tray top and central pedestal; three removable muted-olive upholstered storage stools, one shown open');
+for(const [sx,side] of [[-1,'sofa'],[1,'TV']])for(const [sz,end] of [[-1,'north'],[1,'south']]){
+ livingStorageStool(tableX+sx*.58,tableZ+sz*.84,side+' '+end);
+}
+feature('Living rounded tray coffee table and four storage stools','furniture',tableX,tableZ,2.167,3.0,1.49,'Walnut-framed rounded top; intersecting walnut support forms four corner bays, each with one muted-olive upholstered storage stool');
 // TV WALL REVISION V7: the full-height backing clears the W5 window entirely.
 // Only the low console continues left to the exact window centreline.
 const livingWindowStart=25.6275,livingWindowEnd=28.1325,
@@ -5236,7 +5235,7 @@ plant(7.0,54.2,1.9);
 const viewpoints={
  overview:{name:'Whole floor',detail:'3 bedrooms · 10 ft ceiling · optional partition omitted'},
  living:{name:'Living',pos:[px(459),5.2,pz(653)],target:[px(323),3.2,pz(490)],detail:'Walnut · warm stone · terracotta · supportive sand seating'},
- 'living-table':{name:'Living coffee table and storage stools',pos:[11.25,4.55,33.8],target:[13.90,1.12,29.75],room:'living',fov:60,detail:'Rounded walnut tray top · central pedestal · three muted olive storage stools, one lid shown open'},
+ 'living-table':{name:'Living coffee table and four storage stools',pos:[11.25,4.55,33.8],target:[13.90,1.12,29.75],room:'living',fov:60,detail:'Rounded walnut-framed top · plus-shaped support · four muted olive storage stools tucked into the corner bays'},
  'living-reverse':{name:'Living reverse view',pos:[px(360),5.1,pz(463)],target:[18.0,3.8,tvPanelZ],room:'living',detail:'Full-height TV backing clears the window; low console extends to the window centreline'},
  'tv-wall':{name:'Living TV wall',pos:[10.8,4.8,31.0],target:[18.2,4.7,tvPanelZ],room:'living',fov:60,detail:'Ceiling-height backing shifted right of W5 · console extends beneath half the window'},
  'sofa-wall':{name:'Living sofa service plank',pos:[14.6,4.1,30.0],target:[7.0,1.9,30.0],room:'living',fov:58,detail:'Walnut plank extends beyond both sofa arms · integrated switches, 6A socket, USB-A and USB-C'},

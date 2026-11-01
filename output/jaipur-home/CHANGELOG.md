@@ -2,6 +2,12 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Corrected living table to four-corner stool layout
+
+- Replaced the mistaken central pedestal with intersecting walnut support panels forming a plus beneath the rounded framed top. The four resulting corner bays each hold one muted olive hollow storage stool with a closed lift-up lid. The earlier three-stool interpretation below is superseded.
+- Kept the 914 × 660 mm top, walnut/olive room palette and table position. All four stools tuck within the modelled tabletop footprint; modelled sofa/console side bands remain 916/920 mm. Confirm finished sizes, extraction and lid hardware with the fabricator.
+- Rebuilt the walkthrough, GLB and affected renders; updated the dedicated table view and geometry check to require four stools in the four corner bays. Added an inspection still with the top temporarily hidden to reveal the plus support and all four stools; the top remains in the maintained model and GLB.
+
 ## 1 November 2026 - Living coffee table from client reference
 
 - Replaced the 42 × 20 in four-leg table with a 36 × 26 in (914 × 660 mm) rounded walnut tray top on a central pedestal. Modelled tabletop height is about 454 mm.

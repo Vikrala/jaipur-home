@@ -4,11 +4,16 @@
     "found": {
       "Living rounded walnut tray top": true,
       "Living raised walnut tray rim": true,
-      "Living coffee table central walnut pedestal": true,
-      "Living tucked olive storage stool": true,
-      "Living pull-out olive storage stool (lid open)": true
+      "Living coffee table plus support east-west": true,
+      "Living coffee table plus support north-south": true
     },
-    "stoolCount": 3,
+    "stoolCount": 4,
+    "corners": [
+      "TV north",
+      "TV south",
+      "sofa north",
+      "sofa south"
+    ],
     "table": {
       "name": "Centre table",
       "x0": 12.816500000000001,
@@ -24,12 +29,13 @@
     },
     "floorTileError": null
   },
-  "glbBytes": 19946684,
+  "glbBytes": 19948028,
   "views": [
     "overview",
     "living",
     "living-reverse",
     "living-table",
+    "living-table-underframe-inspection",
     "living-evening"
   ]
 }

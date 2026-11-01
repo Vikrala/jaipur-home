@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "generated_for": "LIVING-TABLE-2026-11-01",
+ "generated_for": "LIVING-TABLE-FOUR-STOOLS-2026-11-01",
  "hash_algorithm": "sha256",
  "artifacts": [
   {
@@ -15,14 +15,14 @@
    "path": "docs/PROJECT_HANDOFF.md",
    "role": "Human-readable approved design continuity",
    "authority_rank": 2,
-   "sha256": "6b595289c4de8948f5443b77dbebefdc2591eb0af9573ab9af5087648c9c4f0a"
+   "sha256": "d3ac4909ed244ab814af3c67bdff2439b2d5875d5001d55543e0d3ebfff07e01"
   },
   {
    "id": "design-state",
    "path": "docs/LATEST_COMPLETE_HOUSE_DESIGN.json",
    "role": "Structured approved design context",
    "authority_rank": 2,
-   "sha256": "07e2ecf806a20e9e65bfb74004a525231a222d7a927661cf806a92263ce2e59a"
+   "sha256": "8910a01cc82a2470c4f3cd6ce09dc65b6adb8c33d161f058f604c116f3b607d8"
   },
   {
    "id": "architect-layout",
@@ -43,14 +43,14 @@
    "path": "output/jaipur-home/README.md",
    "role": "Current maintained-model summary",
    "authority_rank": 2,
-   "sha256": "7256c07d837840de917cb064b16acd2cb182811218bf0b060ae857eec7084e2a"
+   "sha256": "5274b44252861466f4814c5d40e6b8e389c8bbf6fce99f31eb22dea7b27422b5"
   },
   {
    "id": "baseline-changelog",
    "path": "output/jaipur-home/CHANGELOG.md",
    "role": "Dated approved revision history",
    "authority_rank": 2,
-   "sha256": "6dcf4704d441b35c0d097af8f740f1f011c068845bb23b1092047d50c7f93514"
+   "sha256": "a7e8ae2ebbd192126b85c9dab4a0a4f9d605327b3e234bde62fb44982576ad9b"
   },
   {
    "id": "baseline-qa",
@@ -92,21 +92,21 @@
    "path": "output/jaipur-home/model/interior.js",
    "role": "Single maintained 3D model scene logic",
    "authority_rank": 2,
-   "sha256": "17311a504be5d9f622d5d9b4ff72492c3fe90eac596768234ab66f08e9f145c0"
+   "sha256": "a00981d492dab0dd093c54dd91b237df5ea98e9f0f6a0c71bc2d9397f055904b"
   },
   {
    "id": "jaipur-first-floor.glb",
    "path": "output/jaipur-home/model/jaipur-first-floor.glb",
    "role": "Single maintained 3D model (GLB, metres)",
    "authority_rank": 2,
-   "sha256": "a04bcbfaa3cfaabd26c82cf2e2c28a0a07a11b23dc4a86aa1ce0a11088456483"
+   "sha256": "0dc3e680e4ae69318bffdcf4c80b622780a1538dbff55f1d2f0d5beab46f1da8"
   },
   {
    "id": "walkthrough.html",
    "path": "output/jaipur-home/walkthrough.html",
    "role": "Standalone walkthrough of the single model",
    "authority_rank": 2,
-   "sha256": "bed86b7c4e999dfe17a84c27324fb0ab17d3495c6b7fa8b0238dcc7e99c1513e"
+   "sha256": "a90c27801d7043861f817f3d13c1fa1aba392d3b720b5a8402050f4037b35b07"
   },
   {
    "id": "rfis.json",
@@ -211,21 +211,28 @@
    "path": "output/jaipur-home/renders/living-table-detail.png",
    "role": "Updated living coffee-table detail render",
    "authority_rank": 2,
-   "sha256": "8762453f9cc539d3f514111ef54ca5ae80c091f9e768bb0a0b74c1f1de9f0885"
+   "sha256": "5e350b2128acc2a178e3930754fc52d2acf0c2f3c10f1b64f2a3113b18ba770e"
   },
   {
    "id": "living-table-checks",
    "path": "output/jaipur-home/model/living-table-checks.json",
    "role": "Browser and GLB export check for living table",
    "authority_rank": 2,
-   "sha256": "83ed25be85b5d23e7bd67e919666ccf38696710b9af45373f9fd2952d8f35980"
+   "sha256": "67521ac8860427123a5b5672fb5d134d8bc830a87ebad3bc016fcffa8b72aaab"
   },
   {
    "id": "render_living_table",
    "path": "output/jaipur-home/model/build-tools/render_living_table.cjs",
    "role": "Repeatable living-table render and GLB export",
    "authority_rank": 2,
-   "sha256": "92436b66d6234f4ec36bcf01704dd30b9954cf913b60bdc9903fb4b1bfaada24"
+   "sha256": "fcd395972932b87e31bc1701b3621032637a9ce9d1b8ca0704fb384e838b7928"
+  },
+  {
+   "id": "living-table-underframe",
+   "path": "output/jaipur-home/renders/living-table-underframe.png",
+   "role": "Four-stool and plus-support inspection view with tabletop temporarily hidden",
+   "authority_rank": 2,
+   "sha256": "d3407916e07870da3a8a8a7a6dfef3627db861a96fb2afbb33b133ed18a6322c"
   }
  ],
  "verification_rule": "A hash mismatch triggers targeted source review. User-authorised main-model changes are recorded by Git."
