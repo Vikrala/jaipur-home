@@ -2,6 +2,11 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Bedroom 2 two-bay sliding wardrobe sketch
+
+- Corrected the unapproved wardrobe sketch after the client's practicality review. The main wardrobe beyond the corner shelves is now drawn as two independent bays with two sliding leaves in each bay, a fixed central divider and upper storage split to match.
+- Saved `concepts/bedroom-2-sliding-wardrobe-two-bays-sketch-2026-11-01.png` and preserved the earlier sketch. Bedroom 2 model, walkthrough and GLB remain unchanged while the client reviews the interpretation.
+
 ## 1 November 2026 - Bedroom 2 sliding wardrobe and top-storage sketch
 
 - Added a new unapproved review sketch, `concepts/bedroom-2-sliding-wardrobe-loft-sketch-2026-11-01.png`, based on the client's separate sliding-wardrobe video. It shows a matching upper loft band with shelves behind its shutters and warm-greige main sliding leaves; one of each is open in the sketch to explain storage and movement.

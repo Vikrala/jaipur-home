@@ -194,6 +194,7 @@ These were included in the original coordinated whole-home model. They are not n
 - Associated charging points, headboard artwork and ceiling fan shifted with bed so alignments remain coherent.
 - Prior 545 mm gap was removed.
 - A privacy screen was tested then rejected/removed: it compromised arrival and was visually intrusive. Existing doorway and masonry are untouched.
+- The 1 November 2026 bedside/wardrobe proposal is still a review sketch, not a model revision. The current sketch is `output/jaipur-home/concepts/bedroom-2-sliding-wardrobe-two-bays-sketch-2026-11-01.png`: open corner shelves beside a mattress-height bedside top, tall mirror and vertical switchboard; the remaining wardrobe is split into two independent bays with two sliding shutters each, and matching divided upper storage. Confirm this interpretation and site joinery dimensions before editing the 3D model.
 
 ### Bedroom 3
 

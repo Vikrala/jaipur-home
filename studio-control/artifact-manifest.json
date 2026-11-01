@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "generated_for": "BEDROOM2-SLIDING-WARDROBE-LOFT-SKETCH-2026-11-01",
+ "generated_for": "BEDROOM2-TWO-SLIDING-BAYS-SKETCH-2026-11-01",
  "hash_algorithm": "sha256",
  "artifacts": [
   {
@@ -15,7 +15,7 @@
    "path": "docs/PROJECT_HANDOFF.md",
    "role": "Human-readable approved design continuity",
    "authority_rank": 2,
-   "sha256": "d3ac4909ed244ab814af3c67bdff2439b2d5875d5001d55543e0d3ebfff07e01"
+   "sha256": "af264ceafe168ce7509bb72b816440a0d516ccae0183dea05058feb88b541b77"
   },
   {
    "id": "design-state",
@@ -43,14 +43,14 @@
    "path": "output/jaipur-home/README.md",
    "role": "Current maintained-model summary",
    "authority_rank": 2,
-   "sha256": "dcd614a1659407d86666719ab05e8a306690decaba82c161ef08dc5eeffe9b5f"
+   "sha256": "15e1be3eff349c006b7ef844d8390018e070cefcfc4bcaa29aecae79d8159068"
   },
   {
    "id": "baseline-changelog",
    "path": "output/jaipur-home/CHANGELOG.md",
    "role": "Dated approved revision history",
    "authority_rank": 2,
-   "sha256": "3964199600af76116d5b7cfb56962bdabe1a035fc3fc163360f26c64235f18ed"
+   "sha256": "d0427f7afa3adfec7dea4a5d1511e6853abb8acd01c2a41489bc3c90849f5091"
   },
   {
    "id": "baseline-qa",
@@ -253,7 +253,7 @@
    "path": "output/jaipur-home/concepts/README.md",
    "role": "Bedroom 2 concept sketch status, sources and prompt summary",
    "authority_rank": 4,
-   "sha256": "383776da7805bb9d148de1396f1c0a610a50d29ac320284111c01084bc34d255"
+   "sha256": "98385c0d65d997ff82a3c9b2545f0eedcdeecdc3962504608ea171fa4bfed749"
   },
   {
    "id": "bedroom-2-wardrobe-corner-sketch-v2",
@@ -265,9 +265,16 @@
   {
    "id": "bedroom-2-sliding-wardrobe-loft-sketch",
    "path": "output/jaipur-home/concepts/bedroom-2-sliding-wardrobe-loft-sketch-2026-11-01.png",
-   "role": "Current unapproved Bedroom 2 sliding-wardrobe and top-storage review sketch",
+   "role": "Earlier unapproved Bedroom 2 sliding-wardrobe and top-storage review sketch",
    "authority_rank": 4,
    "sha256": "d68aeee58da76b0ed267c7abfda5b0521966f1f5268397be1c2e97771ec37d7a"
+  },
+  {
+   "id": "bedroom-2-sliding-wardrobe-two-bays-sketch",
+   "path": "output/jaipur-home/concepts/bedroom-2-sliding-wardrobe-two-bays-sketch-2026-11-01.png",
+   "role": "Current unapproved Bedroom 2 sketch with two independent two-leaf sliding bays and matching upper storage",
+   "authority_rank": 4,
+   "sha256": "47f4c2d922ab44887f09841150f01481ac0fc08c86d486be5e304e1f29908cc2"
   }
  ],
  "verification_rule": "A hash mismatch triggers targeted source review. User-authorised main-model changes are recorded by Git."
