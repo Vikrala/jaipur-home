@@ -2,6 +2,17 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Bedroom 2 client QA corrections
+
+Applied directly after an independent site-QA review and the client's six observations; the corrected 3D interpretation was approved in chat before modelling.
+
+- **Niche and bedside aligned.** The open walnut niche widens from 381 mm to about 600 mm, running from the north wall (closing the dead 3 in slot) to the floating bedside's front line. The bedside now sits just in front of the mirror, about 535 mm deep, with its front 9 mm clear of the north sliding leaf. Previously the tabletop projected 143 mm past the niche and fouled the leaf's path. The niche has four equal open tiers (about 474 mm clear) and warm LED profiles in both inner rear corners of every tier; the single top strip is removed. Its separate upper door widens to about 573 mm.
+- **Mirror.** It now stops at about 2,374 mm, below the corner upper door (2,417 mm), and uses a pale blue-grey glass finish instead of the fully metallic material that rendered as a black strip. The vertical switchboard is slightly deeper.
+- **Wardrobe re-proportioned.** The main wardrobe shortens from 3,278 mm to 3,135 mm (two bays of about 1,567 mm). The right compartment now keeps a full 229 mm clear width inside its boards (previously 197 mm). Both bays share a 520 mm shelf column; hanging widths are about 999 mm left and 752 mm right. Drawers, pull-out trays and the lower storage are split at the shelf-column gable so no unit exceeds about 1 m; the solid lower box is now an open basket. The compartment has fixed shelves about 300 mm apart.
+- **Doors.** The broad sliding leaves overlap 35 mm (was 13 mm) and park flush with the far end; handles are lowered to about 1,050 mm centre. Each bay keeps two equal hinged upper doors (about 766 mm), re-split to the new bays rather than to the compartment.
+- Rebuilt the walkthrough, GLB and Bedroom 2 renders, added `renders/bedroom-2-niche.png` and the **Bedroom 2 bedside niche** viewpoint, and recorded measured dimensions in `model/bedroom-2-wardrobe-checks.json`. The QA record is `studio-control/qa/QA-B2-2026-11-01/`.
+- Not changed: the bed position. The bed-to-wardrobe clear lane is about 486–521 mm, below a comfortable 600 mm; this is added to RFI-015 for a site decision. The niche LED driver and switching need an electrician's check.
+
 ## 1 November 2026 - Bedroom 2 approved wardrobe sketch built in the maintained model
 
 - Replaced the old fixed terracotta east wardrobe shutters, within the architect's 10 ft 9 in by 2 ft footprint, with two broad greige lower sliding leaves on separate tracks. Either leaf slides over the other bay. The two upper bays each have a pair of hinged shutters, with independent left/right controls. The static GLB exports all four upper shutters and both lower leaves closed.

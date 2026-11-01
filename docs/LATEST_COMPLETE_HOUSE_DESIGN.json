@@ -260,29 +260,31 @@
       },
       "bedroom_2": {
         "r011_revised_layout": "TV unit replaced by a 5 ft x 1 ft 6 in study unit on the south wall (face 3 ft 9 in from bed foot); TV removed; AC moved from west wall to south wall over the unit; desk height and pedestal are assumptions (RFI-012)",
-        "latest_approved_change": "1 Nov 2026: corrected bedroom-corner sketch built in the maintained model; 538 mm bed shift retained",
-        "wardrobe_side_table_gap_mm": 0,
-        "wardrobe_side_table_top": "floating one-drawer dark top at modelled mattress height, approximately 424 mm; touches the wardrobe/niche face",
+        "latest_approved_change": "1 Nov 2026: approved bedroom-corner sketch built, then QA-corrected (niche/bedside alignment, mirror, niche LEDs, 229 mm clear compartment, re-proportioned bays and upper doors); 538 mm bed shift retained",
+        "wardrobe_side_table_gap_mm": 9,
+        "wardrobe_side_table_top": "floating one-drawer dark top at modelled mattress height, approximately 424 mm; front flush with the widened niche and 9 mm clear of the north sliding leaf",
         "moved_with_bed": [
           "headboard artwork",
           "ceiling fan",
           "left bedside charging point"
         ],
         "rejected": "inner-entry privacy screen was removed; do not re-add by default",
-        "east_wall_run": "R-010 (15 Oct 2026): 3 in offset + 1 ft 3 in oak end store + 10 ft 9 in wardrobe = 12 ft 3 in, as on the architect plan; store and wardrobe no longer overlap",
+        "east_wall_run": "1 Nov 2026 QA correction: open niche about 600 mm (north wall face to bedside front, absorbing the drawn 3 in strip) + 3,135 mm wardrobe = 12 ft 3 in room length; supersedes the R-010 1 ft 3 in end store and 10 ft 9 in wardrobe joinery split",
         "unchanged": [
           "constructed doorway",
           "masonry",
           "bed size"
         ],
         "joinery_2026_11_01": {
-          "east_wall_footprint": "Architect 381 mm end bay plus 10 ft 9 in x 2 ft main wardrobe retained",
-          "lower_doors": "Two broad sliding leaves; left or right leaf parks across the other bay",
-          "upper_storage": "Two aligned upper bays with two hinged doors each; separate operable hinged upper shutter over the open end niche",
-          "right_bay": "Fixed 229 mm full-height outer compartment; hanging, shelves, drawer and pull-outs fit in remaining width",
-          "bedside_mirror_switch": "Floating one-drawer right bedside at mattress height; mirror rises to 2,920 mm upper-cabinet top; vertical switchboard between mirror and headboard",
+          "east_wall_footprint": "About 600 mm open niche plus 3,135 mm x 2 ft main wardrobe (two bays of about 1,567 mm)",
+          "lower_doors": "Two broad sliding leaves overlapping 35 mm; either parks flush over the other bay; handles at about 1,050 mm centre",
+          "upper_storage": "Two hinged doors per bay (about 766 mm each), aligned to the bays; separate hinged upper door over the niche, about 573 mm",
+          "right_bay": "Fixed full-height compartment with 229 mm clear inside its boards and fixed shelves about 300 mm apart; hanging, 520 mm shelf column, drawers, trays and open basket fit in the remaining width",
+          "bedside_mirror_switch": "Floating one-drawer right bedside at mattress height, about 535 mm deep in front of the mirror; pale blue-grey mirror from tabletop to about 2,374 mm, below the corner upper door; vertical switchboard between mirror and headboard",
           "walkthrough": "Independent lower left/right slide and upper left/right pair and corner upper-door controls; GLB exports closed",
-          "execution_hold": "RFI-014 and RFI-015: measure site, verify wide-leaf hardware, pull-out access, fixings, wiring and ceiling services"
+          "execution_hold": "RFI-014 and RFI-015: measure site, verify wide-leaf hardware, pull-out access, fixings, LED driver/switching, wiring, ceiling services and the 486-521 mm bed-to-wardrobe lane",
+          "internals": "Both bays share a 520 mm shelf column; hanging about 999 mm left and 752 mm right; drawers, pull-out trays and open baskets split at the shelf-column gable (no unit wider than about 1 m)",
+          "niche": "Four equal walnut tiers (about 474 mm clear) above the bedside; warm LED profiles in both inner rear corners of each tier"
         }
       },
       "bedroom_3": {

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "run_id": "RUN-QA-B2-2026-11-01-site-qa-01",
+  "revision_id": "QA-B2-2026-11-01",
+  "agent_id": "QA-B2-2026-11-01-site-qa-01",
+  "role": "site-qa-coordinator",
+  "launch_status": "completed",
+  "model": "claude-sonnet-5-5",
+  "reasoning_effort": "medium",
+  "model_tier": "standard",
+  "consent_id": null,
+  "consent_status": "not-required",
+  "selection_rationale": "Standard, bounded design-delivery work. Models are an explicit, ordered preference: gpt-6-sol in Codex, claude-sonnet-5-5 in Claude Code; if neither is available the launch is blocked.",
+  "runtime_available_models": [
+    "claude-haiku-5-5",
+    "claude-opus-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "task_fingerprint": "ada16d21111556ff209991e3572b931cabd86813ac3b92b22db6233fb8b5b59e",
+  "task": "Independently QA the built Bedroom 2 wardrobe corner against the client-approved concept sketches and the client's 1 Nov observations. Report proportion, alignment, joinery, operability, lighting and buildability defects with evidence; make no edits.",
+  "artifact_scope": [
+    "output/jaipur-home/model/interior.js",
+    "output/jaipur-home/walkthrough.html",
+    "output/jaipur-home/concepts/bedroom-2-hinged-loft-closed-2026-11-01.png",
+    "output/jaipur-home/concepts/bedroom-2-hinged-loft-right-open-2026-11-01.png",
+    "output/jaipur-home/renders/",
+    "output/jaipur-home/model/bedroom-2-wardrobe-checks.json"
+  ],
+  "write_scope": "read-only",
+  "output_contract": "Structured independent QA findings for Bedroom 2 with element names, measured model dimensions, sketch comparison, severity, recommended correction and remaining uncertainty; no file edits.",
+  "contribution": "Found the bedside/sliding-leaf clash, black mirror material, 197 mm compartment, over-wide drawers, uneven niche tiers, small leaf overlap and the 486-521 mm bed lane (findings F1-F16). No edits.",
+  "sources_actually_used": [
+    "client sketches and screenshot (1 Nov 2026)",
+    "output/jaipur-home/model/interior.js",
+    "output/jaipur-home/walkthrough.html",
+    "output/jaipur-home/model/bedroom-2-wardrobe-checks.json",
+    "output/jaipur-home/CHANGELOG.md",
+    "studio-control/rfis.json"
+  ],
+  "output_artifacts": [
+    "studio-control/qa/QA-B2-2026-11-01/QA-REPORT.md",
+    "studio-control/qa/QA-B2-2026-11-01/qa-record.json"
+  ],
+  "completed_at": "2026-11-01",
+  "failure_reason": null
+}

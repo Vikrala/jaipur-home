@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "revision_id": "QA-B2-2026-11-01",
+  "authoring_specialist": "Director / root agent",
+  "independent_qa_specialist": "QA-B2-2026-11-01-site-qa-01",
+  "review_scope": [
+    "Bedroom 2 floating bedside, open niche, mirror and switchboard",
+    "Two-bay sliding wardrobe internals, 229 mm compartment, upper doors",
+    "Ceiling junction and clearances"
+  ],
+  "checks": [
+    {
+      "name": "Source hierarchy respected",
+      "status": "pass",
+      "evidence": "Client-approved sketches and the client's 1 Nov observations governed; interpretation approved in chat before modelling."
+    },
+    {
+      "name": "Architect layout/geometry preserved or authorised",
+      "status": "pass",
+      "evidence": "Constructed walls and openings unchanged; joinery split within the 12 ft 3 in east wall changed at the client's instruction (niche ~600 mm, wardrobe 3,135 mm)."
+    },
+    {
+      "name": "Protected decisions checked",
+      "status": "pass",
+      "evidence": "Bed shift retained; no privacy screen; bed clearance raised as RFI-015 rather than changed."
+    },
+    {
+      "name": "Safety and professional-signoff boundaries stated",
+      "status": "pass",
+      "evidence": "Hardware, LED driver/switching, wiring, fixings and ceiling levels under RFI-014/RFI-015."
+    },
+    {
+      "name": "Direct main-model changes traced and checked before Git commit",
+      "status": "pass",
+      "evidence": "interior.js edited; walkthrough, GLB and Bedroom 2 renders rebuilt; render_bedroom2.cjs asserts niche 600 mm, wardrobe 3,135 mm, compartment 229 mm clear, 9 mm leaf gap, 35 mm overlap, mirror below door, 8 LED profiles, no browser errors."
+    }
+  ],
+  "result": "pass-with-open-rfis",
+  "date": "2026-11-01"
+}

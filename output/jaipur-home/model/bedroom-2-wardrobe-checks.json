@@ -1,6 +1,6 @@
 {
   "date": "2026-11-01",
-  "scope": "Bedroom 2 approved sketch implementation and ceiling return",
+  "scope": "Bedroom 2 client QA corrections: niche width, mirror, lighting, 229 mm compartment, bays and upper doors",
   "browserErrors": [],
   "audit": {
     "main": true,
@@ -9,12 +9,17 @@
       "right"
     ],
     "upperLeafCount": 4,
-    "rightCompartmentFt": 0.75,
-    "mirrorTop": 9.58,
+    "wardrobeLengthMm": 3135,
+    "nicheWidthMm": 600,
+    "compartmentClearMm": 229,
+    "tableFrontToLeafGapMm": 9,
+    "leafOverlapMm": 35,
+    "mirrorTopMm": 2374,
+    "cornerDoorBottomMm": 2417,
+    "nicheLedProfiles": 8,
     "wardrobeTop": 9.58,
     "ceilingFaceX": 24.25,
     "ceilingBottom": 9.579999998509884,
-    "niche": true,
     "cornerUpperHinge": true,
     "floatingTable": true,
     "tileError": null
@@ -37,8 +42,9 @@
     "bedroom-2-wardrobe-closed-detail",
     "bedroom-2-wardrobe-right-open",
     "bedroom-2-wardrobe-left-open",
-    "bedroom-2-ceiling-and-upper-storage"
+    "bedroom-2-ceiling-and-upper-storage",
+    "bedroom-2-niche"
   ],
-  "glbBytes": 20170416,
+  "glbBytes": 20242448,
   "glbStaticState": "all Bedroom 2 wardrobe doors closed"
 }

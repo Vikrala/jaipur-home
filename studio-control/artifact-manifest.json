@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "generated_for": "BEDROOM2-APPROVED-SKETCH-OPERABLE-WARDROBE-2026-11-01",
+ "generated_for": "BEDROOM2-CLIENT-QA-CORRECTIONS-2026-11-01",
  "hash_algorithm": "sha256",
  "artifacts": [
   {
@@ -15,14 +15,14 @@
    "path": "docs/PROJECT_HANDOFF.md",
    "role": "Human-readable approved design continuity",
    "authority_rank": 2,
-   "sha256": "13135e392d1dcd449eb681cab7806023dab84fed6ba4e6dac56df9426a74825a"
+   "sha256": "4f3794d15d6fd732423621885f54cf184ea9dd2ae2710e6cb67739346b96c6ce"
   },
   {
    "id": "design-state",
    "path": "docs/LATEST_COMPLETE_HOUSE_DESIGN.json",
    "role": "Structured approved design context",
    "authority_rank": 2,
-   "sha256": "54c55984fedd0f3a63ffb48355ba117b36ccaf6d1d649731c6b31664514e4443"
+   "sha256": "5caadef31b54eb7427594990fd399f5d3fa65afbfdea254a8b379175e5607605"
   },
   {
    "id": "architect-layout",
@@ -43,14 +43,14 @@
    "path": "output/jaipur-home/README.md",
    "role": "Current maintained-model summary",
    "authority_rank": 2,
-   "sha256": "a7f0551a24d7c3ef2b353810477b9f6364ed7b1c78ae7f0ddb3a08528717a0fe"
+   "sha256": "c5e98b42f5f66ec6009ada7879c192695be1c4a87183bd7aa1ed52e9f87c3469"
   },
   {
    "id": "baseline-changelog",
    "path": "output/jaipur-home/CHANGELOG.md",
    "role": "Dated approved revision history",
    "authority_rank": 2,
-   "sha256": "158f4d2ba24278080448d8c9b7db5352fc68f7815be76a7f7acc394d7465d12d"
+   "sha256": "75ebcf15da6d3cdedf046ebdf2e6f8ae7215e205e51bc4f28647c1d287007338"
   },
   {
    "id": "baseline-qa",
@@ -92,28 +92,28 @@
    "path": "output/jaipur-home/model/interior.js",
    "role": "Single maintained 3D model scene logic",
    "authority_rank": 2,
-   "sha256": "960120ea66f4700636e36428cf89a74c8c17d5abc8cda093957cfef3c45039d4"
+   "sha256": "6248cc51b5ec74237cd1e5814e11381ee00d740b6d39bf30eeceafa08b20bf74"
   },
   {
    "id": "jaipur-first-floor.glb",
    "path": "output/jaipur-home/model/jaipur-first-floor.glb",
    "role": "Single maintained 3D model (GLB, metres)",
    "authority_rank": 2,
-   "sha256": "559dfd4bd19e6375935fe2da9bdac9bd8bc92cdaa10c7e381bd900bdce1f124d"
+   "sha256": "52b7d91e08e84377d314913e3ebfba36cce751df6b187f36b7c0b5e4dfeb8c26"
   },
   {
    "id": "walkthrough.html",
    "path": "output/jaipur-home/walkthrough.html",
    "role": "Standalone walkthrough of the single model",
    "authority_rank": 2,
-   "sha256": "66a602d9856ddbc83326d95638cca8852b546481a2816ceef6ff23c09476dcaa"
+   "sha256": "4b40a30cd7b62f6a3b72ed1a957f14adb4e9431a31f8f58c34af76c3638722bc"
   },
   {
    "id": "rfis.json",
    "path": "studio-control/rfis.json",
    "role": "RFI register",
    "authority_rank": 2,
-   "sha256": "1fb02e6112b5b931e082f81d643d2dc4a855cb2e781b0e3aef72f4289eefeceb"
+   "sha256": "381f4221ff3477acbbf97e94d6bfb6df8291cdd3d6b19b3571331dc3c8001699"
   },
   {
    "id": "floor-tile-image",
@@ -148,7 +148,7 @@
    "path": "output/jaipur-home/index.html",
    "role": "Current maintained model landing page",
    "authority_rank": 2,
-   "sha256": "16f31cfd84c4d9dfa9d38c1f225981b2692c8caed0742e2c988e1ed2fbe3d5dd"
+   "sha256": "f3ede09f25d400fcfc99ff0003ab8d6dc87345a266df6e2033b9c6243485507e"
   },
   {
    "id": "floor-tile-source-photo",
@@ -309,49 +309,49 @@
    "path": "output/jaipur-home/model/bedroom-2-wardrobe-checks.json",
    "role": "Browser geometry, control and GLB export checks for current Bedroom 2 model",
    "authority_rank": 2,
-   "sha256": "03d846a07fe6483d1f5af488c9f381df55acb4761d78f07a239b3f618f2d2870"
+   "sha256": "9a78d61fe3433d51628fe88242d0c5c6572fd62c8e4cc1366f10d4eee08d79eb"
   },
   {
    "id": "bedroom-2-render-tool",
    "path": "output/jaipur-home/model/build-tools/render_bedroom2.cjs",
    "role": "Rebuild and check affected Bedroom 2 renders and maintained GLB",
    "authority_rank": 2,
-   "sha256": "950151371cae854be523e534399d3611503c3b530c5ea68c436de42084520f4c"
+   "sha256": "58c2574b178dd6ff7439173940c2b31f6495a018f0188d148bf7c2ec0ed728b1"
   },
   {
    "id": "bedroom-2-wardrobe-closed-render",
    "path": "output/jaipur-home/renders/bedroom-2-wardrobe-closed.png",
    "role": "Current Bedroom 2 wardrobe and ceiling closed inspection render",
    "authority_rank": 2,
-   "sha256": "6ff875d1d35fa6522876a23e26f4ac69242c2b738a3168902303edd15d9b1878"
+   "sha256": "9e7dbd9cd49cbd7ad9e5717e95b1fe478bc98980f311cc7f1c820175df8a29d6"
   },
   {
    "id": "bedroom-2-wardrobe-right-open-render",
    "path": "output/jaipur-home/renders/bedroom-2-wardrobe-right-open.png",
    "role": "Current Bedroom 2 right bay and upper storage open inspection render",
    "authority_rank": 2,
-   "sha256": "8507076d702f8d6d2c1d3de83e9085f571d02d20557fc33f53621b1252dfb616"
+   "sha256": "03ebbf41440ad0d11382ef833ba9e2a09f9854a8f8d34c99570fb3f108798a78"
   },
   {
    "id": "bedroom-2-ceiling-render",
    "path": "output/jaipur-home/renders/bedroom-2-ceiling-and-upper-storage.png",
    "role": "Current Bedroom 2 false-ceiling and upper-joinery inspection render",
    "authority_rank": 2,
-   "sha256": "e1382e4c243e5be7157ae316a23ee36969639de8b90e9305f6f1ebb096d59e21"
+   "sha256": "56ce1f232eff07f544c017b12fbd53ac5581b7c4cee629184584c2c86ed6cdb2"
   },
   {
    "id": "current-overview-render",
    "path": "output/jaipur-home/renders/overview.png",
    "role": "Current whole-floor overview after Bedroom 2 joinery revision",
    "authority_rank": 2,
-   "sha256": "a049d600bbf1196e841c3f10e55013b7a6dea86e3d6a1d41f376e40aca40ae81"
+   "sha256": "4a85af2cdde4939d81d06ea1b80914ddd0f5f1169bcf736de4036a5b3d0bab0e"
   },
   {
    "id": "current-bedroom-2-render",
    "path": "output/jaipur-home/renders/bedroom-2.png",
    "role": "Current Bedroom 2 overall view after approved joinery revision",
    "authority_rank": 2,
-   "sha256": "eb0092f56b1c9268a69e5c2e15a836f1408ae229f683a784b4d49d6e4d076b71"
+   "sha256": "202cac9998d61f0952a9bcc59e01550f06e6138fef3548334527b085091ead06"
   }
  ],
  "verification_rule": "A hash mismatch triggers targeted source review. User-authorised main-model changes are recorded by Git."

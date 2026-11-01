@@ -195,6 +195,7 @@ These were included in the original coordinated whole-home model. They are not n
 - Prior 545 mm gap was removed.
 - A privacy screen was tested then rejected/removed: it compromised arrival and was visually intrusive. Existing doorway and masonry are untouched.
 - On 1 November 2026 the user authorised the corrected sketch in the maintained 3D model. The right bedside is a mattress-height floating one-drawer unit meeting the open north-end walnut shelf niche; the mirror runs from tabletop to upper-cabinet top, with a vertical switchboard between mirror and headboard. The main wardrobe retains the architect's 10 ft 9 in by 2 ft footprint and has two broad sliding lower shutters. Each of its two aligned upper bays has two hinged doors. The right lower bay contains a fixed 229 mm outer compartment; hanging, shelves, a shallow drawer and lower pull-outs occupy the remaining width. The walkthrough independently opens left/right lower bays, each upper pair and the separate corner upper cabinet door; the GLB is static with doors closed. The earlier concept images remain provenance, and joinery/electrical/ceiling execution remains under RFI-014/RFI-015.
+- Later on 1 November 2026, after independent QA and the client's observations, the corner was corrected: the open niche widens to about 600 mm (north wall to the bedside front, closing the 3 in strip) and the main wardrobe shortens to 3,135 mm. The floating bedside sits in front of the mirror, about 535 mm deep, 9 mm clear of the north sliding leaf (it previously fouled it). The niche has four equal tiers with inner-corner warm LED profiles; the pale mirror stops at about 2,374 mm, below the corner upper door. The right compartment keeps 229 mm clear; both bays use a 520 mm shelf column, with drawers, trays and open baskets split at it; leaves overlap 35 mm; upper doors remain two per bay. The bed was not moved: the bed-to-wardrobe lane (about 486–521 mm) is an RFI-015 decision.
 
 ### Bedroom 3
 
@@ -211,7 +212,7 @@ These were included in the original coordinated whole-home model. They are not n
 
 - The Bedroom 2 east-wall run now matches the architect plan: 3 in offset from the north wall, a **1 ft 3 in** oak end store, then the **10 ft 9 in** wardrobe = 12 ft 3 in (the room length). The store was previously modelled 2 ft long and overlapped the wardrobe by about 6 in.
 - End-bay depth remains 2 ft; its back face sits on the east wall face. Its former store door is superseded by the open niche and separate upper cabinet in the 1 November 2026 joinery revision.
-- Bed-group shift and the bedside-to-wardrobe contact are unchanged. The 3 in strip north of the store is modelled open as drawn; whether it needs a filler or furring panel is not on the drawing (proposed as an RFI, not yet raised).
+- Bed-group shift and the bedside-to-wardrobe contact are unchanged. The 3 in strip north of the store was modelled open as drawn until 1 November 2026, when the widened open niche absorbed it.
 
 ### R-011 revised architect layout (15 Oct 2026)
 
