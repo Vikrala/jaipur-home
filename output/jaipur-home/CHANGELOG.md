@@ -2,6 +2,13 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Bedroom 2 approved wardrobe sketch built in the maintained model
+
+- Replaced the old fixed terracotta east wardrobe shutters, within the architect's 10 ft 9 in by 2 ft footprint, with two broad greige lower sliding leaves on separate tracks. Either leaf slides over the other bay. The two upper bays each have a pair of hinged shutters, with independent left/right controls. The static GLB exports all four upper shutters and both lower leaves closed.
+- Converted the 1 ft 3 in north end store into the sketch's open walnut shelf niche with a separately operable upper cabinet door. Replaced the right bedside with a floating one-drawer unit whose top is at the modelled mattress level; extended the mirror to the top of the upper cabinets and added a vertical switchboard between it and the headboard. The right main bay has a 229 mm full-height outer compartment; hanging, shelves, drawer and pull-outs fit in the remaining width.
+- Widened only Bedroom 2's east false-ceiling drop to the wardrobe face. Its underside and the wardrobe top meet at approximately 2,920 mm; the assumed 3,048 mm slab soffit and other rooms' ceilings are unchanged.
+- Added walkthrough controls and close/open inspection views, rebuilt affected Bedroom 2 renders and the GLB, and recorded the browser, dimension and export checks in `model/bedroom-2-wardrobe-checks.json`. Hardware rating, pull-out clearance, wall fixings, electrical routing and measured ceiling levels remain RFI-014/RFI-015 execution checks.
+
 ## 1 November 2026 - Bedroom 2 hinged-upper and 229 mm compartment sketches
 
 - Corrected both unapproved review images: upper storage now has two hinged shutters over each lower sliding bay, rather than sliding shutters. Upper bay divisions align with the two lower bays. The bedside mirror reaches the top of the upper cabinets.

@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-01",
+  "scope": "Bedroom 2 approved sketch implementation and ceiling return",
+  "browserErrors": [],
+  "audit": {
+    "main": true,
+    "lowerLeaves": [
+      "left",
+      "right"
+    ],
+    "upperLeafCount": 4,
+    "rightCompartmentFt": 0.75,
+    "mirrorTop": 9.58,
+    "wardrobeTop": 9.58,
+    "ceilingFaceX": 24.25,
+    "ceilingBottom": 9.579999998509884,
+    "niche": true,
+    "cornerUpperHinge": true,
+    "floatingTable": true,
+    "tileError": null
+  },
+  "controls": {
+    "rightOpen": {
+      "lower": "true",
+      "upper": "true"
+    },
+    "leftOpen": true,
+    "upperRightOpened": true,
+    "cornerUpperOpenedAndClosed": true
+  },
+  "views": [
+    "overview",
+    "bedroom-2",
+    "bedroom-2-entry",
+    "bedroom-2-study",
+    "bedroom-2-wardrobe-closed",
+    "bedroom-2-wardrobe-closed-detail",
+    "bedroom-2-wardrobe-right-open",
+    "bedroom-2-wardrobe-left-open",
+    "bedroom-2-ceiling-and-upper-storage"
+  ],
+  "glbBytes": 20170416,
+  "glbStaticState": "all Bedroom 2 wardrobe doors closed"
+}

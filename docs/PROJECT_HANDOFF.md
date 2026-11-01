@@ -62,7 +62,7 @@ This project is a first-floor interior/3D coordination exercise for a residentia
 
 ### False ceiling concept — 1 November 2026
 
-The current model adds matte white false ceilings to every enclosed room and the short passage, visibly lighter than the warm chalk walls, beneath the unchanged assumed 3,048 mm slab soffit. Bedroom central fields and the living central field are provisionally at about 2,981 mm; shallow perimeter trays drop another 61–70 mm. The master has a restrained warm brass inset line, Bedrooms 2 and 3 muted blue lines, and the living room a warm cove line. Fans and ceiling fittings are visually coordinated with these fields. The kitchen remains one simple flat plane at about 2,932 mm. Its approved loft and exhaust-service module arrangement is retained, with tops adjusted to meet the proposed finished ceiling. Both bathrooms, the washing niche, store, lobby and passage are plain flat at about 2,993 mm. The lift cabin remains a lift-vendor item; the stair void and open terrace do not gain ceilings. See the ceiling viewpoints in the walkthrough and `renders/false-ceiling-reflected-plan.png`.
+The current model adds matte white false ceilings to every enclosed room and the short passage, visibly lighter than the warm chalk walls, beneath the unchanged assumed 3,048 mm slab soffit. Bedroom central fields and the living central field are provisionally at about 2,981 mm; shallow perimeter trays drop another 61–70 mm. The master has a restrained warm brass inset line, Bedrooms 2 and 3 muted blue lines, and the living room a warm cove line. Bedroom 2's east dropped band now meets its 2 ft deep wardrobe face and the wardrobe top at about 2,920 mm. Fans and ceiling fittings are visually coordinated with these fields. The kitchen remains one simple flat plane at about 2,932 mm. Its approved loft and exhaust-service module arrangement is retained, with tops adjusted to meet the proposed finished ceiling. Both bathrooms, the washing niche, store, lobby and passage are plain flat at about 2,993 mm. The lift cabin remains a lift-vendor item; the stair void and open terrace do not gain ceilings. See the ceiling viewpoints in the walkthrough and `renders/bedroom-2-ceiling-and-upper-storage.png` for the revised Bedroom 2 junction.
 
 These heights are visual assumptions, not a measured section or reflected ceiling construction drawing. Before work, close RFI-014: measure slab and beams; coordinate AC/chimney/exhaust ducts, light fitting and driver depths, access panels, fan anchorage to structure, kitchen loft tops, and moisture-resistant bathroom details. Maintain ventilation and service access. Bathroom wall tile still runs to the assumed slab level behind the new ceiling.
 
@@ -191,10 +191,10 @@ These were included in the original coordinated whole-home model. They are not n
 
 - Bed and both bedside tables shifted approximately **538 mm / 1 ft 9.2 in toward the east almirah**.
 - Almirah-side bedside tabletop now touches wardrobe exactly: **0 mm gap**; no overlap.
-- Associated charging points, headboard artwork and ceiling fan shifted with bed so alignments remain coherent.
+- Headboard artwork and ceiling fan retain their shifted alignment; the left charging outlet remains, while the right-side controls are now a vertical switchboard beside the tall mirror.
 - Prior 545 mm gap was removed.
 - A privacy screen was tested then rejected/removed: it compromised arrival and was visually intrusive. Existing doorway and masonry are untouched.
-- The 1 November 2026 bedside/wardrobe proposal is still a review sketch, not a model revision. The current closed/open pair is `output/jaipur-home/concepts/bedroom-2-hinged-loft-closed-2026-11-01.png` and `output/jaipur-home/concepts/bedroom-2-hinged-loft-right-open-2026-11-01.png`: open corner shelves beside a mattress-height bedside top, mirror rising to the upper-cabinet top and vertical switchboard; the remaining wardrobe has two broad bay-width sliding shutters total. Each aligned upper bay has two hinged shutters. The right-open view shows an approximately 229 mm outer compartment plus hanging space, shelves, drawer and pull-outs within the remaining width. Earlier sliding-upper and four-narrow-main-shutter sketches are superseded. Check site joinery dimensions before editing the 3D model.
+- On 1 November 2026 the user authorised the corrected sketch in the maintained 3D model. The right bedside is a mattress-height floating one-drawer unit meeting the open north-end walnut shelf niche; the mirror runs from tabletop to upper-cabinet top, with a vertical switchboard between mirror and headboard. The main wardrobe retains the architect's 10 ft 9 in by 2 ft footprint and has two broad sliding lower shutters. Each of its two aligned upper bays has two hinged doors. The right lower bay contains a fixed 229 mm outer compartment; hanging, shelves, a shallow drawer and lower pull-outs occupy the remaining width. The walkthrough independently opens left/right lower bays, each upper pair and the separate corner upper cabinet door; the GLB is static with doors closed. The earlier concept images remain provenance, and joinery/electrical/ceiling execution remains under RFI-014/RFI-015.
 
 ### Bedroom 3
 
@@ -205,12 +205,12 @@ These were included in the original coordinated whole-home model. They are not n
 
 - Bedroom 2 AC was on the west wall in R-006; R-011 moved it to the south wall over the study unit. W2 sill 2 ft 6 in; W9 sill 1 ft 6 in (RFI-006). Mirrors added at Master east-wall store, Bedroom 2 north wall and Bedroom 3 store.
 - Master hidden locker modelled inside the NW bedside; store BRICK return added (height provisional); D6 and D9 modelled as two-way doors (RFI-007, RFI-008).
-- Bedroom 2 bed-group shift was not touched; the Bedroom 2 north mirror sits behind the shifted bedside until that is revisited.
+- Bedroom 2 bed-group shift was not touched in R-006. Its north mirror was later moved and extended beside the wardrobe in the 1 November 2026 joinery revision above.
 
 ### R-010 Bedroom 2 east-wall correction (15 Oct 2026)
 
 - The Bedroom 2 east-wall run now matches the architect plan: 3 in offset from the north wall, a **1 ft 3 in** oak end store, then the **10 ft 9 in** wardrobe = 12 ft 3 in (the room length). The store was previously modelled 2 ft long and overlapped the wardrobe by about 6 in.
-- Store depth is still 2 ft; its back face sits on the east wall face. A 0.72 in reveal separates the store door from the first wardrobe door.
+- End-bay depth remains 2 ft; its back face sits on the east wall face. Its former store door is superseded by the open niche and separate upper cabinet in the 1 November 2026 joinery revision.
 - Bed-group shift and the bedside-to-wardrobe contact are unchanged. The 3 in strip north of the store is modelled open as drawn; whether it needs a filler or furring panel is not on the drawing (proposed as an RFI, not yet raised).
 
 ### R-011 revised architect layout (15 Oct 2026)

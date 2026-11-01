@@ -166,15 +166,16 @@ const ceilingLevels={master:9.78,'bedroom-2':9.78,'bedroom-3':9.78,living:9.78,
 const falseCeilingPaint=mat('Matte white gypsum false ceiling','#ffffff',1),
  bathCeilingPaint=mat('Matte white moisture resistant bathroom ceiling finish','#ffffff',1),
  coveGlow=mat('Concealed warm ceiling cove','#ffe7c1',.5,0,{emissive:'#ffd9a4',emissiveIntensity:.72});
-function ceilingRing(name,x0,z0,x1,z1,width,drop,accent){
+function ceilingRing(name,x0,z0,x1,z1,width,drop,accent,eastWidth=width){
  const y=ceilingLevels[name]-drop/2;
  box(x1-x0,drop,width,(x0+x1)/2,y,z0+width/2,falseCeilingPaint,ceilings,name+' north dropped band');
  box(x1-x0,drop,width,(x0+x1)/2,y,z1-width/2,falseCeilingPaint,ceilings,name+' south dropped band');
  box(width,drop,z1-z0-2*width,x0+width/2,y,(z0+z1)/2,falseCeilingPaint,ceilings,name+' west dropped band');
- box(width,drop,z1-z0-2*width,x1-width/2,y,(z0+z1)/2,falseCeilingPaint,ceilings,name+' east dropped band');
+ box(eastWidth,drop,z1-z0-2*width,x1-eastWidth/2,y,(z0+z1)/2,falseCeilingPaint,ceilings,name+' east dropped band');
  const lipY=ceilingLevels[name]-drop+.027,t=.035;
- for(const [w,d,x,z] of [[x1-x0-2*width,t,(x0+x1)/2,z0+width],[x1-x0-2*width,t,(x0+x1)/2,z1-width],
-  [t,z1-z0-2*width,x0+width,(z0+z1)/2],[t,z1-z0-2*width,x1-width,(z0+z1)/2]])
+ const insetSpan=x1-x0-width-eastWidth,insetX=(x0+width+x1-eastWidth)/2;
+ for(const [w,d,x,z] of [[insetSpan,t,insetX,z0+width],[insetSpan,t,insetX,z1-width],
+  [t,z1-z0-2*width,x0+width,(z0+z1)/2],[t,z1-z0-2*width,x1-eastWidth,(z0+z1)/2]])
   box(w,.025,d,x,lipY,z,accent,ceilings,name+' inset ceiling line');
 }
 // R-014: the passage between the Bedroom 2 door (D4), the common bath and the living room is not a room in the traced
@@ -192,7 +193,8 @@ for(const r of P.rooms){if(r.id==='stairs')continue;polyPlane(r.polygon,.008,r.i
 // A shallow perimeter tray gives the bedrooms and living room a deliberate ceiling composition.
 // The central panels stay high enough for the existing fan and room fittings.
 ceilingRing('master',.75,5.0025,11.7525,20.2575,.78,.20,brass);
-ceilingRing('bedroom-2',12.1275,.375,26.25,12.63,.82,.20,taupe);
+// Bedroom 2 east drop now reaches the 2 ft wardrobe face; its underside meets the new loft at 9.58 ft.
+ceilingRing('bedroom-2',12.1275,.375,26.25,12.63,.82,.20,taupe,2.0);
 ceilingRing('bedroom-3',15.75,39.5025,26.25,55.005,.78,.20,taupe);
 ceilingRing('living',6.75,22.1325,19.2525,37.005,.95,.23,coveGlow);
 for(const v of P.voids){const [a,b,c,d]=v.bounds;box(c-a,.05,d-b,(a+c)/2,.007,(b+d)/2,mat(v.id+' shaft depth cue','#6b736c',.98),building,v.name+' — termination provisional');}
@@ -402,13 +404,98 @@ ceilingLight('master',px(323),pz(267),29);for(const [x,z] of [[234,208],[234,332
 // the left table, charging points, artwork and fan retain alignment with the bed.
 const b2ShiftPdf=28.24,b2BedPdfX=474.36+b2ShiftPdf,b2LeftTablePdfX=410.4+b2ShiftPdf,b2RightTablePdfX=539+b2ShiftPdf;
 bed('Bedroom 2 bed 6 ft × 6 ft 6 in — shifted toward almirah',px(b2BedPdfX),pz(136.92),6,6.5,0);
-bedside(px(b2LeftTablePdfX),pz(102),0);bedside(px(b2RightTablePdfX),pz(102),0);
-cabinet('Bedroom 2 east wardrobe',px(596.4),pz(190.92),10.755,2,8.6,-Math.PI/2,sage);
+bedside(px(b2LeftTablePdfX),pz(102),0);
 // R-010: architect east-wall chain is 3 in wall offset + 1 ft 3 in store + 10 ft 9 in wardrobe = 12 ft 3 in
 // (the room). The store was modelled 2 ft long, so it overlapped the wardrobe by 6 in and their shutters
 // collided. Now 1 ft 3 in long (z 0.625-1.875 ft), abutting the wardrobe at z 1.875 ft; depth stays 2 ft.
 // Back face set exactly on the east wall face (x 26.25 ft; px(596.36)), so nothing here exceeds the room.
-cabinet('Bedroom 2 north end storage',px(596.36),pz(94.88),1.25,2,8.6,-Math.PI/2,oak);
+const b2Face=mat('Bedroom 2 warm matte greige wardrobe shutters','#c9c5bc',.85,0,{bevel:true}),
+ b2Inside=mat('Bedroom 2 light warm grey wardrobe carcass','#dedbd3',.91),
+ b2Dark=mat('Bedroom 2 walnut shelf niche liner','#69513e',.82);
+function buildBedroom2Wardrobe(){
+ const W=10.755,D=2,H=9.58,loftY=7.88,bay=W/2,main=new T.Group();
+ main.name='Bedroom 2 two-bay sliding wardrobe';main.position.set(px(596.4),0,pz(190.92));main.rotation.y=-Math.PI/2;building.add(main);
+ box(W,.20,D,0,.10,0,charcoal,main,'Bedroom 2 wardrobe recessed plinth');
+ for(const xx of [-W/2+.035,0,W/2-.035])box(.07,H-.20,D-.06,xx,(H+.20)/2,0,b2Inside,main,xx===0?'Bedroom 2 fixed central bay divider':'Bedroom 2 wardrobe end gable');
+ box(W-.12,H-.20,.05,0,(H+.20)/2,-D/2+.025,b2Inside,main,'Bedroom 2 wardrobe back');
+ box(W-.12,.07,D-.06,0,.245,0,b2Inside,main,'Bedroom 2 wardrobe base');
+ box(W-.12,.07,D-.06,0,loftY,0,b2Inside,main,'Bedroom 2 upper-storage deck');
+ box(W,.06,D,0,H-.03,0,oak,main,'Bedroom 2 wardrobe top beneath false ceiling');
+ const trays={};
+ for(const side of ['left','right']){
+  const a=side==='left'?-W/2:0,b=side==='left'?0:W/2,workEnd=side==='right'?b-.75:b;
+  if(side==='right')box(.065,loftY-.27,D-.10,workEnd,(loftY+.27)/2,0,b2Inside,main,'Bedroom 2 right bay 229 mm full-height compartment gable');
+  const split=a+(workEnd-a)*.62;
+  box(.055,loftY-3.58,D-.16,split,(loftY+3.58)/2,0,b2Inside,main,'Bedroom 2 '+side+' hanging and shelf divider');
+  for(const yy of [4.25,5.43,6.61])box(workEnd-split-.07,.055,D-.20,(split+workEnd)/2,yy,0,b2Inside,main,'Bedroom 2 '+side+' adjustable shelf');
+  const rod=cylinder(.03,split-a-.24,(a+split)/2,7.12,.12,metal,main);rod.rotation.z=Math.PI/2;rod.name='Bedroom 2 '+side+' hanging rail';
+  for(let i=0;i<4;i++){
+   const x=a+.42+i*.49,cloth=[linen,greige,taupe,sage][i];
+   box(.34,2.10,.11,x,5.80,.02,cloth,main,'Bedroom 2 '+side+' hanging garment');
+  }
+  const innerW=workEnd-a-.16,cx=(a+workEnd)/2;
+  box(innerW,.40,.48,cx,3.34,.45,b2Inside,main,'Bedroom 2 '+side+' shallow drawer');
+  box(.34,.035,.04,cx,3.34,.72,metal,main,'Bedroom 2 '+side+' drawer pull');
+  const tray=new T.Group();tray.name='Bedroom 2 '+side+' pull-out tray';main.add(tray);
+  box(innerW,.08,1.28,cx,2.40,.22,b2Inside,tray,'Pull-out tray base');
+  box(innerW,.19,.045,cx,2.49,.88,b2Face,tray,'Pull-out tray front');
+  for(const edge of [a+.10,workEnd-.10])box(.045,.18,1.20,edge,2.47,.23,b2Inside,tray,'Pull-out tray side');
+  box(innerW,.78,.67,cx,.93,.42,b2Inside,main,'Bedroom 2 '+side+' lower storage pull-out');
+  box(.46,.035,.04,cx,.95,.79,metal,main,'Bedroom 2 '+side+' lower pull');
+  trays[side]=tray;
+  box(bay-.12,.055,D-.16,(a+b)/2,8.72,0,b2Inside,main,'Bedroom 2 '+side+' upper storage shelf');
+ }
+ // Independent tracks let either 1.64 m wide main leaf park over the other bay.
+ for(const zz of [D/2+.06,D/2+.18])for(const yy of [.26,loftY-.055])box(W-.08,.025,.035,0,yy,zz,metal,main,'Bedroom 2 sliding-door track');
+ const slides={};
+ for(const side of ['left','right']){
+  const leaf=new T.Group();leaf.name='Bedroom 2 '+side+' broad sliding shutter';leaf.position.set(side==='left'?-bay/2:bay/2,0,D/2+(side==='left'?.075:.19));main.add(leaf);
+  box(bay+.045,loftY-.32,.07,0,(loftY+.20)/2,0,b2Face,leaf,'Bedroom 2 '+side+' broad sliding face');
+  const handleX=(side==='left'?1:-1)*(bay/2-.17);
+  box(.04,.56,.055,handleX,3.9,.073,oak,leaf,'Bedroom 2 '+side+' recessed vertical pull');
+  slides[side]=leaf;
+ }
+ const upperDoors=[];
+ for(const side of ['left','right']){
+  const a=side==='left'?-W/2:0,b=side==='left'?0:W/2,doorW=bay/2-.06;
+  for(const half of ['outer-left','outer-right']){
+   const isLeft=half==='outer-left',hinge=new T.Group();
+   hinge.name='Bedroom 2 '+side+' upper '+half+' hinged shutter';hinge.position.set(isLeft?a+.045:b-.045,0,D/2+.08);main.add(hinge);
+   const center=isLeft?doorW/2:-doorW/2;
+   box(doorW,H-loftY-.10,.055,center,(H+loftY)/2,0,b2Face,hinge,'Bedroom 2 upper hinged shutter face');
+   box(.018,H-loftY-.13,.012,isLeft?doorW-.02:-doorW+.02,(H+loftY)/2,.047,charcoal,hinge,'Bedroom 2 upper shutter meeting-edge reveal');
+   box(.035,.32,.05,isLeft?doorW-.16:-doorW+.16,(H+loftY)/2,.052,oak,hinge,'Bedroom 2 upper shutter pull');
+   upperDoors.push({side,hinge,openAngle:isLeft?-1.25:1.25});
+  }
+ }
+ // The 381 mm end bay remains in its architect-dimensioned footprint. It becomes an open shelf niche
+ // above the bedside, with one separate upper cabinet; none of its carcass projects into the room.
+ const niche=new T.Group();niche.name='Bedroom 2 bedside open shelf and upper cabinet';niche.position.set(px(596.36),0,pz(94.88));niche.rotation.y=-Math.PI/2;building.add(niche);
+ const NW=1.25;
+ for(const xx of [-NW/2+.035,NW/2-.035])box(.07,H-1.39,D-.06,xx,(H+1.39)/2,0,oak,niche,'Bedroom 2 niche side');
+ box(NW-.12,H-1.39,.055,0,(H+1.39)/2,-D/2+.03,b2Dark,niche,'Bedroom 2 niche dark back');
+ for(const yy of [1.40,4.50,6.15,loftY,H-.03])box(NW-.08,.065,D-.08,0,yy,0,oak,niche,'Bedroom 2 niche shelf or cap');
+ const nicheUpperHinge=new T.Group();nicheUpperHinge.name='Bedroom 2 corner upper cabinet hinge';
+ nicheUpperHinge.position.set(-NW/2+.04,0,D/2+.07);niche.add(nicheUpperHinge);
+ box(NW-.09,H-loftY-.10,.06,(NW-.09)/2,(H+loftY)/2,0,b2Face,nicheUpperHinge,'Bedroom 2 narrow upper cabinet hinged shutter');
+ box(.028,.30,.05,NW-.24,(H+loftY)/2,.055,oak,nicheUpperHinge,'Bedroom 2 narrow upper cabinet pull');
+ box(NW-.16,.025,.06,0,loftY-.14,D/2-.05,warmLight,niche,'Bedroom 2 niche warm shelf light');
+ // The right bedside surface is intentionally at the modelled mattress top, 1.39 ft.
+ const table=new T.Group();table.name='Bedroom 2 floating bedside table';table.position.set(px(b2RightTablePdfX),0,pz(102));building.add(table);
+ box(1.63,.08,1.30,.01,1.35,0,granite,table,'Bedroom 2 mattress-height bedside top');
+ box(1.53,.37,1.17,0,1.12,0,oak,table,'Bedroom 2 floating drawer carcass');
+ box(1.49,.30,.055,0,1.13,.63,b2Face,table,'Bedroom 2 one-drawer bedside front');
+ box(.38,.03,.06,0,1.16,.68,metal,table,'Bedroom 2 floating drawer pull');
+ box(.09,.31,1.08,.68,.96,0,oak,table,'Bedroom 2 bedside concealed wall support');
+ collision('Bedroom 2 floating bedside table',px(b2RightTablePdfX)-.82,pz(102)-.65,px(b2RightTablePdfX)+.82,pz(102)+.65,1.39,'cabinet');
+ furniture.push({name:'Bedroom 2 floating bedside table',type:'cabinet',x:px(b2RightTablePdfX),z:pz(102),w:1.63,d:1.30,h:1.39});
+ collision('Bedroom 2 two-bay sliding wardrobe',24.25,1.875,26.25,12.63,H,'cabinet');
+ collision('Bedroom 2 bedside open shelf',24.25,.625,26.25,1.875,H,'cabinet');
+ feature('Bedroom 2 two-bay sliding wardrobe','joinery',25.25,7.2525,2,W,H,'Client-approved sketch: two lower sliding leaves, paired hinged upper doors per bay; rightmost lower bay includes a 229 mm full-height compartment');
+ feature('Bedroom 2 floating bedside and open niche','joinery',24.2,1.25,1.63,1.25,H,'Client-approved sketch: mattress-height floating tabletop, open shelf end bay and separate upper cabinet');
+ return {main,slides,upperDoors,nicheUpperHinge,trays,bay,W,D,H,loftY};
+}
+const bedroom2Wardrobe=buildBedroom2Wardrobe();
 // R-011 (revised architect plan 14 Oct 2026): the Bedroom 2 TV unit is replaced by a STUDY UNIT, 5 ft wide x 1 ft 6 in deep
 // (outline measured from the PDF vectors: x 16.19-21.19 ft, z 10.88-12.37 ft). Its face is 3 ft 9 in from the bed foot (plan dimension
 // 3'-9"; bed foot z 7.13 ft) and it stands about 3 in off the south wall, as drawn. The TV is removed. Desk height (2 ft 6 in), the
@@ -430,9 +517,14 @@ curtain('Bedroom 2 south window curtains',px(560.4),pz(274.7),2.6,9.0,Math.PI,.3
 art(px(474+b2ShiftPdf),5.5,pz(82.5),3.8,2.2,0);
 // R-011: the revised plan removes the west-wall AC and draws it on the south wall, centred over the study unit (3 ft wide, x 17.19-20.18 ft).
 ac('Bedroom 2 AC south wall over study unit (revised plan)',18.6865,12.53,Math.PI);
-wallMirror('Bedroom 2 north wall mirror',22.9,3.5,.4,1.5,2.9,0,'Architect plan: MIRROR 1 ft 3 in beside the north-wall store; placed per the drawing, not the shifted bed (discrepancy 1 left open)');
+// Beside the end niche the mirror rises from the bedside top to the 9.58 ft upper-cabinet line.
+wallMirror('Bedroom 2 tall bedside mirror',23.47,1.39,.51,1.28,9.58-1.39,0,'Client-approved Bedroom 2 sketch: mirror from mattress-height table to upper-cabinet top');
+// Slim vertical switchboard between the headboard and mirror, from tabletop to headboard top.
+box(.19,3.45-1.39,.045,22.62,(1.39+3.45)/2,.54,white,building,'Bedroom 2 vertical bedside switchboard');
+for(const yy of [1.78,2.14,2.50,2.86,3.22])box(.11,.17,.02,22.62,yy,.575,trim,building,'Bedroom 2 bedside switch rocker');
+feature('Bedroom 2 vertical bedside switchboard','switch',22.62,.54,.19,.045,3.45,'Client-approved sketch: vertical control strip between headboard and tall mirror; electrical routing to be checked on site');
 switchPanel('Bedroom 2 entry controls',px(445),3.7,pz(316),-Math.PI/2,4);
-for(const xx of [b2LeftTablePdfX,b2RightTablePdfX])switchPanel('Bedroom 2 bedside charging',px(xx),2,pz(82.5),0,2,true);
+switchPanel('Bedroom 2 left bedside charging',px(b2LeftTablePdfX),2,pz(82.5),0,2,true);
 ceilingLight('bedroom-2',px(474),pz(220),29);for(const [x,z] of [[407,171],[548,171],[407,240],[552,240]])downlight('bedroom-2',px(x),pz(z));fan('Bedroom 2 fan',px(474+b2ShiftPdf),pz(155));
 
 // BEDROOM 3: dusty blue; the smaller bed and two separate wardrobes stay as drawn.
@@ -1182,7 +1274,10 @@ const viewpoints={
  'kitchen-detail':{name:'Kitchen worktop',pos:[px(397),4.95,pz(783)],target:[px(247),4.8,pz(814)],room:'kitchen',detail:'One lift-up hood gate · sink-width rack · direct RO tap · accessible fixed corner shelf'},
  master:{name:'Master bedroom',pos:[px(356),5.1,pz(382)],target:[px(245),3.0,pz(221)],detail:'Older adults’ room · clear floor · bedside controls · closed storage'},
  'master-reverse':{name:'Master storage',pos:[px(235),5.0,pz(304)],target:[px(365),3.7,pz(248)],room:'master',detail:'Simple wardrobes and TV storage stay in their planned positions'},
- 'bedroom-2':{name:'Bedroom 2',pos:[px(415),5.15,pz(266)],target:[px(520),3.2,pz(120)],detail:'Sleeping group shifted toward the almirah · right bedside top meets the almirah side'},
+ 'bedroom-2':{name:'Bedroom 2',pos:[px(415),5.15,pz(266)],target:[px(520),3.2,pz(120)],detail:'Mattress-height floating bedside · tall mirror · two-bay sliding wardrobe with paired upper shutters'},
+ 'bedroom-2-wardrobe':{name:'Bedroom 2 wardrobe',pos:[16.0,4.6,9.0],target:[25.0,4.6,7.2],room:'bedroom-2',fov:84,detail:'Two full-width lower sliding shutters; each upper bay has two hinged doors. Use the Bedroom 2 controls to open either bay'},
+ 'bedroom-2-wardrobe-detail':{name:'Bedroom 2 wardrobe detail',pos:[18.1,4.55,10.35],target:[24.6,4.75,6.5],room:'bedroom-2',fov:73,detail:'Closer view of the sliding shutters, upper hinges, pull-outs and 229 mm right compartment'},
+ 'bedroom-2-wardrobe-upper':{name:'Bedroom 2 upper storage and ceiling',pos:[19.3,5.45,8.7],target:[24.6,8.65,6.4],room:'bedroom-2',fov:72,detail:'Four hinged upper shutters align over the two sliding bays; the wider east false-ceiling drop meets their top'},
  'bedroom-2-entry':{name:'Bedroom 2 from hall',pos:[13.78,4.85,22.75],target:[16.4,3.0,7.0],room:'bedroom-2',fov:58,detail:'Hall sightline after shifting the bed and both bedside units toward the almirah'},
  'bedroom-2-study':{name:'Bedroom 2 study unit',pos:[px(430),5.0,pz(150)],target:[18.69,4.4,12.1],room:'bedroom-2',fov:72,detail:'Study unit 5 ft x 1 ft 6 in replaces the TV unit · AC now on the south wall above it · 3 ft 9 in from the bed foot'},
  'bedroom-3':{name:'Bedroom 3',pos:[px(552),5.0,pz(939)],target:[px(473),3.0,pz(795)],detail:'Dusty blue accents · walnut · two planned storage runs'},
@@ -1263,6 +1358,46 @@ aoBtn.addEventListener('click',()=>setAO(!aoOn));
 const rugBtn=root.querySelector('[data-action="rug"]');
 function setLivingRugVisible(visible){livingRug.visible=visible;rugBtn.textContent=visible?'Living rug: On':'Living rug: Off';rugBtn.setAttribute('aria-pressed',String(visible));render();}
 rugBtn.addEventListener('click',()=>setLivingRugVisible(!livingRug.visible));
+let bedroom2SlideState='closed';
+const bedroom2SlideTargets={left:-bedroom2Wardrobe.bay/2,right:bedroom2Wardrobe.bay/2},
+ bedroom2UpperOpen={left:false,right:false,corner:false};
+function updateBedroom2WardrobeButtons(){
+ for(const state of ['left','right','closed'])root.querySelector('[data-b2-slide="'+state+'"]').setAttribute('aria-pressed',String(bedroom2SlideState===state));
+ for(const side of ['left','right','corner']){
+  const btn=root.querySelector('[data-b2-upper="'+side+'"]');
+  btn.textContent=(bedroom2UpperOpen[side]?'Close':'Open')+(side==='corner'?' corner upper door':' upper '+side+' doors');
+  btn.setAttribute('aria-pressed',String(bedroom2UpperOpen[side]));
+ }
+}
+function setBedroom2Sliding(state,instant=false,repaint=true){
+ if(!['left','right','closed'].includes(state))throw new Error('Unknown Bedroom 2 sliding-door state');
+ bedroom2SlideState=state;
+ bedroom2SlideTargets.left=state==='left'?bedroom2Wardrobe.bay/2:-bedroom2Wardrobe.bay/2;
+ bedroom2SlideTargets.right=state==='right'?-bedroom2Wardrobe.bay/2:bedroom2Wardrobe.bay/2;
+ if(instant){for(const side of ['left','right']){
+  bedroom2Wardrobe.slides[side].position.x=bedroom2SlideTargets[side];
+  bedroom2Wardrobe.trays[side].position.z=state===side ? .48 : 0;
+ }}
+ updateBedroom2WardrobeButtons();if(repaint)render();
+}
+function setBedroom2UpperDoors(side,open,instant=false,repaint=true){
+ if(!['left','right','corner'].includes(side))throw new Error('Unknown Bedroom 2 upper-door bay');
+ bedroom2UpperOpen[side]=!!open;
+ if(instant){
+  if(side==='corner')bedroom2Wardrobe.nicheUpperHinge.rotation.y=open?-1.25:0;
+  else for(const p of bedroom2Wardrobe.upperDoors.filter(p=>p.side===side))p.hinge.rotation.y=open?p.openAngle:0;
+ }
+ updateBedroom2WardrobeButtons();if(repaint)render();
+}
+root.querySelectorAll('[data-b2-slide]').forEach(btn=>btn.addEventListener('click',()=>{
+ if(!selected.startsWith('bedroom-2'))go('bedroom-2-wardrobe');
+ setBedroom2Sliding(btn.dataset.b2Slide);
+}));
+root.querySelectorAll('[data-b2-upper]').forEach(btn=>btn.addEventListener('click',()=>{
+ if(!selected.startsWith('bedroom-2'))go('bedroom-2-wardrobe-upper');
+ const side=btn.dataset.b2Upper;setBedroom2UpperDoors(side,!bedroom2UpperOpen[side]);
+}));
+updateBedroom2WardrobeButtons();
 const twoWayBtn=root.querySelector('[data-action="twoway"]');
 twoWayBtn.addEventListener('click',()=>{doorPivots.forEach(p=>{if(!p.twoWay)return;p.openAngle=-p.openAngle;if(p.open)p.hinge.rotation.y=p.openAngle;});updateDoorBounds();render();});
 doorBtn.addEventListener('click',()=>{const open=doorBtn.textContent==='Close doors';doorPivots.forEach(p=>{p.hinge.rotation.y=open?0:p.openAngle;p.open=!open;});doorBtn.textContent=open?'Open doors':'Close doors';updateDoorBounds();render();});
@@ -1300,14 +1435,43 @@ function animate(t){const dt=Math.min((t-lastTime)/1000,.05)||.016;lastTime=t;
   vx+=((-Math.sin(yaw)*f+Math.cos(yaw)*r)/n*speed-vx)*kV;vz+=((-Math.cos(yaw)*f-Math.sin(yaw)*r)/n*speed-vz)*kV;
   if(Math.hypot(vx,vz)>.02){move(vx*dt,vz*dt);dirty=true;}else vx=vz=0;
  }else if(ease(orbitTheta,tTheta)||ease(orbitPhi,tPhi)||ease(orbitRadius,tRadius)){orbitTheta+=(tTheta-orbitTheta)*kL;orbitPhi+=(tPhi-orbitPhi)*kL;orbitRadius+=(tRadius-orbitRadius)*kL;updateOrbit();dirty=true;}
+ const kDoor=1-Math.exp(-dt*8);
+ for(const side of ['left','right']){
+  const leaf=bedroom2Wardrobe.slides[side],target=bedroom2SlideTargets[side],tray=bedroom2Wardrobe.trays[side];
+  if(Math.abs(leaf.position.x-target)>.002){leaf.position.x+=(target-leaf.position.x)*kDoor;dirty=true;renderer.shadowMap.needsUpdate=true;}
+  const trayTarget=bedroom2SlideState===side&&Math.abs(leaf.position.x-target)<.08 ? .48 : 0;
+  if(Math.abs(tray.position.z-trayTarget)>.002){tray.position.z+=(trayTarget-tray.position.z)*kDoor;dirty=true;renderer.shadowMap.needsUpdate=true;}
+ }
+ for(const p of bedroom2Wardrobe.upperDoors){const target=bedroom2UpperOpen[p.side]?p.openAngle:0;
+  if(Math.abs(p.hinge.rotation.y-target)>.002){p.hinge.rotation.y+=(target-p.hinge.rotation.y)*kDoor;dirty=true;renderer.shadowMap.needsUpdate=true;}}
+ const cornerTarget=bedroom2UpperOpen.corner?-1.25:0;
+ if(Math.abs(bedroom2Wardrobe.nicheUpperHinge.rotation.y-cornerTarget)>.002){bedroom2Wardrobe.nicheUpperHinge.rotation.y+=(cornerTarget-bedroom2Wardrobe.nicheUpperHinge.rotation.y)*kDoor;dirty=true;renderer.shadowMap.needsUpdate=true;}
  if(dirty){dirty=false;draw();}
  requestAnimationFrame(animate);}
-window.JAIPUR={scene,building,renderer,camera,go,viewpoints,fixtures,furniture,colliders,P,ceilings,doorPivots,kitchenStorage,kitchenFronts,kitchenDoorPivots,poojaDoorPivots,poojaTrayGroup,kitchenQA,setStorageInspection,setPoojaOpen,setDiyaTrayOpen,setNight,setIronTable,setAO,setLivingRugVisible,
+window.JAIPUR={scene,building,renderer,camera,go,viewpoints,fixtures,furniture,colliders,P,ceilings,doorPivots,kitchenStorage,kitchenFronts,kitchenDoorPivots,poojaDoorPivots,poojaTrayGroup,kitchenQA,bedroom2Wardrobe,setBedroom2Sliding,setBedroom2UpperDoors,setStorageInspection,setPoojaOpen,setDiyaTrayOpen,setNight,setIronTable,setAO,setLivingRugVisible,
  render,draw,width:27,ceiling:10,
  capture(id,w=1920,h=1280){go(id);renderer.setPixelRatio(1);renderer.setSize(w,h,false);composer.setPixelRatio(1);composer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();render();return canvas.toDataURL('image/png');},
  overhead(){go('overview');renderer.clippingPlanes=[new T.Plane(new T.Vector3(0,-1,0),3.8)];camera.position.set(13.5,85,27);camera.up.set(0,0,-1);camera.lookAt(13.5,0,27);camera.fov=39;camera.updateProjectionMatrix();render();return canvas.toDataURL('image/png');},
  resetUp(){camera.up.set(0,1,0);go('overview');},
- async glb(){const e=new window.JAIPUR_GLTFExporter();const saved=ceilings.visible,poojaWasOpen=poojaOpen,trayWasOpen=diyaTrayOpen;ceilings.visible=true;const angles=kitchenDoorPivots.map(p=>p.hinge.rotation[p.axis]);kitchenDoorPivots.forEach(p=>p.hinge.rotation[p.axis]=0);const ironWas=ironOpen;setIronTable(true);setPoojaOpen(false);const exportRoot=building.clone(true);setIronTable(ironWas);kitchenDoorPivots.forEach((p,i)=>p.hinge.rotation[p.axis]=angles[i]);setPoojaOpen(poojaWasOpen);setDiyaTrayOpen(trayWasOpen);exportRoot.scale.setScalar(ft);exportRoot.name='Suresh Ji first floor — metres';exportRoot.userData={source:P.source,ceiling_m:10*ft,optional_partition:'omitted',ventilation_shafts:'three confirmed',kitchen:'Approved 14 September: four burners, double bowl sink, equal-width drying rack, hidden RO cutout, sink geyser, single lift-up chimney, fixed corner shelf',pooja:'Operable four-leaf pocket-fold cabinet with full-width fire-safe pull-out diya tray',provisional:P.provisional};const out=await e.parseAsync(exportRoot,{binary:true,onlyVisible:false,maxTextureSize:512});ceilings.visible=saved;return Array.from(new Uint8Array(out));}
+ async glb(){
+  const e=new window.JAIPUR_GLTFExporter(),saved=ceilings.visible,poojaWasOpen=poojaOpen,trayWasOpen=diyaTrayOpen;
+  const b2SlideWas=bedroom2SlideState,b2UpperWas={...bedroom2UpperOpen};
+  ceilings.visible=true;
+  const angles=kitchenDoorPivots.map(p=>p.hinge.rotation[p.axis]);
+  kitchenDoorPivots.forEach(p=>p.hinge.rotation[p.axis]=0);
+  const ironWas=ironOpen;setIronTable(true);setPoojaOpen(false);
+  setBedroom2Sliding('closed',true,false);
+  for(const side of ['left','right','corner'])setBedroom2UpperDoors(side,false,true,false);
+  const exportRoot=building.clone(true);
+  setBedroom2Sliding(b2SlideWas,true,false);
+  for(const side of ['left','right','corner'])setBedroom2UpperDoors(side,b2UpperWas[side],true,false);
+  setIronTable(ironWas);kitchenDoorPivots.forEach((p,i)=>p.hinge.rotation[p.axis]=angles[i]);
+  setPoojaOpen(poojaWasOpen);setDiyaTrayOpen(trayWasOpen);
+  exportRoot.scale.setScalar(ft);exportRoot.name='Suresh Ji first floor — metres';
+  exportRoot.userData={source:P.source,ceiling_m:10*ft,optional_partition:'omitted',ventilation_shafts:'three confirmed',kitchen:'Approved 14 September: four burners, double bowl sink, equal-width drying rack, hidden RO cutout, sink geyser, single lift-up chimney, fixed corner shelf',pooja:'Operable four-leaf pocket-fold cabinet with full-width fire-safe pull-out diya tray',bedroom_2:'Two broad lower sliding shutters; paired hinged upper shutters per bay; 229 mm outer right compartment; export closed',provisional:P.provisional};
+  const out=await e.parseAsync(exportRoot,{binary:true,onlyVisible:false,maxTextureSize:512});
+  ceilings.visible=saved;render();return Array.from(new Uint8Array(out));
+ }
 };
 root.querySelector('[data-action="model"]').addEventListener('click',async()=>{const button=root.querySelector('[data-action="model"]');button.disabled=true;try{const bytes=await window.JAIPUR.glb();const url=URL.createObjectURL(new Blob([new Uint8Array(bytes)],{type:'model/gltf-binary'}));const a=document.createElement('a');a.href=url;a.download='jaipur-home-main.glb';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}finally{button.disabled=false;}});
 root.dataset.kitchenQa=JSON.stringify(kitchenQA());

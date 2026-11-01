@@ -1,6 +1,6 @@
 # Bedroom 2 bedside and wardrobe corner — review sketch
 
-**Status:** Concept image for client review only, 1 November 2026. Bedroom 2 geometry in the maintained 3D model is unchanged.
+**Status:** The client authorised the corrected closed/open pair for the maintained Bedroom 2 3D model on 1 November 2026. The images remain conceptual references; `../walkthrough.html`, `../model/interior.js` and `../renders/bedroom-2-wardrobe-*.png` show the implemented, operable model.
 
 **Current paired images:** `bedroom-2-hinged-loft-closed-2026-11-01.png` and `bedroom-2-hinged-loft-right-open-2026-11-01.png`. The main wardrobe after the corner shelves has two broad sliding shutters total, one the width of each internal bay. Above it, each bay has a pair of hinged upper shutters aligned with that bay: four small upper doors total, no upper sliding track. The mirror reaches from the bedside top to the upper-cabinet top. The right-open view shows a 229 mm (9 in) full-height compartment at the outer right of the exposed bay; its hanging, shelves, drawer and pull-outs fit in the remaining width.
 
@@ -22,4 +22,4 @@
 
 **Hinged-loft correction (built-in imagegen, prompts condensed for review):** In both sketches, keep exactly two broad lower sliding shutters. Replace the upper sliding pair with two hinged doors over each lower bay, four upper doors total, with the upper bay split aligned to the lower. Extend the mirror from bedside-top level to the top of the upper storage. In the right-open view, leave the left upper pair closed and open both hinged shutters of the right upper bay; add a fixed full-height gable forming an approximately 229 mm (9 in) compartment at the outer right of the open lower bay. Resize the existing hanging, shelves, drawer and pull-outs within the wider area left of this compartment. The narrow compartment is shown empty because its use has not been specified.
 
-These sketches are visual proposals, not measured joinery. Confirm the wide lower-shutter weight and track rating, upper-door swing and hinges, end-bay treatment, 229 mm compartment width, pull-out clearance and actual site dimensions before a 3D revision or fabrication drawing.
+These sketches and the resulting 3D joinery are visual proposals, not measured fabrication drawings. Confirm the wide lower-shutter weight and track rating, upper-door swing and hinges, end-bay treatment, 229 mm compartment clear width, pull-out clearance, ceiling levels and actual site dimensions under RFI-014/RFI-015 before fabrication.

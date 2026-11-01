@@ -1,6 +1,6 @@
 {
   "approved_reference": "renders/approved-kitchen-reference.png",
-  "source_elevations": "Kitchen-editable-layout-vivek.pptx slides 2\u20133",
+  "source_elevations": "Kitchen-editable-layout-vivek.pptx slides 2–3",
   "liveGeometryChecks": {
     "RODirectTapCutout": true,
     "blindCornerReachUnblocked": true,
@@ -36,8 +36,14 @@
     "plankSeparatedFromBackrest": true,
     "plankControlsFaceUp": true,
     "continuousSeatPlanes": 2,
-    "centreTable_in": [42, 20],
-    "rug_ft": [7.15, 10.1],
+    "centreTable_in": [
+      42,
+      20
+    ],
+    "rug_ft": [
+      7.15,
+      10.1
+    ],
     "tvDiagonal_in": 75,
     "tvConsoleWidth_ft": 9.22,
     "chargingPoints": 2,
@@ -95,7 +101,17 @@
     "hallViewReducedToNarrowBedEdgeWithDoorFullyOpen": true,
     "privacyScreenRejectedAndRemoved": true,
     "constructedDoorwayUnchanged": true,
-    "masonryUnchanged": true
+    "masonryUnchanged": true,
+    "lowerBroadSlidingShutters": 2,
+    "independentlyOpenableLowerBays": 2,
+    "upperHingedShutters": 4,
+    "independentlyOpenableUpperBays": 2,
+    "rightOuterCompartment_mm": 229,
+    "mirrorReachesUpperCabinetTop": true,
+    "mattressHeightFloatingBedside": true,
+    "eastFalseCeilingDropMeetsWardrobe": true,
+    "siteAndVendorChecksOpen": "RFI-014/RFI-015",
+    "cornerNicheUpperDoorOperable": true
   },
   "exportChecks": {
     "validGLB": true,
@@ -110,12 +126,13 @@
     "removedDining": true,
     "removedHandwash": true,
     "exportedInMetres": true,
-    "accessDoorsExportedClosed": true
+    "accessDoorsExportedClosed": true,
+    "bedroom2WardrobeExportedClosed": true
   },
   "glb": {
-    "bytes": 7587760,
-    "nodes": 2110,
-    "meshes": 1066,
+    "bytes": 20170416,
+    "nodes": 2580,
+    "meshes": 1618,
     "units": "metres"
   },
   "visualReviews": [
@@ -198,7 +215,7 @@
     },
     {
       "pass": 3,
-      "perspective": "Cook and household ages 60+ and 28\u201335",
+      "perspective": "Cook and household ages 60+ and 28–35",
       "views": [
         "Complete kitchen with doors closed",
         "Hob and preparation run",
@@ -231,7 +248,11 @@
     "result": "pass",
     "bakedFamilies": 11,
     "decodedBakedMaps": 33,
-    "tvStoneMeanRGB": [216, 204, 188],
+    "tvStoneMeanRGB": [
+      216,
+      204,
+      188
+    ],
     "tvStoneDayEveningVisual": "warm ivory veined stone; no broad cast-shadow block",
     "poojaDrawerReveals": "two walnut rails present; only narrow working reveals visible",
     "browserPageErrors": 0,

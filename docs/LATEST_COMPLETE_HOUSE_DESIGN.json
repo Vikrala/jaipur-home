@@ -260,22 +260,30 @@
       },
       "bedroom_2": {
         "r011_revised_layout": "TV unit replaced by a 5 ft x 1 ft 6 in study unit on the south wall (face 3 ft 9 in from bed foot); TV removed; AC moved from west wall to south wall over the unit; desk height and pedestal are assumptions (RFI-012)",
-        "latest_approved_change": "bed and both bedside tables shifted 538 mm toward east almirah",
+        "latest_approved_change": "1 Nov 2026: corrected bedroom-corner sketch built in the maintained model; 538 mm bed shift retained",
         "wardrobe_side_table_gap_mm": 0,
-        "wardrobe_side_table_top": "touches wardrobe exactly without overlap",
+        "wardrobe_side_table_top": "floating one-drawer dark top at modelled mattress height, approximately 424 mm; touches the wardrobe/niche face",
         "moved_with_bed": [
-          "charging points",
           "headboard artwork",
-          "ceiling fan"
+          "ceiling fan",
+          "left bedside charging point"
         ],
         "rejected": "inner-entry privacy screen was removed; do not re-add by default",
         "east_wall_run": "R-010 (15 Oct 2026): 3 in offset + 1 ft 3 in oak end store + 10 ft 9 in wardrobe = 12 ft 3 in, as on the architect plan; store and wardrobe no longer overlap",
         "unchanged": [
           "constructed doorway",
           "masonry",
-          "bed size",
-          "wardrobe"
-        ]
+          "bed size"
+        ],
+        "joinery_2026_11_01": {
+          "east_wall_footprint": "Architect 381 mm end bay plus 10 ft 9 in x 2 ft main wardrobe retained",
+          "lower_doors": "Two broad sliding leaves; left or right leaf parks across the other bay",
+          "upper_storage": "Two aligned upper bays with two hinged doors each; separate operable hinged upper shutter over the open end niche",
+          "right_bay": "Fixed 229 mm full-height outer compartment; hanging, shelves, drawer and pull-outs fit in remaining width",
+          "bedside_mirror_switch": "Floating one-drawer right bedside at mattress height; mirror rises to 2,920 mm upper-cabinet top; vertical switchboard between mirror and headboard",
+          "walkthrough": "Independent lower left/right slide and upper left/right pair and corner upper-door controls; GLB exports closed",
+          "execution_hold": "RFI-014 and RFI-015: measure site, verify wide-leaf hardware, pull-out access, fixings, wiring and ceiling services"
+        }
       },
       "bedroom_3": {
         "modelled_layout": "5 ft 6 in x 6 ft 3 in bed, bedside tables, east-wall run 2 ft 9 in wardrobe + 2 ft mirror store + 5 ft x 1 ft 9 in folding iron table + 1 ft 6 in shelf + 4 ft 3 in wardrobe; no TV",
@@ -298,9 +306,10 @@
     "quality_record": "output/jaipur-home/model/quality-checks.json",
     "glb": {
       "valid": true,
-      "nodes": 2110,
-      "meshes": 1066,
-      "access_doors_export_state": "closed"
+      "nodes": 2580,
+      "meshes": 1618,
+      "access_doors_export_state": "closed",
+      "bedroom_2_joinery_export_state": "lower sliding and upper hinged doors closed"
     },
     "verified_current_conditions": [
       "architect geometry retained",
@@ -310,8 +319,8 @@
       "no kitchen dining or separate handwash",
       "W5-clear full-height TV panel and console aligned to its centreline",
       "operable four-leaf puja closure and safe tray sequence",
-      "current bedroom-2 bed/wardrobe correction",
-      "day/night, kitchen access, puja access and GLB-download controls checked"
+      "Bedroom 2 retained bed shift, two operable lower sliding leaves, four operable upper hinged doors, 229 mm right compartment and east false-ceiling return",
+      "day/night, kitchen access, puja access, Bedroom 2 wardrobe controls and GLB download checked"
     ],
     "limitations": [
       "Concept geometry, not fabrication drawing or BIM.",
@@ -376,8 +385,16 @@
     "status": "User-authorised visual concept; site section and services coordination held under RFI-014",
     "finish": "Matte white on all proposed false ceiling planes and dropped bands, visibly lighter than the warm chalk walls; decorative inset lines retained",
     "assumed_slab_soffit_mm": 3048,
-    "finished_centre_levels_mm_approx": {"master": 2981, "bedroom_2": 2981, "bedroom_3": 2981, "living": 2981, "kitchen": 2932, "bathrooms_store_lobby_passage": 2993},
+    "finished_centre_levels_mm_approx": {
+      "master": 2981,
+      "bedroom_2": 2981,
+      "bedroom_3": 2981,
+      "living": 2981,
+      "kitchen": 2932,
+      "bathrooms_store_lobby_passage": 2993
+    },
     "design": "Shallow perimeter trays in all three bedrooms and living; simple flat kitchen; plain flat baths, washing niche, store, lobby and passage. Lift cabin remains a vendor item; stair and terrace remain open.",
-    "kitchen_coordination": "Approved module logic retained; ceiling loft and exhaust-service fronts end at proposed 2932 mm plane."
+    "kitchen_coordination": "Approved module logic retained; ceiling loft and exhaust-service fronts end at proposed 2932 mm plane.",
+    "bedroom_2_coordination": "East perimeter drop widened to the 2 ft wardrobe face; dropped underside and upper cabinet top meet at approximately 2,920 mm. Slab soffit remains assumed at 3,048 mm; site checks under RFI-014/RFI-015."
   }
 }

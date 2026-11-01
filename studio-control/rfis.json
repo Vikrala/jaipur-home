@@ -116,6 +116,15 @@
       "owner": "Architect / site supervisor / ceiling contractor / licensed electrician / HVAC and kitchen vendors",
       "reason": "The 3,048 mm slab height and proposed false ceiling levels are model assumptions without a measured section or coordinated service drawings. Ceiling work and cabinet fabrication must wait for these checks.",
       "added": "2026-11-01"
+    },
+    {
+      "id": "RFI-015",
+      "status": "open",
+      "zone": "Bedroom 2 wardrobe, bedside and east false ceiling",
+      "question": "Site-measure the east run, ceiling/beam soffit and bedside-to-wardrobe contact; obtain a hardware supplier layout and weight/track rating for two approximately 1.64 m wide sliding leaves, including anti-jump stops, overlap, soft close, floor-track cleaning and the parked-door clear opening. Confirm the 229 mm right compartment clear width after board thickness, drawer and pull-out travel with one door parked, upper hinged shutter swing and fixing, end-niche support, mirror fixing and the vertical switchboard circuit/routing. Coordinate the upper cabinet, ceiling drop, fan/light service access and any necessary ventilation or scribing.",
+      "owner": "Architect / site supervisor / joinery and hardware supplier / ceiling contractor / licensed electrician",
+      "reason": "The approved 3D arrangement is a visual concept. The drawings do not dimension the joinery internals or confirm wide-door hardware, built clearances, substrate, electrical routing or actual finished ceiling levels; fabrication and ceiling setting-out await these checks.",
+      "added": "2026-11-01"
     }
   ]
 }
