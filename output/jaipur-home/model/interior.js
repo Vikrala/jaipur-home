@@ -519,7 +519,7 @@ feature('Low illuminated sofa service plank','furniture',sofaBoardX,sofaBoardZ,.
 // formed by a full-height walnut plus support beneath the rounded timber-framed top.
 // The 36 x 26 in top keeps the long-side walking bands above 36 in in the model.
 const tableX=13.90,tableZ=29.05;
-rb(7.15,.10,10.10,13.65,.075,29.05,rugMat,building,.10,'Living low-pile washable rug');
+const livingRug=rb(7.15,.10,10.10,13.65,.075,29.05,rugMat,building,.10,'Living low-pile washable rug');
 feature('Living 7 ft 2 in × 10 ft 1 in rug','furniture',13.65,29.05,7.15,10.10,.10,'Final living selection: L1 warm neutral rug');
 function roundedTrayShape(w,d,r){
  const s=new T.Shape();s.moveTo(-w/2+r,-d/2);s.lineTo(w/2-r,-d/2);
@@ -1260,6 +1260,9 @@ lightBtn.addEventListener('click',()=>setNight(!night));
 const aoBtn=root.querySelector('[data-action="ao"]');
 function setAO(on){aoOn=on;aoBtn.textContent=on?'Soft shadows: On':'Soft shadows: Off';aoBtn.setAttribute('aria-pressed',String(on));render();}
 aoBtn.addEventListener('click',()=>setAO(!aoOn));
+const rugBtn=root.querySelector('[data-action="rug"]');
+function setLivingRugVisible(visible){livingRug.visible=visible;rugBtn.textContent=visible?'Living rug: On':'Living rug: Off';rugBtn.setAttribute('aria-pressed',String(visible));render();}
+rugBtn.addEventListener('click',()=>setLivingRugVisible(!livingRug.visible));
 const twoWayBtn=root.querySelector('[data-action="twoway"]');
 twoWayBtn.addEventListener('click',()=>{doorPivots.forEach(p=>{if(!p.twoWay)return;p.openAngle=-p.openAngle;if(p.open)p.hinge.rotation.y=p.openAngle;});updateDoorBounds();render();});
 doorBtn.addEventListener('click',()=>{const open=doorBtn.textContent==='Close doors';doorPivots.forEach(p=>{p.hinge.rotation.y=open?0:p.openAngle;p.open=!open;});doorBtn.textContent=open?'Open doors':'Close doors';updateDoorBounds();render();});
@@ -1299,7 +1302,7 @@ function animate(t){const dt=Math.min((t-lastTime)/1000,.05)||.016;lastTime=t;
  }else if(ease(orbitTheta,tTheta)||ease(orbitPhi,tPhi)||ease(orbitRadius,tRadius)){orbitTheta+=(tTheta-orbitTheta)*kL;orbitPhi+=(tPhi-orbitPhi)*kL;orbitRadius+=(tRadius-orbitRadius)*kL;updateOrbit();dirty=true;}
  if(dirty){dirty=false;draw();}
  requestAnimationFrame(animate);}
-window.JAIPUR={scene,building,renderer,camera,go,viewpoints,fixtures,furniture,colliders,P,ceilings,doorPivots,kitchenStorage,kitchenFronts,kitchenDoorPivots,poojaDoorPivots,poojaTrayGroup,kitchenQA,setStorageInspection,setPoojaOpen,setDiyaTrayOpen,setNight,setIronTable,setAO,
+window.JAIPUR={scene,building,renderer,camera,go,viewpoints,fixtures,furniture,colliders,P,ceilings,doorPivots,kitchenStorage,kitchenFronts,kitchenDoorPivots,poojaDoorPivots,poojaTrayGroup,kitchenQA,setStorageInspection,setPoojaOpen,setDiyaTrayOpen,setNight,setIronTable,setAO,setLivingRugVisible,
  render,draw,width:27,ceiling:10,
  capture(id,w=1920,h=1280){go(id);renderer.setPixelRatio(1);renderer.setSize(w,h,false);composer.setPixelRatio(1);composer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();render();return canvas.toDataURL('image/png');},
  overhead(){go('overview');renderer.clippingPlanes=[new T.Plane(new T.Vector3(0,-1,0),3.8)];camera.position.set(13.5,85,27);camera.up.set(0,0,-1);camera.lookAt(13.5,0,27);camera.fov=39;camera.updateProjectionMatrix();render();return canvas.toDataURL('image/png');},

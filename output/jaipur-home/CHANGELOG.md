@@ -2,6 +2,12 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Living rug visibility and Bedroom 2 review sketch
+
+- Added a walkthrough control to show or hide only the living rug. It starts visible; hiding it exposes the existing glossy ivory tile, and switching it back on restores the rug. The static GLB keeps the rug because its geometry has not changed.
+- Captured `renders/living-without-rug.png` and checked the button's on/off state and floor visibility in the browser.
+- Saved a separate Bedroom 2 concept sketch under `concepts/` for client review: floating one-drawer bedside corner, dark open niche and closed upper bay at the wardrobe end, with the main wardrobe shown as sliding doors. This is not an approved bedroom design or a 3D model change.
+
 ## 1 November 2026 - Corrected living table to four-corner stool layout
 
 - Replaced the mistaken central pedestal with intersecting walnut support panels forming a plus beneath the rounded framed top. The four resulting corner bays each hold one muted olive hollow storage stool with a closed lift-up lid. The earlier three-stool interpretation below is superseded.

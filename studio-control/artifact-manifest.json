@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "generated_for": "LIVING-TABLE-FOUR-STOOLS-2026-11-01",
+ "generated_for": "LIVING-RUG-TOGGLE-BEDROOM2-SKETCH-2026-11-01",
  "hash_algorithm": "sha256",
  "artifacts": [
   {
@@ -43,14 +43,14 @@
    "path": "output/jaipur-home/README.md",
    "role": "Current maintained-model summary",
    "authority_rank": 2,
-   "sha256": "5274b44252861466f4814c5d40e6b8e389c8bbf6fce99f31eb22dea7b27422b5"
+   "sha256": "d4cffd8596e76ee5b07523eeaef0c7347e83d0dd346449021d35ce22ddf651e3"
   },
   {
    "id": "baseline-changelog",
    "path": "output/jaipur-home/CHANGELOG.md",
    "role": "Dated approved revision history",
    "authority_rank": 2,
-   "sha256": "a7e8ae2ebbd192126b85c9dab4a0a4f9d605327b3e234bde62fb44982576ad9b"
+   "sha256": "50cfdf9d336a7e1cf0a9c5d67f3258243fbc0379f9915690c2c9745cbcfd0bed"
   },
   {
    "id": "baseline-qa",
@@ -92,7 +92,7 @@
    "path": "output/jaipur-home/model/interior.js",
    "role": "Single maintained 3D model scene logic",
    "authority_rank": 2,
-   "sha256": "a00981d492dab0dd093c54dd91b237df5ea98e9f0f6a0c71bc2d9397f055904b"
+   "sha256": "b627040263c86d6fb607e400a996fdf049be969a139ceb20b266094832cf7e9c"
   },
   {
    "id": "jaipur-first-floor.glb",
@@ -106,7 +106,7 @@
    "path": "output/jaipur-home/walkthrough.html",
    "role": "Standalone walkthrough of the single model",
    "authority_rank": 2,
-   "sha256": "a90c27801d7043861f817f3d13c1fa1aba392d3b720b5a8402050f4037b35b07"
+   "sha256": "8d062364fa6479689fb7e31a54d2bc98877d6b0d3b9703f73a8736e9dde4ccaf"
   },
   {
    "id": "rfis.json",
@@ -141,7 +141,7 @@
    "path": "output/jaipur-home/walkthrough.template.html",
    "role": "Standalone walkthrough source template",
    "authority_rank": 2,
-   "sha256": "ad40625f1d47961c8db5812516ced4c8bb8957cb498e850cd7fd6738444fda49"
+   "sha256": "1f3ec8ed65e2fa8d1330fa68da67b584978ed0f4b710352f89e37c7d1219a97d"
   },
   {
    "id": "main-index",
@@ -233,6 +233,27 @@
    "role": "Four-stool and plus-support inspection view with tabletop temporarily hidden",
    "authority_rank": 2,
    "sha256": "d3407916e07870da3a8a8a7a6dfef3627db861a96fb2afbb33b133ed18a6322c"
+  },
+  {
+   "id": "living-without-rug",
+   "path": "output/jaipur-home/renders/living-without-rug.png",
+   "role": "Living floor visualization with walkthrough rug hidden",
+   "authority_rank": 2,
+   "sha256": "95904704f3e6c0f351882e77e0e5df80be8bc339e8daa9cbec5c78ab453362e3"
+  },
+  {
+   "id": "bedroom-2-wardrobe-corner-sketch-2026-11-01",
+   "path": "output/jaipur-home/concepts/bedroom-2-wardrobe-corner-sketch-2026-11-01.png",
+   "role": "Unapproved Bedroom 2 bedside and sliding-wardrobe concept sketch",
+   "authority_rank": 4,
+   "sha256": "15a6d5ded71aa3175b3b90721017d256c8a23d21dc0f1e7d22cf69fb395e6c2c"
+  },
+  {
+   "id": "README",
+   "path": "output/jaipur-home/concepts/README.md",
+   "role": "Bedroom 2 concept sketch status, sources and prompt summary",
+   "authority_rank": 4,
+   "sha256": "1305dff544c8ed26b86fbff42d6e0b03f5d5760ef7f38d083d742e209dda59bf"
   }
  ],
  "verification_rule": "A hash mismatch triggers targeted source review. User-authorised main-model changes are recorded by Git."
