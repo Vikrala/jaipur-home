@@ -613,7 +613,9 @@ for(const [z,m,h] of [[25.20,linen,.80],[28.35,blanket,.76],[31.55,linen,.80]]){
 }
 soft(1.55,1.35,.42,8.30,2.10,21.78,blanket,building,'Living return accent cushion','z',.24,.62,.05).rotation.x=-.22;
 soft(1.55,1.35,.42,10.05,2.10,21.78,linen,building,'Living return loose cushion','z',.24,.62,.05).rotation.x=-.22;
-const sofaBoardX=6.84,sofaBoardStart=returnBackZ-.12,sofaBoardEnd=sofaZ1+1.18,
+// RFI-016 (1 Nov 2026): the plank once ran 1.18 ft past the sofa arm; it now stops 9 mm short of the R-019
+// ledge (z 34.84 ft), and the south charging panel moves with its end to sit beside the sofa arm.
+const sofaBoardX=6.84,sofaBoardStart=returnBackZ-.12,sofaBoardEnd=34.84-.03,
  sofaBoardLen=sofaBoardEnd-sofaBoardStart,sofaBoardZ=(sofaBoardStart+sofaBoardEnd)/2,
  returnBoardStart=6.75,returnBoardEnd=12.1275,returnBoardLen=returnBoardEnd-returnBoardStart,returnBoardX=(returnBoardStart+returnBoardEnd)/2;
 box(.18,.76,sofaBoardLen,sofaBoardX,1.70,sofaBoardZ,oak,building,'Walnut sofa service band');

@@ -2,6 +2,11 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Sofa plank stops at the kitchen–living ledge (RFI-016)
+
+- The walnut sofa service plank, its wall-wash LED and the south switch/USB charging panel no longer pass inside the R-019 ledge. The plank now ends 9 mm short of the ledge face, about 92 mm past the sofa arm instead of 360 mm; the charging panel moves with the plank end and stays reachable beside the arm. The ledge is unchanged.
+- Rebuilt the walkthrough and GLB; refreshed the living, living-reverse, sofa-wall and ledge renders. A clash check now finds only the expected wall-skirting contact at the wall-flush ledge (to be scribed on site).
+
 ## 1 November 2026 - Merged the GitHub history: kitchen–living ledge restored
 
 - GitHub's `main` held three 28–29 October commits that this checkout lacked. They were merged at the user's instruction, keeping all local work from 31 October onwards.

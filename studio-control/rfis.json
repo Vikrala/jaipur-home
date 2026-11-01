@@ -128,12 +128,14 @@
     },
     {
       "id": "RFI-016",
-      "status": "open",
+      "status": "closed",
       "zone": "Living / kitchen-living ledge and sofa service plank",
       "question": "Decide how the R-019 ledge meets the walnut sofa service plank: the plank and its south-end switch/USB charging panel run along the west wall to about 1,089 mm past the sofa arm (z 35.69 ft) and pass inside the ledge, which starts 101 mm past the sofa arm. Options: stop the plank at the ledge face and relocate the charging panel (for example to the ledge top or the sofa side), or shorten/shift the ledge. Then confirm wall fit, scribing and electrical routing on site.",
       "owner": "User / designer / joinery fabricator / licensed electrician",
       "reason": "Found when merging the GitHub history on 1 Nov 2026; the overlap was already present in the GitHub model and was carried over unchanged.",
-      "added": "2026-11-01"
+      "added": "2026-11-01",
+      "closed": "2026-11-01",
+      "resolution": "User chose to stop the sofa plank at the ledge. The plank now ends 9 mm short of the ledge face (about 92 mm past the sofa arm instead of 360 mm); the south charging panel moves with the plank end and sits in the gap beside the sofa arm. Confirm the final gap, scribing and wiring on site under RFI-003/RFI-005."
     }
   ]
 }

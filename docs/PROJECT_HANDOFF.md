@@ -310,4 +310,4 @@ Source: architect's "Revised Interior Layout OP-1", dated 14 October 2026, now `
 
 ### Merge of the GitHub history (1 November 2026)
 
-The 28–29 October work on GitHub (R-019 kitchen–living ledge, R-020 granite labelling, Git-workflow wording) was merged into the current model at the user's instruction. The ledge geometry is unchanged from GitHub. It overlaps the south end of the walnut sofa service plank and its upward-facing south charging panel, which run along the west wall past the sofa arm; this clash already existed in the GitHub version and is held as RFI-016 for a design decision.
+The 28–29 October work on GitHub (R-019 kitchen–living ledge, R-020 granite labelling, Git-workflow wording) was merged into the current model at the user's instruction. The ledge geometry is unchanged from GitHub. It overlaps the south end of the walnut sofa service plank and its upward-facing south charging panel, which run along the west wall past the sofa arm; this clash already existed in the GitHub version. The user then chose to stop the plank at the ledge face (RFI-016 closed): the plank ends about 92 mm past the sofa arm and the south charging panel moves with it.
