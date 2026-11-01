@@ -2,6 +2,11 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Bedroom 2 concept sketch correction
+
+- Revised the unapproved sketch only: lowered the floating bedside top to mattress-top level, moved and extended the mirror from the top to the highest open shelf bay, and added a vertical switchboard between mirror and headboard from the tabletop to headboard top.
+- Preserved the earlier sketch as provenance and saved the corrected version as `concepts/bedroom-2-wardrobe-corner-sketch-2026-11-01-v2.png`. No Bedroom 2 geometry, walkthrough or GLB change was made.
+
 ## 1 November 2026 - Living rug visibility and Bedroom 2 review sketch
 
 - Added a walkthrough control to show or hide only the living rug. It starts visible; hiding it exposes the existing glossy ivory tile, and switching it back on restores the rug. The static GLB keeps the rug because its geometry has not changed.

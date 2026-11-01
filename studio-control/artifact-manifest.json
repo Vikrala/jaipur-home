@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "generated_for": "LIVING-RUG-TOGGLE-BEDROOM2-SKETCH-2026-11-01",
+ "generated_for": "BEDROOM2-CORNER-SKETCH-V2-2026-11-01",
  "hash_algorithm": "sha256",
  "artifacts": [
   {
@@ -43,14 +43,14 @@
    "path": "output/jaipur-home/README.md",
    "role": "Current maintained-model summary",
    "authority_rank": 2,
-   "sha256": "d4cffd8596e76ee5b07523eeaef0c7347e83d0dd346449021d35ce22ddf651e3"
+   "sha256": "1b66fa1f354ee5b9b7ce0956a412500fe8e532084ed6514cc3e0fb1de34c1777"
   },
   {
    "id": "baseline-changelog",
    "path": "output/jaipur-home/CHANGELOG.md",
    "role": "Dated approved revision history",
    "authority_rank": 2,
-   "sha256": "50cfdf9d336a7e1cf0a9c5d67f3258243fbc0379f9915690c2c9745cbcfd0bed"
+   "sha256": "eed2473ef89f622441f3124b89b1f9b2f249cc8017c76739c4092b58dc19a915"
   },
   {
    "id": "baseline-qa",
@@ -253,7 +253,14 @@
    "path": "output/jaipur-home/concepts/README.md",
    "role": "Bedroom 2 concept sketch status, sources and prompt summary",
    "authority_rank": 4,
-   "sha256": "1305dff544c8ed26b86fbff42d6e0b03f5d5760ef7f38d083d742e209dda59bf"
+   "sha256": "c77577d7365376920c5a721ffc58880f3e122fd01620649453b1010401d1f329"
+  },
+  {
+   "id": "bedroom-2-wardrobe-corner-sketch-v2",
+   "path": "output/jaipur-home/concepts/bedroom-2-wardrobe-corner-sketch-2026-11-01-v2.png",
+   "role": "Current unapproved Bedroom 2 corner concept sketch with corrected table, mirror and switchboard",
+   "authority_rank": 4,
+   "sha256": "5d34a3a52c3a9be086ba38011d784ebc323fdb9f71dc593dcdff12afaf133c0a"
   }
  ],
  "verification_rule": "A hash mismatch triggers targeted source review. User-authorised main-model changes are recorded by Git."
