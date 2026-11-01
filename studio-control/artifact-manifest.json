@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "generated_for": "BEDROOM2-TWO-SLIDING-BAYS-SKETCH-2026-11-01",
+ "generated_for": "BEDROOM2-TWO-SLIDING-DOORS-CLOSED-OPEN-SKETCHES-2026-11-01",
  "hash_algorithm": "sha256",
  "artifacts": [
   {
@@ -15,7 +15,7 @@
    "path": "docs/PROJECT_HANDOFF.md",
    "role": "Human-readable approved design continuity",
    "authority_rank": 2,
-   "sha256": "af264ceafe168ce7509bb72b816440a0d516ccae0183dea05058feb88b541b77"
+   "sha256": "f546d530e96805f98168ef2aa591c68e3683510187eb2b5a07830cfc4f98ca49"
   },
   {
    "id": "design-state",
@@ -43,14 +43,14 @@
    "path": "output/jaipur-home/README.md",
    "role": "Current maintained-model summary",
    "authority_rank": 2,
-   "sha256": "15e1be3eff349c006b7ef844d8390018e070cefcfc4bcaa29aecae79d8159068"
+   "sha256": "861b838b8cf541e5c4aecdc0d45f9a02b8094b48d8616eb01b69d6c8e0c3c0cb"
   },
   {
    "id": "baseline-changelog",
    "path": "output/jaipur-home/CHANGELOG.md",
    "role": "Dated approved revision history",
    "authority_rank": 2,
-   "sha256": "d0427f7afa3adfec7dea4a5d1511e6853abb8acd01c2a41489bc3c90849f5091"
+   "sha256": "3c1a4fc6dc91a8948e491cd0da236129ca758b145c92e7f52870de82a116a4da"
   },
   {
    "id": "baseline-qa",
@@ -253,7 +253,7 @@
    "path": "output/jaipur-home/concepts/README.md",
    "role": "Bedroom 2 concept sketch status, sources and prompt summary",
    "authority_rank": 4,
-   "sha256": "98385c0d65d997ff82a3c9b2545f0eedcdeecdc3962504608ea171fa4bfed749"
+   "sha256": "a78b9403d4170ddb0856a2ec0d586e8827c7c3158dea2a1cc7f2dd4ee60f4ede"
   },
   {
    "id": "bedroom-2-wardrobe-corner-sketch-v2",
@@ -272,9 +272,23 @@
   {
    "id": "bedroom-2-sliding-wardrobe-two-bays-sketch",
    "path": "output/jaipur-home/concepts/bedroom-2-sliding-wardrobe-two-bays-sketch-2026-11-01.png",
-   "role": "Current unapproved Bedroom 2 sketch with two independent two-leaf sliding bays and matching upper storage",
+   "role": "Superseded Bedroom 2 four-shutter review sketch",
    "authority_rank": 4,
    "sha256": "47f4c2d922ab44887f09841150f01481ac0fc08c86d486be5e304e1f29908cc2"
+  },
+  {
+   "id": "bedroom-2-two-sliding-doors-closed",
+   "path": "output/jaipur-home/concepts/bedroom-2-two-sliding-doors-closed-2026-11-01.png",
+   "role": "Current unapproved Bedroom 2 two-shutter wardrobe and loft closed review sketch",
+   "authority_rank": 4,
+   "sha256": "2451cf9f3ed8d8489f2c6eeebe8ed565973fd09bb7ad033fb9e32cd23f2d3822"
+  },
+  {
+   "id": "bedroom-2-two-sliding-doors-right-open",
+   "path": "output/jaipur-home/concepts/bedroom-2-two-sliding-doors-right-open-2026-11-01.png",
+   "role": "Current unapproved Bedroom 2 right-bay and upper-storage open review sketch",
+   "authority_rank": 4,
+   "sha256": "5914c06e8ada86103b70dfc8e3e6177c794406cd8644ea2b50c22a25c95136d7"
   }
  ],
  "verification_rule": "A hash mismatch triggers targeted source review. User-authorised main-model changes are recorded by Git."

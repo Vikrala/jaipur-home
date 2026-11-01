@@ -2,6 +2,11 @@
 
 This folder is the single maintained model. New revisions update these files directly.
 
+## 1 November 2026 - Bedroom 2 two-shutter closed/open sketch pair
+
+- Superseded the four-narrow-shutter review sketch after the client's correction. The main wardrobe beyond the corner shelves now has two bay-width sliding shutters total; the loft above it has its own aligned two-shutter sliding pair. Internal partitions remain behind the door fronts.
+- Added matched closed and right-open review sketches under `concepts/`. The open view shows one bay's hanging space, shelf column, drawer and lower pull-outs, plus the open right loft. The source image guides the storage arrangement only. No Bedroom 2 model, walkthrough or GLB change was made.
+
 ## 1 November 2026 - Bedroom 2 two-bay sliding wardrobe sketch
 
 - Corrected the unapproved wardrobe sketch after the client's practicality review. The main wardrobe beyond the corner shelves is now drawn as two independent bays with two sliding leaves in each bay, a fixed central divider and upper storage split to match.
